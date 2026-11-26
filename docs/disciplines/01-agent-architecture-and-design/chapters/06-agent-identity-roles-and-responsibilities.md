@@ -1,6 +1,6 @@
 # Chapter 6 — Agent Identity, Roles and Responsibilities
 
-<text>**Status:** In progress</text>
+**Status:** In progress
 
 ## Chapter scope
 
