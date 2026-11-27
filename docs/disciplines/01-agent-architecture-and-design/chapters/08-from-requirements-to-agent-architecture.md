@@ -18,7 +18,7 @@ This chapter is a synthesis chapter. It should reuse prior material rather than 
 
 ## Proposed learning scope
 
-The following subsections are planned and have not yet been taught:
+The chapter is being taught progressively. Subsections marked Covered have been completed; the remaining entries are planned and have not yet been taught:
 
 1. **8.1 Problem Framing and Agent Suitability:** Covered.
 2. **8.2 Requirements, Constraints and Operating Context:** Covered.
