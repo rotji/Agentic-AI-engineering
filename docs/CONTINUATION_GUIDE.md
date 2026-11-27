@@ -9,7 +9,7 @@ Before continuing a session:
 3. Continue from the next unfinished subsection.
 4. Do not repeat completed lessons unless the user asks to revisit or deepen them.
 
-Current continuation point: **Discipline 2 → Chapter 2 → 2.4 Constraints, Priorities and Conflicting Objectives.** Chapter 1 is complete; subsections 2.1–2.3 are covered.
+Current continuation point: **Discipline 2 → Chapter 2 → 2.5 Ambiguity, Missing Requirements and Clarification.** Chapter 1 is complete; subsections 2.1–2.4 are covered.
 
 ## 2. Document a lesson
 
