@@ -9,7 +9,7 @@ Before continuing a session:
 3. Continue from the next unfinished subsection.
 4. Do not repeat completed lessons unless the user asks to revisit or deepen them.
 
-Current continuation point: **Discipline 2 → Chapter 3 → 3.4 Causal Reasoning, Correlation and Analogy.** Chapters 1–2 are complete; Chapter 3.1–3.3 are covered.
+Current continuation point: **Discipline 2 → Chapter 3 → 3.5 Hypotheses, Evidence, Confidence and Limitations.** Chapters 1–2 are complete; Chapter 3.1–3.4 are covered.
 
 ## 2. Document a lesson
 
