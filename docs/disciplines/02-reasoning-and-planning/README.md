@@ -1,6 +1,6 @@
 # Discipline 2 — Reasoning and Planning
 
-**Status:** In progress; Chapters 1–2 complete, Chapter 3 in progress (3.1–3.4 covered).
+**Status:** In progress; Chapters 1–3 complete; Chapter 4 is next.
 
 ## 1. Purpose
 
@@ -66,7 +66,7 @@ Planned subsections:
 - **3.2 Inductive Reasoning:** Covered.
 - **3.3 Abductive Reasoning and Explanation:** Covered.
 - **3.4 Causal Reasoning, Correlation and Analogy:** Covered.
-- **3.5 Hypotheses, Evidence, Confidence and Limitations**
+- **3.5 Hypotheses, Evidence, Confidence and Limitations:** Covered.
 
 ### Chapter 4 — Representing Problems, States and Actions
 
@@ -204,6 +204,6 @@ Where useful, exercises will ask the learner to formulate goals, decompose tasks
 
 ## 7. Current continuation point
 
-**Discipline 2 → Chapter 3 → 3.5 Hypotheses, Evidence, Confidence and Limitations.**
+**Discipline 2 → Chapter 4 → 4.1 Problem and Environment Representation.**
 
-Chapters 1–2 (subsections 1.1–1.4 and 2.1–2.5) are complete. Chapter 3 is in progress; subsections 3.1–3.4 are covered.
+Chapters 1–3 are complete. Chapter 3 subsections 3.1–3.5 are covered.
