@@ -15,7 +15,7 @@ The chapter is being taught progressively. Subsections marked as planned have no
 1. **7.1 Agent Configuration:** Covered.
 2. **7.2 Configuration Elements:** Covered.
 3. **7.3 Initialization and Startup:** Covered.
-4. **7.4 Agent Lifecycle and States:** creation, configuration, initialization, ready, running, paused, failed, recovery, shutdown and retirement.
+4. **7.4 Agent Lifecycle and States:** Covered.
 5. **7.5 Configuration and Version Changes:** how approved changes are introduced, tracked, tested and rolled back.
 6. **7.6 Lifecycle Management and Continuity:** how agents are suspended, resumed, replaced or retired without losing necessary task history and accountability.
 
@@ -494,6 +494,181 @@ Record information proportionately. Do not expose secrets or collect unnecessary
 - Continue in a reduced mode only when explicitly permitted and transparently reported.
 - Protect credentials and do not expand authority during startup.
 - Record startup outcomes and configuration versions for accountability.
+
+
+## 7.4 Agent Lifecycle and States
+
+### Core question
+
+What stages does an agent pass through from creation to retirement, and how does the system know what condition the agent is in at any given moment?
+
+An agent lifecycle describes the stages through which an agent is created, prepared, operated, maintained, stopped and eventually retired.
+
+An agent state describes its current operational condition at a particular moment. Lifecycle describes the broader journey; state describes where the agent is now.
+
+There is no single universal lifecycle or state vocabulary that every agentic system must use. The model below is a practical teaching framework. A system should define states that match its actual operating requirements.
+
+### Lifecycle stages
+
+A typical agent lifecycle may include:
+
+1. **Creation or registration:** establish the agent as a managed component and assign its identity.
+2. **Configuration:** define its purpose, instructions, operating settings, capabilities and relevant policy references.
+3. **Initialization:** load and validate the configuration, prepare required context and dependencies, and check permissions.
+4. **Ready:** the required startup checks have passed and the agent can accept authorised work.
+5. **Operation:** the agent performs assigned tasks, observes results and updates its state.
+6. **Maintenance or update:** approved changes, repairs, evaluations or adjustments are performed.
+7. **Shutdown:** the agent stops accepting or executing work and closes its current operation safely.
+8. **Retirement:** the agent is permanently withdrawn from service, its access is revoked and its remaining records or resources are handled according to policy.
+
+These stages describe a lifecycle at a high level. An agent may repeat configuration, initialization, operation and maintenance stages many times before it is retired.
+
+### Common operational states
+
+A system may use states such as:
+
+| State | Meaning |
+|---|---|
+| Created | The agent identity exists, but preparation may not be complete. |
+| Configuring | The required operating settings are being applied or checked. |
+| Initializing | The agent is loading context and preparing dependencies. |
+| Ready | Required checks have passed and the agent can accept authorised work. |
+| Running | The agent is actively executing a task or operation. |
+| Waiting or blocked | Progress depends on an input, dependency, approval or event. |
+| Paused | Operation has deliberately been suspended and may be resumed. |
+| Failed | An error or condition has prevented normal operation. |
+| Recovering | The system is attempting an approved recovery or restart. |
+| Stopping | The agent is completing or cancelling work and shutting down. |
+| Stopped | The agent is not currently operating but may be started again. |
+| Retired | The agent has been permanently withdrawn and should not resume normal operation. |
+
+A system may combine or rename states. It may also use additional states such as degraded, quarantined or maintenance, when those distinctions are needed.
+
+### States and transitions
+
+A state machine describes the states an agent can occupy and the permitted transitions between them.
+
+A transition occurs when an event happens and any required conditions have been satisfied.
+
+Examples:
+- A valid startup request may move an agent from Created or Stopped into Configuring.
+- Successful initialization and readiness checks may move it into Ready.
+- Assignment of an authorised task may move it from Ready to Running.
+- A missing required approval may move a task or agent into Waiting or Blocked.
+- An authorised pause request may move it from Running to Paused.
+- A critical error may move it into Failed.
+- A permitted recovery procedure may move it from Failed to Recovering and then to Initializing or Ready.
+- A shutdown request may move it through Stopping to Stopped.
+- An approved decommissioning process may move it to Retired.
+
+The system should define which transitions are allowed, what event triggers each transition, which checks must pass and who or what is authorised to request the transition. An agent should not be able to bypass these rules simply by declaring that its state has changed.
+
+### Agent state is not the same as task state
+
+This is one of the most important distinctions in lifecycle engineering.
+
+An **agent state** describes the condition of the agent as a managed component.
+
+A **task state** describes the progress of a particular piece of work.
+
+For example, AGENT-001 may be Ready while it has no assigned work. When a collection task begins, the agent becomes Running. The task may then be Waiting for a source response while the agent remains operational and able to handle other work, depending on its design.
+
+A task may have states such as:
+- Queued
+- Assigned
+- Running
+- Waiting
+- Completed
+- Failed
+- Cancelled
+
+These are illustrative task states, not an additional mandatory lifecycle model.
+
+One long-running agent may handle many tasks over its lifetime. A task can complete without the agent itself being stopped or retired.
+
+### Example: lifecycle of the Market Data Collector
+
+Consider AGENT-001, the Market Data Collector.
+
+1. It is created and given an identity.
+2. Its role and configuration are assigned.
+3. It initializes by loading approved settings and checking access to its required sources and destination.
+4. It becomes Ready after the necessary checks pass.
+5. A scheduled trigger assigns a collection task, and it enters Running.
+6. One source becomes temporarily unavailable. The task may wait, retry within its limits or continue in a permitted reduced mode.
+7. The agent completes the task, records the result and returns to Ready.
+8. Later, an approved update is required. The agent may be paused or stopped for maintenance, then initialized and returned to service.
+9. When the service is no longer needed, it is retired through an authorised decommissioning process.
+
+This example illustrates why the agent's lifecycle is longer than any single task.
+
+### Pausing, stopping, failing and retiring are different
+
+These terms should not be treated as interchangeable.
+
+- **Paused:** operation is deliberately suspended and may resume from a defined point.
+- **Stopped:** the current operating process has ended. The agent may be started again.
+- **Failed:** an unexpected condition has prevented normal operation. The system may need investigation or recovery.
+- **Retired:** the agent has been permanently withdrawn from service and should not return to normal operation.
+
+A failed agent is not automatically retired. A stopped agent is not necessarily failed. A paused agent may still retain its identity and configuration.
+
+### Recovery and restart
+
+When an agent fails, the system should not blindly restart it without considering the cause and the task's current condition.
+
+A recovery procedure may:
+1. Record the failure and preserve relevant state and evidence.
+2. Identify whether the problem is transient, persistent or caused by invalid configuration, permissions or input.
+3. Decide whether retry, restart, rollback, repair or human intervention is appropriate.
+4. Check that the agent still has valid configuration and authority.
+5. Restore or reconstruct necessary task context safely.
+6. Resume only when the required readiness checks pass.
+7. Record the recovery outcome.
+
+The system must consider whether repeating an action could create duplicate or harmful effects. For example, retrying a payment or external message without checking whether the first attempt succeeded could cause the action to happen twice.
+
+### Graceful shutdown
+
+A controlled shutdown should avoid abandoning work or leaving the system in an uncertain state.
+
+Depending on the agent and task, shutdown may:
+- Stop accepting new tasks.
+- Allow safe in-progress work to finish, or cancel it according to policy.
+- Save necessary task state and outputs.
+- Record unfinished work and its status.
+- Close connections and release resources.
+- Remove temporary credentials or access where appropriate.
+- Record the shutdown outcome.
+
+Some urgent failures require immediate termination instead. That should be treated as a distinct emergency path, with recovery and evidence preservation considered where possible.
+
+### Retirement and decommissioning
+
+Retirement is the final withdrawal of an agent from service.
+
+A controlled retirement process may:
+- Confirm that retirement is authorised.
+- Stop new work from being assigned.
+- Complete, transfer or cancel outstanding tasks.
+- Revoke credentials, permissions and external access.
+- Preserve required records and accountability evidence.
+- Handle stored data according to retention and deletion requirements.
+- Release or remove allocated resources.
+- Update the system's agent registry so the retired identity cannot be started accidentally.
+
+Retiring an agent should not mean deleting all historical evidence needed for accountability. Records should be retained or disposed of according to applicable policy.
+
+### Principles established
+
+- Lifecycle describes the agent's journey; state describes its current operational condition.
+- Define states and transitions according to actual system requirements; no single vocabulary is universal.
+- Distinguish agent state from the state of an individual task.
+- Paused, stopped, failed and retired have different meanings.
+- Transitions should be triggered by defined events and guarded by required checks and authority.
+- Recovery should consider the cause of failure and the risk of repeating an action.
+- Shutdown should handle active work, state, connections and resources deliberately.
+- Retirement should revoke access and handle outstanding tasks and records without destroying required accountability evidence.
 
 
 No particular implementation technology or framework is assumed.
