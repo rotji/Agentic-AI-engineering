@@ -1,5 +1,16 @@
 # Changelog
 
+## 2026-11-27 — Discipline 2 learning progress
+
+- Covered and documented Chapter 2.2, Interpreting Instructions and Identifying Intent.
+- Distinguished explicit instruction, intended purpose and relevant context.
+- Established a method for identifying requester authority, literal request, scope, deliverable, constraints, context and assumptions.
+- Used the Plateau agricultural producer-mapping instruction to illustrate careful interpretation of producer, product and destination relationships.
+- Clarified the boundary between requested work and additional actions requiring separate authority.
+- Established proceed, disclose-assumption, clarify and defer/escalate responses to uncertainty.
+- Set the next learning point to Chapter 2.3, Goal States and Conditions for Success.
+
+
 ## 2026-11-27 — Discipline 2 practical learning progress
 
 - Began Chapter 2, Goals, Instructions and Problem Formulation.
