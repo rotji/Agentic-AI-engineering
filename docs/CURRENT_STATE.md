@@ -14,8 +14,8 @@ Agentic AI Engineering
 - **Chapter 7 status:** Complete (subsections 7.1–7.6)
 - **Review outcome:** One genuine design-synthesis gap identified
 - **Current chapter:** 8 — From Requirements to Agent Architecture (in progress)
-- **Covered subsections:** 8.1 Problem Framing and Agent Suitability; 8.2 Requirements, Constraints and Operating Context; 8.3 Capability and Responsibility Mapping
-- **Next subsection:** 8.4 — Selecting the High-Level Architecture Shape
+- **Covered subsections:** 8.1 Problem Framing and Agent Suitability; 8.2 Requirements, Constraints and Operating Context; 8.3 Capability and Responsibility Mapping; 8.4 Selecting the High-Level Architecture Shape
+- **Next subsection:** 8.5 — Component Boundaries, Interfaces and Flows
 
 ## Completed chapter coverage
 
@@ -233,6 +233,20 @@ Each defined responsibility should have a clear owner, identified contributors, 
 
 Principles: derive capabilities from requirements; avoid creating an agent for every activity; use the simplest suitable provider; keep ownership clear; define important handoffs; preserve evidence status; record unresolved assumptions and gaps.
 
+
+
+### 8.4 Selecting the High-Level Architecture Shape
+
+Architecture shape is the broad arrangement of system components and responsibilities. The lesson compared conventional software or automation without agents, a single-agent design, one agent supported by workflows, multi-agent systems and hybrid systems.
+
+The selection principle is to begin with the simplest sufficient arrangement. A single agent may suit coherent, bounded adaptive work that shares context and can be owned clearly. Multiple agents may be justified by distinct responsibilities, separate contexts or permissions, parallel work, independent checking, lifecycle or scaling needs, or operational isolation. The coordination, testing, monitoring and maintenance overhead must be weighed against those benefits.
+
+Hybrid systems combine agents with conventional software, automation, workflows, external services and people. The agricultural intelligence example used scheduled collection, deterministic parsing and validation, adaptive investigation where justified, human review for consequential findings and controlled notification after approval. This remains illustrative, not a final implementation commitment.
+
+The lesson also distinguished architecture shape from autonomy: a single agent can have high autonomy within limited authority, and a multi-agent system can remain under close human supervision. Coordinator-led, distributed and mixed arrangements were introduced only as high-level organisational choices; detailed orchestration remains in Discipline 6 and self-governing arrangements in Agentic Governance.
+
+Principles: select the simplest sufficient architecture; do not make an agent for every capability; use multiple agents only when real separation benefits justify coordination overhead; preserve human control and accountability where required; document alternatives and the reasons for the chosen shape.
+
 ## Important project boundaries
 
 - Do not divert the learning sequence into detailed platform or tool evaluations before a relevant need arises.
@@ -242,4 +256,4 @@ Principles: derive capabilities from requirements; avoid creating an agent for e
 
 ## Next action
 
-Continue with **Discipline 1 → Chapter 8 → 8.4 Selecting the High-Level Architecture Shape**. Chapter 8 is in progress; do not treat the remaining planned subsections as lessons already covered.
+Continue with **Discipline 1 → Chapter 8 → 8.5 Component Boundaries, Interfaces and Flows**. Chapter 8 is in progress; do not treat the remaining planned subsections as lessons already covered.
