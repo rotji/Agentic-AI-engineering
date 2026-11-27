@@ -4,6 +4,13 @@ Significant changes to the project's structure, curriculum, decisions and learni
 
 ## 2026-11-27 — Chapter 6 learning progress
 
+- Covered and documented Chapter 6.4, Agent Authority.
+- Distinguished responsibility, authority and technical capability.
+- Documented dimensions of authority, including decisions, data, actions, resources, scope, conditions, delegation and approvals.
+- Clarified the difference between authority and autonomy.
+- Established least privilege, explicit permission boundaries and system-enforced authorization as design principles.
+- Updated the project continuation point to Chapter 6.5, Agent Boundaries.
+
 - Covered and documented Chapter 6.2, Agent Roles.
 - Covered and documented Chapter 6.3, Agent Responsibilities.
 - Clarified the distinction between identity, role, responsibility, task and authority.
