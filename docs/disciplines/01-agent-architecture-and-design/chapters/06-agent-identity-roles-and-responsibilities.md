@@ -362,8 +362,7 @@ The tests should verify the actual system behaviour and enforcement, not merely 
 
 ## Remaining subsections
 
-- **6.5 Agent Boundaries** — what an agent must not do or exceed.
 - **6.6 Agent Relationships** — which other agents it can communicate or collaborate with.
 - **6.7 Agent Accountability** — how its actions and performance are traced, assessed and governed.
 
-Continue with 6.5 Agent Boundaries. Do not treat the remaining subsection headings as lessons already covered.
+Continue with 6.6 Agent Relationships. Do not treat the remaining subsection headings as lessons already covered.
