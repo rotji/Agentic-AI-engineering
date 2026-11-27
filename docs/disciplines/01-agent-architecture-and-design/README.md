@@ -14,7 +14,7 @@ Understand the structure and behaviour of an individual agent before studying th
 | 4 | Agent vs Chatbot vs Workflow vs Automation vs Autonomous System | Covered |
 | 5 | Autonomy Levels and the Autonomy Spectrum | Covered |
 | 6 | Agent Identity, Roles and Responsibilities | Covered |
-| 7 | Agent Configuration and Lifecycle | Planned |
+| 7 | Agent Configuration and Lifecycle | In progress |
 
 ## Chapter documents
 
@@ -28,7 +28,7 @@ Understand the structure and behaviour of an individual agent before studying th
 
 ## Continuation point
 
-Chapter 6 is covered (subsections 6.1–6.7). Chapter 7, Agent Configuration and Lifecycle, is planned and has not yet been taught. Continue with Chapter 7.1.
+Chapter 6 is covered (subsections 6.1–6.7). Chapter 7 is in progress: 7.1 Agent Configuration is covered. Continue with 7.2 Configuration Elements.
 
 ## Learning note
 
