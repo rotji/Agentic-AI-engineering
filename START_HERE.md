@@ -10,7 +10,8 @@ This repository preserves the learning path, concepts, decisions, and progress o
 - **Current discipline:** 1 — Agent Architecture and Design.
 - **Completed chapters:** 1–7.
 - **Last completed chapter:** 7 — Agent Configuration and Lifecycle (subsections 7.1–7.6).
-- **Next learning step:** Review remaining Discipline 1 coverage and identify any essential architecture gap before moving to Discipline 2.
+- **Review outcome:** Chapter 8 is justified as a final design-synthesis chapter.
+- **Next learning step:** 8.1 — Problem Framing and Agent Suitability.
 
 ## Read in this order
 
