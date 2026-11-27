@@ -88,4 +88,4 @@ This file records decisions that shape the learning project. It is not a list of
 
 **Scope boundary:** This discipline covers forming and revising plans, not executing tools, engineering persistent memory/retrieval, implementing runtime loops or coordinating work across multiple agents. Those responsibilities remain in their assigned disciplines.
 
-**Status:** Active. Scope and sequence defined; lessons not yet started.
+**Status:** Active. Scope and sequence defined; Chapter 1.1 covered.
