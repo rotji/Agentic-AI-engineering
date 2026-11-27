@@ -9,7 +9,7 @@ Before continuing a session:
 3. Continue from the next unfinished subsection.
 4. Do not repeat completed lessons unless the user asks to revisit or deepen them.
 
-Current continuation point: **Discipline 2 → Chapter 2 → 2.2 Interpreting Instructions and Identifying Intent.** Chapter 1 is complete; subsection 2.1 is covered.
+Current continuation point: **Discipline 2 → Chapter 2 → 2.3 Goal States and Conditions for Success.** Chapter 1 is complete; subsections 2.1–2.2 are covered.
 
 ## 2. Document a lesson
 
