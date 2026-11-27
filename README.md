@@ -12,8 +12,8 @@ Read [START_HERE.md](START_HERE.md) for the project entry point and documentatio
 - **Completed discipline:** 1 — Agent Architecture and Design (Chapters 1–8).
 - **Current discipline:** 2 — Reasoning and Planning (in progress; sequence defined).
 - **Completed chapter:** Chapter 1 — Foundations of Reasoning and Planning (subsections 1.1–1.4).
-- **Completed subsection:** Chapter 2.1 — Objectives, Goals and Desired Outcomes.
-- **Next learning step:** Chapter 2.2 — Interpreting Instructions and Identifying Intent.
+- **Completed subsections:** Chapter 2.1 — Objectives, Goals and Desired Outcomes; Chapter 2.2 — Interpreting Instructions and Identifying Intent.
+- **Next learning step:** Chapter 2.3 — Goal States and Conditions for Success.
 - **Practical direction:** Agriculture is the first pilot path; solution discovery, assembly and validation proceed alongside the curriculum.
 
 ## Practical operating method
