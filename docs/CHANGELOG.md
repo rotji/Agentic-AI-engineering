@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-11-27 — Discipline 2 started
+
+- Began Chapter 1, Foundations of Reasoning and Planning.
+- Covered and documented subsection 1.1, What Reasoning and Planning Mean in Agentic Systems.
+- Defined reasoning as interpreting information and assessing conclusions, and planning as formulating a possible course of action toward an objective.
+- Used the agricultural market-price investigation example to distinguish evidence assessment from the proposed investigation plan.
+- Emphasised uncertainty, plan feasibility, authority boundaries and the distinction between planning and completed execution.
+- Set the next learning point to 1.2, Reasoning vs Planning vs Decision-Making vs Execution.
+
+
 ## 2026-11-27 — Discipline 2 scope and learning sequence defined
 
 - Established the scope, learning outcomes and boundaries for Discipline 2, Reasoning and Planning.
