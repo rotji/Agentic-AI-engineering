@@ -82,7 +82,7 @@ It will not select implementation technologies, prescribe an infrastructure stac
 
 ## 7. Proposed Chapter 8 learning scope
 
-The following is an outline; the lessons have not yet been taught.
+At the time of the initial review, the following was a proposed outline. All seven subsections were subsequently taught and documented; see the final review outcome below.
 
 1. **8.1 Problem Framing and Agent Suitability** — define the problem and decide whether an agent is justified compared with simpler alternatives.
 2. **8.2 Requirements, Constraints and Operating Context** — identify desired outcomes, users, environment, dependencies, risks and quality constraints.
@@ -94,11 +94,9 @@ The following is an outline; the lessons have not yet been taught.
 
 The outline may be refined as each lesson is taught.
 
-## 8. Review conclusion
+## 8. Initial review conclusion
 
-Discipline 1 is not yet complete. Chapters 1–7 establish the main concepts and agent-level lifecycle, but Chapter 8 is needed to show how to assemble those concepts into a coherent architecture for a real problem.
-
-After Chapter 8, review the discipline once more. If the design method is clear and the remaining specialist topics are properly assigned to later disciplines, transition to Discipline 2 — Reasoning and Planning.
+At the time of the initial review, Discipline 1 was not yet complete. Chapters 1–7 established the main concepts and agent-level lifecycle, but Chapter 8 was needed to show how to assemble those concepts into a coherent architecture for a real problem. The final review after teaching Chapter 8 is recorded in Section 9.
 
 ## 9. Final review after completion of Chapter 8
 
