@@ -251,7 +251,7 @@ The pilot may initially use no autonomous agents at all. Conventional software, 
 
 **Status:** Discovery charter drafted; five candidate sources/platforms have received initial desk assessment in the Discovery Register. The problem hypothesis, intended users, initial sample scope, evidence thresholds and final solution remain unvalidated.
 
-**Next practical action:** Build a source-and-problem discovery register. For each candidate source or user problem, record the claim or need, source/person type, geographic and product coverage, observation type, access conditions, freshness, evidence quality, limitations and what needs to be verified.
+**Next practical action:** Continue validating the five source candidates already recorded in the Discovery Register: obtain raw files where accessible, confirm actual geographic/product coverage and observed-versus-estimated data, examine collection methods and data rights, and separately establish whether potential users experience a material problem. Do not select the first test scope until these checks support it.
 
 The first concrete test scope should be selected from this evidence, not assumed in advance.
 
