@@ -10,7 +10,9 @@ This repository preserves the learning path, concepts, decisions, and progress o
 - **Current discipline:** 1 — Agent Architecture and Design.
 - **Current chapter:** 6 — Agent Identity, Roles and Responsibilities.
 - **Last completed chapter:** 6 — Agent Identity, Roles and Responsibilities (subsections 6.1–6.7).
-- **Next learning step:** Chapter 7 — Agent Configuration and Lifecycle (planned).
+- **Current chapter:** 7 — Agent Configuration and Lifecycle.
+- **Last covered subsection:** 7.1 — Agent Configuration.
+- **Next learning step:** 7.2 — Configuration Elements.
 
 ## Read in this order
 
