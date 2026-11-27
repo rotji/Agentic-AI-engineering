@@ -9,7 +9,7 @@ Before continuing a session:
 3. Continue from the next unfinished subsection.
 4. Do not repeat completed lessons unless the user asks to revisit or deepen them.
 
-Current continuation point: **Discipline 2 → Chapter 1 → 1.3 How Reasoning and Planning Fit into an Agent's Operation.** Subsections 1.1–1.2 are covered.
+Current continuation point: **Discipline 2 → Chapter 1 → 1.4 Deliberative and Reactive Behaviour.** Subsections 1.1–1.3 are covered.
 
 ## 2. Document a lesson
 
