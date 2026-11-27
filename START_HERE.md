@@ -11,8 +11,8 @@ This repository preserves the learning path, concepts, decisions, and progress o
 - **Final review:** Completed; ready to progress to Discipline 2.
 - **Next discipline:** 2 — Reasoning and Planning.
 - **Discipline 2 status:** In progress; scope and 10-chapter learning sequence defined.
-- **Last covered subsections:** Chapter 1.1 — What Reasoning and Planning Mean in Agentic Systems; Chapter 1.2 — Reasoning vs Planning vs Decision-Making vs Execution.
-- **Next learning step:** Chapter 1.3 — How Reasoning and Planning Fit into an Agent's Operation.
+- **Last covered subsections:** Chapter 1.1 — What Reasoning and Planning Mean in Agentic Systems; Chapter 1.2 — Reasoning vs Planning vs Decision-Making vs Execution; Chapter 1.3 — How Reasoning and Planning Fit into an Agent's Operation.
+- **Next learning step:** Chapter 1.4 — Deliberative and Reactive Behaviour.
 
 ## Read in this order
 
