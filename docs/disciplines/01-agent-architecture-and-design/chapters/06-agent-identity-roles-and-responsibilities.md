@@ -168,11 +168,105 @@ The people or organisations that design, deploy, operate and authorise a system 
 - An agent should report limitations and escalate when it cannot fulfil a responsibility safely or reliably.
 - Assigning operational responsibility to an agent does not automatically transfer ultimate organisational or legal accountability to the software.
 
+## 6.4 Agent Authority
+
+### Core question
+
+Which decisions and actions is an agent permitted to make, and under what conditions?
+
+Agent authority defines the scope of decisions, access and actions that the system permits an agent to exercise. It establishes what the agent is authorised to do, rather than merely what it is technically capable of doing.
+
+An agent may be responsible for achieving an outcome without being authorised to take every action that could contribute to that outcome.
+
+### Authority is different from responsibility and capability
+
+- **Responsibility:** what the agent is expected to accomplish.
+- **Authority:** what the agent is permitted to decide or do.
+- **Capability:** what the agent is technically able to do.
+
+These must be considered separately.
+
+For example, an agent may be technically capable of sending messages because a messaging function is available to it. That does not automatically mean it has permission to contact every person or publish every message.
+
+### Main dimensions of agent authority
+
+A role's authority should make clear:
+
+1. **Decision authority:** which decisions the agent may make independently, such as classifying information, prioritising work or recommending an action.
+2. **Data authority:** which information it may read, create, modify, export or delete.
+3. **Action authority:** which operations it may perform, such as sending an internal notification, publishing a report or initiating a transaction.
+4. **Resource authority:** which resources it may consume or commit, including money, computing capacity, quotas or other assets.
+5. **Scope authority:** the permitted subjects, markets, locations, customers or systems within which it may act.
+6. **Conditional authority:** the circumstances, thresholds, duration and conditions under which permission applies.
+7. **Delegation authority:** whether it may assign work or pass specific permissions to another agent.
+8. **Approval and escalation:** which decisions require a human or another authorised entity to approve them.
+
+Not every agent needs every type of authority. Grant only what is relevant to its work.
+
+### Example: authority across agricultural intelligence agents
+
+| Agent | Example of permitted authority | Example of restricted action |
+|---|---|---|
+| Market Data Collector | Read approved sources and submit collected observations | Delete verified historical records |
+| Information Verification Agent | Assess evidence and assign a verification status | Alter the original source or invent missing evidence |
+| Market Analyst | Read approved datasets and prepare analysis | Publish a public market warning without approval |
+| Opportunity Discovery Agent | Investigate opportunities and prepare recommendations | Commit funds or enter contracts |
+| Reporting Agent | Send approved routine internal reports | Issue high-impact public statements without required approval |
+
+These are illustrative allocations, not final production permissions.
+
+### Authority versus autonomy
+
+Authority and autonomy are connected, but they are not the same.
+
+- **Authority** defines the actions and decisions an agent is allowed to perform.
+- **Autonomy** describes how independently it can decide and act within the permitted scope.
+
+An agent can have high autonomy within a narrow authority. For example, it might independently collect and organise public price data every day, but have no permission to purchase produce or publish public announcements.
+
+Increasing autonomy should not automatically increase authority.
+
+### The principle of least privilege
+
+Give each agent only the minimum authority necessary to fulfil its assigned responsibilities.
+
+This reduces the consequences of mistakes, compromised access, misunderstood instructions or unexpected behaviour.
+
+Authority should also be:
+- Explicit rather than assumed.
+- Limited to an appropriate scope.
+- Conditional where necessary.
+- Revocable when no longer needed.
+- Enforced by the surrounding system, not merely requested in an instruction to the AI model.
+
+An agent should not be able to grant itself greater authority simply because it believes doing so would help complete its objective.
+
+### Approval and escalation
+
+Some actions can be permitted automatically, while others should require approval.
+
+For example:
+- Reading approved market data may be allowed routinely.
+- Preparing an internal report may be allowed independently.
+- Publishing a sensitive public alert may require human approval.
+- Committing significant funds may require additional authorisation.
+
+The required approval should reflect the action's potential impact, reversibility and risk.
+
+### Principles established
+
+- Responsibility does not automatically confer authority.
+- Technical capability does not automatically confer permission.
+- Authority must be explicit, scoped and proportionate to the agent's duties.
+- Apply least privilege: grant only the authority needed.
+- Autonomy and authority must be designed separately.
+- High-impact or irreversible actions may require additional approval.
+- Agents must not be able to unilaterally expand their own authority.
+
 ## Remaining subsections
 
-- **6.4 Agent Authority** — which decisions and actions an agent is permitted to make.
 - **6.5 Agent Boundaries** — what an agent must not do or exceed.
 - **6.6 Agent Relationships** — which other agents it can communicate or collaborate with.
 - **6.7 Agent Accountability** — how its actions and performance are traced, assessed and governed.
 
-Continue with 6.4 Agent Authority. Do not treat the remaining subsection headings as lessons already covered.
+Continue with 6.5 Agent Boundaries. Do not treat the remaining subsection headings as lessons already covered.
