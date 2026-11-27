@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-11-27 — Practical pilot and cross-sector transfer direction
+
+- Clarified that Agentic AI Engineering is an integrated learning, solution-discovery, assembly, engineering and validation journey, not a theory-only course.
+- Established agriculture as the first practical pilot path rather than only an illustrative teaching example.
+- Established the cycle: identify a real problem, study relevant concepts, define requirements, discover existing solutions, assemble, test, build only genuine gaps, document evidence and assess transferability.
+- Added a sector-transfer method for assessing reusable principles across real estate, mining, healthcare and other domains without blindly copying sector-specific assumptions or controls.
+- Clarified that practical pilot work may advance alongside the 13-discipline curriculum, with learning progress and build progress tracked separately.
+- Recorded decision D-011 and added the Practical Build and Sector Transfer Method.
+
+
 ## 2026-11-27 — Discipline 2 learning progress
 
 - Completed and documented Chapter 1.4, Deliberative and Reactive Behaviour.
