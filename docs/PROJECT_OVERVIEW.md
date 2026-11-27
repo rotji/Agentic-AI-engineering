@@ -46,7 +46,7 @@ Agriculture is the first practical pilot path. It will be used to identify real 
 
 When a capability or principle is supported by evidence in agriculture, we will examine its applicability to other sectors such as real estate, mining and healthcare. We will transfer validated principles, not blindly copy sector-specific data models, decision rules, autonomy levels or controls. Each sector requires its own evidence, workflow and risk assessment.
 
-See [Practical Build and Sector Transfer Method](PRACTICAL_BUILD_AND_SECTOR_TRANSFER.md) for the operating method.
+See [Practical Build and Sector Transfer Method](PRACTICAL_BUILD_AND_SECTOR_TRANSFER.md) for the operating method and the [provisional Agricultural Pilot Charter](practical-pilot/AGRICULTURAL_PILOT_CHARTER.md) for the current discovery scope.
 
 ## 5. Working end goals and practical milestones
 
@@ -71,6 +71,6 @@ Blockchain is not a mandatory component of agentic AI. It will be considered onl
 
 ## 7. Project status
 
-Discipline 1 is complete. Discipline 2 is in progress; Chapters 1–2 are complete, and Chapter 3.1, Deductive Reasoning, is covered. The next learning point is Chapter 3.2, Inductive Reasoning. Agriculture is the first practical pilot path. The first bounded pilot use case and its acceptance criteria remain to be defined. Practical discovery and validation should develop alongside the learning journey, not wait for completion of the curriculum.
+Discipline 1 is complete. Discipline 2 is in progress; Chapters 1–2 are complete, and Chapter 3.1, Deductive Reasoning, and 3.2, Inductive Reasoning, are covered. The next learning point is Chapter 3.3, Abductive Reasoning and Explanation. Agriculture is the first practical pilot path. The first bounded pilot use case and its acceptance criteria remain to be defined. Practical discovery and validation should develop alongside the learning journey, not wait for completion of the curriculum.
 
 See [Current State](CURRENT_STATE.md) for the exact continuation point.
