@@ -5,11 +5,11 @@
 Before continuing a session:
 
 1. Read [Current State](CURRENT_STATE.md).
-2. Open the relevant chapter document from the [Discipline 1 guide](disciplines/01-agent-architecture-and-design/README.md).
+2. Open the relevant chapter document from the current discipline guide under `docs/disciplines/`.
 3. Continue from the next unfinished subsection.
 4. Do not repeat completed lessons unless the user asks to revisit or deepen them.
 
-Current continuation point: **Discipline 2 — Reasoning and Planning: define its scope and learning sequence before beginning the first lesson.**
+Current continuation point: **Discipline 2 → Chapter 1 → 1.1 What Reasoning and Planning Mean in Agentic Systems.** The scope and sequence are defined; lessons have not yet started.
 
 ## 2. Document a lesson
 
