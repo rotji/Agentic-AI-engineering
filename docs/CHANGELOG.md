@@ -1,5 +1,17 @@
 # Changelog
 
+## 2026-11-27 — Chapter 3.3 and initial agricultural source discovery
+
+- Covered and documented Chapter 3.3, Abductive Reasoning and Explanation.
+- Distinguished abduction from deduction and induction, and explained why a plausible explanation remains a hypothesis.
+- Covered competing explanations, supporting and contradicting evidence, discriminating tests and common abductive errors.
+- Applied abductive reasoning to an unusual agricultural market quotation without claiming a cause.
+- Conducted initial desk research on five candidate sources/platforms: NBS Selected Food Price Watch, World Bank Nigeria food price estimates, FAO FPMA, PLACOM and Agromate Intelligence.
+- Populated the agricultural discovery register with source descriptions, preliminary status, limitations and follow-up checks.
+- Identified a possible Plateau local-market price coverage and traceability gap as a hypothesis only; no unmet user need has been confirmed.
+- Recorded important limitations: NBS monthly selected-food reports and state/national averages; World Bank's indexed/opened version discrepancy and model-imputed values; FAO series granularity to check; PLACOM indicative prices with methodology to verify; and Agromate's distinction between nearest external survey markets and its own Plateau pilot estimates.
+- Set the next learning point to Chapter 3.4, Causal Reasoning, Correlation and Analogy.
+
 ## 2026-11-27 — Parallel learning and practical pilot progress
 
 - Covered and documented Chapter 3.2, Inductive Reasoning.
