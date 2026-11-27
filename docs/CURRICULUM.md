@@ -25,7 +25,7 @@ The project currently follows 13 disciplines. The sequence is a learning structu
 ## Discipline descriptions
 
 ### 1. Agent Architecture and Design
-Understand what an agent is, its components, identity, boundaries, lifecycle, roles, responsibilities and autonomy.
+Understand what an agent is, its components, identity, boundaries, lifecycle, roles, responsibilities and autonomy; learn how to translate problem requirements into a coherent, technology-neutral agent architecture.
 
 ### 2. Reasoning and Planning
 Study how agents interpret objectives, reason through problems, decompose tasks, plan, select actions and revise plans.
