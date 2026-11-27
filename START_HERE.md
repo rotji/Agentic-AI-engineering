@@ -12,8 +12,8 @@ This repository preserves the learning path, concepts, decisions, and progress o
 - **Last completed chapter:** 7 — Agent Configuration and Lifecycle (subsections 7.1–7.6).
 - **Review outcome:** Chapter 8 is justified as a final design-synthesis chapter.
 - **Current chapter:** 8 — From Requirements to Agent Architecture.
-- **Last covered subsection:** 8.3 — Capability and Responsibility Mapping.
-- **Next learning step:** 8.4 — Selecting the High-Level Architecture Shape.
+- **Last covered subsection:** 8.4 — Selecting the High-Level Architecture Shape.
+- **Next learning step:** 8.5 — Component Boundaries, Interfaces and Flows.
 
 ## Read in this order
 
