@@ -1,5 +1,16 @@
 # Changelog
 
+## 2026-11-27 — Chapter 8 and Discipline 1 completed
+
+- Covered and documented subsection 8.7, Producing and Reviewing an Architecture Blueprint.
+- Established the purpose, scope, contents, review process and maintenance of an architecture blueprint.
+- Created a reusable, technology-neutral Agent Architecture Blueprint Template.
+- Completed Chapter 8 (subsections 8.1–8.7).
+- Performed the final Discipline 1 review and confirmed that no additional foundational architecture chapter is currently required.
+- Marked Discipline 1 complete for progression to Discipline 2.
+- Set the next action to define the scope and learning sequence for Discipline 2, Reasoning and Planning.
+
+
 ## 2026-11-27 — Chapter 8 learning progress
 
 - Covered and documented subsection 8.6, Integrating Autonomy, Authority and Human Oversight.
