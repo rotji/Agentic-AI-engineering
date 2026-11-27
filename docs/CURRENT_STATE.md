@@ -13,8 +13,8 @@ Agentic AI Engineering
 - **Completed chapter coverage:** Chapters 1–5
 - **Chapter 6 status:** Covered (subsections 6.1–6.7)
 - **Current chapter:** 7 — Agent Configuration and Lifecycle
-- **Covered subsections:** 7.1 Agent Configuration; 7.2 Configuration Elements; 7.3 Initialization and Startup
-- **Next subsection:** 7.4 — Agent Lifecycle and States
+- **Covered subsections:** 7.1 Agent Configuration; 7.2 Configuration Elements; 7.3 Initialization and Startup; 7.4 Agent Lifecycle and States
+- **Next subsection:** 7.5 — Configuration and Version Changes
 
 ## Completed chapter coverage
 
@@ -142,6 +142,16 @@ For the agricultural Market Data Collector, the startup flow checks its identity
 
 Principles: validate before execution; distinguish liveness from readiness; do not bypass permissions; protect credentials; define failure and degraded-mode handling; record startup outcomes and configuration versions.
 
+
+
+### 7.4 Agent Lifecycle and States
+
+An agent lifecycle describes the journey from creation and configuration through initialization, operation, maintenance, shutdown and eventual retirement. An agent state describes its current operating condition. The project framework introduced states such as Created, Configuring, Initializing, Ready, Running, Waiting or Blocked, Paused, Failed, Recovering, Stopping, Stopped and Retired. These are illustrative, not a universal standard.
+
+A state machine defines permitted states and transitions, the events that trigger them, required checks and who is authorised to request them. Agent state must be distinguished from task state: one agent may handle many tasks, and a task can complete while the agent remains ready for further work.
+
+Paused, stopped, failed and retired have different meanings. Recovery should establish the cause of failure, preserve relevant evidence and state, check authority and consider whether retrying could duplicate an external action. Graceful shutdown should handle new and in-progress work, save necessary state, close connections and release resources. Retirement should stop new assignments, handle outstanding work, revoke access and preserve records required for accountability.
+
 ## Important project boundaries
 
 - Do not divert the learning sequence into detailed platform or tool evaluations before a relevant need arises.
@@ -151,4 +161,4 @@ Principles: validate before execution; distinguish liveness from readiness; do n
 
 ## Next action
 
-Continue with **Discipline 1 → Chapter 7 → 7.4 Agent Lifecycle and States**. Chapter 7 is in progress; do not treat the remaining planned subsections as lessons already covered.
+Continue with **Discipline 1 → Chapter 7 → 7.5 Configuration and Version Changes**. Chapter 7 is in progress; do not treat the remaining planned subsections as lessons already covered.
