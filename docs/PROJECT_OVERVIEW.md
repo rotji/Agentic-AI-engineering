@@ -71,6 +71,6 @@ Blockchain is not a mandatory component of agentic AI. It will be considered onl
 
 ## 7. Project status
 
-Discipline 1 is complete. Discipline 2 is in progress; Chapters 1–2 are complete, and Chapter 3.1, Deductive Reasoning, and 3.2, Inductive Reasoning, are covered. The next learning point is Chapter 3.3, Abductive Reasoning and Explanation. Agriculture is the first practical pilot path. The first bounded pilot use case and its acceptance criteria remain to be defined. Practical discovery and validation should develop alongside the learning journey, not wait for completion of the curriculum.
+Discipline 1 is complete. Discipline 2 is in progress; Chapters 1–2 are complete, and Chapter 3.1, Deductive Reasoning; 3.2, Inductive Reasoning; and 3.3, Abductive Reasoning and Explanation, are covered. The next learning point is Chapter 3.4, Causal Reasoning, Correlation and Analogy. Agriculture is the first practical pilot path. The first bounded pilot use case and its acceptance criteria remain to be defined. Practical discovery and validation should develop alongside the learning journey, not wait for completion of the curriculum.
 
 See [Current State](CURRENT_STATE.md) for the exact continuation point.
