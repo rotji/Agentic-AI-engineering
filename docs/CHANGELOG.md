@@ -2,6 +2,17 @@
 
 ## 2026-11-27 — Discipline 2 learning progress
 
+- Began Chapter 3, Reasoning Patterns and Inference.
+- Covered and documented subsection 3.1, Deductive Reasoning.
+- Distinguished premises, conclusions and inference, and explained logical validity versus soundness.
+- Covered categorical reasoning, modus ponens, modus tollens, affirming the consequent and denying the antecedent.
+- Explained necessary and sufficient conditions and the danger of reversing one-way rules.
+- Applied deduction to agricultural producer-location evidence and market-observation classification.
+- Emphasised that valid logic does not establish the truth of premises and that missing evidence does not prove an event did not occur.
+- Set the next learning point to Chapter 3.2, Inductive Reasoning.
+
+## 2026-11-27 — Discipline 2 learning progress
+
 - Covered and documented subsection 2.5, Ambiguity, Missing Requirements and Clarification.
 - Distinguished ambiguity, missing requirements, underspecification, inconsistency and evidence uncertainty.
 - Established response options: proceed, disclose a low-risk assumption, clarify, provide an honest partial result, or stop/defer/escalate.
