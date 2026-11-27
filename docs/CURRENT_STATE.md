@@ -216,4 +216,4 @@ Principles: frame the problem first; distinguish problem, outcome and solution; 
 
 ## Next action
 
-Chapter 7 is complete. Next, review the Discipline 1 curriculum coverage and identify any remaining essential Agent Architecture and Design topics before transitioning to Discipline 2. Do not invent an additional chapter unless a genuine learning gap is identified.
+Continue with **Discipline 1 → Chapter 8 → 8.2 Requirements, Constraints and Operating Context**. Chapter 8 is in progress; do not treat the remaining planned subsections as lessons already covered.
