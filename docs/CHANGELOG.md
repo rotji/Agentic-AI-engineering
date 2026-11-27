@@ -2,6 +2,16 @@
 
 ## 2026-11-27 — Chapter 8 learning progress
 
+- Covered and documented subsection 8.3, Capability and Responsibility Mapping.
+- Distinguished requirements, capabilities, responsibilities, components and tools.
+- Documented capability derivation, decomposition and classification by work type.
+- Mapped agricultural intelligence requirements to a mixed set of candidate providers: conventional software, automation, agents, human review and external dependencies.
+- Established clear responsibility ownership, contributor roles, inputs, outputs, acceptance conditions, boundaries and escalation.
+- Set the next learning point to 8.4, Selecting the High-Level Architecture Shape.
+
+
+## 2026-11-27 — Chapter 8 learning progress
+
 - Covered and documented subsection 8.2, Requirements, Constraints and Operating Context.
 - Distinguished functional requirements, quality requirements, constraints and operating context.
 - Documented stakeholders, actors, data requirements, dependencies, assumptions, preferences, risks and open questions.
