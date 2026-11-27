@@ -1,5 +1,16 @@
 # Changelog
 
+## 2026-11-27 — Discipline 2 practical learning progress
+
+- Began Chapter 2, Goals, Instructions and Problem Formulation.
+- Covered and documented subsection 2.1, Objectives, Goals and Desired Outcomes.
+- Established project working definitions for objective, goal, desired outcome and task, while noting that terminology varies across methodologies.
+- Distinguished outputs, outcomes and longer-term impacts.
+- Connected the lesson to the practical agricultural pilot and recorded a provisional objective for refinement, not an approved system specification.
+- Clarified that a bounded test scope does not permanently narrow the wider agricultural programme.
+- Set the next learning point to subsection 2.2, Interpreting Instructions and Identifying Intent.
+
+
 ## 2026-11-27 — Practical pilot and cross-sector transfer direction
 
 - Clarified that Agentic AI Engineering is an integrated learning, solution-discovery, assembly, engineering and validation journey, not a theory-only course.
