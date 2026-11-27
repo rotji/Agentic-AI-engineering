@@ -1,5 +1,16 @@
 # Changelog
 
+## 2026-11-27 — Discipline 2 Chapter 3 completed
+
+- Covered and documented subsection 3.5, Hypotheses, Evidence, Confidence and Limitations.
+- Distinguished observations, evidence, hypotheses, inferences and conclusions.
+- Explained claim-specific evidence assessment and separated source reliability, claim verification, evidence status, freshness, representativeness, comparability and inference strength.
+- Covered supporting, contradicting and missing evidence, including the limits of absence-of-evidence arguments.
+- Introduced qualitative confidence reporting, evidence-based reassessment and explicit limitation reporting; warned against invented confidence percentages.
+- Applied claim assessment to the provisional Plateau market-information opportunity hypothesis; it remains weakly supported and is not a validated user problem or confirmed market gap.
+- Completed Chapter 3, Reasoning Patterns and Inference (subsections 3.1–3.5).
+- Set the next learning point to Chapter 4.1, Problem and Environment Representation.
+
 ## 2026-11-27 — Chapter 3.4 and agricultural source verification
 
 - Covered and documented Chapter 3.4, Causal Reasoning, Correlation and Analogy.
