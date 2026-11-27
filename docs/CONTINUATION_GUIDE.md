@@ -9,7 +9,7 @@ Before continuing a session:
 3. Continue from the next unfinished subsection.
 4. Do not repeat completed lessons unless the user asks to revisit or deepen them.
 
-Current continuation point: **Discipline 2 → Chapter 1 → 1.1 What Reasoning and Planning Mean in Agentic Systems.** The scope and sequence are defined; lessons have not yet started.
+Current continuation point: **Discipline 2 → Chapter 1 → 1.2 Reasoning vs Planning vs Decision-Making vs Execution.** Subsection 1.1 is covered.
 
 ## 2. Document a lesson
 
