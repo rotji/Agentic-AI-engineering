@@ -12,8 +12,8 @@ This repository preserves the learning path, concepts, decisions, and progress o
 - **Last completed chapter:** 7 — Agent Configuration and Lifecycle (subsections 7.1–7.6).
 - **Review outcome:** Chapter 8 is justified as a final design-synthesis chapter.
 - **Current chapter:** 8 — From Requirements to Agent Architecture.
-- **Last covered subsection:** 8.5 — Component Boundaries, Interfaces and Flows.
-- **Next learning step:** 8.6 — Integrating Autonomy, Authority and Human Oversight.
+- **Last covered subsection:** 8.6 — Integrating Autonomy, Authority and Human Oversight.
+- **Next learning step:** 8.7 — Producing and Reviewing an Architecture Blueprint.
 
 ## Read in this order
 
