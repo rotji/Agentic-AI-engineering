@@ -1769,8 +1769,6 @@ Discipline 1 now has eight chapters. Its coverage review has been updated after 
 The next learning discipline is **Discipline 2 — Reasoning and Planning**. Its detailed learning sequence should be established before the first lesson begins.
 
 
-Continue with **8.7 Producing and Reviewing an Architecture Blueprint**. Subsection 8.7 remains planned and has not yet been taught.
-
 
 ## Next learning step
 
