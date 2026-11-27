@@ -4,6 +4,15 @@ Significant changes to the project's structure, curriculum, decisions and learni
 
 ## 2026-11-27 — Chapter 6 learning progress
 
+- Covered and documented Chapter 6.5, Agent Boundaries.
+- Distinguished permitted authority from the boundaries and constraints that limit an agent's operation.
+- Documented role, data, action, resource, operational, safety, delegation, evidence and change boundaries.
+- Distinguished system-enforced restrictions from behavioural guidance.
+- Established stop, explain and escalate behaviour, and boundary testing as design practices.
+- Updated the project continuation point to Chapter 6.6, Agent Relationships.
+
+## 2026-11-27 — Previous Chapter 6 progress
+
 - Covered and documented Chapter 6.4, Agent Authority.
 - Distinguished responsibility, authority and technical capability.
 - Documented dimensions of authority, including decisions, data, actions, resources, scope, conditions, delegation and approvals.
