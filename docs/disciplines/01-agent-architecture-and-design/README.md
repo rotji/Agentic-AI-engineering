@@ -14,7 +14,7 @@ Understand the structure and behaviour of an individual agent before studying th
 | 4 | Agent vs Chatbot vs Workflow vs Automation vs Autonomous System | Covered |
 | 5 | Autonomy Levels and the Autonomy Spectrum | Covered |
 | 6 | Agent Identity, Roles and Responsibilities | Covered |
-| 7 | Agent Configuration and Lifecycle | In progress |
+| 7 | Agent Configuration and Lifecycle | Covered |
 
 ## Chapter documents
 
@@ -28,7 +28,7 @@ Understand the structure and behaviour of an individual agent before studying th
 
 ## Continuation point
 
-Chapter 6 is covered (subsections 6.1–6.7). Chapter 7 is in progress: 7.1 Agent Configuration, 7.2 Configuration Elements, 7.3 Initialization and Startup, 7.4 Agent Lifecycle and States and 7.5 Configuration and Version Changes are covered. Continue with 7.6 Lifecycle Management and Continuity.
+Chapters 1–7 are covered. Chapter 7 includes subsections 7.1–7.6. Next, review the scope of Discipline 1 and identify any remaining essential architecture topics before transitioning to Discipline 2. Do not add chapters without a demonstrated learning gap.
 
 ## Learning note
 
