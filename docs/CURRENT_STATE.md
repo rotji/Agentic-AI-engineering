@@ -12,7 +12,9 @@ Agentic AI Engineering
 - **Chapter:** 6 — Agent Identity, Roles and Responsibilities
 - **Completed chapter coverage:** Chapters 1–5
 - **Chapter 6 status:** Covered (subsections 6.1–6.7)
-- **Next chapter:** 7 — Agent Configuration and Lifecycle (planned; not yet taught)
+- **Current chapter:** 7 — Agent Configuration and Lifecycle
+- **Covered subsection:** 7.1 — Agent Configuration
+- **Next subsection:** 7.2 — Configuration Elements
 
 ## Completed chapter coverage
 
@@ -98,6 +100,24 @@ Accountability records should be access-controlled, protected against unauthoris
 
 Principles: make consequential actions attributable and reviewable; preserve important handoffs and approvals; distinguish logging, monitoring, auditing and evaluation; respond to failures through containment, investigation, correction and verification; protect records; do not mistake operational agent responsibility for ultimate legal or organisational accountability.
 
+
+
+## Chapter 7 progress
+
+### 7.1 Agent Configuration
+
+Agent configuration is the collection of settings, instructions and references that define how an agent is prepared to operate in a particular purpose and environment. It is broader than a system prompt and may include objectives, model settings, context sources, assigned capabilities, output expectations, schedules, limits and policy references.
+
+Configuration is distinct from:
+- **Identity:** which agent this is.
+- **Role:** what function it performs.
+- **Authority:** what it is permitted to do.
+- **Runtime state:** what is happening with it at the current moment.
+
+Two agents with the same role may have different configurations. A configuration change can alter behaviour without necessarily changing the agent's identity. Configuration should be explicit, controlled, versioned and reviewable, and must not silently override enforced permissions or boundaries.
+
+The agricultural Market Data Collector example illustrated configuration settings such as market coverage, product scope, approved sources, collection schedule, required output fields and operating limits, contrasted with changing runtime information such as current task, progress and pending requests.
+
 ## Important project boundaries
 
 - Do not divert the learning sequence into detailed platform or tool evaluations before a relevant need arises.
@@ -107,4 +127,4 @@ Principles: make consequential actions attributable and reviewable; preserve imp
 
 ## Next action
 
-Begin **Discipline 1 → Chapter 7 — Agent Configuration and Lifecycle**. This chapter is planned, not yet taught. Start by defining what agent configuration contains and why configuration must be distinguished from identity, role, authority and runtime state.
+Continue with **Discipline 1 → Chapter 7 → 7.2 Configuration Elements**. Chapter 7 is in progress; do not treat the remaining planned subsections as lessons already covered.
