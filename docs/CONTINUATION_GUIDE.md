@@ -23,13 +23,22 @@ After a chapter or subsection is covered:
 - Add a concise entry to [Changelog](CHANGELOG.md) when the project state or documentation materially changes.
 - Update [README](../README.md) or [Start Here](../START_HERE.md) only when navigation or top-level status changes.
 
-## 3. Preserve scope
+## 3. Integrate learning with practical building
 
-- Follow the established curriculum order unless a genuine dependency or important gap requires a temporary detour.
-- Do not let a passing mention of a technology turn into an unrelated technology survey.
-- Investigate a tool or platform when a relevant capability is required, not simply because it is advertised or recommended.
-- Prefer the simplest sufficient approach; do not presume that a specialised technology is necessary.
-- Keep examples distinct from approved implementation decisions.
+The project is not a theory-only course. The 13 disciplines organise knowledge, but practical work may progress alongside the curriculum.
+
+Use the [Practical Build and Sector Transfer Method](PRACTICAL_BUILD_AND_SECTOR_TRANSFER.md):
+
+- Begin with a real problem in the agricultural pilot path.
+- Study the concepts needed to understand and address it.
+- Define requirements, capabilities and acceptance conditions.
+- Discover and assess existing solutions before considering custom development.
+- Assemble suitable existing solutions and test their fit.
+- Build only where a genuine gap or clearly justified reason remains.
+- Record practical progress separately from lesson completion.
+- Assess whether demonstrated principles can transfer to other sectors, adapting and validating them independently.
+
+Do not let a passing mention of a technology turn into an unrelated survey. Investigate tools when a concrete capability requirement makes them relevant, not simply because they are advertised or recommended. Keep proposals, demonstrations and tested working capabilities clearly distinguished.
 
 ## 4. Handle new concepts
 
