@@ -2,6 +2,16 @@
 
 ## 2026-11-27 — Chapter 7 learning progress
 
+- Covered and documented subsection 7.5, Configuration and Version Changes.
+- Documented change assessment, approval, version identification, validation, testing, controlled rollout, monitoring, promotion and rollback.
+- Distinguished agent configuration, model, instruction, policy, schema and software versions.
+- Covered compatibility, configuration drift and changes during active tasks.
+- Clarified that rollback does not automatically reverse external actions, and that agents may propose but not unilaterally authorise configuration changes.
+- Set the next learning point to 7.6, Lifecycle Management and Continuity.
+
+
+## 2026-11-27 — Chapter 7 learning progress
+
 - Covered and documented subsection 7.4, Agent Lifecycle and States.
 - Distinguished lifecycle stages from current operational states.
 - Distinguished agent state from individual task state.
