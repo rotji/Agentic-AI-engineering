@@ -6,6 +6,14 @@ Agentic AI Engineering
 ## Curriculum
 13 disciplines. See [Curriculum](CURRICULUM.md).
 
+## Project operating direction
+
+Agentic AI Engineering is a practical learning and building journey, not a theory-only course. The 13 disciplines remain the knowledge structure, while learning, solution discovery, assembly, testing and improvement proceed together.
+
+**Agriculture is the first practical pilot path.** We will investigate real needs, discover existing solutions, combine what is suitable and build only where an important gap is demonstrated. Working principles and capabilities will then be assessed for transfer to real estate, mining, healthcare and other sectors. Transfer requires sector-specific adaptation and independent validation; agricultural assumptions and controls must not be copied blindly.
+
+See [Practical Build and Sector Transfer Method](PRACTICAL_BUILD_AND_SECTOR_TRANSFER.md).
+
 ## Active learning position
 
 - **Completed discipline:** 1 — Agent Architecture and Design
