@@ -28,7 +28,7 @@ Understand the structure and behaviour of an individual agent before studying th
 
 ## Continuation point
 
-Chapter 6 is covered (subsections 6.1–6.7). Chapter 7 is in progress: 7.1 Agent Configuration and 7.2 Configuration Elements are covered. Continue with 7.3 Initialization and Startup.
+Chapter 6 is covered (subsections 6.1–6.7). Chapter 7 is in progress: 7.1 Agent Configuration, 7.2 Configuration Elements and 7.3 Initialization and Startup are covered. Continue with 7.4 Agent Lifecycle and States.
 
 ## Learning note
 
