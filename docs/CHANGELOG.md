@@ -1,5 +1,16 @@
 # Changelog
 
+## 2026-11-27 — Parallel learning and practical pilot progress
+
+- Covered and documented Chapter 3.2, Inductive Reasoning.
+- Distinguished deduction from induction and explained why inductive conclusions remain provisional.
+- Covered generalisation, sampling, representativeness, selection bias, source dependence, comparability and cautious prediction.
+- Applied induction to agricultural market observations while preserving geographic, product, market-level and time limits.
+- Created a provisional Agricultural Pilot Charter to guide problem discovery and a first bounded end-to-end evidence workflow.
+- Kept the pilot hypothesis, first users, sample scope, evidence thresholds and solution choice explicitly unresolved pending discovery.
+- Confirmed practical work proceeds alongside the curriculum.
+- Set the next learning point to Chapter 3.3, Abductive Reasoning and Explanation.
+
 ## 2026-11-27 — Discipline 2 learning progress
 
 - Began Chapter 3, Reasoning Patterns and Inference.
