@@ -10,7 +10,7 @@ Establish what reasoning and planning mean in an agentic system, how they contri
 
 1. **1.1 What Reasoning and Planning Mean in Agentic Systems:** Covered.
 2. **1.2 Reasoning vs Planning vs Decision-Making vs Execution:** Covered.
-3. **1.3 How Reasoning and Planning Fit into an Agent's Operation:** Planned.
+3. **1.3 How Reasoning and Planning Fit into an Agent's Operation:** Covered.
 4. **1.4 Deliberative and Reactive Behaviour:** Planned.
 
 ---
@@ -366,4 +366,236 @@ The final examination may begin another round of reasoning and planning. The det
 - New information or execution results may trigger further reasoning, decisions and plan revision.
 
 
-Continue with **1.3 How Reasoning and Planning Fit into an Agent's Operation**. Subsections 1.3–1.4 remain planned and have not yet been taught.
+## 1.3 How Reasoning and Planning Fit into an Agent's Operation
+
+### Core question
+
+Where do reasoning and planning sit within the wider architecture of an agent, and how do they interact with its objective, context, memory, model, tools, state, execution environment and feedback?
+
+Reasoning and planning are important capabilities, but they do not operate in isolation. They depend on information supplied by the surrounding system, must respect its rules and authority boundaries, and need results from the environment to determine what should happen next.
+
+This lesson connects the concepts from Discipline 1 with the reasoning and planning capabilities studied in Discipline 2.
+
+### 1. Start with an objective and an authorised task
+
+An agentic operation begins when the system receives an objective or an authorised task.
+
+The objective describes the result the system is expected to pursue. The task provides a particular piece of work or instruction to address that objective.
+
+For example:
+
+- **Overall objective:** help users understand important agricultural market changes.
+- **Assigned task:** investigate a report of an unusual tomato-price movement in a specified market.
+
+The agent should not assume that every broad objective is an instruction to perform every possible action. Its assigned responsibility, scope, constraints and authority determine what it may work on.
+
+Reasoning helps interpret the task. Planning helps formulate a possible route toward its intended result.
+
+### 2. Establish the current situation and relevant context
+
+Before reasoning about a task, an agent needs relevant information.
+
+The surrounding system may provide:
+- The task instruction and objective.
+- Current task state and progress.
+- Relevant conversation or session context.
+- Approved reference information and knowledge.
+- Relevant records from previous work.
+- Constraints, policies and permission information.
+- Results from earlier actions.
+
+Context helps the agent interpret what is being asked and what is already known.
+
+Memory may provide information retained from earlier interactions or tasks. However, memory is not automatically complete, current or correct. The system must consider relevance, provenance, freshness and access restrictions.
+
+Detailed memory and knowledge engineering belong to Discipline 3. Here, the important point is that reasoning depends on the quality and relevance of the information made available to it.
+
+### 3. The model contributes reasoning capability, but is not the entire agent
+
+An AI model may interpret instructions, compare information, form hypotheses, generate candidate actions and help construct plans.
+
+However, the model alone does not define the full agentic system.
+
+The wider agent architecture also determines:
+- Which objective and task are active.
+- What context and information the model receives.
+- Which capabilities and actions are available.
+- What permissions and boundaries apply.
+- How plans and decisions are handled.
+- How actions are carried out.
+- How results and task progress are recorded.
+
+The model can propose an action, but the surrounding system must determine whether that action is available, permitted and appropriate to execute.
+
+### 4. Reasoning interprets the situation
+
+With the objective, context and current state available, the agent can reason about the problem.
+
+It may:
+1. Interpret the task.
+2. Identify relevant information.
+3. Distinguish observations from assumptions.
+4. Compare available evidence.
+5. Identify contradictions and missing information.
+6. Form possible explanations.
+7. Assess uncertainty and determine what is not yet established.
+
+For the tomato-price investigation, the agent may find that the reported price is higher than an earlier observation but also notice that the units or observation dates may not match.
+
+Its reasoning should therefore preserve the uncertainty instead of turning an unreliable comparison into a confident conclusion.
+
+### 5. Planning organises possible next steps
+
+Based on its understanding, the agent can formulate a plan.
+
+A plan may identify:
+- Tasks to be completed.
+- The order and dependencies between them.
+- Required inputs and resources.
+- Preconditions and expected results.
+- Alternative steps if a condition is not met.
+- Completion, stopping and escalation conditions.
+
+For the tomato-price investigation, a plan might include validating the original observation, finding comparable records, checking other approved sources and preparing an evidence-based finding.
+
+The plan is a proposal. It must still be checked against feasibility, constraints and authority before actions are taken.
+
+### 6. The system checks decisions, permissions and boundaries
+
+Reasoning and planning do not grant the agent new authority.
+
+Before a proposed action proceeds, the system must consider:
+- Is the action relevant to the assigned objective?
+- Is it within the agent's responsibility and scope?
+- Are the required inputs and preconditions satisfied?
+- Is the action permitted by the applicable policy and permissions?
+- Does it require human approval?
+- Are its risks and possible consequences acceptable?
+- Is there a reason to ask for clarification, defer, stop or escalate?
+
+Some checks may be enforced by surrounding software or policy controls rather than left to the model's judgement alone.
+
+For example, an investigation agent may be allowed to retrieve approved market observations and prepare a report, but not to publish a sensitive warning or commit funds.
+
+### 7. Decision-making selects what should happen next
+
+After considering the situation, possible plans and applicable constraints, the agentic system selects an appropriate next step.
+
+It may choose to:
+- Proceed with a permitted action.
+- Select a different route.
+- Gather more information.
+- Wait for a dependency or approval.
+- Ask a person for clarification.
+- Escalate an unresolved issue.
+- Take no action because the evidence or authority is insufficient.
+
+The selected option should be consistent with the objective and the agent's assigned authority.
+
+Detailed action-selection methods are developed later in this discipline. Here, we are locating decision-making within the wider agent operation.
+
+### 8. Execution takes place through the surrounding system
+
+Once an action has been selected and the necessary checks have passed, the system can carry it out.
+
+The action may be performed through a tool, software component, workflow, external service or human-operated process.
+
+For example, the system may send an authorised request to an approved information source.
+
+The model's proposal is not itself the external action. The execution environment or assigned component performs or mediates that action.
+
+Tool selection and integration belong to Discipline 4. Detailed execution loops, action handling and runtime mechanics belong to Discipline 5.
+
+### 9. Observe the result and update the task state
+
+After an action, the system needs information about what actually happened.
+
+Possible outcomes include:
+- The request succeeded and useful information was returned.
+- The request was rejected.
+- The source did not respond.
+- The returned information was incomplete.
+- The action failed or produced an unexpected result.
+- A human approval is still pending.
+
+The system should record the outcome and update the relevant task state. It should distinguish an action that was proposed, an action that was attempted and an outcome that was confirmed.
+
+The new information becomes part of the context for subsequent reasoning and planning.
+
+Detailed feedback loops and runtime state handling belong to Discipline 5, while operational monitoring and traceability are developed in Discipline 11.
+
+### 10. The connected operating picture
+
+The following is a conceptual view of how the capabilities fit together. It does not prescribe a mandatory software architecture or a single fixed sequence.
+
+**Objective and authorised task**
+↓
+**Relevant context and current state**
+↓
+**Reasoning — interpret and assess**
+↓
+**Planning — organise possible steps**
+↓
+**Decision and control checks — select a permitted next step**
+↓
+**Execution through the appropriate system component**
+↓
+**Observation of the result and task-state update**
+↓
+**New context for further reasoning and planning, or completion, pause, stop or escalation**
+
+The flow may repeat. A simple task may need only a small amount of reasoning and a short plan. A complicated task may require multiple cycles of investigation, decisions and revised plans.
+
+### 11. Worked example: one task moving through the wider agent architecture
+
+Suppose the system receives a report of an unusual tomato-price movement.
+
+1. **Objective and task:** investigate the reported movement within the assigned market scope.
+2. **Context and state:** provide the observation, source details, relevant previous records and current task status.
+3. **Reasoning:** identify that the observation lacks a reliable date and cannot yet be compared confidently.
+4. **Planning:** propose finding a dated observation and seeking another approved comparable source.
+5. **Control checks:** confirm that the sources are approved and that the agent is permitted to request their information.
+6. **Decision:** choose an approved alternative source because the original source cannot supply the missing date.
+7. **Execution:** the collection component sends the authorised request.
+8. **Observation and state update:** record whether the source responded and whether the returned information is usable.
+9. **Continue or stop:** if usable evidence arrives, reason about it and revise the plan as necessary. If it does not, mark the issue unresolved or escalate it.
+
+At each stage, the responsibilities of the wider system remain important. The model does not independently create permissions, the plan does not execute itself, and the task is not complete merely because a request was sent.
+
+### 12. Important architectural implications
+
+- **Reasoning depends on context:** missing, stale or misleading information can produce weak conclusions.
+- **Planning depends on capabilities:** a plan that requires unavailable actions or resources is not feasible.
+- **Decision-making depends on controls:** an attractive option may still be outside the agent's authority.
+- **Execution depends on the environment:** actions can fail, be delayed or return unexpected results.
+- **Further reasoning depends on observation:** the agent needs reliable information about what actually happened.
+- **Task state preserves continuity:** the system needs to know what was completed, what remains and what is unresolved.
+
+These dependencies explain why reasoning and planning cannot be designed as isolated model prompts. They must fit into the agent's wider architecture.
+
+### 13. Scope boundaries for later disciplines
+
+This lesson provides the conceptual relationship. It does not attempt to teach all the implementation details.
+
+- **Discipline 3 — Context, Memory and Knowledge:** how context, memory, retrieval and knowledge are represented and managed.
+- **Discipline 4 — Tools and Environment Engineering:** how tools, integrations and environmental capabilities are selected and connected.
+- **Discipline 5 — Execution and Loop Engineering:** how actions are executed, results observed, state updated and runtime loops controlled.
+- **Discipline 6 — Orchestration and Multi-Agent Systems:** how tasks and plans are coordinated across multiple agents.
+- **Discipline 7 and 8 — Security, Safety and Agentic Governance:** how policy, permissions, safeguards, shared rules and accountability are engineered.
+- **Discipline 9 — Evaluation and Testing:** how reasoning, plans and outcomes are systematically assessed.
+
+### Principles established
+
+- Reasoning and planning operate within the wider agent architecture, not in isolation.
+- Objectives and assigned tasks establish what the agent is working toward.
+- Context, memory and current state supply information needed to interpret the situation.
+- The model contributes reasoning and planning capability but is not the entire agentic system.
+- Plans must be checked for feasibility, permissions, policy and authority before execution.
+- Decision-making selects an appropriate next step; execution is carried out by the surrounding system.
+- Results must be observed and task state updated before the system assumes an action succeeded.
+- New information can trigger further reasoning and replanning.
+- Simple tasks may need little deliberation; complex or uncertain tasks may require repeated cycles.
+- Detailed context, tools, execution, orchestration, governance and evaluation engineering remain in their assigned disciplines.
+
+
+Continue with **1.4 Deliberative and Reactive Behaviour**. Subsection 1.4 remains planned and has not yet been taught.
