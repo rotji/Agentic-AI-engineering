@@ -6,7 +6,7 @@
 
 1. **2.1 Objectives, Goals and Desired Outcomes:** Covered.
 2. **2.2 Interpreting Instructions and Identifying Intent:** Covered.
-3. **2.3 Goal States and Conditions for Success:** Planned.
+3. **2.3 Goal States and Conditions for Success:** Covered.
 4. **2.4 Constraints, Priorities and Conflicting Objectives:** Planned.
 5. **2.5 Ambiguity, Missing Requirements and Clarification:** Planned.
 
@@ -586,9 +586,282 @@ Before turning an instruction into a task, ask:
 - Clarify, defer or escalate when uncertainty or authority limits materially affect the work.
 - Preserve interpretation decisions for important recurring tasks and handoffs.
 
+
+## 2.3 Goal States and Conditions for Success
+
+### Core question
+
+Once an agent understands the objective and the instruction, how can it tell what the situation should look like when the goal has been achieved, and what evidence would justify declaring success?
+
+A goal needs more than a statement of intention. It needs a description of the result to be reached and conditions that allow the result to be checked.
+
+For this lesson, we will use these working definitions:
+
+- **Current state:** the relevant situation as it is understood now.
+- **Goal state:** the desired situation or set of conditions that should hold when the goal is achieved.
+- **Success condition:** a condition that must be satisfied for the goal to count as achieved.
+- **Acceptance criterion:** a specific, checkable rule used to assess whether an output or result is acceptable.
+- **Evidence of achievement:** information that supports the conclusion that a success condition has been met.
+
+These terms are related but not identical. A goal state describes the desired result. Success conditions tell us what must be true. Acceptance criteria make those conditions assessable. Evidence supports the judgement.
+
+### 1. Current state and goal state
+
+A goal-directed agent needs to distinguish where things stand now from the condition it is trying to reach.
+
+For example, in our agricultural intelligence pilot:
+
+- **Current state:** information about producers, products and destinations is scattered across sources, with uneven coverage and different levels of evidence.
+- **Goal state:** within an agreed pilot scope, there is a traceable, evidence-labelled register of identified producers and their documented products and destination relationships, with unknown or unsupported details clearly marked.
+
+The goal state does not describe every action the agent must take. It describes what should be true when the goal has been achieved.
+
+The current state may also be partly unknown. That uncertainty is important: the agent should not pretend it has a complete picture before investigating.
+
+### 2. Describe the goal state, not just the activity
+
+An instruction may describe an activity without defining what a successful result looks like.
+
+Compare:
+
+- Activity: "Search for agricultural producers."
+- Goal state: "A register exists for the agreed pilot scope, with each included producer entry linked to its supporting source and with the limits of the available evidence made visible."
+
+The first statement may lead to lots of searching without establishing what has been achieved. The second describes a result that can be reviewed.
+
+Activities are still necessary, but they are not the same as success.
+
+Other examples:
+- "Monitor market prices" is an activity; "produce current, comparable observations with units, locations, dates and source status for the agreed markets" is a result.
+- "Find processing facilities" is an activity; "record identified facilities with sourced location and processing-capability information, while marking unconfirmed details" is a result.
+- "Investigate a price spike" is an activity; "produce a conclusion that distinguishes supported findings, plausible explanations and unresolved questions" is a result.
+
+### 3. Turn a goal into conditions that can be checked
+
+A goal state may contain several conditions. Those conditions should be expressed so a person or system can judge whether they hold.
+
+Consider this goal:
+
+"Create traceable agricultural producer records for an agreed pilot scope."
+
+Possible acceptance criteria include:
+
+1. Every included record has a producer identity or is explicitly marked as an unidentified or unresolved entity.
+2. Each factual claim has a source reference or is clearly marked as unsupported or unverified.
+3. The location is recorded at the level supported by the source; more precise coordinates are not invented.
+4. The products associated with the producer are recorded with the product form and relevant period where known.
+5. Documented processing, buyer or destination relationships are linked to their supporting evidence.
+6. Missing, conflicting or outdated information is visible rather than silently filled in.
+7. Records presented in a verified category meet the project's defined evidence requirements for that category.
+
+These criteria are examples to be refined for the pilot. They are not yet a formally approved data standard.
+
+Notice that some criteria allow an honest "unknown" value. The purpose is not to make every field appear complete. The purpose is to make the state of knowledge clear and prevent unsupported claims from being presented as facts.
+
+### 4. Success conditions versus implementation steps
+
+Keep the conditions for success separate from the steps used to achieve them.
+
+| Success condition | Possible implementation step |
+|---|---|
+| Each included claim has a traceable source or a visible unresolved status. | Identify source references and record them during collection. |
+| Producer locations are represented only at supported precision. | Compare source descriptions and record the supported geographic level. |
+| Destination relationships are evidence-backed or marked unknown. | Seek and assess information about buyers, processors and markets. |
+| Verified records satisfy the agreed evidence standard. | Apply the verification procedure and review exceptions. |
+
+The left column describes what must be true at completion. The right column describes possible work to make it true.
+
+If the implementation method changes, the success conditions may remain the same. This makes the goal more durable and less dependent on a specific tool or platform.
+
+### 5. Quantitative and qualitative success conditions
+
+Some success conditions can be expressed numerically. Others require a qualitative assessment.
+
+**Quantitative examples:**
+- Number of records within a defined scope.
+- Proportion of records with required fields completed.
+- Number of observations received within a specified period.
+- Time taken to complete a defined investigation.
+- Number of duplicate records detected in a test set.
+
+**Qualitative examples:**
+- A reviewer can trace a claim to its source.
+- A report distinguishes evidence from interpretation.
+- A destination relationship is described without overstating what the source establishes.
+- A user can understand which information remains uncertain.
+- An analyst considers the output useful for the intended task.
+
+A numerical measure is not automatically meaningful. Counting records, sources or reports may measure activity or coverage without showing that the information is accurate or useful.
+
+Qualitative criteria should also be made as reviewable as possible. For example, "easy to understand" can be assessed through a defined review by intended users using agreed questions, rather than left as an unexplained opinion.
+
+### 6. Baselines, targets and thresholds
+
+A **baseline** describes the starting point against which change may be assessed.
+
+A **target** describes the level or result we intend to reach.
+
+A **threshold** is a boundary or value that triggers a decision, classification or response.
+
+For example:
+- Baseline: how many records in an existing sample have traceable sources.
+- Target: the agreed level of source traceability required for a pilot deliverable.
+- Threshold: a defined evidence condition below which a record cannot be presented as verified.
+
+Do not invent numerical targets before understanding the scope, baseline, data quality, operating conditions and intended users. A target should follow from the requirement and available evidence, not from a desire to make the project look measurable.
+
+Some conditions are mandatory rather than negotiable targets. For example, if the goal requires that verified claims have supporting evidence, a large number of unsupported records cannot compensate for failing that condition.
+
+### 7. Distinguish mandatory conditions from indicators
+
+A **mandatory success condition** must be satisfied for the goal to be accepted.
+
+An **indicator** helps monitor progress or quality but may not, by itself, determine success.
+
+For a traceable producer register:
+
+| Type | Example |
+|---|---|
+| Mandatory condition | Records presented as verified meet the defined evidence standard. |
+| Mandatory condition | Unknown producer destinations are not invented or presented as established. |
+| Progress indicator | Number of relevant sources examined. |
+| Coverage indicator | Number of LGAs for which usable evidence has been found. |
+| Quality indicator | Proportion of records with complete required provenance fields. |
+| Usefulness indicator | Reviewer assessment of whether the register supports the intended investigation. |
+
+The indicators help us understand progress and quality. But high source counts or broad geographic coverage must not override mandatory evidence and integrity conditions.
+
+### 8. Define what counts as completion, partial completion and failure
+
+Real investigations do not always produce a fully achieved goal. The system should be able to report outcomes honestly.
+
+Possible result states include:
+
+- **Achieved:** all mandatory success conditions have been met and supported by evidence.
+- **Partially achieved:** some useful results have been produced, but one or more mandatory conditions remain unmet.
+- **Blocked:** progress cannot continue because a dependency, permission, source or decision is unavailable.
+- **Not achieved:** the goal was not met within the agreed scope or conditions.
+- **Unresolved:** evidence is insufficient to determine whether a relevant condition holds.
+
+These labels are a practical project vocabulary, not a universal classification standard. A project may define additional states where its work requires them.
+
+For example, a producer register may be partially achieved if reliable producer information exists for some of the agreed scope but important locations or destination links remain unresolved. The system should report that limitation instead of describing the whole goal as complete.
+
+### 9. Goal states can require time and freshness conditions
+
+Some goals concern a result at one point in time. Others require a condition to remain true or information to be refreshed.
+
+Examples:
+
+- A one-time producer identity record may be accepted based on evidence collected at a stated date.
+- A market price observation must include when it was observed; an old price should not be presented as current.
+- A supplier relationship may need periodic confirmation before it is treated as active.
+- A monitoring service may have a goal to deliver observations on an agreed schedule over a defined evaluation period.
+
+Therefore, a goal may need to specify:
+- The relevant observation period.
+- The date or time by which the result is expected.
+- How current information must be.
+- Whether the condition must hold once or repeatedly.
+- What happens when an update is overdue.
+
+Do not use the word "current" without establishing what freshness means for the particular information and decision.
+
+### 10. Evidence must support the success judgement
+
+A goal should not be declared achieved solely because an agent says it has completed the task.
+
+For each important success condition, identify what evidence would support acceptance.
+
+For example:
+
+| Success condition | Evidence that may support it |
+|---|---|
+| A producer identity is supported | Source record, official listing or appropriately documented confirmation |
+| A location is accurate to the stated precision | Source with that geographic detail or an independently checked location record |
+| A product is associated with a producer | Source explicitly establishing the relationship |
+| A buyer or destination relationship is documented | Evidence identifying the relationship and its relevant date |
+| A report distinguishes known and unknown information | Review of the report against the agreed evidence and uncertainty rules |
+
+These are examples of evidence types. The appropriate evidence standard depends on the claim, the source and the consequences of error.
+
+Keep the claim, source, observation date, verification status and limits connected so a reviewer can understand why a condition was judged satisfied.
+
+### 11. Worked example: define success for one agricultural pilot goal
+
+**Goal:** Create an evidence-labelled producer and product register for an agreed pilot scope.
+
+| Element | Working definition |
+|---|---|
+| Current state | Producer and product information is fragmented; coverage and evidence quality are not yet established. |
+| Goal state | A reviewable register exists for the agreed scope, with sourced producer and product records and explicit evidence status. |
+| Mandatory conditions | Claims have traceable support or are visibly unresolved; location precision is not overstated; unsupported destination relationships are not presented as facts. |
+| Quality indicators | Required provenance fields are complete; records are understandable and useful to reviewers. |
+| Coverage indicators | Relevant products and locations represented within the agreed test scope. |
+| Time condition | Each observation carries its observation date; freshness expectations are defined for information that can change. |
+| Evidence of achievement | Source references, dated observations, review results and recorded exceptions. |
+| Completion status | Achieved, partially achieved, blocked, not achieved or unresolved, according to the agreed rules. |
+
+The pilot's exact scope, sample size, numeric targets and evidence thresholds still need to be established. We should not invent them in this lesson.
+
+### 12. Transfer the principle to other sectors
+
+The same goal-state method can be used elsewhere, but the success conditions must be adapted.
+
+- **Real estate:** a property record may need a supported identity, location, ownership evidence and clearly dated status. The evidence rules for title and ownership are sector-specific.
+- **Mining:** a site or operator record may need a supported location, licence status, commodity or production claim and observation date. Regulatory and safety requirements matter.
+- **Healthcare:** a clinical or service record may need verified identity, provenance, clinical context and authorised professional review. Privacy and clinical governance requirements are materially different.
+
+The reusable principle is to define the desired state, mandatory conditions and acceptable evidence. The domain-specific data, standards, authorities and acceptance rules must be established separately.
+
+### 13. Practical goal-state worksheet
+
+For any important goal, record:
+
+1. **Goal:** What target result are we pursuing?
+2. **Current state:** What is known about the situation now?
+3. **Goal state:** What should be true when the goal is achieved?
+4. **Scope:** Which entities, locations, period and exclusions apply?
+5. **Mandatory success conditions:** What must all be satisfied?
+6. **Indicators:** What measures help track coverage, progress or quality?
+7. **Baseline:** What is the starting point, if comparison is needed?
+8. **Targets and thresholds:** What levels or boundaries are justified, and by what evidence?
+9. **Evidence:** What would support each success judgement?
+10. **Time and freshness:** When must the result be available, and how current must it be?
+11. **Partial and blocked outcomes:** How will incomplete or unsuccessful work be reported?
+12. **Authority:** Who may accept the result or approve consequential next actions?
+
+This worksheet connects the goal-formulation work from 2.1 and instruction-interpretation work from 2.2 to practical evaluation of results.
+
+### 14. Common mistakes
+
+Avoid:
+- Describing activities without defining the result they should produce.
+- Treating output volume as proof of achievement.
+- Using vague success conditions that cannot be reviewed.
+- Inventing numeric targets without a baseline or operational reason.
+- Allowing optional indicators to compensate for failed mandatory conditions.
+- Declaring a goal achieved because an agent reports that it is done.
+- Hiding incomplete, blocked or unresolved results.
+- Treating stale information as current.
+- Demanding that every field be filled even when the evidence does not support it.
+- Transferring one sector's evidence thresholds or acceptance rules unchanged into another sector.
+
+### Principles established
+
+- The current state describes the relevant situation now; the goal state describes the desired conditions at completion.
+- A goal state describes a result, not merely the activities used to pursue it.
+- Success conditions specify what must be true; acceptance criteria make the conditions checkable.
+- Evidence is needed to support a judgement that the goal has been achieved.
+- Use quantitative and qualitative criteria where appropriate.
+- Establish baselines before choosing numerical targets when comparison is required.
+- Separate mandatory conditions from progress and quality indicators.
+- Preserve honest states for partial, blocked, failed and unresolved work.
+- Specify dates and freshness where information can change.
+- Do not force unknown information into a completed-looking record.
+- Reuse the goal-state method across sectors, but adapt evidence, standards and governance to each domain.
+
 ## Continuation point
 
-Continue with **2.3 Goal States and Conditions for Success**. Subsections 2.3–2.5 remain planned.
+Continue with **2.4 Constraints, Priorities and Conflicting Objectives**. Subsections 2.4–2.5 remain planned.
 
-
-Continue with **2.3 Goal States and Conditions for Success**. Subsections 2.3–2.5 remain planned.
