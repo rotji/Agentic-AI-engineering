@@ -1,5 +1,16 @@
 # Changelog
 
+## 2026-11-27 — Chapter 3.5 and evidence assessment
+
+- Covered and documented subsection 3.5, Hypotheses, Evidence, Confidence and Limitations.
+- Distinguished observation, evidence, hypothesis, inference and conclusion; separated source reliability from claim verification, freshness, representativeness and inference strength.
+- Covered supporting, contradicting and missing evidence, absence-of-evidence limits, qualitative confidence and revising assessments when new evidence arrives.
+- Completed Chapter 3, Reasoning Patterns and Inference (3.1–3.5).
+- Updated the discovery register with newer indexed World Bank variable metadata; FAO's documented country-filtered series and price retrieval API; and Agromate's differing nine-state source-data and 21 state-market pilot descriptions.
+- Recorded that NBS and World Bank raw file/API retrieval attempts did not yield inspected row-level data in this session; the FAO API documentation is inspected but Nigeria series have not yet been enumerated.
+- Kept the Plateau traceability/coverage opportunity as an unvalidated hypothesis, not a confirmed market gap.
+- Set the next learning step to Chapter 4.1, Problem and Environment Representation.
+
 ## 2026-11-27 — Discipline 2 Chapter 3 completed
 
 - Covered and documented subsection 3.5, Hypotheses, Evidence, Confidence and Limitations.
