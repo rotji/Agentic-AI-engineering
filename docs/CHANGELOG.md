@@ -4,6 +4,15 @@ Significant changes to the project's structure, curriculum, decisions and learni
 
 ## 2026-11-27 — Chapter 6 learning progress
 
+- Covered and documented Chapter 6.6, Agent Relationships.
+- Documented peer, producer–consumer, delegation, coordinator–worker, supervisory and dependency relationships.
+- Distinguished communication, delegation, coordination and authority.
+- Covered communication patterns, message expectations, information provenance, trust, dependencies and failure handling.
+- Established purpose-driven connections, information minimisation, provenance preservation and explicit escalation handling.
+- Updated the project continuation point to Chapter 6.7, Agent Accountability.
+
+## 2026-11-27 — Previous Chapter 6 progress
+
 - Covered and documented Chapter 6.5, Agent Boundaries.
 - Distinguished permitted authority from the boundaries and constraints that limit an agent's operation.
 - Documented role, data, action, resource, operational, safety, delegation, evidence and change boundaries.
