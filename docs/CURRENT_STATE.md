@@ -18,9 +18,9 @@ See [Practical Build and Sector Transfer Method](PRACTICAL_BUILD_AND_SECTOR_TRAN
 
 - **Pilot domain:** Agriculture.
 - **Discovery charter:** [Agricultural Pilot Charter](practical-pilot/AGRICULTURAL_PILOT_CHARTER.md) — provisional; first problem, users, test scope and acceptance thresholds remain unvalidated.
-- **Discovery register:** [Agricultural Pilot Discovery Register](practical-pilot/DISCOVERY_REGISTER.md) — populated with five initial source/platform desk assessments (NBS, World Bank RTFP, FAO FPMA, PLACOM and Agromate).
+- **Discovery register:** [Agricultural Pilot Discovery Register](practical-pilot/DISCOVERY_REGISTER.md) — five source/platform desk assessments updated with current indexed metadata, data-field descriptions, FAO API documentation and Agromate's differing coverage claims.
 - **Discovery finding:** a possible Plateau local-market price coverage and traceability gap has emerged as a hypothesis, not a confirmed unmet need.
-- **Next practical step:** obtain and inspect the NBS May 2026 workbook; retrieve the World Bank 2026-11-17 data and check actual markets and modelled/observed fields; inspect FAO Nigeria series; verify PLACOM's live records and method; inspect Agromate CSVs/backtests; and separately validate user problems. Some raw files and live pages could not yet be accessed; no integration or user problem is validated.
+- **Next practical step:** obtain the NBS May 2026 workbook; retrieve and inspect the World Bank 2026-11-17 CSV; enumerate Nigeria series through the documented FAO API; inspect PLACOM's live price records and methodology; obtain Agromate CSVs and reconcile nine-state source coverage with its 21-market pilot claims; and separately validate user problems. NBS download and live/API retrieval attempts have not yielded raw data in this session; no integration or user problem is validated.
 
 
 ## Active learning position
