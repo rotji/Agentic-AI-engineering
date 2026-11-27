@@ -8,9 +8,9 @@ This repository preserves the learning path, concepts, decisions, and progress o
 
 - **Curriculum:** 13 disciplines.
 - **Current discipline:** 1 — Agent Architecture and Design.
-- **Current chapter:** 7 — Agent Configuration and Lifecycle.
-- **Last covered subsection:** 7.5 — Configuration and Version Changes.
-- **Next learning step:** 7.6 — Lifecycle Management and Continuity.
+- **Completed chapters:** 1–7.
+- **Last completed chapter:** 7 — Agent Configuration and Lifecycle (subsections 7.1–7.6).
+- **Next learning step:** Review remaining Discipline 1 coverage and identify any essential architecture gap before moving to Discipline 2.
 
 ## Read in this order
 
