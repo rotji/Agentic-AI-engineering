@@ -67,3 +67,14 @@ This file records decisions that shape the learning project. It is not a list of
 **Reason:** Multiple agents can use the same model while having different roles, configurations, permissions and memory; a model can also be changed without necessarily changing the agent's identity.
 
 **Status:** Active learning principle introduced in Chapter 6.1.
+
+
+## D-009 — Add an architecture-design synthesis chapter to Discipline 1
+
+**Decision:** Add Chapter 8, From Requirements to Agent Architecture, as the final chapter of Discipline 1.
+
+**Reason:** The existing seven chapters establish individual concepts and agent-level design elements, but the documented sequence does not yet teach a repeatable end-to-end method for determining whether an agent is appropriate and assembling the relevant concepts into a coherent architecture for a real problem.
+
+**Scope boundary:** The chapter will synthesise existing material and address problem framing, requirements, capability mapping, high-level architecture selection, component boundaries and flows, autonomy and oversight integration, and architecture documentation/review. Detailed reasoning, context/memory, tools, execution loops, orchestration, security, governance, evaluation, infrastructure and continuous improvement remain in their assigned disciplines.
+
+**Status:** Active. Chapter 8 is planned and has not yet been taught.
