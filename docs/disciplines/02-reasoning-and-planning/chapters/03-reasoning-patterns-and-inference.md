@@ -1,6 +1,6 @@
 # Chapter 3 — Reasoning Patterns and Inference
 
-**Status:** In progress; subsections 3.1–3.4 covered.
+**Status:** Complete; subsections 3.1–3.5 covered.
 
 ## Purpose
 
@@ -12,7 +12,7 @@ Study how conclusions are drawn from premises, how different reasoning patterns 
 2. **3.2 Inductive Reasoning:** Covered.
 3. **3.3 Abductive Reasoning and Explanation:** Covered.
 4. **3.4 Causal Reasoning, Correlation and Analogy:** Covered.
-5. **3.5 Hypotheses, Evidence, Confidence and Limitations:** Planned.
+5. **3.5 Hypotheses, Evidence, Confidence and Limitations:** Covered.
 
 ---
 
@@ -1136,6 +1136,306 @@ Now suppose the team proposes reusing an agricultural traceability workflow in m
 
 This is the central discipline of subsection 3.4: distinguish association from causation, and use analogy to generate carefully bounded transfer hypotheses rather than assume that similar-looking situations are identical.
 
+## 3.5 Hypotheses, Evidence, Confidence and Limitations
+
+### Core question
+
+When an agent makes a claim, proposes an explanation or draws a conclusion from incomplete information, how can it show what supports that conclusion, how strong the support is, what remains uncertain and where the conclusion must stop?
+
+This subsection brings together the reasoning methods in Chapter 3. An agent must not only produce a conclusion. It must be able to distinguish observations from interpretations, identify the hypothesis being considered, assess the supporting and contradicting evidence, express confidence proportionately and state the limitations of what it knows.
+
+A useful result is not necessarily a certain answer. Sometimes the most reliable result is a clear account of what is known, what is plausible, what is unresolved and what evidence is needed next.
+
+### 1. What is a hypothesis?
+
+A **hypothesis** is a proposed statement or explanation that can be examined against evidence.
+
+It may describe:
+- A possible explanation for an observation.
+- A suspected relationship between variables.
+- A possible pattern in a group of observations.
+- A prediction about what may happen under stated conditions.
+- A claim about an entity, place, event or process that still needs verification.
+
+Agricultural examples:
+- "Tomato arrivals at Market A decreased during the reported period."
+- "Higher transport costs may have contributed to the increase in delivered tomato quotations."
+- "The cooperative listed in this source produced Product B at the stated location during the 2026 dry season."
+- "The available observations suggest that wholesale prices increased in the sampled markets."
+
+These statements are not all the same kind of hypothesis. Some are factual claims, some are explanatory, and some are generalisations. The agent should identify what kind of claim it is assessing and what evidence could support or weaken it.
+
+A useful hypothesis should be sufficiently clear and bounded to examine. Specify, where relevant:
+- The entity or variables involved.
+- The claimed relationship, event or explanation.
+- The geographic and organisational scope.
+- The relevant product, category or population.
+- The period or conditions.
+- What observations would support it.
+- What observations would weaken it.
+
+Avoid vague claims such as "the agricultural market is changing" when the actual issue concerns one product, one market level, a limited sample and a particular period.
+
+### 2. Observation, evidence, hypothesis and conclusion are different
+
+These terms should not be used interchangeably.
+
+| Term | Meaning | Agricultural example |
+|---|---|---|
+| **Observation** | Something recorded or directly noticed. | A published page displays a tomato wholesale quotation for Market A on a stated date. |
+| **Evidence** | Information used to assess a particular claim. | The original dated quotation, its source and any independent corroborating record. |
+| **Hypothesis** | A proposed statement or explanation being examined. | The quotation increased because market arrivals declined. |
+| **Inference** | The reasoning that connects the evidence to a conclusion. | Comparable dated quotations are higher; separate arrival information also suggests a reduction. |
+| **Conclusion** | The assessment reached from the evidence and reasoning. | The quotations increased in the observed sample; reduced arrivals remain a possible contributing explanation, not established as the cause. |
+
+A source may contain an observation without providing adequate evidence for every claim someone wants to make from it.
+
+For example, a page showing an indicative price may support the statement that the page displayed that quotation at the time it was inspected. It does not automatically support the statement that a transaction occurred at that price, that the price represents the entire market, or that the quoted value is still current.
+
+### 3. Evidence must be assessed in relation to a claim
+
+Evidence is not simply "good" or "bad" in the abstract. Its usefulness depends on the exact claim being assessed.
+
+Suppose we want to establish that a cooperative produced tomatoes at a named village during a specified season.
+
+A source that merely lists the cooperative's address may be relevant to its location, but it may not establish production there. A directory entry listing tomatoes may establish that tomatoes are associated with the cooperative in that directory, but it may not establish actual production during the stated season.
+
+For each claim, ask:
+
+1. **Relevance:** Does the information address the exact claim?
+2. **Directness:** Is it direct evidence of the event or only an indirect indication?
+3. **Provenance:** Who created it, and can the original source be identified?
+4. **Reliability:** What is known about the source's methods, competence, incentives and possible errors?
+5. **Independence:** Is this separate corroboration or a copy of another report?
+6. **Freshness:** Does the date fit the period the claim concerns?
+7. **Completeness:** Are important details missing?
+8. **Comparability:** Are products, units, definitions, locations and periods sufficiently alike?
+9. **Consistency:** Does the evidence agree with other relevant information, or are there conflicts?
+10. **Reproducibility:** Can another reviewer inspect the source and follow the assessment?
+
+A source's reputation does not make every claim it publishes automatically true. Likewise, a less formal source may provide a useful direct observation, but its limitations must be understood and its claims checked proportionately.
+
+### 4. Source reliability is not the same as claim verification
+
+Several related dimensions should be kept separate:
+
+- **Source reliability:** how dependable the source generally is for the type of information in question.
+- **Claim verification:** whether the specific claim has been checked against adequate evidence.
+- **Evidence status:** what kind of evidence is available and what it establishes.
+- **Freshness:** whether the information is current enough for the intended use.
+- **Representativeness:** whether the observations support a claim about a wider population or area.
+- **Comparability:** whether observations can legitimately be compared.
+- **Inference strength:** how strongly the evidence supports the conclusion being drawn.
+
+For example, an official national statistical report may be a reliable source for its published state-level average. It may still be unsuitable for establishing today's price at one named local market.
+
+Similarly, a verified transaction in one market can establish something about that transaction. It does not automatically establish the average price across Plateau State.
+
+A record's evidence status must therefore not be used as a shortcut for all the other dimensions.
+
+### 5. Supporting, contradicting and missing evidence
+
+An agent should look for three kinds of information:
+
+- **Supporting evidence:** information consistent with the hypothesis.
+- **Contradicting evidence:** information that conflicts with the hypothesis or weakens it.
+- **Missing or unavailable evidence:** information needed to assess the claim but not currently available.
+
+These should be recorded distinctly.
+
+Suppose the hypothesis is: "Tomato prices increased in all major Plateau markets during the observation period."
+
+- Higher comparable quotations from several markets support part of the hypothesis.
+- Comparable observations showing stable or falling quotations in another major market contradict the universal wording.
+- Missing observations from several LGAs leave the coverage incomplete.
+
+The responsible conclusion may be that prices increased in the sampled markets, but there is not enough evidence to establish an increase in all major Plateau markets.
+
+Do not ignore contradictory observations or silently remove them because they complicate the story.
+
+### 6. Absence of evidence is not always evidence of absence
+
+This distinction is essential for intelligence systems.
+
+If a search does not find a record of a cooperative producing a particular commodity, several explanations are possible:
+- The cooperative did not produce it.
+- The activity occurred but was not published.
+- The relevant source is offline or not indexed.
+- The source uses another name or classification.
+- The record exists but could not be accessed.
+- The search method or geographic coverage was incomplete.
+
+Therefore:
+
+**"We did not find evidence that the cooperative produced tomatoes" is not automatically equivalent to "the cooperative did not produce tomatoes."**
+
+Absence can become meaningful evidence when the search or monitoring process is known to have sufficiently complete coverage and the claim implies that a record should exist. Even then, the conclusion must be limited to that system, scope and period.
+
+For example, if a complete, authoritative register is known to list every currently licensed operator in a defined jurisdiction, absence from that register may support a narrower conclusion about licensing status. The completeness and authority of the register must themselves be established.
+
+### 7. Confidence: how strongly is the conclusion supported?
+
+**Confidence** describes how strongly the available evidence and reasoning support a particular conclusion or hypothesis.
+
+It should not be confused with:
+- The agent's fluency or persuasiveness.
+- How familiar or plausible the explanation sounds.
+- The number of times a claim has been repeated.
+- A source's general reputation alone.
+- A numeric probability invented without a defensible method.
+
+Confidence is claim-specific. An agent may have strong confidence that a webpage displayed a particular figure when inspected, while having low confidence that the figure represents a completed transaction or the current market price.
+
+A simple qualitative vocabulary can be useful as a project working convention:
+
+| Label | Meaning for reporting |
+|---|---|
+| **Strongly supported** | Multiple relevant checks support the specific claim; important alternatives or conflicts have been examined; remaining limitations do not undermine the bounded conclusion. |
+| **Moderately supported** | Relevant evidence supports the claim, but material gaps, source limitations or unresolved alternatives remain. |
+| **Weakly supported** | Some information is consistent with the claim, but it is indirect, incomplete, poorly corroborated or affected by important uncertainty. |
+| **Unresolved** | Available evidence is insufficient, conflicting or unsuitable for choosing between the claim and credible alternatives. |
+| **Contradicted by available evidence** | Relevant evidence conflicts with the claim within the stated scope. This does not prove every possible alternative claim. |
+
+These labels are provisional reporting categories, not universal statistical confidence levels. Their use should be accompanied by a short explanation of the evidence and limitations. Do not assign percentages such as 80% or 95% merely to make an answer appear precise.
+
+Where a statistical model or formal probability method is used, its assumptions, calibration, data and validation should be documented separately.
+
+### 8. Confidence should change when evidence changes
+
+An agent must be willing to revise a conclusion.
+
+For example:
+
+1. A single unverified post reports a sudden tomato-price increase.
+2. The agent marks the claim as weakly supported and seeks the original source.
+3. The original post is found to be several weeks old and does not identify the product grade.
+4. The apparent current price signal is weakened.
+5. A separate, dated quotation from the relevant market is obtained.
+6. The agent can now support the narrower claim that a particular quotation was published for that market and date.
+7. It still cannot claim a completed transaction or a statewide price increase without the relevant evidence.
+
+New evidence does not always increase confidence. It can reduce it, reveal that two sources were duplicates, or show that the original question was framed too broadly.
+
+A reliable agent updates the assessment rather than defending its first answer.
+
+### 9. Limitations must be explicit
+
+A conclusion should identify the limits that affect how it can be used.
+
+Common limitations include:
+
+- Geographic coverage is narrower than the claimed area.
+- Only selected commodities or product forms are included.
+- Observation dates are old, missing or inconsistent.
+- A quotation is being compared with a transaction.
+- A dataset combines observed and model-estimated values.
+- Sources are duplicated or share the same upstream source.
+- The sample is small or selected in a biased way.
+- Important locations or population groups are missing.
+- A causal mechanism has not been established.
+- A hypothesis remains one of several plausible explanations.
+- Access restrictions prevent examination of the underlying evidence.
+- A source's methodology or data rights are not known.
+
+Limitations are not decorative disclaimers. They determine what the system can responsibly claim and what decisions the information can support.
+
+### 10. Applying the full method to the agricultural pilot
+
+Consider the provisional hypothesis:
+
+> There may be value in connecting locally grounded Plateau market observations to transparent source provenance, dates, product definitions, units, evidence status and comparable market-level records.
+
+The five candidate sources in our discovery register provide different kinds of information:
+
+- NBS describes broad LGA-level price collection but state/national weighted-average public outputs.
+- The World Bank publishes selected market-level modeled estimates, but the newest indexed file and the accessible detailed pages have a version discrepancy, and actual Plateau market rows remain to be checked.
+- FAO describes extensive price series and national-system integration capabilities, but Nigeria-specific coverage remains uninspected.
+- PLACOM advertises local indicative prices, but the actual observation methodology and record detail remain unverified.
+- Agromate distinguishes nearby surveyed FEWS NET/WFP markets from its own Plateau pilot estimates.
+
+This evidence makes the local traceability/coverage hypothesis worth investigating. It does not prove that no suitable service exists or that users experience an unmet need.
+
+A disciplined assessment would be:
+
+| Assessment field | Current position |
+|---|---|
+| Hypothesis | A locally grounded, traceable Plateau market-information workflow may have value. |
+| Supporting evidence | Existing source descriptions show different coverage and data forms; PLACOM advertises indicative local prices; Agromate distinguishes nearby surveys from Plateau pilot estimates. |
+| Contradicting or alternative considerations | PLACOM may already satisfy some local needs; other offline or institutional channels may exist; the apparent gap may not matter to users. |
+| Missing evidence | PLACOM's actual data methodology; current World Bank market rows; NBS workbook details; FAO Nigeria series; Agromate CSV lineage; actual user needs and workarounds. |
+| Current confidence | **Weakly supported as an opportunity hypothesis; not yet a validated user problem or market gap.** |
+| Next evidence | Inspect raw data and methods, identify existing channels, and gather evidence about specific user decisions and difficulties. |
+| Decision | Continue discovery; do not build or announce a market gap yet. |
+
+This is an example of how evidence, abductive reasoning, induction, causal caution and limitation reporting work together.
+
+### 11. A practical claim-assessment record for agents
+
+For claims that materially influence an intelligence output or decision, a structured record may include:
+
+| Field | What it captures |
+|---|---|
+| Claim ID | Stable identifier for the claim. |
+| Exact claim | The specific statement being assessed. |
+| Claim scope | Entity, product, location, period and relevant conditions. |
+| Claim type | Observation, classification, generalisation, explanation, prediction or causal claim. |
+| Hypothesis | The proposition being tested, where applicable. |
+| Supporting evidence | Source references and the specific facts they establish. |
+| Contradicting evidence | Sources or observations that weaken or challenge the claim. |
+| Missing evidence | Important information not yet available. |
+| Source assessment | Provenance, reliability, freshness and access limitations. |
+| Independence | Whether corroborating sources are genuinely independent. |
+| Reasoning method | Deduction, induction, abduction, causal reasoning or a combination. |
+| Confidence assessment | Qualitative strength with a short rationale, or a validated quantitative method where appropriate. |
+| Limitations | Scope, sample, measurement, method and domain restrictions. |
+| Current status | Supported, partially supported, unresolved, contradicted or another defined state. |
+| Reviewer and date | Who assessed it and when. |
+| Reassessment trigger | New evidence, expiry, source change or another event requiring review. |
+
+This is a proposed record structure for the pilot, not yet an approved production schema. We should test it against real claims and simplify or extend it only when justified.
+
+### 12. A practical reasoning and evidence workflow
+
+For a material claim, an agent can follow this sequence:
+
+1. State the exact claim and its scope.
+2. Identify whether it is an observation, rule application, generalisation, explanation, prediction or causal claim.
+3. Collect the relevant original evidence under permitted access conditions.
+4. Check provenance, date, source reliability, independence and relevance.
+5. Check comparability, coverage, definitions and missing information.
+6. Identify supporting and contradicting evidence.
+7. Consider alternative hypotheses and the possibility of confounding or bias.
+8. Apply the appropriate reasoning method and make the inference explicit.
+9. Assess how strongly the evidence supports the bounded claim.
+10. Record limitations and unresolved questions.
+11. Decide whether to report, gather more evidence, ask for clarification or defer.
+12. Set a review trigger where the claim may become stale or new evidence may change it.
+
+Not every low-risk task needs a lengthy record. Apply proportionate evidence handling: more scrutiny is needed where the decision is more consequential, the source is uncertain or the claim may affect people, money, safety or public reporting.
+
+### 13. Key principles
+
+- A hypothesis is a proposition to examine, not an established fact.
+- Observation, evidence, hypothesis, inference and conclusion are distinct.
+- Evidence must be assessed against the precise claim it is intended to support.
+- Source reliability, claim verification, evidence status, freshness, representativeness and inference strength are different dimensions.
+- Seek supporting, contradicting and missing evidence.
+- The absence of a record does not automatically prove that an event did not occur.
+- Confidence should reflect the evidence and reasoning, not the agent's fluency or familiarity.
+- Do not invent precise confidence percentages without a defensible statistical method.
+- Conclusions must remain within the scope supported by evidence.
+- Limitations must be explicit enough to guide use and decision-making.
+- Reassess conclusions when new, contradictory or more current evidence arrives.
+- Increase verification and oversight in proportion to the consequences of error.
+
+## Lesson checkpoint
+
+An agent finds several online reports suggesting that tomato prices are rising in Plateau State. It later discovers that many reports repeat the same original post, some have no observation date, and the available verified quotations are concentrated in two markets.
+
+A defensible report would say that repeated reports indicate a possible upward price signal, but much of the material is not independent and the verified observations cover only two markets. The agent should not conclude that prices have risen across Plateau State. It should seek additional independent, dated and comparable observations.
+
+The central discipline of subsection 3.5 is to make the strength and limits of knowledge visible: state what the evidence supports, how strongly it supports it, what contradicts it, what is missing and what should happen next.
+
 ## Chapter 3 progress
 
-Subsections 3.1, Deductive Reasoning; 3.2, Inductive Reasoning; 3.3, Abductive Reasoning and Explanation; and 3.4, Causal Reasoning, Correlation and Analogy, are covered. Next: **3.5 Hypotheses, Evidence, Confidence and Limitations**.
+Subsections 3.1, Deductive Reasoning; 3.2, Inductive Reasoning; 3.3, Abductive Reasoning and Explanation; 3.4, Causal Reasoning, Correlation and Analogy; and 3.5, Hypotheses, Evidence, Confidence and Limitations, are covered. **Chapter 3 is complete.** Next: **Chapter 4.1 Problem and Environment Representation**.
