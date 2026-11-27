@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-11-27 — Discipline 2 learning progress
+
+- Covered and documented Chapter 1.2, Reasoning vs Planning vs Decision-Making vs Execution.
+- Distinguished interpretation and assessment, plan formulation, option selection and carrying out an authorised action.
+- Used the agricultural tomato-price investigation to show how the four activities interact.
+- Clarified that these are conceptual functions, not necessarily separate software modules or a rigid sequence.
+- Emphasised that a plan does not grant authority and that an action attempt does not prove success.
+- Set the next learning point to Chapter 1.3, How Reasoning and Planning Fit into an Agent's Operation.
+
+
 ## 2026-11-27 — Discipline 2 started
 
 - Began Chapter 1, Foundations of Reasoning and Planning.
