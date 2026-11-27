@@ -1,6 +1,6 @@
 # Chapter 8 — From Requirements to Agent Architecture
 
-**Status:** In progress.
+**Status:** Covered.
 
 ## Purpose
 
@@ -26,7 +26,7 @@ The chapter is being taught progressively. Subsections marked Covered have been 
 4. **8.4 Selecting the High-Level Architecture Shape:** Covered.
 5. **8.5 Component Boundaries, Interfaces and Flows:** Covered.
 6. **8.6 Integrating Autonomy, Authority and Human Oversight:** Covered.
-7. **8.7 Producing and Reviewing an Architecture Blueprint:** document the design, assumptions, alternatives, trade-offs, unresolved questions and traceability to requirements.
+7. **8.7 Producing and Reviewing an Architecture Blueprint:** Covered.
 
 ## Scope boundaries
 
@@ -1377,6 +1377,401 @@ Before accepting an architecture, check:
 - Record decisions, permissions, approvals and interventions so the control design remains accountable.
 
 
-## Continuation point
+## 8.7 Producing and Reviewing an Architecture Blueprint
+
+### Core question
+
+How do we capture the architecture decisions in a form that another person can understand, challenge, maintain and use as a reliable basis for later engineering work?
+
+An architecture blueprint is a structured description of the proposed system: the problem it addresses, its requirements, the major components and responsibilities, how those components interact, the authority and oversight arrangements, important constraints, risks, assumptions and unresolved decisions.
+
+The blueprint brings together the work from Chapter 8 and the foundational concepts from Chapters 1–7. It is a communication and decision record, not merely a diagram.
+
+A good blueprint should be understandable without depending on the original designer being present to explain every choice.
+
+### 1. Why do we need an architecture blueprint?
+
+Without a durable architecture record:
+- Different people may understand the system's purpose differently.
+- Components may be built with overlapping or missing responsibilities.
+- Permissions and approval requirements may be misunderstood.
+- Important dependencies and failure conditions may be overlooked.
+- Later changes may contradict earlier decisions.
+- A new engineer may not understand why the system was designed in a particular way.
+
+The blueprint reduces these risks by recording the design in a consistent, reviewable form.
+
+It should be detailed enough to support decisions and future work, but not overloaded with implementation details that have not yet been justified.
+
+### 2. What an architecture blueprint is—and is not
+
+An architecture blueprint is:
+- A structured explanation of the problem and desired outcomes.
+- A description of the system's major components and their responsibilities.
+- A record of interfaces, information flows and control flows.
+- A view of autonomy, authority, boundaries and human oversight.
+- A record of important assumptions, constraints, risks and dependencies.
+- A traceable explanation of why the selected architecture is appropriate.
+
+It is not automatically:
+- A complete product requirements specification.
+- A detailed software design for every component.
+- A set of final prompts or agent instructions.
+- A catalogue of tools or technology products.
+- A deployment or infrastructure plan.
+- Proof that the proposed system has been tested or that its assumptions are true.
+
+Those more detailed artefacts may be produced later when requirements and capabilities justify them.
+
+### 3. Core contents of a useful architecture blueprint
+
+A practical blueprint should normally address the following areas. The detail should be proportionate to the system's size, risk and complexity.
+
+#### A. Document identity and status
+
+Record:
+- System or project name.
+- Blueprint title and identifier.
+- Version and date.
+- Status, such as draft, under review, approved or superseded.
+- Author or responsible role.
+- Reviewers and relevant approvers.
+- Links to related requirements, decisions and supporting records.
+
+This lets readers understand which version they are examining and whether it is a proposal or an approved design.
+
+#### B. Problem, purpose and desired outcomes
+
+Summarise:
+- The problem being addressed.
+- Who experiences or is affected by it.
+- The current situation and supporting evidence.
+- The desired outcomes.
+- What is explicitly outside the proposed system's scope.
+
+This section should preserve the distinction between verified facts, assumptions and proposed outcomes.
+
+#### C. Requirements and constraints
+
+Capture:
+- Functional requirements.
+- Important quality requirements.
+- Legal, organisational, budget, access, privacy and operational constraints.
+- Requirement priorities.
+- Measurable acceptance conditions where known.
+
+Each important requirement should have an identifier so it can be traced through the design and later validation.
+
+#### D. Operating context and stakeholders
+
+Identify:
+- Users, stakeholders and direct actors.
+- Existing processes and organisational responsibilities.
+- Relevant locations, schedules and operating conditions.
+- Information sources and external dependencies.
+- Important environmental uncertainties.
+
+Do not imply that a stakeholder has agreed to the design unless that agreement has actually been obtained.
+
+#### E. Capability and responsibility map
+
+Show:
+- What capabilities are required.
+- Which component, agent, person or external system is the candidate provider.
+- Who owns each important outcome.
+- What contributors and dependencies exist.
+- What inputs, outputs, acceptance conditions and boundaries apply.
+
+This is where the reasoning from subsection 8.3 becomes visible.
+
+#### F. Selected architecture shape and alternatives
+
+State whether the proposal is primarily:
+- Conventional software, workflow or automation.
+- A single-agent arrangement.
+- An agent supported by workflows and automation.
+- A multi-agent arrangement.
+- A hybrid system.
+
+Explain why it was selected and record reasonable alternatives considered. Include the important trade-offs, such as simplicity, coordination overhead, separation of permissions, flexibility, cost, reliability and maintainability.
+
+Do not describe an alternative as rejected unless it was actually considered.
+
+#### G. Component catalogue and boundaries
+
+For each major component, record:
+- Name or identifier.
+- Purpose and responsibilities.
+- What it owns and does not own.
+- Inputs and outputs.
+- Dependencies.
+- Permissions and restrictions.
+- Failure or escalation conditions.
+- Whether it is an agent, conventional component, automated process, human role or external dependency.
+
+A component in the blueprint does not automatically mean a separately deployed service or a separate AI agent.
+
+#### H. Interfaces and information/control flows
+
+Describe:
+- Which components interact.
+- Why they interact.
+- What information or requests are exchanged.
+- Required structure, meaning, units and evidence status.
+- How task initiation, approvals, pauses and completion are controlled.
+- What happens when an exchange fails or is rejected.
+
+Use diagrams where they clarify the design. A simple context diagram, component diagram, information-flow diagram or control-flow diagram may be sufficient. Diagrams should have titles, labels and explanations; an unexplained drawing is not an adequate architecture record.
+
+#### I. Autonomy, authority and human oversight
+
+Record the autonomy arrangement for each relevant agent or action category.
+
+Identify:
+- Decisions and actions permitted independently.
+- Data and resources the agent may access.
+- Prohibited or restricted operations.
+- Actions requiring human approval.
+- Reviewers and their authority.
+- Escalation and safe-stop conditions.
+- Conditions that reduce or suspend autonomy.
+
+The project's five autonomy levels may be used as a teaching and documentation aid, but they must be accompanied by actual action-level permissions and controls. A level number alone is not a sufficient permission specification.
+
+#### J. Risk, security, privacy and governance requirements
+
+At architecture level, identify the important risks and controls that the design must accommodate.
+
+Examples include:
+- Access restrictions and least privilege.
+- Protection of confidential information and credentials.
+- Untrusted or misleading inputs.
+- Prompt or instruction manipulation risks.
+- Unsafe or unauthorised actions.
+- Approval and accountability requirements.
+- Audit and record protection needs.
+
+This chapter identifies where these concerns affect the architecture. Detailed threat modelling, security engineering and governance mechanisms remain in their assigned disciplines.
+
+#### K. Reliability, failure and lifecycle considerations
+
+Describe important:
+- External and internal dependencies.
+- Failure conditions and degraded modes.
+- Pause, retry, recovery and escalation expectations.
+- Shutdown and retirement considerations.
+- Continuity requirements for unfinished work.
+- Monitoring and traceability needs.
+
+Detailed reliability, observability and infrastructure design remain in later disciplines.
+
+#### L. Assumptions, risks and open questions
+
+Keep separate lists for:
+- Verified facts.
+- Assumptions requiring validation.
+- Constraints.
+- Preferences.
+- Risks.
+- Open questions and pending decisions.
+
+For each material assumption or open question, identify its importance and, where possible, who or what can resolve it.
+
+Do not hide uncertainty to make the blueprint look complete.
+
+#### M. Architecture decisions and rationale
+
+Record important decisions and why they were made.
+
+A concise architecture decision record can contain:
+1. Decision title and date.
+2. Context or problem requiring a decision.
+3. Options genuinely considered.
+4. Selected option.
+5. Reason for selection.
+6. Consequences and trade-offs.
+7. Conditions that might cause the decision to be revisited.
+
+This prevents future contributors from repeating old investigations or reversing decisions without understanding their original rationale.
+
+#### N. Requirement-to-architecture traceability
+
+Link important requirements to:
+- The capability that addresses them.
+- The responsible component or participant.
+- The interface or flow involved.
+- The control or constraint that applies.
+- The evidence or test that will later verify satisfaction.
+
+A simple traceability chain is:
+
+**Requirement → Capability → Responsible component → Interface or control → Validation evidence**
+
+This helps identify requirements with no architectural owner and components that exist without a clear purpose.
+
+### 4. Worked example: a preliminary agricultural intelligence blueprint
+
+The following is a compact illustration of what the blueprint might contain. It is not a verified market study, an approved product specification or a commitment to build.
+
+**Purpose:** support timely, traceable understanding of agricultural market changes by bringing together observations from relevant sources, preserving evidence status and presenting useful findings.
+
+**Candidate architecture shape:** hybrid system.
+
+**Candidate component responsibilities:**
+- Scheduled intake: initiates collection from approved sources.
+- Extraction and normalisation: captures and standardises observations.
+- Evidence assessment: records whether information is verified, unverified, rejected or unresolved.
+- Monitoring and calculation: applies defined comparisons and identifies conditions for investigation.
+- Investigation agent: examines unusual or ambiguous cases using permitted sources and bounded authority.
+- Human reviewer: approves sensitive or consequential publication.
+- Reporting and notification: prepares outputs and distributes them only when required approval conditions are satisfied.
+
+**Important design constraints:**
+- Each observation must retain source, location, date, unit and evidence status.
+- Unverified information must not silently become verified through processing.
+- The investigation agent cannot commit funds or publish sensitive claims independently.
+- Missing or unreliable sources must be disclosed.
+- The design must preserve task ownership, approvals and action history.
+
+**Unresolved questions:**
+- Which information sources can be used reliably and under what terms?
+- What evidence standard will define each verification category?
+- Which reports require approval and who is authorised to approve them?
+- What coverage and reporting timeliness are genuinely required?
+- What operating budget and resource limits are acceptable?
+
+This example shows how the blueprint records both proposed architecture and unresolved matters without pretending they have already been settled.
+
+### 5. How to review an architecture blueprint
+
+A review should challenge the design rather than merely check whether the document has been filled in.
+
+#### A. Problem and requirement review
+- Does the design address the actual problem?
+- Are outcomes clear and requirements traceable?
+- Are constraints and operating conditions represented accurately?
+
+#### B. Completeness review
+- Does every important requirement have a capability and owner?
+- Are important components, interfaces and dependencies represented?
+- Are inputs, outputs and acceptance conditions clear?
+
+#### C. Simplicity and suitability review
+- Is an agent genuinely justified where one is proposed?
+- Could any part be handled more simply by conventional software or automation?
+- Are multiple agents justified by meaningful separation benefits?
+- Has unnecessary complexity been introduced?
+
+#### D. Authority and oversight review
+- Are permissions and boundaries explicit?
+- Does autonomy match responsibilities and consequences?
+- Are human approval and intervention arrangements practical?
+- Can restricted actions be prevented when approval is missing?
+
+#### E. Consistency review
+- Do component responsibilities overlap or leave gaps?
+- Do interfaces use compatible meanings, units and evidence statuses?
+- Are information flow and control flow understandable?
+- Are there circular or hidden dependencies?
+- Do the stated assumptions conflict with the proposed design?
+
+#### F. Risk and operational review
+- What happens when important dependencies fail?
+- Can errors be contained and corrected?
+- Can unfinished work be recovered or transferred?
+- Can actions and approvals be traced?
+- Can the system be maintained and changed without losing control?
+
+#### G. Evidence and readiness review
+- Which statements are verified and which remain assumptions?
+- Are unresolved questions visible?
+- What must be tested before implementation or wider deployment?
+- Is the blueprint detailed enough for the next stage, without pretending that later engineering work is complete?
+
+### 6. Review outcomes
+
+A blueprint review should end with a clear outcome, such as:
+
+- **Accept for the next design stage:** the architecture is sufficiently clear for more detailed design, subject to recorded conditions.
+- **Accept with conditions:** specified issues must be resolved before particular work proceeds.
+- **Revise and resubmit:** important gaps, conflicts or risks require changes.
+- **Reject the proposed architecture:** the design does not adequately address the problem or its constraints; alternatives must be reconsidered.
+
+Approval of a blueprint does not prove that the eventual system will work. It means the architecture is sufficiently reasoned and documented to proceed to the next authorised stage.
+
+### 7. Maintain the blueprint over time
+
+An architecture blueprint is a managed project record, not a document written once and forgotten.
+
+Update it when material changes occur in:
+- Problem or system scope.
+- Requirements and constraints.
+- Component responsibilities or boundaries.
+- Interfaces and information flows.
+- Autonomy, authority or approval rules.
+- External dependencies and operating conditions.
+- Important assumptions, risks or decisions.
+
+Record the new version, reason for change, review outcome and affected decisions. Preserve superseded versions where they are needed to understand historical designs and actions.
+
+Keep the blueprint understandable independently of its original author. Link to detailed discipline documents and decision records rather than copying every technical detail into one enormous document.
+
+### 8. A reusable architecture blueprint structure
+
+The project now has a technology-neutral blueprint template at:
+
+[Agent Architecture Blueprint Template](../../templates/AGENT_ARCHITECTURE_BLUEPRINT_TEMPLATE.md)
+
+The template provides a starting structure for future design exercises. It is not compulsory to fill every section for every small system. Use the sections that are relevant, explain omissions where necessary and scale the detail to the system's risk and complexity.
+
+### 9. Common blueprint mistakes
+
+Avoid:
+- Treating a diagram as the complete architecture.
+- Recording components without their responsibilities and boundaries.
+- Listing agents without explaining why agentic behaviour is required.
+- Naming tools or platforms before capabilities and interfaces are understood.
+- Omitting human roles, approval points or action-level permissions.
+- Presenting assumptions as verified facts.
+- Leaving unresolved questions hidden.
+- Describing alternatives or approvals that never actually occurred.
+- Treating blueprint approval as proof of successful implementation.
+- Allowing the blueprint to become stale after important architecture changes.
+
+### Principles established
+
+- An architecture blueprint is a structured explanation and decision record, not merely a diagram.
+- It should connect the problem, requirements, capabilities, components, interfaces, flows, authority, oversight, risks and validation.
+- Record alternatives, trade-offs, assumptions, open questions and rationale honestly.
+- Keep component responsibilities, information flows and control flows understandable.
+- Preserve requirement-to-architecture traceability.
+- Review suitability, simplicity, completeness, consistency, control, risk and operational feasibility.
+- Approval to proceed is not proof that the system has been implemented or validated successfully.
+- Maintain and version the blueprint as material architecture decisions change.
+- Keep the architecture technology-neutral until a demonstrated capability requirement warrants a technology choice.
+
+## Chapter 8 completion
+
+Chapter 8 has covered the full design-synthesis sequence:
+
+1. Problem Framing and Agent Suitability.
+2. Requirements, Constraints and Operating Context.
+3. Capability and Responsibility Mapping.
+4. Selecting the High-Level Architecture Shape.
+5. Component Boundaries, Interfaces and Flows.
+6. Integrating Autonomy, Authority and Human Oversight.
+7. Producing and Reviewing an Architecture Blueprint.
+
+## Discipline 1 completion
+
+Discipline 1 now has eight chapters. Its coverage review has been updated after the final synthesis chapter. The foundational concepts are established for progression into the specialist disciplines; detailed treatment of reasoning, knowledge, tools, execution, orchestration, security, governance, evaluation, interaction, reliability, infrastructure and continuous improvement remains in their assigned disciplines.
+
+The next learning discipline is **Discipline 2 — Reasoning and Planning**. Its detailed learning sequence should be established before the first lesson begins.
+
 
 Continue with **8.7 Producing and Reviewing an Architecture Blueprint**. Subsection 8.7 remains planned and has not yet been taught.
+
+
+## Next learning step
+
+Begin **Discipline 2 — Reasoning and Planning** by defining its scope and learning sequence before teaching the first lesson.
