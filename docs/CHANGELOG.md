@@ -2,6 +2,16 @@
 
 ## 2026-11-27 — Chapter 7 learning progress
 
+- Covered and documented subsection 7.4, Agent Lifecycle and States.
+- Distinguished lifecycle stages from current operational states.
+- Distinguished agent state from individual task state.
+- Documented state transitions, readiness, pausing, stopping, failure, recovery, shutdown and retirement.
+- Added recovery safeguards for repeated actions and controlled decommissioning.
+- Set the next learning point to 7.5, Configuration and Version Changes.
+
+
+## 2026-11-27 — Chapter 7 learning progress
+
 - Covered and documented subsection 7.3, Initialization and Startup.
 - Distinguished configuration, initialization, startup and runtime.
 - Documented configuration validation, authority and policy checks, dependency preparation, secure credential loading, task-state initialization and readiness checks.
