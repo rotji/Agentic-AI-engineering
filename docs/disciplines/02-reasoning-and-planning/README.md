@@ -1,6 +1,6 @@
 # Discipline 2 — Reasoning and Planning
 
-**Status:** In progress; Chapter 1 complete, Chapter 2 next.
+**Status:** In progress; Chapters 1–2 complete, Chapter 3 next.
 
 ## 1. Purpose
 
@@ -55,7 +55,7 @@ Planned subsections:
 - **2.2 Interpreting Instructions and Identifying Intent:** Covered.
 - **2.3 Goal States and Conditions for Success:** Covered.
 - **2.4 Constraints, Priorities and Conflicting Objectives:** Covered.
-- **2.5 Ambiguity, Missing Requirements and Clarification**
+- **2.5 Ambiguity, Missing Requirements and Clarification:** Covered.
 
 ### Chapter 3 — Reasoning Patterns and Inference
 
@@ -203,6 +203,6 @@ Where useful, exercises will ask the learner to formulate goals, decompose tasks
 
 ## 7. Current continuation point
 
-**Discipline 2 → Chapter 2 → 2.5 Ambiguity, Missing Requirements and Clarification.**
+**Discipline 2 → Chapter 3 → 3.1 Deductive Reasoning.**
 
-Subsections 2.1–2.4 are covered. Subsection 2.5 remains planned.
+Chapter 2 (subsections 2.1–2.5) is complete. Chapter 3 has not yet been taught.
