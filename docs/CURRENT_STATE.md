@@ -11,8 +11,8 @@ Agentic AI Engineering
 - **Discipline:** 1 — Agent Architecture and Design
 - **Chapter:** 6 — Agent Identity, Roles and Responsibilities
 - **Completed chapter coverage:** Chapters 1–5
-- **Covered subsections in Chapter 6:** 6.1 Agent Identity; 6.2 Agent Roles; 6.3 Agent Responsibilities; 6.4 Agent Authority; 6.5 Agent Boundaries; 6.6 Agent Relationships
-- **Next subsection:** 6.7 Agent Accountability
+- **Chapter 6 status:** Covered (subsections 6.1–6.7)
+- **Next chapter:** 7 — Agent Configuration and Lifecycle (planned; not yet taught)
 
 ## Completed chapter coverage
 
@@ -82,6 +82,22 @@ Relationships also create dependencies. The system should define how it handles 
 
 Principles: make relationships explicit and purpose-driven; distinguish communication, delegation, coordination, supervision and authority; share only information needed for an authorised task; preserve provenance; define failure and escalation handling; avoid unnecessary connections and unclear task ownership.
 
+
+
+### 6.7 Agent Accountability
+
+Agent accountability means that agent actions and outputs can be traced, assessed and addressed against assigned responsibilities, authority, boundaries and expected standards. It makes behaviour reviewable, but does not automatically make software the ultimate legal or organisational bearer of responsibility.
+
+For consequential work, appropriate records may connect agent identity, configuration and policy version, task origin, assigned role and authority, input sources, actions and tool calls, decision summaries, approvals, outputs, handoffs, outcomes, exceptions and incidents. The level of detail should be proportionate to risk, privacy and operational needs.
+
+Logging records events; monitoring observes ongoing operation; auditing examines evidence; evaluation measures performance. Logs alone do not prove correctness or completeness. Decision records should capture relevant evidence, rules, uncertainty and outcomes without requiring storage of hidden model chain-of-thought.
+
+Multi-agent delegation and handoffs should remain traceable so that task ownership and intermediate results do not disappear. When failures occur, the system should record and contain the incident, preserve evidence, identify affected components and approvals, correct the outcome where possible, investigate the cause and verify corrective action.
+
+Accountability records should be access-controlled, protected against unauthorised alteration and retained only as justified. Measures should reflect each role and not reward speed or volume at the expense of accuracy, safety or evidence quality.
+
+Principles: make consequential actions attributable and reviewable; preserve important handoffs and approvals; distinguish logging, monitoring, auditing and evaluation; respond to failures through containment, investigation, correction and verification; protect records; do not mistake operational agent responsibility for ultimate legal or organisational accountability.
+
 ## Important project boundaries
 
 - Do not divert the learning sequence into detailed platform or tool evaluations before a relevant need arises.
@@ -91,4 +107,4 @@ Principles: make relationships explicit and purpose-driven; distinguish communic
 
 ## Next action
 
-Continue with **Discipline 1 → Chapter 6 → 6.7 Agent Accountability**. Document the subsection after it has been taught and update this file when the learning position advances.
+Begin **Discipline 1 → Chapter 7 — Agent Configuration and Lifecycle**. This chapter is planned, not yet taught. Start by defining what agent configuration contains and why configuration must be distinguished from identity, role, authority and runtime state.
