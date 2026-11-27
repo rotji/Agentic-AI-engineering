@@ -1,6 +1,6 @@
 # Chapter 2 — Goals, Instructions and Problem Formulation
 
-**Status:** In progress.
+**Status:** Complete.
 
 ## Chapter learning sequence
 
@@ -8,7 +8,7 @@
 2. **2.2 Interpreting Instructions and Identifying Intent:** Covered.
 3. **2.3 Goal States and Conditions for Success:** Covered.
 4. **2.4 Constraints, Priorities and Conflicting Objectives:** Covered.
-5. **2.5 Ambiguity, Missing Requirements and Clarification:** Planned.
+5. **2.5 Ambiguity, Missing Requirements and Clarification:** Covered.
 
 ---
 
@@ -1194,7 +1194,355 @@ When an agent encounters competing requirements, it can use this sequence:
 
 ## Continuation point
 
-Continue with **2.5 Ambiguity, Missing Requirements and Clarification**. Subsection 2.5 remains planned.
+## 2.5 Ambiguity, Missing Requirements and Clarification
+
+### Core question
+
+What should an agent do when an instruction or task is unclear, incomplete, underspecified or open to several interpretations?
+
+An agent will often receive instructions that leave important details unstated. It may also encounter information that is contradictory, outdated or insufficient to support a conclusion.
+
+The agent must recognise the kind of uncertainty it is facing and decide whether it can proceed safely, state an assumption, ask for clarification, return a partial result or stop and escalate.
+
+For this lesson, use these working definitions:
+
+- **Ambiguity:** wording or context permits more than one plausible interpretation.
+- **Missing requirement:** information needed to define or complete the task has not been supplied.
+- **Underspecification:** the general intention is understandable, but important details such as scope, format, quality or timing are not defined.
+- **Inconsistency:** two or more requirements, instructions or pieces of information appear to contradict one another.
+- **Uncertainty:** the available evidence does not establish which interpretation or factual conclusion is correct.
+- **Clarification:** a question or exchange used to resolve a material ambiguity, missing requirement or conflict.
+
+These conditions are related, but they are not the same. The correct response depends on what is unclear and what consequences a mistaken interpretation could have.
+
+### 1. Recognise different forms of ambiguity
+
+Ambiguity can arise in several parts of an instruction.
+
+**A. Wording or lexical ambiguity**
+
+A word or phrase has more than one plausible meaning.
+
+Example: "Find agricultural markets in Plateau State."
+
+Does "markets" mean physical trading locations, wholesale buyers, market prices, or commercial demand?
+
+**B. Scope ambiguity**
+
+The boundary of the requested work is unclear.
+
+Example: "Map producers across Plateau State."
+
+Does this mean all 17 LGAs, selected production clusters, registered organisations, individual farmers, or all identifiable producer types?
+
+**C. Entity ambiguity**
+
+It is unclear which person, organisation, product, place or record is being referred to.
+
+Example: "Check the processor near the farm."
+
+Which farm and which processor?
+
+**D. Temporal ambiguity**
+
+The relevant date, period or freshness requirement is unclear.
+
+Example: "Find current tomato prices."
+
+Does current mean today, this week, the latest available observation, or a defined reporting period?
+
+**E. Measurement or classification ambiguity**
+
+The unit, product form or category is unclear.
+
+Example: "A basket of tomatoes costs ₦X."
+
+What basket size, product grade, market level and observation date are involved? Without those details, the figure may not be comparable.
+
+**F. Intent ambiguity**
+
+The words are understandable, but the intended purpose is uncertain.
+
+Example: "Monitor agricultural producers."
+
+Does this mean track public information, observe production changes, verify operating status, or contact producers directly?
+
+Different interpretations may require different data, permissions, costs and workflows.
+
+### 2. Missing requirements are not always ambiguity
+
+Sometimes the instruction has one clear meaning but still lacks information needed to complete the task.
+
+For example:
+
+"Produce a weekly agricultural market report."
+
+The general request is understandable, but important requirements may be missing:
+- Which products or product forms?
+- Which markets and locations?
+- Which market levels: farmgate, wholesale or retail?
+- What day and time should the report cover?
+- Which sources are permitted?
+- What evidence labels are required?
+- Who will use the report and what decisions should it support?
+
+The agent may understand the requested deliverable but still lack enough information to produce a valid result.
+
+A useful distinction:
+
+- **Ambiguity:** the agent does not know which meaning is intended.
+- **Missing requirement:** the agent knows the general meaning but does not have a required detail.
+- **Uncertainty:** even after understanding the request, the available evidence may not establish the relevant fact.
+
+Clarification can help with the first two. Additional investigation or evidence may be needed for the third.
+
+### 3. Distinguish ambiguity from inconsistency
+
+An ambiguous instruction has multiple plausible meanings. An inconsistent instruction contains requirements that appear to conflict.
+
+Example of ambiguity:
+"Cover major agricultural producers."
+
+The term "major" has not been defined. It could refer to output volume, land area, commercial scale, market influence or another criterion.
+
+Example of inconsistency:
+"Include every identified producer, but exclude all producers without independently verified production figures."
+
+If many identified producers do not have verified production figures, these requirements may conflict depending on what "include" means.
+
+The agent should not silently choose one requirement and ignore the other. It should identify the conflict, examine whether the requirements can be reconciled by separate categories or status labels, and ask or escalate if the conflict materially changes the result.
+
+### 4. Determine whether the uncertainty matters
+
+Not every missing detail requires a question.
+
+An agent should consider:
+- Would different interpretations materially change the result?
+- Would the ambiguity change the people, places, products or records included?
+- Could it affect privacy, safety, legal compliance or financial commitments?
+- Could it cause an irreversible or externally visible action?
+- Would a wrong assumption waste substantial time or resources?
+- Can the result be produced in a useful, clearly labelled partial form?
+- Is there an established, low-risk default from current project context?
+
+A missing heading style is normally low impact. An unclear recipient for a confidential report is material. An uncertain measurement unit can invalidate a price comparison. Unclear authority to contact producers can change the action from research to external engagement.
+
+The greater the consequences of being wrong, the stronger the need to clarify or stop.
+
+### 5. Use context and established defaults carefully
+
+Relevant context may resolve an ambiguity without asking the requester to repeat information already established.
+
+For example, if the project has explicitly established that the agricultural pilot covers all 17 Plateau State LGAs, the agent should use that scope when a later instruction says "include the remaining locations", provided the earlier decision is still active and applicable.
+
+But context must not be stretched beyond what it supports.
+
+If the project says it monitors all 17 LGAs, that does not automatically define:
+- Which producer types are included.
+- What evidence confirms a producer.
+- Whether direct contact is authorised.
+- What location precision is acceptable.
+- How current production information must be.
+- Which commercial relationships may be published.
+
+Use an established default only when it is relevant, current, compatible with the instruction and low risk. State the assumption when it could affect how the result is interpreted.
+
+### 6. Decide whether to proceed, assume, clarify, partially complete or stop
+
+A practical response model has five options.
+
+**A. Proceed**
+
+Proceed when the instruction is sufficiently clear, required information is available and the work is within authority.
+
+Example: "Compare these three dated retail observations, all measured in the same unit, and show the difference."
+
+**B. Proceed with a stated assumption**
+
+Use this when a detail is missing but a reasonable, low-risk and reversible default exists.
+
+Example: the user asks for a short summary but does not specify a format. The agent may use a concise structured summary and state the format chosen if relevant.
+
+An assumption record should capture:
+- What is assumed.
+- Why the assumption is reasonable.
+- What part of the result it affects.
+- How easily it can be corrected.
+- Whether it needs later confirmation.
+
+**C. Ask for clarification**
+
+Ask when different interpretations would materially change the scope, result, cost, timing, evidence standard or permitted action.
+
+Example: "When you say 'monitor producers', do you mean track publicly available information, or are you authorising direct contact with producers?"
+
+Ask the question that most affects the next decision. Do not overwhelm the requester with a long questionnaire when one answer will resolve the main blocker.
+
+**D. Produce a partial result and identify the gap**
+
+Use this when some useful work can be completed without pretending that missing information is known.
+
+Example: produce a sourced list of identified producers, while marking product destinations as unknown where there is no supporting evidence.
+
+Clearly state what is complete, what is missing and what additional information would allow the work to continue.
+
+**E. Stop, defer or escalate**
+
+Use this when proceeding would breach a mandatory constraint, exceed authority, create unacceptable risk or require a decision the agent cannot make.
+
+Example: an instruction asks the agent to share private producer contact details with an external party, but the agent has no permission to disclose them. It must not guess that permission exists.
+
+### 7. Ask precise and useful clarification questions
+
+A good clarification question should:
+- Identify the exact ambiguity or missing requirement.
+- Explain briefly why it matters when that is not obvious.
+- Offer clear alternatives when that helps the requester answer.
+- Ask only for information needed for the next decision.
+- Avoid leading the requester toward an unsupported conclusion.
+
+Weak question:
+"What exactly do you want?"
+
+Better question:
+"When you say 'where the products go', should the register record only documented first buyers, or should it also capture processors, aggregators, wholesale markets and export destinations where evidence is available?"
+
+The better question identifies the unresolved scope and makes the consequences visible.
+
+When several details are genuinely interdependent, ask them together in a compact way. Otherwise, use progressive clarification: resolve the most important blocker first, then ask further questions only if the next stage requires them.
+
+### 8. Worked example: interpreting an agricultural producer-mapping task
+
+Instruction:
+
+"Map agricultural producers across Plateau State and show what they produce and where their products go."
+
+The agent identifies several unresolved questions:
+
+| Issue | Why it matters | Possible response |
+|---|---|---|
+| Meaning of producer | Individuals, farms, cooperatives and companies may need different records. | Use the project's established producer categories if approved; otherwise clarify. |
+| Geographic scope | "Across Plateau State" may mean all 17 LGAs, but local coverage and precision still need definition. | Reuse the established 17-LGA scope; do not invent village or farm coordinates. |
+| Product coverage | Raw produce, processed products and by-products may be included. | Apply the project's existing broad agricultural scope. |
+| Destination meaning | First buyer, aggregator, processor, market or export destination are different relationships. | Clarify the relationship types or capture separate categories with evidence. |
+| Evidence standard | A social post, official registry and direct confirmation do not establish the same thing. | Apply approved evidence classifications; do not invent verification rules. |
+| External contact | Direct producer engagement is not automatically authorised. | Research permitted sources; ask for separate authority before contact. |
+| Time and freshness | Producer status and destinations may change. | Record observation dates and use an agreed freshness rule when established. |
+
+A responsible interpretation could be:
+
+"Create a sourced, evidence-labelled register of identified agricultural producers within the established Plateau State scope. Record their known products and separately identify documented buyer, aggregator, processor, market or export relationships. Preserve source and observation dates, distinguish evidence status and leave unsupported relationships unresolved. Do not contact producers or disclose private information without the required authority."
+
+This formulation reuses established project context where it is applicable, identifies remaining uncertainty and preserves authority boundaries.
+
+### 9. Progressive clarification versus asking everything at once
+
+A task may contain many unknowns, but not all of them need to be resolved before any work begins.
+
+For example, to build an initial producer register:
+1. We may first need the agreed definition of a producer and the required record fields.
+2. During source discovery, we may learn which locations and producer types have available evidence.
+3. Before linking destinations, we may need to clarify which relationship types are in scope.
+4. Before direct engagement, we need the correct authority, contact purpose and information-sharing rules.
+
+This is progressive clarification. It avoids asking the requester to decide details that cannot yet be informed by evidence.
+
+However, do not postpone a question when the missing answer changes whether the proposed work is permitted or safe to begin.
+
+### 10. Do not confuse missing information with permission to invent
+
+An agent may be tempted to fill gaps to make its output appear complete.
+
+Examples:
+- Assigning an estimated production volume without evidence.
+- Inferring a buyer from a nearby market.
+- Treating a producer's old listing as proof that the producer is currently active.
+- Converting an unspecified basket into a standard unit without recording the assumption.
+- Treating an unverified report as an official confirmation.
+
+These are not valid ways to resolve ambiguity.
+
+The system should preserve unknown values, disclose assumptions, seek evidence or ask for clarification. It should not convert uncertainty into fabricated certainty.
+
+### 11. Record ambiguity, assumptions and clarification outcomes
+
+For recurring or consequential work, preserve an interpretation record.
+
+| Field | What to record |
+|---|---|
+| Original instruction | Exact wording or a faithful reference to it. |
+| Ambiguity or gap | What is unclear or missing. |
+| Type | Ambiguity, missing requirement, inconsistency or evidence uncertainty. |
+| Impact | What may change if the issue is interpreted incorrectly. |
+| Context checked | Relevant current decisions, scope and defaults. |
+| Assumption | Any temporary interpretation used. |
+| Clarification | Question asked and response received. |
+| Decision | How the task was ultimately formulated. |
+| Authority | Who approved a consequential interpretation or action. |
+| Revisit condition | What new information would require the interpretation to be reviewed. |
+
+This record reduces repeated questioning and helps different agents or people interpret recurring tasks consistently.
+
+### 12. Practical ambiguity-resolution procedure
+
+Before proceeding with a materially unclear instruction:
+
+1. Extract the explicit request and intended deliverable.
+2. Identify ambiguous wording, missing requirements, inconsistencies and evidence gaps separately.
+3. Check relevant current context and previously approved decisions.
+4. Identify the possible interpretations.
+5. Assess how each interpretation changes scope, cost, timing, evidence, risk and authority.
+6. Use an established low-risk default only where appropriate and disclose material assumptions.
+7. Ask the smallest useful clarification question when the answer changes the work materially.
+8. Complete safe, independent parts where a partial result is useful.
+9. Stop or escalate if no permitted interpretation is available.
+10. Record the resolution so it can be reused when the same task recurs.
+
+### 13. Transfer the principle across sectors
+
+The same approach applies across industries, but each domain has its own high-impact ambiguities.
+
+- **Agriculture:** product form, measurement unit, market level, producer identity, season, source date and destination relationship.
+- **Real estate:** property identity, legal ownership, listing status, location precision, title evidence and authority to disclose information.
+- **Mining:** site identity, licence status, mineral classification, production period, environmental conditions and regulatory permissions.
+- **Healthcare:** patient identity, clinical meaning, date, missing observations, uncertainty, consent and professional authority.
+
+The transferable capability is disciplined interpretation and clarification. Domain-specific terms, evidence standards, privacy requirements and professional decisions must be established separately.
+
+### 14. Common mistakes
+
+Avoid:
+- Treating every unclear instruction as a reason to stop.
+- Guessing when different interpretations would materially change the work.
+- Asking the requester to repeat information already established in current context.
+- Asking too many questions before knowing which details are necessary.
+- Confusing ambiguity with missing information or evidence uncertainty.
+- Treating an assumption as a verified fact.
+- Filling empty fields with invented or inferred details.
+- Using context to create permissions that were never granted.
+- Continuing a consequential action while its authority is unresolved.
+- Forgetting to record clarifications for recurring tasks.
+
+### Principles established
+
+- Ambiguity, missing requirements, underspecification, inconsistency and evidence uncertainty are different conditions.
+- Assess the impact of uncertainty before deciding how to respond.
+- Use current, relevant and approved context to resolve references without inventing new requirements.
+- Proceed when clear; disclose low-risk assumptions; clarify material uncertainty; provide honest partial results where useful; stop or escalate when authority or safety requires it.
+- Ask the smallest useful question that resolves the next material blocker.
+- Use progressive clarification when later questions depend on evidence discovered during the work.
+- Do not fabricate information to make an output appear complete.
+- Preserve original instructions, assumptions, clarifications and interpretation decisions for important recurring work.
+- Reuse the method across sectors while adapting domain-specific terminology, evidence and governance.
+
+## Chapter 2 completion
+
+Chapter 2, Goals, Instructions and Problem Formulation, is complete. Its five subsections established how to define objectives and goals, interpret instructions and intent, describe goal states and success conditions, resolve constraints and competing priorities, and handle ambiguity and missing requirements.
+
+## Next learning step
+
+Continue with **Chapter 3 → 3.1 Deductive Reasoning**. Chapter 3 has not yet been taught.
+
 
 
 
