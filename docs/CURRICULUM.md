@@ -7,7 +7,7 @@ The project currently follows 13 disciplines. The sequence is a learning structu
 | No. | Discipline | Status |
 |---:|---|---|
 | 1 | Agent Architecture and Design | Complete |
-| 2 | Reasoning and Planning | Not started |
+| 2 | Reasoning and Planning | Sequence defined; not started |
 | 3 | Context, Memory and Knowledge | Not started |
 | 4 | Tools and Environment Engineering | Not started |
 | 5 | Execution and Loop Engineering | Not started |
@@ -28,7 +28,7 @@ The project currently follows 13 disciplines. The sequence is a learning structu
 Understand what an agent is, its components, identity, boundaries, lifecycle, roles, responsibilities and autonomy; learn how to translate problem requirements into a coherent, technology-neutral agent architecture.
 
 ### 2. Reasoning and Planning
-Study how agents interpret objectives, reason through problems, decompose tasks, plan, select actions and revise plans.
+Study how agents interpret objectives, reason through problems, represent states and actions, decompose tasks, construct and validate plans, select actions under constraints and uncertainty, and revise or stop plans appropriately. See the [Discipline 2 learning sequence](disciplines/02-reasoning-and-planning/README.md).
 
 ### 3. Context, Memory and Knowledge
 Study how agents use immediate context, persistent memory, external knowledge, retrieval and information management.
