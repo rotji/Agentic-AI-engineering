@@ -54,7 +54,7 @@ Planned subsections:
 - **2.1 Objectives, Goals and Desired Outcomes:** Covered.
 - **2.2 Interpreting Instructions and Identifying Intent:** Covered.
 - **2.3 Goal States and Conditions for Success:** Covered.
-- **2.4 Constraints, Priorities and Conflicting Objectives**
+- **2.4 Constraints, Priorities and Conflicting Objectives:** Covered.
 - **2.5 Ambiguity, Missing Requirements and Clarification**
 
 ### Chapter 3 — Reasoning Patterns and Inference
@@ -203,6 +203,6 @@ Where useful, exercises will ask the learner to formulate goals, decompose tasks
 
 ## 7. Current continuation point
 
-**Discipline 2 → Chapter 2 → 2.4 Constraints, Priorities and Conflicting Objectives.**
+**Discipline 2 → Chapter 2 → 2.5 Ambiguity, Missing Requirements and Clarification.**
 
-Subsections 2.1–2.3 are covered. Subsections 2.4–2.5 remain planned.
+Subsections 2.1–2.4 are covered. Subsection 2.5 remains planned.
