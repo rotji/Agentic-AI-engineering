@@ -24,7 +24,7 @@ The chapter is being taught progressively. Subsections marked Covered have been 
 2. **8.2 Requirements, Constraints and Operating Context:** Covered.
 3. **8.3 Capability and Responsibility Mapping:** Covered.
 4. **8.4 Selecting the High-Level Architecture Shape:** Covered.
-5. **8.5 Component Boundaries, Interfaces and Flows:** establish responsibilities, inputs, outputs, information flows, control boundaries and dependencies at architecture level.
+5. **8.5 Component Boundaries, Interfaces and Flows:** Covered.
 6. **8.6 Integrating Autonomy, Authority and Human Oversight:** ensure decisions, permissions, boundaries, approvals and escalation are coherent across the design.
 7. **8.7 Producing and Reviewing an Architecture Blueprint:** document the design, assumptions, alternatives, trade-offs, unresolved questions and traceability to requirements.
 
@@ -901,6 +901,247 @@ The selected shape remains provisional until its interfaces, information flows a
 - Coordinator-led, distributed and mixed arrangements are high-level organisational choices; their detailed coordination belongs in later disciplines.
 - A distributed system still needs explicit authority, ownership, boundaries and accountability.
 - Record the reasons for the selected architecture and the alternatives rejected.
+
+
+## 8.5 Component Boundaries, Interfaces and Flows
+
+### Core question
+
+Once the high-level architecture shape is selected, how do we define where each component's responsibility begins and ends, how components exchange information, and how work and control move through the system?
+
+A component boundary defines the responsibility and scope assigned to a part of the system. An interface defines the agreed way that component interacts with another. A flow describes how information, work or control moves between components.
+
+These decisions make the architecture understandable and help prevent components from becoming unnecessarily dependent on one another.
+
+### 1. What is a component boundary?
+
+A component is a distinguishable part of the overall system that performs one or more related functions. It may be an AI agent, conventional software service, workflow, data store, external system or human-operated function.
+
+A component boundary clarifies:
+- What the component is responsible for.
+- What work it does not own.
+- What inputs it is allowed or expected to receive.
+- What outputs it must provide.
+- Which other components it may interact with.
+- What authority and restrictions apply to it.
+- What conditions require it to stop, return an error or escalate.
+
+A boundary is a design responsibility boundary. It does not necessarily mean a separate computer, application, process, container or agent. Those implementation decisions come later.
+
+One component may contain several internal functions. Conversely, a single capability may require several components to cooperate.
+
+### 2. Give each component a coherent responsibility
+
+A component should have a clear purpose and a responsibility that can be understood independently.
+
+For example, in the agricultural intelligence system:
+- The intake component receives observations from approved sources.
+- The normalisation component standardises fields and units.
+- The evidence assessment function assigns evidence status according to defined criteria.
+- The monitoring component identifies changes that meet agreed conditions.
+- The investigation agent examines unusual or ambiguous findings.
+- The approval function handles decisions reserved for authorised people.
+- The reporting and notification components prepare and distribute approved outputs.
+
+These are candidate responsibilities, not a requirement to implement each as a separate service or agent.
+
+Avoid giving a component unrelated duties simply because it is convenient to place them together. Also avoid splitting one small responsibility into many components without a meaningful reason.
+
+### 3. Understand cohesion and coupling
+
+Two useful architecture concepts help assess component boundaries.
+
+- **Cohesion** describes how closely the responsibilities inside a component belong together. A component with high cohesion has a clear, focused purpose.
+- **Coupling** describes how strongly one component depends on other components. Excessive coupling means a change or failure in one part can cause widespread effects elsewhere.
+
+A useful design aim is:
+
+**High cohesion within components and manageable coupling between components.**
+
+For example, a unit-normalisation component should focus on standardising measurement units. It should not also decide which commercial opportunities the system should pursue.
+
+If many components need to know each other's internal details, the boundaries may be unclear or the interfaces too tightly connected.
+
+Some dependencies are unavoidable. The aim is not zero coupling, but dependencies that are explicit, limited and manageable.
+
+### 4. What is an interface?
+
+An interface is the agreed way one component interacts with another.
+
+It describes what a component provides or requires without exposing every detail of how it performs its internal work.
+
+An interface may support:
+- Supplying information to another component.
+- Requesting a task or service.
+- Receiving a result or status.
+- Notifying another component that an event occurred.
+- Requesting a decision or approval.
+- Reporting an error or inability to proceed.
+
+An interface is not necessarily a software API. It may be a message, a shared record, a human approval step, a file exchange or another defined interaction. Specific interface technologies and integration mechanisms belong to Discipline 4.
+
+### 5. Define an interface contract
+
+Components should not rely on vague assumptions about what another component will provide.
+
+An interface contract establishes the expectations for an interaction. Depending on the type of exchange, it may define:
+
+1. **Producer and consumer:** which component provides the information or service and which component receives or uses it.
+2. **Purpose:** why the interaction occurs.
+3. **Input:** what information, request or trigger is supplied.
+4. **Output:** what result, response or status is returned.
+5. **Structure and meaning:** required fields, data types, units, definitions and interpretation.
+6. **Evidence and provenance:** source, timestamp, verification status and relevant limitations.
+7. **Conditions:** when the interaction is valid and what preconditions must be met.
+8. **Authority and access:** who is allowed to initiate, receive or perform the interaction.
+9. **Failure behaviour:** how errors, missing information, delays or rejected requests are represented.
+10. **Completion or acknowledgement:** how the parties know the interaction was received, accepted, completed or rejected.
+11. **Version and compatibility:** how changes to the interaction are identified and managed.
+
+The contract should contain enough detail to make the interaction reliable, but should not duplicate every internal implementation detail of either component.
+
+### 6. Information flow and control flow are different
+
+Architecture diagrams often show components connected by arrows. But an arrow can represent different kinds of movement.
+
+**Information flow** describes how data, evidence, requests or results move between components.
+
+Example:
+- The intake component sends price observations to normalisation.
+- Normalisation sends standardised records to evidence assessment.
+- The investigation agent sends findings to reporting.
+
+**Control flow** describes how work is triggered, directed, approved, paused or allowed to proceed.
+
+Example:
+- A scheduled trigger starts collection.
+- A significant-change condition requests an investigation.
+- A sensitive report is held until an authorised reviewer approves it.
+- An approval result allows the notification process to proceed.
+
+The two flows may travel between the same components, but they answer different questions. An architecture should make both understandable.
+
+### 7. Example information and control flows
+
+Consider this illustrative agricultural intelligence arrangement:
+
+**Information flow**
+
+1. Approved sources provide observations to intake.
+2. Intake passes captured observations and source details to normalisation.
+3. Normalisation produces standardised records for evidence assessment.
+4. Evidence assessment provides records with verification status to monitoring and analysis.
+5. When an investigation is required, relevant evidence is supplied to the investigation agent.
+6. The investigation agent returns findings, source references and uncertainty to reporting.
+7. The report is delivered to an authorised reviewer and, after approval, to the notification function.
+
+**Control flow**
+
+1. A schedule or approved trigger initiates collection.
+2. Validation and evidence checks determine whether records can proceed.
+3. A defined condition triggers an investigation.
+4. The investigation may be marked complete, incomplete or requiring escalation.
+5. Sensitive publication is held pending the required approval.
+6. An approved result permits distribution; a rejected result stops publication and records the decision.
+
+This distinction prevents the design from showing only where information travels while leaving unclear who or what controls the next action.
+
+### 8. Example component boundary map
+
+The following is an architecture-level illustration. It does not commit the project to separate deployments or specific technology.
+
+| Component or participant | Owns | Receives | Provides | Does not own |
+|---|---|---|---|---|
+| Intake | Capturing observations from approved sources | Source content and collection trigger | Raw observations with source details | Final verification or market interpretation |
+| Normalisation | Standardising fields, formats and units | Raw observations | Standardised records and validation errors | Deciding whether a market claim is true |
+| Evidence assessment | Assessing evidence status against defined criteria | Standardised records and provenance | Verified, unverified, rejected or unresolved status | Changing the original source record |
+| Monitoring and calculation | Applying defined comparisons and thresholds | Eligible observations and reference data | Calculated changes and investigation triggers | Explaining every cause of a change |
+| Investigation agent | Adaptive investigation of assigned cases | Trigger, relevant evidence and task scope | Findings, sources, assumptions and uncertainty | Publishing sensitive findings or committing funds |
+| Human approval | Making reserved approval decisions | Proposed report and supporting evidence | Approval, rejection or request for revision | Performing all routine data processing |
+| Reporting and notification | Preparing and distributing outputs under policy | Findings and approval status | Reports and delivery status | Approving its own restricted publication |
+
+One actual component may perform more than one row's work if the responsibilities are closely related and the design remains clear. A row does not automatically mean a separate agent.
+
+### 9. Avoid circular and hidden dependencies
+
+A dependency exists when one component needs another component's input, service or decision to continue.
+
+A straightforward chain might be:
+- Intake → Normalisation → Evidence assessment → Analysis.
+
+A problematic circular dependency might look like:
+- Component A cannot finish without B.
+- B cannot finish without C.
+- C cannot finish without A.
+
+Such cycles can cause deadlocks, repeated handoffs or unclear ownership unless they are deliberately designed and controlled.
+
+Also watch for hidden dependencies: a component that appears independent but actually relies on an undocumented data field, a particular output format, a person being available or an external service behaving in a specific way.
+
+Important dependencies should be recorded, including what happens when the dependency is unavailable.
+
+### 10. Boundaries should preserve evidence and authority
+
+When information moves between components, its meaning and status must not be lost.
+
+For example, an unverified market report should not become a verified observation merely because it passed through a normalisation component.
+
+Interfaces should preserve relevant:
+- Source references.
+- Observation and processing timestamps.
+- Units and definitions.
+- Verification status.
+- Uncertainty and limitations.
+- Identity of the producing component where relevant.
+
+Interactions must also respect the authority and boundaries already assigned to each participant. A component receiving a request must not interpret that request as permission to perform actions outside its own authority.
+
+### 11. What happens when an interface fails?
+
+A component boundary should include expectations for unsuccessful interactions.
+
+Examples include:
+- Required input is missing or malformed.
+- A response arrives too late.
+- The receiving component rejects the input.
+- A downstream component is unavailable.
+- Two components interpret a field differently.
+- An approval is denied or never arrives.
+- A result is incomplete or contains unresolved evidence.
+
+The architecture should establish whether the affected work is retried, paused, rejected, sent to an alternative approved route or escalated. A failed handoff should not be silently treated as successful completion.
+
+Detailed retry, messaging, orchestration and recovery engineering will be studied in later disciplines. At this stage, the architecture must at least identify the dependency and the required failure outcome.
+
+### 12. A practical boundary and interface review
+
+For each important component, ask:
+
+1. Is its purpose and responsibility clear?
+2. What does it explicitly not own?
+3. What inputs does it receive, and from whom?
+4. What outputs does it provide, and to whom?
+5. Are the meaning, format, units and evidence status clear?
+6. Are information flow and control flow both understood?
+7. Are the interaction's authority and approval conditions explicit?
+8. Are dependencies and failure responses visible?
+9. Can one component change internally without unnecessarily disrupting others?
+10. Is there any circular, hidden or unnecessary dependency?
+
+If these questions cannot be answered, the architecture boundaries or interfaces need further work.
+
+### Principles established
+
+- A component boundary defines responsibility and scope, not necessarily a separate deployment or agent.
+- Give components coherent purposes and clear ownership.
+- Aim for high cohesion and manageable coupling.
+- An interface defines an agreed interaction between components; it is not necessarily a software API.
+- Define interface contracts for important exchanges.
+- Distinguish information flow from control flow.
+- Preserve provenance, evidence status, uncertainty and units across handoffs.
+- Make dependencies, permissions, approvals and failure handling explicit.
+- Avoid circular, hidden and unnecessary dependencies.
+- Do not assume every component is a separate agent or must use a particular technology.
 
 
 ## Continuation point
