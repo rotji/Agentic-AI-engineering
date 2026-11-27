@@ -11,8 +11,8 @@ Agentic AI Engineering
 - **Discipline:** 1 — Agent Architecture and Design
 - **Chapter:** 6 — Agent Identity, Roles and Responsibilities
 - **Completed chapter coverage:** Chapters 1–5
-- **Covered subsections in Chapter 6:** 6.1 Agent Identity; 6.2 Agent Roles; 6.3 Agent Responsibilities; 6.4 Agent Authority; 6.5 Agent Boundaries
-- **Next subsection:** 6.6 Agent Relationships
+- **Covered subsections in Chapter 6:** 6.1 Agent Identity; 6.2 Agent Roles; 6.3 Agent Responsibilities; 6.4 Agent Authority; 6.5 Agent Boundaries; 6.6 Agent Relationships
+- **Next subsection:** 6.7 Agent Accountability
 
 ## Completed chapter coverage
 
@@ -66,6 +66,22 @@ Boundary testing should check whether the agent can access out-of-scope data, pe
 
 Principles: define explicit boundaries; enforce high-impact restrictions outside the model where practical; stop and escalate when necessary; test boundaries as the system changes.
 
+
+
+### 6.6 Agent Relationships
+
+Agent relationships define how agents exchange information, request or delegate work, coordinate activities and depend on one another. Common patterns include peer, producer–consumer, delegation, coordinator–worker, supervisory and dependency relationships.
+
+Communication does not automatically confer authority. An agent may be able to contact another without being allowed to control it, change its permissions or assign unrelated work.
+
+Communication patterns may include direct messages, shared workspaces, publish-and-subscribe arrangements, orchestrated routing and hierarchical communication. A system may combine patterns according to its requirements.
+
+Reliable interactions need clear expectations for sender, recipient, task, inputs, expected outputs, deadlines or priorities, status, restrictions, errors and acknowledgement. Information should retain relevant provenance and uncertainty; a message from another agent is not automatically verified evidence.
+
+Relationships also create dependencies. The system should define how it handles missing or delayed responses, incomplete work, duplicate messages, conflicting results, cancelled tasks and unavailable agents. It should not silently treat a missing response as successful completion.
+
+Principles: make relationships explicit and purpose-driven; distinguish communication, delegation, coordination, supervision and authority; share only information needed for an authorised task; preserve provenance; define failure and escalation handling; avoid unnecessary connections and unclear task ownership.
+
 ## Important project boundaries
 
 - Do not divert the learning sequence into detailed platform or tool evaluations before a relevant need arises.
@@ -75,4 +91,4 @@ Principles: define explicit boundaries; enforce high-impact restrictions outside
 
 ## Next action
 
-Continue with **Discipline 1 → Chapter 6 → 6.6 Agent Relationships**. Document the subsection after it has been taught and update this file when the learning position advances.
+Continue with **Discipline 1 → Chapter 6 → 6.7 Agent Accountability**. Document the subsection after it has been taught and update this file when the learning position advances.
