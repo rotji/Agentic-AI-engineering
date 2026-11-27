@@ -13,15 +13,15 @@ This repository preserves the learning path, practical pilot work, solution rese
 - **Discipline 2 status:** In progress; scope and 10-chapter learning sequence defined.
 - **Last completed chapter:** Chapter 1 — Foundations of Reasoning and Planning (subsections 1.1–1.4).
 - **Last completed chapter:** Chapter 2 — Goals, Instructions and Problem Formulation (subsections 2.1–2.5).
-- **Current chapter:** Chapter 3 — Reasoning Patterns and Inference (3.1 Deductive Reasoning covered).
-- **Next learning step:** Chapter 3.2 — Inductive Reasoning.
+- **Current chapter:** Chapter 3 — Reasoning Patterns and Inference (3.1–3.2 covered).
+- **Next learning step:** Chapter 3.3 — Abductive Reasoning and Explanation.
 - **Practical direction:** Agriculture is the first pilot path. Learning, existing-solution discovery, assembly, testing and justified custom development proceed together.
 
 ## Practical project direction
 
 This is not a theory-only curriculum. Agriculture is the first pilot path. We will connect lessons to real capability needs, discover and combine existing solutions, test working methods and build custom components only when a genuine gap is demonstrated. Validated principles will be assessed for transfer to other sectors—including real estate, mining and healthcare—with sector-specific adaptation and validation.
 
-Read the [Practical Build and Sector Transfer Method](docs/PRACTICAL_BUILD_AND_SECTOR_TRANSFER.md).
+Read the [Practical Build and Sector Transfer Method](docs/PRACTICAL_BUILD_AND_SECTOR_TRANSFER.md) and the [provisional Agricultural Pilot Charter](docs/practical-pilot/AGRICULTURAL_PILOT_CHARTER.md).
 
 ## Read in this order
 
