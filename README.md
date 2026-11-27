@@ -13,9 +13,9 @@ Read [START_HERE.md](START_HERE.md) for the project entry point and documentatio
 - **Current discipline:** 2 — Reasoning and Planning (in progress; sequence defined).
 - **Completed chapter:** Chapter 1 — Foundations of Reasoning and Planning (subsections 1.1–1.4).
 - **Completed chapter:** Chapter 2 — Goals, Instructions and Problem Formulation (subsections 2.1–2.5).
-- **Current chapter:** Chapter 3 — Reasoning Patterns and Inference (3.1–3.2 covered).
-- **Next learning step:** Chapter 3.3 — Abductive Reasoning and Explanation.
-- **Practical direction:** Agriculture is the first pilot path; solution discovery, assembly and validation proceed alongside the curriculum.
+- **Current chapter:** Chapter 3 — Reasoning Patterns and Inference (3.1–3.3 covered).
+- **Next learning step:** Chapter 3.4 — Causal Reasoning, Correlation and Analogy.
+- **Practical direction:** Agriculture is the first pilot path; five candidate information sources have received initial desk assessment, while underlying data and user needs remain to be validated.
 
 ## Practical operating method
 
