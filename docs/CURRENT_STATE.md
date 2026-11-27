@@ -25,8 +25,8 @@ See [Practical Build and Sector Transfer Method](PRACTICAL_BUILD_AND_SECTOR_TRAN
 - **Next discipline:** 2 — Reasoning and Planning
 - **Discipline 2 status:** In progress; scope and 10-chapter sequence defined.
 - **Chapter 1:** Complete (subsections 1.1–1.4).
-- **Chapter 2:** In progress; subsections 2.1–2.3 covered.
-- **Next learning step:** Chapter 2.4 — Constraints, Priorities and Conflicting Objectives.
+- **Chapter 2:** In progress; subsections 2.1–2.4 covered.
+- **Next learning step:** Chapter 2.5 — Ambiguity, Missing Requirements and Clarification.
 
 ## Discipline 2 — Reasoning and Planning
 
@@ -306,7 +306,7 @@ Discipline 1 is complete for progression to the specialist disciplines. Chapters
 
 - Do not divert the learning sequence into detailed platform or tool evaluations before a relevant need arises.
 - Do not assume blockchain or any other technology is compulsory. Revisit a technology only when a specific requirement warrants it.
-- The agricultural intelligence system is an illustrative example, not a final implementation specification.
+- Agriculture is the first practical pilot path; examples in lessons are not final implementation specifications or proof of tested capability.
 - The five autonomy levels are a project teaching framework, not a universal industry standard.
 
 ## Next action
