@@ -14,8 +14,8 @@ Agentic AI Engineering
 - **Chapter 7 status:** Complete (subsections 7.1–7.6)
 - **Review outcome:** One genuine design-synthesis gap identified
 - **Current chapter:** 8 — From Requirements to Agent Architecture (in progress)
-- **Covered subsections:** 8.1 Problem Framing and Agent Suitability; 8.2 Requirements, Constraints and Operating Context
-- **Next subsection:** 8.3 — Capability and Responsibility Mapping
+- **Covered subsections:** 8.1 Problem Framing and Agent Suitability; 8.2 Requirements, Constraints and Operating Context; 8.3 Capability and Responsibility Mapping
+- **Next subsection:** 8.4 — Selecting the High-Level Architecture Shape
 
 ## Completed chapter coverage
 
@@ -219,6 +219,20 @@ The lesson distinguished stakeholders from actors and identified the need to des
 
 Requirements should be prioritised, made testable where possible and traced from problem to desired outcome, requirement, architecture component/process and validation evidence. The agricultural intelligence table is illustrative and not a verified description of current market operations.
 
+
+
+### 8.3 Capability and Responsibility Mapping
+
+Requirements describe what the system must achieve; capabilities describe what it must be able to do; responsibilities identify which participant owns delivery of a capability or outcome. Components perform work, while tools are specific means a component may use. These concepts should not be confused.
+
+Capabilities should be derived from requirements, decomposed until inputs, outputs and ownership are clear, and classified by the nature of the work: deterministic, interpretive, adaptive, human-led or hybrid. Capabilities may be provided by conventional software, automation/workflows, agents, people or external systems.
+
+The agricultural intelligence example mapped collection, extraction, normalisation, validation, evidence assessment, change detection, adaptive investigation, report preparation, human approval and notification to a mixed set of candidate providers. This is an illustrative architecture exercise, not an implementation decision.
+
+Each defined responsibility should have a clear owner, identified contributors, inputs, output, acceptance condition, boundary, dependencies and escalation path. The map is incomplete if requirements are uncovered, capabilities have no viable provider or outputs have no receiving participant.
+
+Principles: derive capabilities from requirements; avoid creating an agent for every activity; use the simplest suitable provider; keep ownership clear; define important handoffs; preserve evidence status; record unresolved assumptions and gaps.
+
 ## Important project boundaries
 
 - Do not divert the learning sequence into detailed platform or tool evaluations before a relevant need arises.
@@ -228,4 +242,4 @@ Requirements should be prioritised, made testable where possible and traced from
 
 ## Next action
 
-Continue with **Discipline 1 → Chapter 8 → 8.3 Capability and Responsibility Mapping**. Chapter 8 is in progress; do not treat the remaining planned subsections as lessons already covered.
+Continue with **Discipline 1 → Chapter 8 → 8.4 Selecting the High-Level Architecture Shape**. Chapter 8 is in progress; do not treat the remaining planned subsections as lessons already covered.
