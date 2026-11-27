@@ -51,7 +51,7 @@ Planned subsections:
 Understand how an agent interprets an objective and turns it into a problem it can work on.
 
 Planned subsections:
-- **2.1 Objectives, Goals and Desired Outcomes**
+- **2.1 Objectives, Goals and Desired Outcomes:** Covered.
 - **2.2 Interpreting Instructions and Identifying Intent**
 - **2.3 Goal States and Conditions for Success**
 - **2.4 Constraints, Priorities and Conflicting Objectives**
@@ -199,9 +199,10 @@ Where useful, exercises will ask the learner to formulate goals, decompose tasks
 ## Chapter documents
 
 1. [Chapter 1 — Foundations of Reasoning and Planning](chapters/01-foundations-of-reasoning-and-planning.md)
+2. [Chapter 2 — Goals, Instructions and Problem Formulation](chapters/02-goals-instructions-and-problem-formulation.md)
 
 ## 7. Current continuation point
 
-**Discipline 2 → Chapter 2 → 2.1 Objectives, Goals and Desired Outcomes.**
+**Discipline 2 → Chapter 2 → 2.2 Interpreting Instructions and Identifying Intent.**
 
-Chapter 1 (subsections 1.1–1.4) is complete. Chapter 2 has not yet been taught.
+Subsection 2.1 is covered. Subsections 2.2–2.5 remain planned.
