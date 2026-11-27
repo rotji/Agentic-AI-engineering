@@ -10,8 +10,8 @@ Read [START_HERE.md](START_HERE.md) for the project entry point and documentatio
 
 - **Curriculum:** 13 disciplines.
 - **Completed discipline:** 1 — Agent Architecture and Design (Chapters 1–8).
-- **Next discipline:** 2 — Reasoning and Planning.
-- **Next step:** Establish Discipline 2's scope and learning sequence.
+- **Next discipline:** 2 — Reasoning and Planning (scope and sequence defined; lessons not yet started).
+- **Next step:** Chapter 1.1 — What Reasoning and Planning Mean in Agentic Systems.
 
 ## Key project principles
 
@@ -29,6 +29,7 @@ Read [START_HERE.md](START_HERE.md) for the project entry point and documentatio
 - [Curriculum — 13 disciplines](docs/CURRICULUM.md)
 - [Current learning state](docs/CURRENT_STATE.md)
 - [Discipline 1 chapter index](docs/disciplines/01-agent-architecture-and-design/README.md)
+- [Discipline 2 learning sequence](docs/disciplines/02-reasoning-and-planning/README.md)
 - [Agent architecture blueprint template](docs/templates/AGENT_ARCHITECTURE_BLUEPRINT_TEMPLATE.md)
 - [Discipline 1 coverage review](docs/disciplines/01-agent-architecture-and-design/REVIEW.md)
 - [Decision log](docs/DECISIONS.md)
