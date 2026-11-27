@@ -7,7 +7,7 @@ The project currently follows 13 disciplines. The sequence is a learning structu
 | No. | Discipline | Status |
 |---:|---|---|
 | 1 | Agent Architecture and Design | Complete |
-| 2 | Reasoning and Planning | Sequence defined; not started |
+| 2 | Reasoning and Planning | In progress |
 | 3 | Context, Memory and Knowledge | Not started |
 | 4 | Tools and Environment Engineering | Not started |
 | 5 | Execution and Loop Engineering | Not started |
