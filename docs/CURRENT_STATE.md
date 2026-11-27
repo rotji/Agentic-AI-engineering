@@ -9,11 +9,10 @@ Agentic AI Engineering
 ## Active learning position
 
 - **Discipline:** 1 — Agent Architecture and Design
-- **Chapter:** 6 — Agent Identity, Roles and Responsibilities
-- **Completed chapter coverage:** Chapters 1–5
+- **Completed chapters:** 1–7
 - **Chapter 6 status:** Covered (subsections 6.1–6.7)
-- **Current chapter:** 7 — Agent Configuration and Lifecycle
 - **Chapter 7 status:** Complete (subsections 7.1–7.6)
+- **Current activity:** Review Discipline 1 coverage for any remaining essential architecture gaps
 - **Next step:** Review remaining Discipline 1 coverage and determine whether another architecture chapter is needed before moving to Discipline 2.
 
 ## Completed chapter coverage
