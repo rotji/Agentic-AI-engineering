@@ -13,8 +13,8 @@ Agentic AI Engineering
 - **Completed chapter coverage:** Chapters 1–5
 - **Chapter 6 status:** Covered (subsections 6.1–6.7)
 - **Current chapter:** 7 — Agent Configuration and Lifecycle
-- **Covered subsections:** 7.1 Agent Configuration; 7.2 Configuration Elements
-- **Next subsection:** 7.3 — Initialization and Startup
+- **Covered subsections:** 7.1 Agent Configuration; 7.2 Configuration Elements; 7.3 Initialization and Startup
+- **Next subsection:** 7.4 — Agent Lifecycle and States
 
 ## Completed chapter coverage
 
@@ -130,6 +130,18 @@ Sensitive credentials should not be exposed in ordinary configuration files or p
 
 A practical review checks purpose, scope, access, capabilities, input/output clarity, resource limits, triggers, secret handling, failure handling, record requirements and the active configuration version.
 
+
+
+### 7.3 Initialization and Startup
+
+Initialization prepares an agent instance and its operating context; startup activates the prepared agent or task; runtime is the period when work is performed and state changes. A typical startup sequence receives a valid trigger, identifies the agent and environment, loads and validates approved configuration, checks policy and permissions, prepares dependencies, loads credentials securely, creates the task context and initial state, performs readiness checks, and starts only when required checks pass.
+
+A running process is not necessarily ready. Liveness checks show whether a process is alive; readiness checks establish whether it can perform its intended work. Startup must define safe responses to invalid configuration, failed permission checks, missing credentials, unavailable dependencies and incomplete input. Reduced operation is acceptable only when explicitly allowed and clearly reported.
+
+For the agricultural Market Data Collector, the startup flow checks its identity, configuration version, geographic and commodity scope, permissions, credentials, sources and destination, then creates a task ID and begins collection after readiness checks. If a configured source is unavailable, the agent must follow its exception policy and disclose any reduced coverage rather than imply complete collection.
+
+Principles: validate before execution; distinguish liveness from readiness; do not bypass permissions; protect credentials; define failure and degraded-mode handling; record startup outcomes and configuration versions.
+
 ## Important project boundaries
 
 - Do not divert the learning sequence into detailed platform or tool evaluations before a relevant need arises.
@@ -139,4 +151,4 @@ A practical review checks purpose, scope, access, capabilities, input/output cla
 
 ## Next action
 
-Continue with **Discipline 1 → Chapter 7 → 7.3 Initialization and Startup**. Chapter 7 is in progress; do not treat the remaining planned subsections as lessons already covered.
+Continue with **Discipline 1 → Chapter 7 → 7.4 Agent Lifecycle and States**. Chapter 7 is in progress; do not treat the remaining planned subsections as lessons already covered.
