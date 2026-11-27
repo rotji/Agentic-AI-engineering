@@ -11,8 +11,8 @@ Agentic AI Engineering
 - **Discipline:** 1 — Agent Architecture and Design
 - **Chapter:** 6 — Agent Identity, Roles and Responsibilities
 - **Completed chapter coverage:** Chapters 1–5
-- **Covered subsections in Chapter 6:** 6.1 Agent Identity; 6.2 Agent Roles; 6.3 Agent Responsibilities; 6.4 Agent Authority
-- **Next subsection:** 6.5 Agent Boundaries
+- **Covered subsections in Chapter 6:** 6.1 Agent Identity; 6.2 Agent Roles; 6.3 Agent Responsibilities; 6.4 Agent Authority; 6.5 Agent Boundaries
+- **Next subsection:** 6.6 Agent Relationships
 
 ## Completed chapter coverage
 
@@ -52,6 +52,20 @@ Authority and autonomy are separate: authority defines the permitted scope, whil
 
 Principles: apply least privilege; make authority explicit, scoped, proportionate and revocable; enforce permissions through the surrounding system rather than relying only on model instructions; do not allow an agent to expand its own authority; require additional approval for actions whose impact or irreversibility warrants it.
 
+
+
+### 6.5 Agent Boundaries
+
+Boundaries define the limits an agent must respect, including limits on its role, data, actions, resources, operating environment, safety, delegation, evidence claims and self-modification.
+
+Authority identifies what the system permits; boundaries define constraints the agent must not cross while operating within that permission. A tool being available does not mean every use is permitted.
+
+Important restrictions should be enforced by the surrounding system wherever practical, rather than relying only on model instructions. When a boundary or unresolved uncertainty prevents safe completion, the agent should stop, explain and escalate.
+
+Boundary testing should check whether the agent can access out-of-scope data, perform prohibited actions, disclose protected information, bypass approval, follow manipulative instructions, delegate prohibited work or alter its own permissions.
+
+Principles: define explicit boundaries; enforce high-impact restrictions outside the model where practical; stop and escalate when necessary; test boundaries as the system changes.
+
 ## Important project boundaries
 
 - Do not divert the learning sequence into detailed platform or tool evaluations before a relevant need arises.
@@ -61,4 +75,4 @@ Principles: apply least privilege; make authority explicit, scoped, proportionat
 
 ## Next action
 
-Continue with **Discipline 1 → Chapter 6 → 6.5 Agent Boundaries**. Document the subsection after it has been taught and update this file when the learning position advances.
+Continue with **Discipline 1 → Chapter 6 → 6.6 Agent Relationships**. Document the subsection after it has been taught and update this file when the learning position advances.
