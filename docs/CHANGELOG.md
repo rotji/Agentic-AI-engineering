@@ -2,6 +2,17 @@
 
 ## 2026-11-27 — Discipline 2 learning progress
 
+- Covered and documented subsection 2.4, Constraints, Priorities and Conflicting Objectives.
+- Distinguished goals, constraints, preferences and assumptions, and explained hard versus soft constraints.
+- Identified goal conflicts, goal-versus-constraint conflicts, constraint conflicts, instruction conflicts and resource conflicts.
+- Established feasibility and authority checks before optimisation.
+- Explained priority-ordered selection and weighted scoring, including the rule that scoring must never override mandatory constraints.
+- Applied conflict resolution to the agricultural producer-information pilot and defined responses when no feasible option exists.
+- Set the next learning point to subsection 2.5, Ambiguity, Missing Requirements and Clarification.
+
+
+## 2026-11-27 — Discipline 2 learning progress
+
 - Covered and documented subsection 2.3, Goal States and Conditions for Success.
 - Distinguished current state, goal state, success conditions, acceptance criteria and evidence of achievement.
 - Explained quantitative and qualitative criteria, baselines, targets, thresholds and the distinction between mandatory conditions and indicators.
