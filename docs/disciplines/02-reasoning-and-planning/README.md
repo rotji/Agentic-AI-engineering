@@ -1,6 +1,6 @@
 # Discipline 2 — Reasoning and Planning
 
-**Status:** In progress; Chapters 1–2 complete, Chapter 3 next.
+**Status:** In progress; Chapters 1–2 complete, Chapter 3 in progress (3.1 covered).
 
 ## 1. Purpose
 
@@ -62,7 +62,7 @@ Planned subsections:
 Study ways of drawing conclusions, forming explanations and assessing evidence.
 
 Planned subsections:
-- **3.1 Deductive Reasoning**
+- **3.1 Deductive Reasoning:** Covered.
 - **3.2 Inductive Reasoning**
 - **3.3 Abductive Reasoning and Explanation**
 - **3.4 Causal Reasoning, Correlation and Analogy**
@@ -200,9 +200,10 @@ Where useful, exercises will ask the learner to formulate goals, decompose tasks
 
 1. [Chapter 1 — Foundations of Reasoning and Planning](chapters/01-foundations-of-reasoning-and-planning.md)
 2. [Chapter 2 — Goals, Instructions and Problem Formulation](chapters/02-goals-instructions-and-problem-formulation.md)
+3. [Chapter 3 — Reasoning Patterns and Inference](chapters/03-reasoning-patterns-and-inference.md)
 
 ## 7. Current continuation point
 
-**Discipline 2 → Chapter 3 → 3.1 Deductive Reasoning.**
+**Discipline 2 → Chapter 3 → 3.2 Inductive Reasoning.**
 
-Chapter 2 (subsections 2.1–2.5) is complete. Chapter 3 has not yet been taught.
+Chapters 1–2 (subsections 1.1–1.4 and 2.1–2.5) are complete. Chapter 3 is in progress; subsection 3.1 is covered.
