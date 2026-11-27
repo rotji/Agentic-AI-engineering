@@ -321,6 +321,6 @@ Discipline 1 is complete for progression to the specialist disciplines. Chapters
 
 ## Next action
 
-- **Learning:** Continue with Discipline 2, Chapter 3.4 — Causal Reasoning, Correlation and Analogy.
-- **Practical pilot:** inspect the data and methods behind the five candidate sources in the discovery register, confirm Plateau coverage and permissions, and begin separate evidence gathering about user problems.
+- **Learning:** Continue with Discipline 2, Chapter 4.1 — Problem and Environment Representation.
+- **Practical pilot:** inspect the data and methods behind the five candidate sources in the discovery register, confirm Plateau coverage and permissions, and validate user problems separately.
 - Do not select technologies, integrate data or declare a market gap until the source and problem evidence justifies those decisions.
