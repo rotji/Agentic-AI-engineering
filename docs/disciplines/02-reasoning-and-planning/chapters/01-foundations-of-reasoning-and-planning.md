@@ -9,7 +9,7 @@ Establish what reasoning and planning mean in an agentic system, how they contri
 ## Chapter learning sequence
 
 1. **1.1 What Reasoning and Planning Mean in Agentic Systems:** Covered.
-2. **1.2 Reasoning vs Planning vs Decision-Making vs Execution:** Planned.
+2. **1.2 Reasoning vs Planning vs Decision-Making vs Execution:** Covered.
 3. **1.3 How Reasoning and Planning Fit into an Agent's Operation:** Planned.
 4. **1.4 Deliberative and Reactive Behaviour:** Planned.
 
@@ -166,6 +166,204 @@ No particular model, framework or planning technology is assumed at this stage.
 - Use the simplest level of reasoning and planning sufficient for the task.
 - Treat these as engineered system capabilities; do not assume human consciousness.
 
-## Continuation point
+## 1.2 Reasoning vs Planning vs Decision-Making vs Execution
 
-Continue with **1.2 Reasoning vs Planning vs Decision-Making vs Execution**. Subsections 1.2–1.4 remain planned and have not yet been taught.
+### Core question
+
+When an agent receives an objective and begins working, four activities are involved: understanding the situation, organising a course of action, selecting what to do and carrying out the selected action. How are these activities different, and how do they work together?
+
+The four concepts are:
+
+- **Reasoning:** interpreting information and assessing what follows from it.
+- **Planning:** formulating a possible course of action to reach an objective.
+- **Decision-making:** choosing among available options or determining what should happen next.
+- **Execution:** carrying out an authorised action in the environment.
+
+They are closely connected, but they are not interchangeable. Treating them as if they mean the same thing makes it harder to design, evaluate and control an agentic system.
+
+### 1. Reasoning — understand and assess
+
+Reasoning helps the agent work out what the available information means and what conclusions are supported.
+
+It may involve:
+- Interpreting instructions and observations.
+- Identifying relevant facts.
+- Comparing evidence.
+- Recognising contradictions or missing information.
+- Forming possible explanations.
+- Assessing assumptions and uncertainty.
+- Working out implications of different conditions.
+
+**Main question:** What do we know, what can we reasonably conclude, and what remains uncertain?
+
+Example: A market report shows a higher tomato price than an earlier record. The agent reasons that the observations may not be directly comparable because the dates or basket sizes may differ. It should not conclude that a general price increase has been established until those issues are examined.
+
+Reasoning produces an interpretation, an assessment or a set of possible conclusions. It does not itself carry out an external action.
+
+### 2. Planning — organise a possible course of action
+
+Planning develops a structured approach for reaching an objective.
+
+A plan may specify:
+- The intended outcome.
+- Tasks or actions that may be needed.
+- The order and dependencies among those tasks.
+- Required information and resources.
+- Preconditions and constraints.
+- Alternative paths if a condition changes.
+- Expected results and completion conditions.
+
+**Main question:** What steps could achieve the objective, and how should they be organised?
+
+Example: The agent proposes to validate the tomato observation, locate comparable records, compare relevant markets, investigate plausible explanations and prepare an evidence-based report.
+
+Planning produces a proposed course of action. It does not prove that every step is feasible, permitted or already completed.
+
+### 3. Decision-making — select among options
+
+Decision-making is the process of choosing an option, action or course of action from the alternatives available.
+
+It may take account of:
+- The objective and priorities.
+- Available evidence and uncertainty.
+- Constraints and permissions.
+- Expected benefit.
+- Cost, time and resource use.
+- Risk and possible consequences.
+- Whether to proceed, defer, ask, escalate or take no action.
+
+**Main question:** Given the available options and constraints, which option should be selected now?
+
+Example: The agent discovers that the tomato report has no observation date. It could:
+- Request a dated observation from the source.
+- Search for another approved source.
+- Mark the comparison as unresolved.
+- Stop the investigation if there is no permitted way to obtain sufficient evidence.
+
+Choosing one of these options is a decision. The reasoning process helps assess the evidence and implications; the plan provides possible routes; decision-making selects which route or next action is appropriate.
+
+Decision-making can occur before a plan is finalised and throughout the work. A plan may also contain conditional decision points, such as "if the source is unavailable, use an approved alternative; otherwise continue." Planning describes the structure of those branches; a decision at runtime selects the branch that applies.
+
+### 4. Execution — carry out the selected action
+
+Execution is the performance of an action in the system or its environment.
+
+It may include:
+- Requesting information from an approved source.
+- Reading or writing an authorised record.
+- Running a calculation.
+- Sending an approved notification.
+- Creating a report.
+- Invoking an authorised tool or service.
+
+**Main question:** What action is actually being carried out?
+
+Example: After deciding to seek a dated observation, the system actually sends the permitted request to the approved source or invokes the authorised collection process.
+
+Execution changes the state of the system or its environment, or attempts to do so. A proposed action is not an executed action. An execution attempt is also not proof of success; the system may need to observe and verify the result. Detailed execution cycles and runtime feedback belong to Discipline 5.
+
+### 5. Compare the four activities
+
+| Activity | Primary purpose | Main question | Typical output |
+|---|---|---|---|
+| Reasoning | Understand and assess | What do we know and what follows? | Interpretation, conclusion, hypothesis or identified uncertainty |
+| Planning | Organise a route to the goal | What steps could achieve it? | Proposed sequence, dependencies and alternatives |
+| Decision-making | Select an option | Which option should be chosen now? | Selected action, plan, deferral, escalation or no-action choice |
+| Execution | Perform the selected action | What is actually being done? | Action attempt and resulting state or outcome |
+
+A simple memory aid:
+
+- Reasoning: **understand**.
+- Planning: **organise**.
+- Decision-making: **choose**.
+- Execution: **do**.
+
+The memory aid is useful, but real agentic systems may interleave these activities rather than perform them in one fixed sequence.
+
+### 6. A complete worked example
+
+Suppose the Agricultural Intelligence System receives an unusual tomato-price observation.
+
+**Stage A — Reasoning**
+
+The agent examines the observation, checks the source details it has, identifies missing date information and concludes that the apparent increase is not yet established.
+
+Output: an evidence assessment and a description of what remains uncertain.
+
+**Stage B — Planning**
+
+The agent formulates possible investigation steps: obtain a dated observation, seek an independent comparable source, compare the same unit and market, then prepare a report if the evidence is sufficient.
+
+Output: a proposed investigation plan with dependencies and a completion condition.
+
+**Stage C — Decision-making**
+
+The agent considers the available next options. It selects an approved alternative source because the original source has not supplied a date and the alternative is within its permitted scope.
+
+Output: the selected next action and the reason for selecting it.
+
+**Stage D — Execution**
+
+The system carries out the authorised request to the alternative source. The request is actually sent; the agent does not yet assume a response has arrived.
+
+Output: an execution record showing that the request was attempted, together with the result when it becomes available.
+
+If the alternative source returns a usable observation, the agent may reason about the new evidence, revise the plan, select another action and execute it. If no usable source is available, it may decide to mark the matter unresolved or escalate it.
+
+This demonstrates that the activities can form a repeating, connected process.
+
+### 7. Why the distinctions matter in engineering
+
+Confusing the four activities can create practical design problems.
+
+- If a plan is mistaken for execution, a system may report that work is complete when it has only proposed the steps.
+- If reasoning is mistaken for verification, an unsupported conclusion may be treated as an established fact.
+- If decision-making is hidden inside a broad planning description, it may be unclear who or what selected a consequential action and why.
+- If execution is not distinguished from a successful outcome, a tool call or request may be reported as successful even when it failed.
+- If planning is treated as permission, an agent may attempt an action that is outside its authority.
+
+Clear distinctions make it easier to record what the agent understood, what it proposed, what it selected, what it attempted and what actually happened.
+
+### 8. They are connected, not necessarily separate modules
+
+These are conceptual functions. They do not have to be implemented as four separate software components or four separate AI agents.
+
+A single agent may reason, plan and make decisions within one operating process, while an execution environment performs or mediates the actual actions. In another architecture, some of these functions may be split across components.
+
+The distinction is about the kind of work being performed, not a mandatory software structure.
+
+The activities also influence one another:
+- Reasoning may reveal that more information is needed before planning.
+- Planning may expose missing prerequisites and trigger further reasoning.
+- Decision-making may select a plan, revise it or choose not to proceed.
+- Execution may produce results that require new reasoning and replanning.
+
+A useful conceptual cycle is:
+
+**Understand → Organise → Choose → Act → Examine the result**
+
+The final examination may begin another round of reasoning and planning. The detailed runtime loop will be developed in Discipline 5.
+
+### 9. Important distinctions to preserve
+
+- A conclusion is not the same as a selected action.
+- A plan is not the same as a decision to execute every step.
+- Selecting an action is not the same as carrying it out.
+- Attempting an action is not the same as confirming its success.
+- A plan may contain future decision points without making those decisions in advance.
+- An agent's ability to plan or decide does not grant it authority to act.
+- A person or external policy may reserve certain decisions or approvals.
+
+### Principles established
+
+- Reasoning interprets information and assesses conclusions.
+- Planning organises a possible course of action toward an objective.
+- Decision-making selects among available options under goals, evidence, constraints, priorities and risk.
+- Execution carries out an authorised action and produces an attempt or outcome that may need verification.
+- The four activities are connected and may interleave; they are not necessarily four separate modules or a rigid one-way sequence.
+- Record the difference between what an agent concluded, planned, selected, attempted and confirmed.
+- A plan does not grant authority, and an action attempt does not prove success.
+- New information or execution results may trigger further reasoning, decisions and plan revision.
+
+
+Continue with **1.3 How Reasoning and Planning Fit into an Agent's Operation**. Subsections 1.3–1.4 remain planned and have not yet been taught.
