@@ -43,7 +43,7 @@ Establish the core concepts and how they fit into an agentic system.
 Planned subsections:
 - **1.1 What Reasoning and Planning Mean in Agentic Systems:** Covered.
 - **1.2 Reasoning vs Planning vs Decision-Making vs Execution:** Covered.
-- **1.3 How Reasoning and Planning Fit into an Agent's Operation**
+- **1.3 How Reasoning and Planning Fit into an Agent's Operation:** Covered.
 - **1.4 Deliberative and Reactive Behaviour**
 
 ### Chapter 2 — Goals, Instructions and Problem Formulation
@@ -199,6 +199,6 @@ Where useful, exercises will ask the learner to formulate goals, decompose tasks
 
 ## 7. Current continuation point
 
-**Discipline 2 → Chapter 1 → 1.3 How Reasoning and Planning Fit into an Agent's Operation.**
+**Discipline 2 → Chapter 1 → 1.4 Deliberative and Reactive Behaviour.**
 
-Subsections 1.1–1.2 are covered. Subsections 1.3–1.4 remain planned.
+Subsections 1.1–1.3 are covered. Subsection 1.4 remains planned.
