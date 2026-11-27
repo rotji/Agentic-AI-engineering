@@ -14,7 +14,7 @@ The chapter is being taught progressively. Subsections marked as planned have no
 
 1. **7.1 Agent Configuration:** Covered.
 2. **7.2 Configuration Elements:** Covered.
-3. **7.3 Initialization and Startup:** what must be checked or prepared before an agent begins work.
+3. **7.3 Initialization and Startup:** Covered.
 4. **7.4 Agent Lifecycle and States:** creation, configuration, initialization, ready, running, paused, failed, recovery, shutdown and retirement.
 5. **7.5 Configuration and Version Changes:** how approved changes are introduced, tracked, tested and rolled back.
 6. **7.6 Lifecycle Management and Continuity:** how agents are suspended, resumed, replaced or retired without losing necessary task history and accountability.
@@ -364,6 +364,136 @@ Before an agent is activated or a configuration change is accepted, reviewers sh
 - Sensitive credentials must be protected and should not be exposed in ordinary configuration or prompts.
 - Configuration elements must be internally consistent and reviewable.
 - There is no single mandatory configuration format for every agent.
+
+
+## 7.3 Initialization and Startup
+
+### Core question
+
+What must happen before an agent is allowed to begin its assigned work?
+
+Initialization and startup are the preparation and activation stages through which an agent is made ready to operate. They help ensure that the correct agent, configuration, permissions, inputs and required dependencies are in place before execution begins.
+
+An agent should not start merely because a process has been launched. The system should first establish that its operating conditions are valid.
+
+### Initialization, startup and runtime are different
+
+- **Configuration:** defines how the agent is intended to operate.
+- **Initialization:** prepares the agent instance and its required operating context.
+- **Startup:** activates the prepared agent or starts its assigned execution.
+- **Runtime:** the period during which the agent performs work and its state changes.
+
+For example, a Market Data Collector may have a daily schedule in its configuration. Initialization prepares its identity, approved configuration, task context and authorised access. Startup begins the collection run when the scheduled trigger occurs. Runtime is the actual collection, processing and reporting activity.
+
+### A typical initialization and startup sequence
+
+The exact sequence varies by system, but a dependable process may include these stages:
+
+1. **Receive a valid trigger or launch request.** Establish why the agent is starting: a schedule, an authorised request, an event or another approved trigger.
+2. **Identify the agent and environment.** Confirm which agent is being started and the environment in which it is expected to operate.
+3. **Load the approved configuration.** Retrieve the intended configuration version rather than relying on undocumented defaults or stale settings.
+4. **Validate configuration.** Check required settings, formats, scope, inputs and outputs. Detect missing, malformed or conflicting values before execution.
+5. **Check policy, authority and boundaries.** Confirm that the requested task is permitted, that the relevant permissions are valid and that startup does not expand the agent's authority.
+6. **Prepare required dependencies.** Make the required model, context sources, data stores and assigned capabilities available. Check critical connections and services needed for the task.
+7. **Load credentials securely.** Where access credentials are required, obtain them through an appropriately protected mechanism. Do not expose secrets in prompts, ordinary logs or output messages.
+8. **Create the task context and initial state.** Establish the task identifier, request, relevant input, permitted context and initial progress state. Retrieve prior state only when the task requires it and access is allowed.
+9. **Perform readiness checks.** Confirm that critical components are available and the agent can safely perform the assigned work. A process being alive does not necessarily mean it is ready to serve tasks.
+10. **Enter the appropriate operating state.** Once required checks pass, mark the agent or task ready and begin execution according to the trigger and operating policy. Record the relevant configuration version and startup outcome.
+
+This is a conceptual sequence, not a universal implementation protocol. Some systems combine stages or perform them in a different order, provided the required controls are preserved.
+
+### Readiness is not the same as being alive
+
+A process may be running while the agent is not ready to perform its assigned work.
+
+For example:
+- The agent process has started, but its required model endpoint is unavailable.
+- The agent can respond, but it cannot access the approved dataset.
+- The configuration has loaded, but a required permission check has failed.
+- The agent is running, but the task input is incomplete.
+
+A **liveness check** asks whether the process or service is alive. A **readiness check** asks whether it is prepared to perform its intended work.
+
+A system may use both concepts. Passing a liveness check alone should not be treated as proof that the agent can safely execute its tasks.
+
+### Startup gates and failure handling
+
+Startup should have clear conditions for proceeding, pausing or failing.
+
+| Startup condition | Suitable response |
+|---|---|
+| Required configuration is missing or invalid | Do not start the task; report the configuration issue |
+| Permission or policy check fails | Block the restricted operation and escalate where appropriate |
+| Required credential is missing or rejected | Do not bypass access controls; report the access failure |
+| Critical dependency is unavailable | Retry only within approved limits, pause or fail safely |
+| Optional dependency is unavailable | Continue in a reduced mode only if that mode is explicitly permitted and its limitations are recorded |
+| Required input is incomplete or invalid | Request correction or mark the task blocked |
+| All required checks pass | Mark ready and begin the authorised work |
+
+An agent should not silently continue in a partially working condition if doing so would make the result misleading or unsafe. Any degraded mode should be explicitly defined, limited and visible to downstream agents and users.
+
+### Example: starting the Market Data Collector
+
+AGENT-001 is scheduled to collect agricultural prices from selected markets in Jos North.
+
+A startup process might:
+
+1. Receive the scheduled collection trigger.
+2. Confirm that AGENT-001 is the intended agent.
+3. Load its approved configuration and record the version.
+4. Validate market coverage, commodity scope, collection instructions and output requirements.
+5. Check that its source access and submission permissions are valid.
+6. Retrieve the required credentials securely.
+7. Confirm that the approved sources and destination are available.
+8. Create a collection task ID and initialise its progress state.
+9. Perform readiness checks.
+10. Begin collection only after the required checks pass.
+
+Suppose four sources are configured but one is unavailable. The agent must follow its configured exception policy. It may continue with the other sources only if partial collection is permitted. The final output must show the missing source and the reduced coverage; it must not claim that all four sources were checked.
+
+### Startup and security
+
+Initialization is a sensitive point because the system is assembling the agent's operating context and access.
+
+The process should therefore:
+- Load only the approved configuration.
+- Check permissions independently of model instructions.
+- Grant access only to resources needed for the task.
+- Avoid exposing credentials in prompts and logs.
+- Validate that the task is within the agent's assigned scope.
+- Record important startup decisions and failures.
+- Stop when critical security or policy checks fail.
+
+Starting an agent must not automatically grant it new privileges or allow it to change its own authority.
+
+### Startup and observability
+
+The system should record enough information to understand whether startup succeeded and why it failed when it did not.
+
+Useful records may include:
+- Agent identity.
+- Task or run identifier.
+- Trigger or launch source.
+- Configuration version.
+- Startup time.
+- Readiness-check results.
+- Dependencies that were unavailable.
+- Permission or credential failures.
+- Whether the agent entered ready, blocked or failed state.
+- Any approved reduced operating mode.
+
+Record information proportionately. Do not expose secrets or collect unnecessary sensitive data merely for debugging.
+
+### Principles established
+
+- Launching a process does not automatically mean an agent is ready to work.
+- Initialization prepares the agent and its context; startup activates the authorised work; runtime is the work in progress.
+- Validate configuration, permissions, boundaries, inputs and critical dependencies before execution.
+- Distinguish liveness from readiness.
+- Define what happens when startup checks fail.
+- Continue in a reduced mode only when explicitly permitted and transparently reported.
+- Protect credentials and do not expand authority during startup.
+- Record startup outcomes and configuration versions for accountability.
 
 
 No particular implementation technology or framework is assumed.
