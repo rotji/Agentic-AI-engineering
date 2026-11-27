@@ -11,8 +11,8 @@ This repository preserves the learning path, concepts, decisions, and progress o
 - **Current chapter:** 6 — Agent Identity, Roles and Responsibilities.
 - **Last completed chapter:** 6 — Agent Identity, Roles and Responsibilities (subsections 6.1–6.7).
 - **Current chapter:** 7 — Agent Configuration and Lifecycle.
-- **Last covered subsection:** 7.4 — Agent Lifecycle and States.
-- **Next learning step:** 7.5 — Configuration and Version Changes.
+- **Last covered subsection:** 7.5 — Configuration and Version Changes.
+- **Next learning step:** 7.6 — Lifecycle Management and Continuity.
 
 ## Read in this order
 
