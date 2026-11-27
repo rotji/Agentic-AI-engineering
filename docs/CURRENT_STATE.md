@@ -14,8 +14,8 @@ Agentic AI Engineering
 - **Chapter 7 status:** Complete (subsections 7.1–7.6)
 - **Review outcome:** One genuine design-synthesis gap identified
 - **Current chapter:** 8 — From Requirements to Agent Architecture (in progress)
-- **Covered subsections:** 8.1 Problem Framing and Agent Suitability; 8.2 Requirements, Constraints and Operating Context; 8.3 Capability and Responsibility Mapping; 8.4 Selecting the High-Level Architecture Shape; 8.5 Component Boundaries, Interfaces and Flows
-- **Next subsection:** 8.6 — Integrating Autonomy, Authority and Human Oversight
+- **Covered subsections:** 8.1 Problem Framing and Agent Suitability; 8.2 Requirements, Constraints and Operating Context; 8.3 Capability and Responsibility Mapping; 8.4 Selecting the High-Level Architecture Shape; 8.5 Component Boundaries, Interfaces and Flows; 8.6 Integrating Autonomy, Authority and Human Oversight
+- **Next subsection:** 8.7 — Producing and Reviewing an Architecture Blueprint
 
 ## Completed chapter coverage
 
@@ -261,6 +261,22 @@ Boundaries should clarify what each component owns and does not own, its inputs 
 
 Principles: use coherent responsibility boundaries; aim for high cohesion and manageable coupling; define important interface contracts; distinguish information flow from control flow; preserve provenance and authority across handoffs; make dependencies and failure behaviour explicit; do not assume each component must be a separate agent or technology.
 
+
+
+### 8.6 Integrating Autonomy, Authority and Human Oversight
+
+Autonomy describes how independently an agent may operate; authority defines what it is permitted to decide or do; human oversight describes how people supervise, approve, constrain or intervene. These decisions must be designed together but are not interchangeable.
+
+The lesson reused the project's five-level autonomy framework from Chapter 5: Level 1 Advisory; Level 2 Assisted execution; Level 3 Conditional autonomy; Level 4 High autonomy; Level 5 Full operational autonomy. These are project teaching levels, not a universal industry standard. Autonomy should reflect responsibility, demonstrated reliability, operating conditions and potential consequences. Different agents and action categories may have different levels and controls.
+
+Human-in-the-loop means a person participates before a decision or action proceeds. Human-on-the-loop means a person supervises and can intervene while the system operates within limits. Human-out-of-the-loop means no routine human participation in each action; it does not remove governance or organisational accountability.
+
+Meaningful oversight requires relevant information, competence, time, authority, visibility, intervention capability and clear responsibility. Approval gates should be placed at consequential boundaries such as sensitive publication or financial commitment. Define who may approve, what evidence they receive, how rejection or silence is handled and how the decision is recorded.
+
+Escalation conditions include conflicting evidence, out-of-scope requests, threshold breaches, missing approval, repeated failures and safety or security concerns. The system should stop or hold restricted actions when required decisions are unavailable. Operating conditions may reduce or suspend autonomy; an agent must not unilaterally increase its own authority or autonomy.
+
+An action-level control map helps expose permissions and oversight requirements that a single autonomy label might hide. Record decisions, permissions, approvals and interventions so the design remains accountable.
+
 ## Important project boundaries
 
 - Do not divert the learning sequence into detailed platform or tool evaluations before a relevant need arises.
@@ -270,4 +286,4 @@ Principles: use coherent responsibility boundaries; aim for high cohesion and ma
 
 ## Next action
 
-Continue with **Discipline 1 → Chapter 8 → 8.6 Integrating Autonomy, Authority and Human Oversight**. Chapter 8 is in progress; do not treat the remaining planned subsections as lessons already covered.
+Continue with **Discipline 1 → Chapter 8 → 8.7 Producing and Reviewing an Architecture Blueprint**. Chapter 8 is in progress; do not treat the remaining planned subsections as lessons already covered.
