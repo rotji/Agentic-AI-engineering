@@ -13,8 +13,8 @@ Read [START_HERE.md](START_HERE.md) for the project entry point and documentatio
 - **Completed chapters:** 1–7 in Discipline 1.
 - **Chapter 7:** Complete (subsections 7.1–7.6).
 - **Current chapter:** 8 — From Requirements to Agent Architecture (in progress).
-- **Covered:** 8.1 Problem Framing and Agent Suitability; 8.2 Requirements, Constraints and Operating Context.
-- **Next:** 8.3 Capability and Responsibility Mapping.
+- **Covered:** 8.1 Problem Framing and Agent Suitability; 8.2 Requirements, Constraints and Operating Context; 8.3 Capability and Responsibility Mapping.
+- **Next:** 8.4 Selecting the High-Level Architecture Shape.
 
 ## Key project principles
 
