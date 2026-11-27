@@ -14,8 +14,8 @@ Agentic AI Engineering
 - **Chapter 7 status:** Complete (subsections 7.1–7.6)
 - **Review outcome:** One genuine design-synthesis gap identified
 - **Current chapter:** 8 — From Requirements to Agent Architecture (in progress)
-- **Covered subsection:** 8.1 — Problem Framing and Agent Suitability
-- **Next subsection:** 8.2 — Requirements, Constraints and Operating Context
+- **Covered subsections:** 8.1 Problem Framing and Agent Suitability; 8.2 Requirements, Constraints and Operating Context
+- **Next subsection:** 8.3 — Capability and Responsibility Mapping
 
 ## Completed chapter coverage
 
@@ -207,6 +207,18 @@ The agricultural intelligence example illustrated a hybrid approach: scheduled c
 
 Principles: frame the problem first; distinguish problem, outcome and solution; use agents only where adaptive goal-directed behaviour provides justified value; prefer simpler methods for predictable tasks; consider hybrid designs; assess failure consequences and preserve evidence and assumptions.
 
+
+
+### 8.2 Requirements, Constraints and Operating Context
+
+Requirements describe what the system must do and the qualities it must satisfy. Functional requirements describe behaviours and capabilities; quality requirements cover properties such as accuracy, timeliness, availability, reliability, security, traceability, usability, scalability and maintainability.
+
+Constraints limit acceptable design choices, such as budget, access, connectivity, jurisdictional obligations, existing procedures or approval requirements. Operating context describes the people, organisations, processes, geography, information environment, technical conditions, external circumstances and workload in which the system will work.
+
+The lesson distinguished stakeholders from actors and identified the need to describe data requirements, information sources, dependencies and what happens when they are unavailable or unreliable. It also established the importance of classifying information as verified fact, assumption, constraint, preference, open question or risk.
+
+Requirements should be prioritised, made testable where possible and traced from problem to desired outcome, requirement, architecture component/process and validation evidence. The agricultural intelligence table is illustrative and not a verified description of current market operations.
+
 ## Important project boundaries
 
 - Do not divert the learning sequence into detailed platform or tool evaluations before a relevant need arises.
@@ -216,4 +228,4 @@ Principles: frame the problem first; distinguish problem, outcome and solution; 
 
 ## Next action
 
-Continue with **Discipline 1 → Chapter 8 → 8.2 Requirements, Constraints and Operating Context**. Chapter 8 is in progress; do not treat the remaining planned subsections as lessons already covered.
+Continue with **Discipline 1 → Chapter 8 → 8.3 Capability and Responsibility Mapping**. Chapter 8 is in progress; do not treat the remaining planned subsections as lessons already covered.
