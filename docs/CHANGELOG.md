@@ -2,6 +2,16 @@
 
 ## 2026-11-27 — Chapter 8 learning progress
 
+- Covered and documented subsection 8.6, Integrating Autonomy, Authority and Human Oversight.
+- Integrated the project's five-level autonomy framework with action-level authority and oversight design.
+- Distinguished human-in-the-loop, human-on-the-loop and human-out-of-the-loop arrangements.
+- Established requirements for meaningful human oversight, approval gates, escalation and safe-stop behaviour.
+- Documented risk-sensitive reduction or suspension of autonomy and the prohibition on agents unilaterally increasing their authority or autonomy.
+- Set the next learning point to 8.7, Producing and Reviewing an Architecture Blueprint.
+
+
+## 2026-11-27 — Chapter 8 learning progress
+
 - Covered and documented subsection 8.5, Component Boundaries, Interfaces and Flows.
 - Distinguished component boundaries, interfaces, information flows and control flows.
 - Introduced cohesion and coupling as architecture quality concepts.
