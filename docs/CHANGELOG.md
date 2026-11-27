@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-11-27 — Chapter 7 started
+
+- Began Chapter 7, Agent Configuration and Lifecycle.
+- Covered and documented subsection 7.1, Agent Configuration.
+- Distinguished configuration from identity, role, authority and runtime state.
+- Established that important configuration should be explicit, controlled, versioned and reviewable.
+- Set the next learning point to 7.2, Configuration Elements.
+
+
 Significant changes to the project's structure, curriculum, decisions and learning progress are recorded here.
 
 ## 2026-11-27 — Chapter 6 completed
