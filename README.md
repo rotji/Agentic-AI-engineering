@@ -23,6 +23,7 @@ Learn the relevant concepts, discover existing solutions, assemble suitable capa
 
 - [Practical Build and Sector Transfer Method](docs/PRACTICAL_BUILD_AND_SECTOR_TRANSFER.md)
 - [Agricultural Pilot Charter (provisional)](docs/practical-pilot/AGRICULTURAL_PILOT_CHARTER.md)
+- [Agricultural Pilot Discovery Register](docs/practical-pilot/DISCOVERY_REGISTER.md)
 
 ## Key project principles
 
