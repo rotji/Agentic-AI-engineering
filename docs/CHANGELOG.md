@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-11-27 — Chapter 7 learning progress
+
+- Covered and documented subsection 7.2, Configuration Elements.
+- Documented objective and scope, instructions and policies, model settings, context and knowledge sources, capabilities, permissions, input/output specifications, operating limits, triggers, environment settings, exception handling and observability.
+- Distinguished configurable elements from enforced authority and runtime state.
+- Added credential-protection guidance and a practical configuration review.
+- Set the next learning point to 7.3, Initialization and Startup.
+
+
 ## 2026-11-27 — Chapter 7 started
 
 - Began Chapter 7, Agent Configuration and Lifecycle.
