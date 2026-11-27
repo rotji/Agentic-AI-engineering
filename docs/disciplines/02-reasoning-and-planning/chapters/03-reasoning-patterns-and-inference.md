@@ -281,6 +281,183 @@ The checkpoint demonstrates the central discipline of deduction: derive what fol
 
 ---
 
+## 3.2 Inductive Reasoning
+
+### Core question
+
+When an agent observes individual cases, examples or repeated patterns, how can it form a broader conclusion without pretending that the observations prove more than they actually do?
+
+**Inductive reasoning** moves from particular observations to a broader pattern, generalisation or prediction. It can make a conclusion more plausible or better supported, but the conclusion does not follow with logical necessity from the observations.
+
+For example:
+- A market observation shows that the wholesale price of a particular grade of tomatoes increased this week.
+- Comparable observations from several other markets show increases over the same period.
+- The agent concludes that there may be a broader upward movement in the observed markets.
+
+This is inductive reasoning. The observations support the conclusion, but do not guarantee that prices increased in every market, for every grade or in every transaction.
+
+### 1. How induction differs from deduction
+
+| Feature | Deductive reasoning | Inductive reasoning |
+|---|---|---|
+| Direction | Applies premises or rules to derive a conclusion. | Uses particular observations to infer a wider pattern or likely result. |
+| Conclusion | Must follow if the argument is valid and its premises are true. | Is supported to some degree, but may still be false. |
+| Main question | What must follow from these premises? | What pattern or likely conclusion is supported by these observations? |
+| Main risk | Invalid logic or false premises. | Unrepresentative, incomplete, biased or misleading observations. |
+| Example | If every approved record must contain a source, a record without a source is not approved under that rule. | If comparable observations across several markets show increasing prices, prices may be rising across the sampled markets. |
+
+A deductive conclusion can be certain relative to true premises and a valid inference. An inductive conclusion is provisional: additional observations may strengthen it, weaken it or overturn it.
+
+### 2. Generalisation from observed cases
+
+One common form of induction is **generalisation**: observing a number of individual cases and using them to form a conclusion about a larger group.
+
+Suppose an agricultural intelligence process observes that several sampled tomato traders in Market A are quoting higher prices than in the previous observation period. After checking product form, grade, unit and market level, the agent infers that quotations in the sampled part of Market A may be increasing.
+
+The conclusion must retain the limits of the sample. It does not automatically establish that every trader in the market is quoting more, every tomato grade has increased, or farmgate, wholesale and retail prices have all moved in the same direction. It certainly does not establish a statewide or national trend.
+
+The conclusion should be no broader than the observations and the method justify.
+
+### 3. Statistical induction and samples
+
+An agent often cannot inspect every member of a population. It uses a sample and considers what that sample may indicate about the wider group.
+
+The strength of the resulting inference depends on the quality of the sample and how it was collected.
+
+Important questions include:
+
+- **Coverage:** Which locations, market levels, product forms and time periods are represented?
+- **Selection:** Why were these observations included? Were some types of cases systematically excluded?
+- **Representativeness:** Does the sample resemble the wider group about which the agent wants to make a claim?
+- **Sample size:** Are there enough observations for the intended conclusion? A larger sample can help, but size alone does not remove bias.
+- **Comparability:** Are observations measuring the same product, unit, quality, market level and time period?
+- **Independence:** Are sources genuinely independent, or are multiple posts repeating one original report?
+- **Missingness:** Which locations or observation types are absent, and could their absence distort the picture?
+
+A large but biased sample may produce a misleading generalisation. A smaller, carefully selected sample can sometimes be more informative for a narrowly defined question.
+
+### 4. Patterns and predictions
+
+Induction can help identify recurring patterns and form cautious expectations about future events.
+
+For example, an agent observes repeated increases in comparable wholesale quotations over several reporting periods. It may infer that the upward pattern could continue in the near term. However, past patterns do not guarantee future results. Market conditions can change, observations may be delayed and a pattern may be temporary.
+
+Distinguish:
+- A pattern observed in historical data.
+- A generalisation about a wider group.
+- A prediction about what may happen next.
+
+These are related but not interchangeable. Predictions require care about time horizon, data quality and changing conditions.
+
+### 5. Repetition is not necessarily independent evidence
+
+An agent may encounter many reports that appear to confirm one another. Repeated statements do not necessarily provide independent evidence.
+
+Imagine six social media accounts repeating the same market-price claim. If all six copied one original post, they may represent one underlying report rather than six independent observations.
+
+Similarly, several websites may reproduce the same dataset, a summary may repeat an old report, or different sources may describe different product grades using the same general name.
+
+An agent should preserve source provenance and investigate whether evidence is independent before treating repetition as corroboration.
+
+### 6. Bias and misleading patterns
+
+| Risk | What happens | Example safeguard |
+|---|---|---|
+| Selection bias | Collected cases do not fairly represent the group. | Record how observations were selected and identify missing locations or groups. |
+| Small sample | Too few observations support a broad conclusion. | Narrow the claim or gather more observations. |
+| Survivorship bias | Only visible or successful cases are considered. | Look for missing, failed or unreported cases where relevant. |
+| Duplicate evidence | Copies of one claim look like multiple confirmations. | Trace reports to their original sources. |
+| Measurement inconsistency | Different units, grades or market levels are combined. | Preserve and compare only compatible observations. |
+| Time mismatch | Different periods are treated as simultaneous. | Retain observation dates and compare appropriate time windows. |
+| Overgeneralisation | A local pattern is presented as universal. | State the actual geographic, product and temporal scope. |
+| Confirmation bias | Attention is given mainly to supporting evidence. | Search for disconfirming observations too. |
+
+An absence of online reports is not proof that no activity occurred. It may simply reflect gaps in source coverage.
+
+### 7. Agricultural price example
+
+Suppose the pilot collects comparable wholesale price quotations for a specified form and grade of tomatoes from four markets during two observation periods. In the later period, three of the four sampled markets show higher quotations.
+
+A careful inductive conclusion is:
+
+> Three of the four sampled markets show higher comparable wholesale quotations in the later observation period. This provides some evidence of an upward movement within the sampled markets, but it is not enough by itself to establish a statewide price increase.
+
+Before strengthening that conclusion, the agent should check whether:
+- The quotations refer to the same product form and grade.
+- Units are comparable.
+- Both periods are correctly dated.
+- The observations are asking prices or completed transactions.
+- Markets and sources were selected in a way that creates bias.
+- Further observations support or contradict the pattern.
+
+This is an illustrative example, not a claim about actual current tomato prices.
+
+### 8. The four agricultural evidence levels
+
+The pilot has a working evidence vocabulary:
+
+1. **Verified transactions:** evidence supports that a transaction was completed.
+2. **Verified quotations:** evidence supports that a price was quoted, without treating it as a completed transaction.
+3. **Unverified information:** a claim has been encountered but has not met the required verification standard.
+4. **Market signals:** indirect indications that may point to a development worth investigating.
+
+These categories describe evidence status or type. They do not automatically make a sample representative.
+
+Ten verified transactions from one market may be strong evidence about those transactions, but they do not necessarily establish prices in all markets. Several unverified reports may point to a useful signal, but should not be presented as confirmed facts.
+
+Evidence status must therefore be considered separately from sample coverage, source reliability, freshness and comparability.
+
+### 9. A practical method for using induction in an agent
+
+1. **Define the question and target group.** Specify the product, entity, geography, market level and period.
+2. **Identify the observations.** Keep original sources, observation dates, collection dates and relevant details.
+3. **Check provenance.** Identify copied reports, common origins, unknown sources and conflicting evidence.
+4. **Check comparability.** Do not combine unlike products, grades, units, market levels or periods without a justified method.
+5. **Check sample coverage and bias.** Identify which cases are present, absent or systematically easier to observe.
+6. **Look for supporting and disconfirming observations.** Do not search only for information that confirms the expected pattern.
+7. **Form a bounded conclusion.** State exactly which observations support the pattern and which wider claims remain uncertain.
+8. **Express confidence proportionately.** Do not invent precise confidence percentages when the data and method do not justify them.
+9. **Identify the next useful evidence.** Determine what observations could strengthen, weaken or test the conclusion.
+10. **Revise when new evidence arrives.** Inductive conclusions remain open to correction.
+
+### 10. Where induction is useful in agentic systems
+
+Induction is useful when an agent needs to:
+- Identify recurring patterns in collected information.
+- Detect possible changes in markets or operating conditions.
+- Infer likely characteristics of a wider group from a sample.
+- Prioritise locations or subjects for further investigation.
+- Form cautious expectations from historical observations.
+- Identify unusual observations that deserve additional verification.
+
+Induction must not bypass mandatory rules or evidence requirements. A likely pattern does not give an agent permission to publish an unverified claim or take an otherwise prohibited action.
+
+An inductive pattern also does not by itself establish causation. Causal reasoning will be examined in subsection 3.4.
+
+### 11. Key principles
+
+- Induction moves from particular observations to broader patterns, generalisations or predictions.
+- Inductive conclusions are supported by evidence but are not logically guaranteed by it.
+- Strength depends on source quality, sample coverage, representativeness, comparability and independence.
+- A larger sample does not automatically remove selection bias or duplicated evidence.
+- A pattern in one location or period does not automatically apply elsewhere or later.
+- Evidence status and sample representativeness are separate questions.
+- Search for disconfirming information as well as confirming information.
+- State what was observed, what is inferred and what remains unresolved.
+- Treat inductive conclusions as revisable when new evidence arrives.
+
+## Lesson checkpoint
+
+Suppose an agent finds higher wholesale quotations for the same product form and grade in three of four sampled markets during a later observation period.
+
+A careful conclusion is:
+
+**The sampled observations suggest an upward movement in the three markets where higher comparable quotations were recorded. The available sample does not by itself establish a statewide increase or explain why the quotations changed.**
+
+The agent should preserve the scope of the sample, investigate its representativeness, check source independence and seek additional observations before making a broader claim.
+
+This is the central discipline of induction: use observed patterns to form useful conclusions, but keep those conclusions proportional to the evidence.
+
 ## Chapter 3 progress
 
-Subsection 3.1, Deductive Reasoning, is covered. Next: **3.2 Inductive Reasoning**.
+Subsections 3.1, Deductive Reasoning, and 3.2, Inductive Reasoning, are covered. Next: **3.3 Abductive Reasoning and Explanation**.
