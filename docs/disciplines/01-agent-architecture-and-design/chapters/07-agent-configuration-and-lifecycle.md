@@ -1,6 +1,6 @@
 # Chapter 7 — Agent Configuration and Lifecycle
 
-**Status:** In progress.
+**Status:** Covered.
 
 ## Purpose
 
@@ -17,7 +17,7 @@ The chapter is being taught progressively. Subsections marked as planned have no
 3. **7.3 Initialization and Startup:** Covered.
 4. **7.4 Agent Lifecycle and States:** Covered.
 5. **7.5 Configuration and Version Changes:** Covered.
-6. **7.6 Lifecycle Management and Continuity:** how agents are suspended, resumed, replaced or retired without losing necessary task history and accountability.
+6. **7.6 Lifecycle Management and Continuity:** Covered.
 
 ## 7.1 Agent Configuration
 
@@ -859,6 +859,182 @@ The person or governance process responsible for the relevant configuration shou
 - Detect and address configuration drift.
 - Do not silently mix configuration versions within consequential work.
 - An agent may propose a change but must not grant itself authority to approve or apply it.
+
+
+## 7.6 Lifecycle Management and Continuity
+
+### Core question
+
+How can an agentic system continue providing its required service when an agent is paused, fails, is replaced, upgraded or retired, without losing essential work, knowledge, permissions control or accountability?
+
+Lifecycle management is the ongoing management of agents throughout their operational lives. Continuity is the ability of the wider system to preserve required functions, information and task progress when individual agents or components change or become unavailable.
+
+Continuity does not mean that one particular agent process must run forever. It means the system has a deliberate way to preserve what matters and resume or transfer work safely.
+
+### Continuity has several dimensions
+
+1. **Identity continuity:** maintain a clear record of which logical agent is responsible for a function, even when its running process or deployment instance is restarted or replaced. A replacement may need a new identity if it is genuinely a new agent with a distinct mandate.
+2. **Task continuity:** preserve the status and necessary progress of unfinished work so it can be resumed, reassigned or safely cancelled.
+3. **Knowledge and information continuity:** retain relevant approved records, source provenance, reference information and task context needed by the next operating agent. This does not mean retaining every prompt, message or piece of data indefinitely.
+4. **Service continuity:** maintain the required service when an agent is unavailable, for example through an authorised backup agent, controlled reassignment or an explicitly accepted temporary pause.
+5. **Responsibility and authority continuity:** make clear who owns the work during a handover, which permissions remain valid and which permissions must be revoked or reassigned.
+6. **Accountability continuity:** preserve records of previous actions, approvals, versions and handoffs so that replacing an agent does not erase the history of its work.
+
+These dimensions are related but not identical. A service can continue even though the original agent has been retired, and a task can be transferred without transferring the original agent's identity or permissions.
+
+### Agent continuity is not process continuity
+
+A running process is an instance of an agent's operation. It may stop because of a restart, failure, maintenance or infrastructure change.
+
+The logical agent may continue to exist even when a particular process instance has ended. The system should distinguish:
+- The agent's durable identity.
+- The particular running instance or session.
+- The task being performed.
+- The configuration and policy versions governing that work.
+
+This distinction helps avoid treating every restart as a new agent or assuming that a new process automatically inherits every permission or previous task state.
+
+### Preserving task progress
+
+For a long-running task, the system may need to save a checkpoint: a deliberate record of enough task progress and relevant state to support safe continuation.
+
+A checkpoint might preserve:
+- Task identifier and objective.
+- Current task status.
+- Work already completed.
+- Work still outstanding.
+- Relevant inputs and source references.
+- Outputs already produced.
+- Configuration and policy versions used.
+- Pending approvals or external responses.
+- Known errors, uncertainties and retry status.
+- Any external action whose completion must be confirmed before retrying.
+
+A checkpoint should contain only the information needed for the task and should be protected according to its sensitivity.
+
+A checkpoint is not automatically a complete copy of the agent's mind or every internal model state. It is a managed record of task progress and relevant operational context.
+
+### Handover from one agent to another
+
+Suppose AGENT-001, the Market Data Collector, becomes unavailable while collecting market observations.
+
+The system decides that an approved replacement agent should continue the work.
+
+A controlled handover may follow these steps:
+
+1. **Detect the need for handover.** Establish why the original agent cannot continue and whether the interruption is temporary or permanent.
+2. **Identify affected tasks.** Find active, waiting and unfinished tasks owned by the agent.
+3. **Preserve the task record.** Save completed work, outstanding work, source details, relevant state and applicable configuration versions.
+4. **Check the proposed receiving agent.** Confirm that it has the appropriate role, capabilities, permissions, capacity and configuration for the work.
+5. **Define the transfer scope.** Specify exactly which tasks, records and responsibilities are being transferred.
+6. **Authorise the handover.** Obtain required approval, particularly where sensitive data, external actions or high-impact responsibilities are involved.
+7. **Transfer the necessary context.** Give the receiving agent the minimum relevant information needed to continue.
+8. **Prevent duplicate execution.** Establish which agent currently owns the task and check the status of any external actions before repeating them.
+9. **Confirm acceptance.** Record that the receiving agent has accepted the task and understands its scope and restrictions.
+10. **Update ownership and permissions.** Reassign only the necessary access and revoke permissions that the original agent no longer needs.
+11. **Record the outcome.** Preserve the handover history and identify the new task owner.
+
+A message saying "continue this task" is not by itself a complete handover. The receiving agent needs sufficient context, valid authority and a clear record of what has already happened.
+
+### Replacement is not always a simple copy
+
+A replacement agent may use a different model, configuration or operating environment. It may interpret instructions differently or produce outputs in a different format.
+
+Before transferring work, check:
+- Whether the replacement supports the required capabilities.
+- Whether its model and configuration are suitable for the task.
+- Whether it can interpret the existing task state and output format.
+- Whether its permissions match the approved scope.
+- Whether downstream agents can accept its outputs.
+- Whether additional validation is needed before resuming consequential work.
+
+Do not blindly copy the original agent's permissions to its replacement. The replacement should receive only the authority required for its assigned work.
+
+### Continuity when an agent is unavailable
+
+The system should define what happens when an agent is temporarily unavailable.
+
+Possible approaches include:
+
+- **Wait:** pause dependent work until the original agent becomes available.
+- **Retry or restart:** attempt recovery when the cause is understood and repeating actions is safe.
+- **Reassign:** transfer the task to an authorised agent with suitable capabilities.
+- **Use an approved fallback:** continue through a documented alternative process, with limitations recorded.
+- **Pause the service:** suspend the affected function when no safe alternative exists.
+- **Escalate:** involve an authorised human when the impact or uncertainty requires intervention.
+
+Automatic failover is not always appropriate. A backup agent must be authorised, sufficiently prepared and able to continue without creating conflicting work or duplicate external actions.
+
+### Continuity during updates and maintenance
+
+An agent may need to be paused or taken out of service while its configuration, model, software or environment is updated.
+
+The system should decide whether to:
+- Finish current tasks before maintenance.
+- Save checkpoints and pause tasks.
+- Transfer urgent tasks to another authorised agent.
+- Cancel tasks that cannot safely be resumed.
+- Revalidate the updated agent before returning it to Ready.
+
+After maintenance, the agent should pass the necessary initialization and readiness checks. A successful software update does not by itself prove that the agent is ready to resume all its previous work.
+
+### Continuity and retirement
+
+When an agent is permanently retired, its work must be deliberately closed or transferred.
+
+A retirement plan should establish:
+- Which responsibilities are ending and which must continue elsewhere.
+- Which unfinished tasks will be completed, transferred or cancelled.
+- Which agent or human becomes the new owner of ongoing work.
+- Which permissions and credentials must be revoked.
+- Which configuration, task and accountability records must be retained.
+- How stored information will be retained, transferred or deleted under applicable policy.
+- Which dependent agents and users must be informed.
+- How accidental reactivation will be prevented.
+
+Retirement should not leave an essential system function without an identified owner.
+
+### Continuity planning and recovery objectives
+
+Not every service requires the same level of continuity. The system should identify which functions are critical, how long they may safely remain unavailable and how much task progress or data loss is acceptable.
+
+Two useful terms, to be developed further in reliability and infrastructure studies, are:
+
+- **Recovery Time Objective (RTO):** the target time within which a service or capability should be restored after disruption.
+- **Recovery Point Objective (RPO):** the maximum acceptable amount of data or progress loss, expressed as a period of time.
+
+These objectives should be set according to the importance of the service and its consequences. They are planning targets, not guarantees that recovery will always meet them.
+
+For example, a daily non-urgent research summary may tolerate a longer interruption than a system controlling time-sensitive transactions. The required continuity arrangements should reflect that difference.
+
+### Continuity must be tested
+
+A continuity plan that has never been tested may fail when it is actually needed.
+
+Useful exercises include:
+- Restarting an agent while it has unfinished tasks.
+- Making a required dependency unavailable.
+- Transferring a task to an approved replacement agent.
+- Checking whether a checkpoint contains enough information to resume.
+- Verifying that the original agent's access is revoked after handover.
+- Confirming that a task or external action is not executed twice.
+- Retiring an agent and checking that dependent functions still have an owner.
+- Restoring required records from an approved backup.
+
+The purpose is to verify that the system can continue safely, not merely that another agent can be started.
+
+### Principles established
+
+- Continuity concerns the required function, task progress, knowledge, authority and accountability—not the indefinite survival of one process.
+- Distinguish logical agent identity, running instance, task and configuration version.
+- Preserve task progress using appropriate checkpoints and records.
+- Transfer only the context, responsibilities and permissions necessary for the receiving agent.
+- Confirm ownership and external-action status before resuming work to prevent duplication.
+- Do not blindly copy permissions to a replacement agent.
+- Define when to wait, retry, reassign, use a fallback, pause or escalate.
+- Retirement must close or transfer responsibilities, revoke access and preserve required records.
+- Set and test continuity and recovery expectations according to the importance and risk of the service.
+- A continuity plan must be tested rather than assumed to work.
 
 
 No particular implementation technology or framework is assumed.
