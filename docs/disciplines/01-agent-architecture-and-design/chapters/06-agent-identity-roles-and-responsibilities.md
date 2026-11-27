@@ -1,6 +1,6 @@
 # Chapter 6 — Agent Identity, Roles and Responsibilities
 
-**Status:** In progress
+**Status:** Covered
 
 ## Chapter scope
 
@@ -503,7 +503,171 @@ Create relationships because a task, dependency or control requires them. Define
 - Define how dependencies, delays, failures and conflicts are handled.
 - Avoid unnecessary connections and unclear ownership of work.
 
-## Remaining subsections
+## 6.7 Agent Accountability
+
+### Core question
+
+How can a system establish what an agent did, what it was expected to do, whether it acted within its authority and boundaries, and who must review or address the consequences?
+
+Agent accountability is the ability to trace, assess and respond to an agent's actions and outputs against its assigned role, responsibilities, permissions, rules and expected standards.
+
+It makes agent behaviour reviewable. Without accountability mechanisms, it may be difficult to identify why an action occurred, which component was involved, whether approval was obtained or how a failure should be corrected.
+
+### Agent accountability is not the same as making software legally responsible
+
+An agent can be assigned operational responsibilities and its behaviour can be evaluated. That does not automatically make the software itself the legal or organisational bearer of ultimate responsibility.
+
+Accountability arrangements should identify the relevant people and organisations that design, deploy, authorise, supervise and operate the system. Their responsibilities depend on the system, its use and applicable rules.
+
+The engineering objective is to make actions attributable and reviewable, and to ensure there is a defined process for human or organisational oversight and remediation.
+
+### What should be traceable?
+
+For a consequential task or action, the system should retain enough reliable evidence to reconstruct what happened.
+
+Depending on the risk and purpose, this may include:
+
+1. **Agent identity:** which agent or service performed the action.
+2. **Configuration and version:** the relevant agent configuration, model or component version, and applicable policy version.
+3. **Task origin:** who or what initiated the task, and the objective or request provided.
+4. **Assigned role and authority:** the role, responsibility, permission and boundary rules applicable at the time.
+5. **Inputs and sources:** information used, its origin, timestamp and verification status, subject to privacy and data-minimisation requirements.
+6. **Actions and tool calls:** what operations were requested or performed, which external systems were involved, and whether they succeeded.
+7. **Decisions and approvals:** significant decision summaries, policy checks, approval requests, approver identity and approval or rejection outcome.
+8. **Outputs and handoffs:** what was produced, who or what received it, and whether another agent continued the task.
+9. **Outcome:** whether the objective was achieved, partially achieved, rejected, cancelled or left unresolved.
+10. **Exceptions and incidents:** errors, boundary violations, overrides, retries, escalations and corrective actions.
+
+Not every low-risk operation needs a detailed record of every internal event. The level of logging should be proportionate to the consequences, regulatory needs, privacy constraints and operational requirements.
+
+### A traceable multi-agent task
+
+Suppose the agricultural intelligence system detects an unusual increase in tomato prices.
+
+A traceable task history might show:
+
+1. A monitoring process created a task to investigate the price movement.
+2. The Market Data Collector submitted observations with source and collection details.
+3. The Information Verification Agent recorded which observations were verified, rejected or unresolved.
+4. The Market Analyst produced an analysis based on the available evidence.
+5. The Opportunity Discovery Agent identified a possible commercial opportunity and recorded its assumptions.
+6. The Reporting Agent prepared a report.
+7. An authorised reviewer approved or rejected publication.
+8. The system recorded the final publication status and any follow-up.
+
+This history helps reviewers understand the sequence, the participating agents, the evidence used and the approvals obtained.
+
+It should be possible to distinguish an agent's own actions from information it received from another agent. A task or correlation identifier can help connect related events across the workflow.
+
+### Logging, monitoring and audit
+
+These concepts are related but different:
+
+- **Logging:** recording relevant events, actions, errors and state changes.
+- **Monitoring:** observing ongoing system activity and checking whether it is operating as expected.
+- **Audit:** examining recorded evidence and decisions to assess compliance, performance or an incident.
+- **Evaluation:** systematically testing or measuring whether an agent performs its assigned tasks to the required standard.
+
+Logs provide evidence for monitoring and audit, but a log by itself does not prove that an action was correct or that the record is complete and truthful.
+
+Monitoring can identify a problem as it happens. An audit may examine the incident afterward and establish what needs to change.
+
+### Decision records and model reasoning
+
+For important decisions, the system should capture an understandable summary of the decision, relevant evidence, applicable rules, uncertainty and outcome.
+
+Accountability does not require storing every private internal reasoning token or hidden chain-of-thought of a model. A concise decision record, source references, policy checks, tool events and final outcome can provide useful review evidence without treating private internal reasoning as an audit log.
+
+The record should help answer: what decision was made, on what relevant evidence and under which authority?
+
+### Measuring whether responsibilities were fulfilled
+
+Accountability also requires comparing actual performance with defined expectations.
+
+Examples for the agricultural intelligence system include:
+
+| Agent | Possible accountability evidence |
+|---|---|
+| Market Data Collector | Source coverage, timestamps, completeness, duplicates and correction rates |
+| Information Verification Agent | Verification outcomes, evidence quality, unresolved conflicts and false acceptance or rejection findings |
+| Market Analyst | Accuracy of calculations, source traceability, treatment of uncertainty and quality of analysis |
+| Opportunity Discovery Agent | Evidence supporting opportunities, assumptions, risk disclosures and usefulness of recommendations |
+| Reporting Agent | Correct recipients, approved content, delivery status and publication approvals |
+
+These are possible measures, not universal metrics. Measures should reflect each role and should not reward an agent for speed or volume at the expense of accuracy, safety or evidence quality.
+
+### What happens when an agent fails?
+
+Accountability must lead to a response, not merely record the failure.
+
+A suitable incident process may include:
+
+1. Detect and record the incident.
+2. Contain the immediate risk, including pausing affected actions where necessary.
+3. Preserve relevant evidence and task history.
+4. Establish which agents, components, permissions and decisions were involved.
+5. Assess impact and notify the appropriate people.
+6. Correct the output or reverse an action where possible and authorised.
+7. Identify the underlying cause.
+8. Update policies, permissions, instructions, tests or operating procedures as appropriate.
+9. Verify that the corrective action has worked.
+
+The response should distinguish a model error, bad input data, a permission-control failure, an orchestration defect, a human approval failure and an external service failure. Different causes require different remedies.
+
+### Accountability in multi-agent systems
+
+When several agents contribute to one result, accountability must not disappear between handoffs.
+
+The system should preserve:
+- Which agent received each task.
+- Which agent produced each intermediate result.
+- Which information and source details were passed along.
+- Which agent made or recommended a consequential decision.
+- Which human or system approved an action.
+- Which agent or component executed the final operation.
+
+Delegation should be traceable. An agent that delegates work should not assume the work is complete merely because it sent a request. The system should record the result, check it against the task requirements and escalate unresolved failures.
+
+### Privacy and record integrity
+
+Accountability records can contain sensitive information. They should be protected against unauthorised access and alteration, and retained only for a justified period.
+
+A sound design considers:
+- Access restrictions for logs and audit records.
+- Data minimisation and appropriate redaction.
+- Retention and deletion requirements.
+- Time consistency and reliable event ordering.
+- Protection against unauthorised modification.
+- Separation of operational logs from sensitive content where appropriate.
+- The ability to export or review records when needed.
+
+More logging is not automatically better. Collect information that serves a defined accountability, safety, reliability or operational purpose.
+
+### Principles established
+
+- Agent actions and consequential outputs should be attributable and reviewable.
+- Accountability records should connect identity, task, configuration, authority, inputs, actions, approvals, outputs, handoffs and outcomes where relevant.
+- Logging, monitoring, auditing and evaluation serve different purposes.
+- Important decisions need understandable evidence and decision summaries, not necessarily hidden internal reasoning traces.
+- Multi-agent handoffs and delegation must remain traceable.
+- Failures should trigger containment, investigation, correction and verification.
+- Accountability records must be protected and proportionate to privacy and retention requirements.
+- Operational responsibilities assigned to agents do not automatically make software the ultimate legal or organisational accountable party.
+
+## Chapter 6 completion
+
+Chapter 6 has covered all seven elements needed to define and organise agents within a larger system:
+
+1. Agent Identity
+2. Agent Roles
+3. Agent Responsibilities
+4. Agent Authority
+5. Agent Boundaries
+6. Agent Relationships
+7. Agent Accountability
+
+The next planned chapter is **Chapter 7 — Agent Configuration and Lifecycle**. Its detailed lessons have not yet been covered.
+
 
 - **6.7 Agent Accountability** — how its actions and performance are traced, assessed and governed.
 
