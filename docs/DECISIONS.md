@@ -89,3 +89,18 @@ This file records decisions that shape the learning project. It is not a list of
 **Scope boundary:** This discipline covers forming and revising plans, not executing tools, engineering persistent memory/retrieval, implementing runtime loops or coordinating work across multiple agents. Those responsibilities remain in their assigned disciplines.
 
 **Status:** Active. Scope and sequence defined; Chapter 1.1 covered.
+
+
+## D-011 — Integrate practical building and cross-sector transfer into the learning journey
+
+**Decision:** Run Agentic AI Engineering as an integrated learning, solution-discovery, assembly, engineering, validation and sector-transfer journey rather than a theory-only curriculum. Agriculture is the first practical pilot path. When a capability or principle is validated there, assess its reuse in other sectors, including real estate, mining and healthcare, with sector-specific adaptation and independent validation.
+
+**Operating cycle:** Identify a real problem; study relevant concepts; define requirements and capabilities; discover and evaluate existing solutions; assemble suitable capabilities; test the result; build only demonstrated gaps; document evidence and decisions; and assess transferability to other sectors.
+
+**Build principle:** Reuse, integrate, partner or implement existing solutions when they adequately satisfy the need. Develop custom components only when a genuine capability gap or other clearly justified reason remains.
+
+**Transfer boundary:** Reuse proven principles and suitable components, not unvalidated sector assumptions, data models, thresholds, permissions or decision rules. Healthcare and other high-consequence sectors require appropriate domain expertise, privacy and regulatory review, professional oversight and stronger validation.
+
+**Reason:** The purpose is not merely to understand agentic AI concepts, but to use that understanding to assemble working capabilities and build only what is genuinely missing, while creating reusable methods across industries.
+
+**Status:** Active.
