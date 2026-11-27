@@ -46,7 +46,7 @@ Agriculture is the first practical pilot path. It will be used to identify real 
 
 When a capability or principle is supported by evidence in agriculture, we will examine its applicability to other sectors such as real estate, mining and healthcare. We will transfer validated principles, not blindly copy sector-specific data models, decision rules, autonomy levels or controls. Each sector requires its own evidence, workflow and risk assessment.
 
-See [Practical Build and Sector Transfer Method](PRACTICAL_BUILD_AND_SECTOR_TRANSFER.md) for the operating method and the [provisional Agricultural Pilot Charter](practical-pilot/AGRICULTURAL_PILOT_CHARTER.md) for the current discovery scope.
+See [Practical Build and Sector Transfer Method](PRACTICAL_BUILD_AND_SECTOR_TRANSFER.md) for the operating method the [provisional Agricultural Pilot Charter](practical-pilot/AGRICULTURAL_PILOT_CHARTER.md), and the [Agricultural Pilot Discovery Register](practical-pilot/DISCOVERY_REGISTER.md) for recording discovery evidence.
 
 ## 5. Working end goals and practical milestones
 
