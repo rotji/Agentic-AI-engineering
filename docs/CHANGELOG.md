@@ -2,7 +2,16 @@
 
 Significant changes to the project's structure, curriculum, decisions and learning progress are recorded here.
 
-## 2026-11-27 — Chapter 6 learning progress
+## 2026-11-27 — Chapter 6 completed
+
+- Covered and documented Chapter 6.7, Agent Accountability.
+- Distinguished operational accountability of agent behaviour from ultimate human or organisational accountability.
+- Documented traceability evidence for agent identity, configuration, task origin, authority, inputs, actions, approvals, outputs, handoffs and outcomes.
+- Distinguished logging, monitoring, auditing and evaluation.
+- Covered multi-agent accountability, incident response, record protection and proportionate retention.
+- Marked Chapter 6 complete and planned Chapter 7, Agent Configuration and Lifecycle.
+
+## 2026-11-27 — Previous Chapter 6 learning progress
 
 - Covered and documented Chapter 6.6, Agent Relationships.
 - Documented peer, producer–consumer, delegation, coordinator–worker, supervisory and dependency relationships.
