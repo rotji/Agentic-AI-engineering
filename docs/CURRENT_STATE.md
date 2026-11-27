@@ -12,8 +12,9 @@ Agentic AI Engineering
 - **Completed chapters:** 1–7
 - **Chapter 6 status:** Covered (subsections 6.1–6.7)
 - **Chapter 7 status:** Complete (subsections 7.1–7.6)
-- **Current activity:** Review Discipline 1 coverage for any remaining essential architecture gaps
-- **Next step:** Review remaining Discipline 1 coverage and determine whether another architecture chapter is needed before moving to Discipline 2.
+- **Review outcome:** One genuine design-synthesis gap identified
+- **Current chapter:** 8 — From Requirements to Agent Architecture (planned)
+- **Next subsection:** 8.1 — Problem Framing and Agent Suitability
 
 ## Completed chapter coverage
 
@@ -178,6 +179,14 @@ A replacement must not blindly inherit the old agent's permissions. During unava
 Maintenance requires a plan for active tasks, checkpoints, transfer or cancellation, reinitialization and readiness checks. Retirement must transfer or close responsibilities, handle outstanding tasks, revoke access, preserve required records and inform affected dependants.
 
 Continuity expectations should reflect service criticality. Recovery Time Objective (RTO) is the target time to restore a service; Recovery Point Objective (RPO) is the maximum acceptable amount of data or progress loss expressed as time. These are planning targets, not guarantees. Test continuity by simulating restarts, unavailable dependencies, task handovers, permission revocation, duplicate-action risks and agent retirement.
+
+## Discipline 1 review outcome
+
+The review found that Chapters 1–7 establish the agent concept, components, autonomy, identity, authority, boundaries, relationships, accountability, configuration and lifecycle. The remaining gap is an end-to-end method for translating a problem and its requirements into a coherent agent architecture.
+
+A final synthesis chapter, Chapter 8 — From Requirements to Agent Architecture, has therefore been added. It will cover problem framing and agent suitability, requirements and constraints, capability mapping, high-level architecture selection, component boundaries and flows, autonomy and oversight integration, and architecture documentation and review.
+
+Detailed methods assigned to Disciplines 2–13 remain in those disciplines. See [Discipline 1 Review](disciplines/01-agent-architecture-and-design/REVIEW.md) and [Chapter 8 outline](disciplines/01-agent-architecture-and-design/chapters/08-from-requirements-to-agent-architecture.md).
 
 ## Important project boundaries
 
