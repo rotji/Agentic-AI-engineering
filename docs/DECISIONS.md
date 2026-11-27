@@ -42,15 +42,15 @@ This file records decisions that shape the learning project. It is not a list of
 
 **Status:** Active.
 
-## D-006 — Use the agricultural intelligence ecosystem as an illustrative learning example
+## D-006 — Use the agricultural intelligence ecosystem as the recurring learning example
 
-**Decision:** Use specialised agricultural intelligence agents to illustrate architecture, roles, responsibility, autonomy and coordination.
+**Original decision:** Use specialised agricultural intelligence agents to illustrate architecture, roles, responsibility, autonomy and coordination.
 
 **Reason:** A recurring example makes abstract engineering concepts easier to examine.
 
-**Boundary:** This does not commit the project to building that system or establish a final production architecture.
+**Updated boundary:** Decision D-011 subsequently established agriculture as the first practical pilot path, not merely an illustrative classroom example. The agricultural intelligence programme remains a proposed practical direction whose requirements and capabilities must be validated; it is not a claim that a production system has already been built.
 
-**Status:** Active.
+**Status:** Superseded by D-011, which governs the practical pilot and cross-sector transfer approach.
 
 ## D-007 — Different agents may require different autonomy levels
 
