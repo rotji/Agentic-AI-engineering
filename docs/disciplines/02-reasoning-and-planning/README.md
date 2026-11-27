@@ -1,6 +1,6 @@
 # Discipline 2 — Reasoning and Planning
 
-**Status:** In progress; Chapters 1–2 complete, Chapter 3 in progress (3.1–3.2 covered).
+**Status:** In progress; Chapters 1–2 complete, Chapter 3 in progress (3.1–3.3 covered).
 
 ## 1. Purpose
 
@@ -64,7 +64,7 @@ Study ways of drawing conclusions, forming explanations and assessing evidence.
 Planned subsections:
 - **3.1 Deductive Reasoning:** Covered.
 - **3.2 Inductive Reasoning:** Covered.
-- **3.3 Abductive Reasoning and Explanation**
+- **3.3 Abductive Reasoning and Explanation:** Covered.
 - **3.4 Causal Reasoning, Correlation and Analogy**
 - **3.5 Hypotheses, Evidence, Confidence and Limitations**
 
@@ -204,6 +204,6 @@ Where useful, exercises will ask the learner to formulate goals, decompose tasks
 
 ## 7. Current continuation point
 
-**Discipline 2 → Chapter 3 → 3.3 Abductive Reasoning and Explanation.**
+**Discipline 2 → Chapter 3 → 3.4 Causal Reasoning, Correlation and Analogy.**
 
-Chapters 1–2 (subsections 1.1–1.4 and 2.1–2.5) are complete. Chapter 3 is in progress; subsections 3.1 and 3.2 are covered.
+Chapters 1–2 (subsections 1.1–1.4 and 2.1–2.5) are complete. Chapter 3 is in progress; subsections 3.1–3.3 are covered.
