@@ -2,6 +2,17 @@
 
 ## 2026-11-27 — Discipline 2 learning progress
 
+- Covered and documented subsection 2.3, Goal States and Conditions for Success.
+- Distinguished current state, goal state, success conditions, acceptance criteria and evidence of achievement.
+- Explained quantitative and qualitative criteria, baselines, targets, thresholds and the distinction between mandatory conditions and indicators.
+- Established honest reporting of achieved, partially achieved, blocked, not achieved and unresolved results.
+- Applied the method to a sourced, evidence-labelled producer and product register for an agreed agricultural pilot scope without inventing numeric targets or evidence thresholds.
+- Clarified that goal-state methods transfer across sectors, while domain-specific evidence and governance must be adapted.
+- Set the next learning point to subsection 2.4, Constraints, Priorities and Conflicting Objectives.
+
+
+## 2026-11-27 — Discipline 2 learning progress
+
 - Covered and documented Chapter 2.2, Interpreting Instructions and Identifying Intent.
 - Distinguished explicit instruction, intended purpose and relevant context.
 - Established a method for identifying requester authority, literal request, scope, deliverable, constraints, context and assumptions.
