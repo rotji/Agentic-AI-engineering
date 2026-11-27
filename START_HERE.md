@@ -13,7 +13,8 @@ This repository preserves the learning path, practical pilot work, solution rese
 - **Discipline 2 status:** In progress; scope and 10-chapter learning sequence defined.
 - **Last completed chapter:** Chapter 1 — Foundations of Reasoning and Planning (subsections 1.1–1.4).
 - **Last completed chapter:** Chapter 2 — Goals, Instructions and Problem Formulation (subsections 2.1–2.5).
-- **Next learning step:** Chapter 3.1 — Deductive Reasoning.
+- **Current chapter:** Chapter 3 — Reasoning Patterns and Inference (3.1 Deductive Reasoning covered).
+- **Next learning step:** Chapter 3.2 — Inductive Reasoning.
 - **Practical direction:** Agriculture is the first pilot path. Learning, existing-solution discovery, assembly, testing and justified custom development proceed together.
 
 ## Practical project direction
