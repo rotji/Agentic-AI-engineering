@@ -196,6 +196,10 @@ No user problem has yet been independently validated. No data has been integrate
 - FAO FPMA overview: https://www.fao.org/giews/food-prices/en/
 - FAO FPMA tool description: https://www.fao.org/giews/food-prices/price-tool/en/
 - FAO FPMA tool: https://fpma.fao.org/giews/fpmat4/#/dashboard/tool/domestic
+- FAO FPMA API documentation — series discovery: https://fpma-documentation.web.app/docs/api-docs/time-series/
+- FAO FPMA API documentation — price retrieval: https://fpma-documentation.web.app/docs/api-docs/series-price/
+- FAO FPMA API documentation — permissioned price upload: https://fpma-documentation.web.app/docs/api-docs/price-upload/
+- World Bank November 17 data dictionary: https://microdata.worldbank.org/catalog/4503/data-dictionary
 - PLACOM price board: https://www.placommarkets.com/market-prices
 - PLACOM services: https://placommarkets.com/what-we-do.html
 - PLACOM insights: https://www.placommarkets.com/insights
