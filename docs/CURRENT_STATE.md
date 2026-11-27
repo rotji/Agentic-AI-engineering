@@ -13,8 +13,8 @@ Agentic AI Engineering
 - **Completed chapter coverage:** Chapters 1–5
 - **Chapter 6 status:** Covered (subsections 6.1–6.7)
 - **Current chapter:** 7 — Agent Configuration and Lifecycle
-- **Covered subsections:** 7.1 Agent Configuration; 7.2 Configuration Elements; 7.3 Initialization and Startup; 7.4 Agent Lifecycle and States; 7.5 Configuration and Version Changes
-- **Next subsection:** 7.6 — Lifecycle Management and Continuity
+- **Chapter 7 status:** Complete (subsections 7.1–7.6)
+- **Next step:** Review remaining Discipline 1 coverage and determine whether another architecture chapter is needed before moving to Discipline 2.
 
 ## Completed chapter coverage
 
@@ -164,6 +164,22 @@ Testing should examine expected behaviour, failure cases, permissions, outputs a
 
 An agent may propose a configuration change but must not automatically approve or apply changes beyond its authority.
 
+
+
+### 7.6 Lifecycle Management and Continuity
+
+Lifecycle management governs agents throughout their operational lives. Continuity preserves the required service, task progress, information, authority and accountability when an agent is unavailable, updated, replaced or retired. Continuity does not require one process to run forever.
+
+Important dimensions include identity, task, knowledge, service, responsibility/authority and accountability continuity. The system should distinguish a logical agent identity from its running instance, task and configuration version.
+
+Long-running work may require checkpoints recording task identity, status, completed and outstanding work, inputs, outputs, relevant versions, pending approvals, errors and external-action status. A handover requires identifying affected tasks, preserving progress, checking the receiving agent's suitability and authority, defining transfer scope, authorising the transfer, preventing duplicate execution, confirming acceptance, updating permissions and recording the result.
+
+A replacement must not blindly inherit the old agent's permissions. During unavailability, the system may wait, retry, reassign, use an approved fallback, pause the service or escalate. The correct response depends on risk and whether repeating an action could cause duplicate effects.
+
+Maintenance requires a plan for active tasks, checkpoints, transfer or cancellation, reinitialization and readiness checks. Retirement must transfer or close responsibilities, handle outstanding tasks, revoke access, preserve required records and inform affected dependants.
+
+Continuity expectations should reflect service criticality. Recovery Time Objective (RTO) is the target time to restore a service; Recovery Point Objective (RPO) is the maximum acceptable amount of data or progress loss expressed as time. These are planning targets, not guarantees. Test continuity by simulating restarts, unavailable dependencies, task handovers, permission revocation, duplicate-action risks and agent retirement.
+
 ## Important project boundaries
 
 - Do not divert the learning sequence into detailed platform or tool evaluations before a relevant need arises.
@@ -173,4 +189,4 @@ An agent may propose a configuration change but must not automatically approve o
 
 ## Next action
 
-Continue with **Discipline 1 → Chapter 7 → 7.6 Lifecycle Management and Continuity**. Chapter 7 is in progress; do not treat the remaining planned subsections as lessons already covered.
+Chapter 7 is complete. Next, review the Discipline 1 curriculum coverage and identify any remaining essential Agent Architecture and Design topics before transitioning to Discipline 2. Do not invent an additional chapter unless a genuine learning gap is identified.
