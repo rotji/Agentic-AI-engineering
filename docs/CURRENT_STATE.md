@@ -8,14 +8,14 @@ Agentic AI Engineering
 
 ## Active learning position
 
-- **Discipline:** 1 — Agent Architecture and Design
-- **Completed chapters:** 1–7
-- **Chapter 6 status:** Covered (subsections 6.1–6.7)
-- **Chapter 7 status:** Complete (subsections 7.1–7.6)
-- **Review outcome:** One genuine design-synthesis gap identified
-- **Current chapter:** 8 — From Requirements to Agent Architecture (in progress)
-- **Covered subsections:** 8.1 Problem Framing and Agent Suitability; 8.2 Requirements, Constraints and Operating Context; 8.3 Capability and Responsibility Mapping; 8.4 Selecting the High-Level Architecture Shape; 8.5 Component Boundaries, Interfaces and Flows; 8.6 Integrating Autonomy, Authority and Human Oversight
-- **Next subsection:** 8.7 — Producing and Reviewing an Architecture Blueprint
+- **Completed discipline:** 1 — Agent Architecture and Design
+- **Completed chapters:** 1–8
+- **Chapter 6:** Complete (subsections 6.1–6.7)
+- **Chapter 7:** Complete (subsections 7.1–7.6)
+- **Chapter 8:** Complete (subsections 8.1–8.7)
+- **Final review:** Completed; no further foundational architecture chapter was identified.
+- **Next discipline:** 2 — Reasoning and Planning
+- **Next action:** Define Discipline 2's scope and learning sequence before beginning its first lesson.
 
 ## Completed chapter coverage
 
@@ -277,6 +277,14 @@ Escalation conditions include conflicting evidence, out-of-scope requests, thres
 
 An action-level control map helps expose permissions and oversight requirements that a single autonomy label might hide. Record decisions, permissions, approvals and interventions so the design remains accountable.
 
+## Chapter 8 completion
+
+Chapter 8 completed the end-to-end architecture-design synthesis: problem framing, requirements and context, capability mapping, architecture-shape selection, component boundaries and flows, autonomy/authority/oversight integration, and architecture blueprint production and review.
+
+## Discipline 1 final review
+
+Discipline 1 is complete for progression to the specialist disciplines. Chapters 1–7 establish foundational agent concepts and agent-level design. Chapter 8 provides the end-to-end method for translating a problem and requirements into a coherent, technology-neutral architecture. The detailed treatment of specialist topics remains assigned to Disciplines 2–13. The concise introductory coverage in Chapters 1–4 should not be mistaken for exhaustive treatment of the topics they introduce.
+
 ## Important project boundaries
 
 - Do not divert the learning sequence into detailed platform or tool evaluations before a relevant need arises.
@@ -286,4 +294,4 @@ An action-level control map helps expose permissions and oversight requirements 
 
 ## Next action
 
-Continue with **Discipline 1 → Chapter 8 → 8.7 Producing and Reviewing an Architecture Blueprint**. Chapter 8 is in progress; do not treat the remaining planned subsections as lessons already covered.
+Begin **Discipline 2 — Reasoning and Planning** by establishing its learning scope, boundaries and chapter sequence. Do not start detailed tool selection before a relevant capability requirement arises.
