@@ -2,6 +2,15 @@
 
 ## 2026-11-27 — Chapter 8 learning progress
 
+- Covered and documented subsection 8.2, Requirements, Constraints and Operating Context.
+- Distinguished functional requirements, quality requirements, constraints and operating context.
+- Documented stakeholders, actors, data requirements, dependencies, assumptions, preferences, risks and open questions.
+- Established requirement prioritisation, testability and traceability to architecture decisions and validation evidence.
+- Set the next learning point to 8.3, Capability and Responsibility Mapping.
+
+
+## 2026-11-27 — Chapter 8 learning progress
+
 - Began Chapter 8, From Requirements to Agent Architecture.
 - Covered and documented subsection 8.1, Problem Framing and Agent Suitability.
 - Established problem-first framing and the distinction between problem, desired outcome and proposed solution.
