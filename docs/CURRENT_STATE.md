@@ -16,12 +16,12 @@ Agentic AI Engineering
 - **Final review:** Completed; no further foundational architecture chapter was identified.
 - **Next discipline:** 2 — Reasoning and Planning
 - **Discipline 2 status:** In progress; scope and 10-chapter sequence defined.
-- **Chapter 1:** In progress; subsections 1.1–1.2 covered.
-- **Next learning step:** Chapter 1.3 — How Reasoning and Planning Fit into an Agent's Operation.
+- **Chapter 1:** In progress; subsections 1.1–1.3 covered.
+- **Next learning step:** Chapter 1.4 — Deliberative and Reactive Behaviour.
 
 ## Discipline 2 — Reasoning and Planning
 
-The scope and initial 10-chapter sequence are defined. Chapter 1 subsection 1.1, What Reasoning and Planning Mean in Agentic Systems, is covered. The lesson defined reasoning as interpreting information and assessing conclusions, and planning as formulating a possible course of action toward an objective. It used an agricultural market-price investigation to show how evidence assessment informs a proposed investigation plan. It emphasised that reasoning and plans can be wrong, that plans are not completed execution, and that both must respect evidence, constraints and assigned authority. Subsection 1.2, Reasoning vs Planning vs Decision-Making vs Execution, is now covered. Reasoning interprets and assesses; planning organises a course of action; decision-making selects among options; execution carries out an authorised action. These functions can interleave, and an action attempt does not prove success. Continue with 1.3, How Reasoning and Planning Fit into an Agent's Operation.
+The scope and initial 10-chapter sequence are defined. Chapter 1 subsection 1.1, What Reasoning and Planning Mean in Agentic Systems, is covered. The lesson defined reasoning as interpreting information and assessing conclusions, and planning as formulating a possible course of action toward an objective. It used an agricultural market-price investigation to show how evidence assessment informs a proposed investigation plan. It emphasised that reasoning and plans can be wrong, that plans are not completed execution, and that both must respect evidence, constraints and assigned authority. Subsection 1.2, Reasoning vs Planning vs Decision-Making vs Execution, is now covered. Reasoning interprets and assesses; planning organises a course of action; decision-making selects among options; execution carries out an authorised action. These functions can interleave, and an action attempt does not prove success. Subsection 1.3, How Reasoning and Planning Fit into an Agent's Operation, is now covered. Reasoning and planning depend on the objective, context, current state, model capabilities, system constraints and available actions. Plans must pass authority and feasibility checks; execution occurs through the surrounding system; outcomes must be observed and task state updated. Continue with 1.4, Deliberative and Reactive Behaviour.
 
 See [Discipline 2 learning sequence](disciplines/02-reasoning-and-planning/README.md).
 
