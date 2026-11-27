@@ -2,6 +2,16 @@
 
 ## 2026-11-27 — Discipline 2 learning progress
 
+- Covered and documented Chapter 1.3, How Reasoning and Planning Fit into an Agent's Operation.
+- Connected reasoning and planning to objectives, assigned tasks, context, memory, model capabilities, state, authority controls, execution and feedback.
+- Clarified that the model contributes capabilities but is not the entire agentic system.
+- Documented the conceptual operating picture from objective and context through reasoning, planning, decision/control checks, execution, observation and task-state update.
+- Reaffirmed boundaries with Disciplines 3–9 for memory, tools, execution, orchestration, governance and evaluation.
+- Set the next learning point to Chapter 1.4, Deliberative and Reactive Behaviour.
+
+
+## 2026-11-27 — Discipline 2 learning progress
+
 - Covered and documented Chapter 1.2, Reasoning vs Planning vs Decision-Making vs Execution.
 - Distinguished interpretation and assessment, plan formulation, option selection and carrying out an authorised action.
 - Used the agricultural tomato-price investigation to show how the four activities interact.
