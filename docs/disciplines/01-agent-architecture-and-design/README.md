@@ -14,7 +14,8 @@ Understand the structure and behaviour of an individual agent before studying th
 | 4 | Agent vs Chatbot vs Workflow vs Automation vs Autonomous System | Covered |
 | 5 | Autonomy Levels and the Autonomy Spectrum | Covered |
 | 6 | Agent Identity, Roles and Responsibilities | Covered |
-| 7 | Agent Configuration and Lifecycle | Covered |\n| 8 | From Requirements to Agent Architecture | In progress |
+| 7 | Agent Configuration and Lifecycle | Covered |
+| 8 | From Requirements to Agent Architecture | In progress |
 
 ## Chapter documents
 
@@ -24,7 +25,8 @@ Understand the structure and behaviour of an individual agent before studying th
 4. [Chapter 4 — Agent vs Chatbot vs Workflow vs Automation vs Autonomous System](chapters/04-agent-chatbot-workflow-automation-autonomous-system.md)
 5. [Chapter 5 — Autonomy Levels and the Autonomy Spectrum](chapters/05-autonomy-levels-and-the-autonomy-spectrum.md)
 6. [Chapter 6 — Agent Identity, Roles and Responsibilities](chapters/06-agent-identity-roles-and-responsibilities.md)
-7. [Chapter 7 — Agent Configuration and Lifecycle](chapters/07-agent-configuration-and-lifecycle.md)\n8. [Chapter 8 — From Requirements to Agent Architecture](chapters/08-from-requirements-to-agent-architecture.md)
+7. [Chapter 7 — Agent Configuration and Lifecycle](chapters/07-agent-configuration-and-lifecycle.md)
+8. [Chapter 8 — From Requirements to Agent Architecture](chapters/08-from-requirements-to-agent-architecture.md)
 
 ## Continuation point
 
