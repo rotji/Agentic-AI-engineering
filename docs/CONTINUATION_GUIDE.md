@@ -9,7 +9,7 @@ Before continuing a session:
 3. Continue from the next unfinished subsection.
 4. Do not repeat completed lessons unless the user asks to revisit or deepen them.
 
-Current continuation point: **Discipline 1 → Chapter 6 → 6.2 Agent Roles**.
+Current continuation point: **Discipline 2 — Reasoning and Planning: define its scope and learning sequence before beginning the first lesson.**
 
 ## 2. Document a lesson
 
