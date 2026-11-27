@@ -263,6 +263,103 @@ The required approval should reflect the action's potential impact, reversibilit
 - High-impact or irreversible actions may require additional approval.
 - Agents must not be able to unilaterally expand their own authority.
 
+## 6.5 Agent Boundaries
+
+### Core question
+
+What limits must an agent respect, even when it has the technical capability or some permission to take an action?
+
+Agent boundaries define the limits within which an agent must operate. They clarify what is outside its role or scope, what it must not do, and when it must stop, refuse or escalate rather than continue.
+
+Boundaries help prevent an agent from interpreting a broad objective as permission to do anything that might achieve it.
+
+### Authority and boundaries are related but different
+
+- **Authority** identifies the decisions and actions the system permits an agent to perform.
+- **Boundaries** define the limits and constraints that the agent must not cross while performing its work.
+
+They work together. An agent may have permission to read approved market data, but its boundaries may prohibit it from accessing personal financial records, changing original source records or using data outside the assigned project.
+
+A tool being available to an agent does not mean every possible use of that tool is within its boundaries.
+
+### Common categories of boundaries
+
+1. **Role and task boundaries:** the topics, objectives and work the agent is assigned to handle. It should not silently take on unrelated objectives.
+2. **Data and privacy boundaries:** which information it may access, disclose, retain, combine or modify, including restrictions on sensitive or confidential information.
+3. **Action boundaries:** actions it must not perform, such as making an unauthorised purchase, signing an agreement or publishing an unapproved announcement.
+4. **Resource boundaries:** limits on spending, compute, storage, message volume, time or other resources.
+5. **Operational and environmental boundaries:** systems, accounts, locations, markets or environments within which it may operate.
+6. **Safety and policy boundaries:** prohibited conduct, unsafe requests, required safeguards and rules that take precedence over task completion.
+7. **Delegation boundaries:** restrictions on transferring tasks, data or permissions to another agent or external party.
+8. **Knowledge and evidence boundaries:** limits on what it may claim. It must distinguish verified information from assumptions, estimates and unknowns rather than presenting uncertainty as fact.
+9. **Change boundaries:** restrictions on changing its own instructions, permissions, configuration or operating environment.
+
+These categories are a practical design checklist; not every system needs a separate rule for every category.
+
+### Example: boundaries for the Market Analyst
+
+Suppose a Market Analyst is authorised to examine approved agricultural price records and prepare internal analysis.
+
+Its boundaries could include:
+
+- It must not alter the original collected observations.
+- It must not access data outside its assigned sources and project scope.
+- It must not expose private or confidential information in its report.
+- It must not present unverified market rumours as established facts.
+- It must not publish a public warning or contact external buyers unless separately authorised.
+- It must not commit money or enter commercial agreements.
+- It must not change its own access permissions.
+- If evidence is contradictory or insufficient, it must state the uncertainty and request further verification rather than inventing a conclusion.
+
+The boundaries help keep the agent's behaviour aligned with its assigned role, responsibility and authority.
+
+### Hard boundaries and behavioural guidance
+
+It is useful to distinguish between two ways of expressing constraints:
+
+- **Enforced boundaries:** restrictions implemented in the surrounding system, such as access controls, spending limits, approval gates, data permissions and blocked operations.
+- **Behavioural boundaries:** instructions and policies that guide how the model should behave, such as staying on topic, explaining uncertainty or escalating a difficult case.
+
+Behavioural instructions are useful but should not be treated as a substitute for technical enforcement where the consequences are significant. High-impact restrictions should be enforced outside the model wherever practical.
+
+### What should happen when a boundary is reached?
+
+An agent should not simply continue because it is under pressure to complete its objective.
+
+A suitable response may be to:
+
+1. Stop the restricted action.
+2. Preserve the relevant task state and evidence.
+3. Explain which boundary or uncertainty prevents it from proceeding.
+4. Escalate to the appropriate human or authorised agent when needed.
+5. Resume only when the required permission, information or decision is available.
+
+For ambiguous or high-impact cases, the system should be designed to fail safely rather than assume permission.
+
+### Boundaries must be tested
+
+A boundary written in a document is not proof that the system will respect it.
+
+Engineering should test whether an agent can:
+- Access information outside its assigned scope.
+- Perform an action it is not authorised to perform.
+- Reveal information it should protect.
+- Continue when required approval is missing.
+- Ignore a restriction after receiving conflicting or manipulative instructions.
+- Delegate a prohibited action to another agent.
+- Modify its own instructions or permissions without authorisation.
+
+The tests should verify the actual system behaviour and enforcement, not merely whether the agent says it understands the rule.
+
+### Principles established
+
+- Every agent should have explicit boundaries appropriate to its role, responsibilities and authority.
+- A broad objective does not authorise an agent to cross its boundaries.
+- Tool availability is not the same as permission to use every capability.
+- Important restrictions should be enforced by the surrounding system, not only by model instructions.
+- Agents should stop, explain and escalate when they reach a boundary they cannot safely resolve.
+- Boundaries should be tested and reviewed as the system changes.
+
 ## Remaining subsections
 
 - **6.5 Agent Boundaries** — what an agent must not do or exceed.
