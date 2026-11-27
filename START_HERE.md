@@ -12,7 +12,8 @@ This repository preserves the learning path, practical pilot work, solution rese
 - **Next discipline:** 2 — Reasoning and Planning.
 - **Discipline 2 status:** In progress; scope and 10-chapter learning sequence defined.
 - **Last completed chapter:** Chapter 1 — Foundations of Reasoning and Planning (subsections 1.1–1.4).
-- **Next learning step:** Chapter 2.1 — Objectives, Goals and Desired Outcomes.
+- **Last covered subsection:** Chapter 2.1 — Objectives, Goals and Desired Outcomes.
+- **Next learning step:** Chapter 2.2 — Interpreting Instructions and Identifying Intent.
 - **Practical direction:** Agriculture is the first pilot path. Learning, existing-solution discovery, assembly, testing and justified custom development proceed together.
 
 ## Practical project direction
