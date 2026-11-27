@@ -2,7 +2,7 @@
 
 **Review status:** Completed  
 **Date:** 2026-11-27  
-**Outcome:** One final synthesis chapter is justified before moving to Discipline 2.
+**Final outcome:** Discipline 1 is complete for progression to Discipline 2 after the synthesis chapter and final review.
 
 ## 1. Purpose of this review
 
@@ -100,8 +100,18 @@ Discipline 1 is not yet complete. Chapters 1–7 establish the main concepts and
 
 After Chapter 8, review the discipline once more. If the design method is clear and the remaining specialist topics are properly assigned to later disciplines, transition to Discipline 2 — Reasoning and Planning.
 
-## 9. Current continuation point
+## 9. Final review after completion of Chapter 8
 
-**Discipline 1 → Chapter 8 → 8.1 Problem Framing and Agent Suitability.**
+Chapter 8 was completed with seven subsections covering problem framing, requirements and context, capability mapping, architecture-shape selection, component boundaries and flows, autonomy/authority/oversight integration, and architecture blueprint production and review.
 
-No implementation or tool-selection work is implied by this decision.
+The original design-synthesis gap has therefore been addressed. No further foundational chapter is currently justified in Discipline 1. The detailed treatment of reasoning, context and memory, tools, execution, orchestration, security, governance, evaluation, human interaction, observability, infrastructure and continuous improvement remains assigned to the other disciplines.
+
+**Coverage qualification:** The documented material in Chapters 1–4 includes concise introductory summaries. This review does not claim that every concept introduced there has been studied exhaustively. Specialist depth and practical reinforcement remain part of the later disciplines.
+
+**Final outcome:** Discipline 1 is complete for progression to Discipline 2 — Reasoning and Planning. New architecture gaps may be revisited if later learning provides a substantive reason.
+
+## 10. Current continuation point
+
+**Discipline 2 — Reasoning and Planning: define the scope and learning sequence before beginning the first lesson.**
+
+No implementation or tool-selection work is implied by this transition.
