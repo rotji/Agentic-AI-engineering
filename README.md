@@ -12,7 +12,8 @@ Read [START_HERE.md](START_HERE.md) for the project entry point and documentatio
 - **Current discipline:** 1 — Agent Architecture and Design.
 - **Completed chapters:** 1–7 in Discipline 1.
 - **Chapter 7:** Complete (subsections 7.1–7.6).
-- **Next:** Review Discipline 1 coverage before transitioning to Discipline 2.
+- **Current chapter:** 8 — From Requirements to Agent Architecture (planned).
+- **Next:** 8.1 Problem Framing and Agent Suitability.
 
 ## Key project principles
 
@@ -30,6 +31,7 @@ Read [START_HERE.md](START_HERE.md) for the project entry point and documentatio
 - [Curriculum — 13 disciplines](docs/CURRICULUM.md)
 - [Current learning state](docs/CURRENT_STATE.md)
 - [Discipline 1 chapter index](docs/disciplines/01-agent-architecture-and-design/README.md)
+- [Discipline 1 coverage review](docs/disciplines/01-agent-architecture-and-design/REVIEW.md)
 - [Decision log](docs/DECISIONS.md)
 - [Continuation guide](docs/CONTINUATION_GUIDE.md)
 - [Changelog](docs/CHANGELOG.md)
