@@ -13,8 +13,8 @@ Read [START_HERE.md](START_HERE.md) for the project entry point and documentatio
 - **Current discipline:** 2 — Reasoning and Planning (in progress; sequence defined).
 - **Completed chapter:** Chapter 1 — Foundations of Reasoning and Planning (subsections 1.1–1.4).
 - **Completed chapter:** Chapter 2 — Goals, Instructions and Problem Formulation (subsections 2.1–2.5).
-- **Current chapter:** Chapter 3 — Reasoning Patterns and Inference (3.1 covered).
-- **Next learning step:** Chapter 3.2 — Inductive Reasoning.
+- **Current chapter:** Chapter 3 — Reasoning Patterns and Inference (3.1–3.2 covered).
+- **Next learning step:** Chapter 3.3 — Abductive Reasoning and Explanation.
 - **Practical direction:** Agriculture is the first pilot path; solution discovery, assembly and validation proceed alongside the curriculum.
 
 ## Practical operating method
@@ -22,6 +22,7 @@ Read [START_HERE.md](START_HERE.md) for the project entry point and documentatio
 Learn the relevant concepts, discover existing solutions, assemble suitable capabilities, test them, build only genuine gaps and assess the transfer of validated principles to other sectors.
 
 - [Practical Build and Sector Transfer Method](docs/PRACTICAL_BUILD_AND_SECTOR_TRANSFER.md)
+- [Agricultural Pilot Charter (provisional)](docs/practical-pilot/AGRICULTURAL_PILOT_CHARTER.md)
 
 ## Key project principles
 
