@@ -9,12 +9,9 @@ Read [START_HERE.md](START_HERE.md) for the project entry point and documentatio
 ## Current progress
 
 - **Curriculum:** 13 disciplines.
-- **Current discipline:** 1 — Agent Architecture and Design.
-- **Completed chapters:** 1–7 in Discipline 1.
-- **Chapter 7:** Complete (subsections 7.1–7.6).
-- **Current chapter:** 8 — From Requirements to Agent Architecture (in progress).
-- **Covered:** 8.1 Problem Framing and Agent Suitability; 8.2 Requirements, Constraints and Operating Context; 8.3 Capability and Responsibility Mapping; 8.4 Selecting the High-Level Architecture Shape; 8.5 Component Boundaries, Interfaces and Flows; 8.6 Integrating Autonomy, Authority and Human Oversight.
-- **Next:** 8.7 Producing and Reviewing an Architecture Blueprint.
+- **Completed discipline:** 1 — Agent Architecture and Design (Chapters 1–8).
+- **Next discipline:** 2 — Reasoning and Planning.
+- **Next step:** Establish Discipline 2's scope and learning sequence.
 
 ## Key project principles
 
@@ -32,6 +29,7 @@ Read [START_HERE.md](START_HERE.md) for the project entry point and documentatio
 - [Curriculum — 13 disciplines](docs/CURRICULUM.md)
 - [Current learning state](docs/CURRENT_STATE.md)
 - [Discipline 1 chapter index](docs/disciplines/01-agent-architecture-and-design/README.md)
+- [Agent architecture blueprint template](docs/templates/AGENT_ARCHITECTURE_BLUEPRINT_TEMPLATE.md)
 - [Discipline 1 coverage review](docs/disciplines/01-agent-architecture-and-design/REVIEW.md)
 - [Decision log](docs/DECISIONS.md)
 - [Continuation guide](docs/CONTINUATION_GUIDE.md)
