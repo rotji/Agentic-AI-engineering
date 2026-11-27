@@ -23,7 +23,7 @@ The chapter is being taught progressively. Subsections marked Covered have been 
 1. **8.1 Problem Framing and Agent Suitability:** Covered.
 2. **8.2 Requirements, Constraints and Operating Context:** Covered.
 3. **8.3 Capability and Responsibility Mapping:** Covered.
-4. **8.4 Selecting the High-Level Architecture Shape:** consider a single agent, an agent with supporting workflow or automation, a hybrid system, or multiple specialised agents; defer detailed orchestration to Discipline 6.
+4. **8.4 Selecting the High-Level Architecture Shape:** Covered.
 5. **8.5 Component Boundaries, Interfaces and Flows:** establish responsibilities, inputs, outputs, information flows, control boundaries and dependencies at architecture level.
 6. **8.6 Integrating Autonomy, Authority and Human Oversight:** ensure decisions, permissions, boundaries, approvals and escalation are coherent across the design.
 7. **8.7 Producing and Reviewing an Architecture Blueprint:** document the design, assumptions, alternatives, trade-offs, unresolved questions and traceability to requirements.
@@ -683,6 +683,226 @@ This produces a capability and responsibility map that can inform the high-level
 - Verify that every requirement is covered and every capability has a viable provider.
 
 
+## 8.4 Selecting the High-Level Architecture Shape
+
+### Core question
+
+Given the problem, requirements, operating context, and mapped capabilities, what overall arrangement of components is the simplest one that can satisfy the system's needs?
+
+An architecture shape describes the broad way the system's main responsibilities and components are arranged. It helps decide whether the solution should use conventional software, one agent, an agent supported by automation, multiple agents, or a hybrid arrangement involving agents, software, workflows and people.
+
+This is a high-level design decision. It is not yet a detailed design of agent communication, task delegation or orchestration. Those topics belong to Discipline 6.
+
+### 1. Start with the simplest sufficient arrangement
+
+The goal is not to create the most sophisticated architecture. It is to choose an arrangement that meets the requirements with acceptable complexity, cost, risk and operational effort.
+
+Begin with the simplest plausible design. Add agents or separate components only when a requirement, responsibility, risk or operational need justifies that separation.
+
+A system that uses five agents is not automatically better than a system using one agent and several conventional components.
+
+### 2. Common high-level architecture shapes
+
+#### A. Conventional software, workflow or automation without an agent
+
+Some problems do not require an AI agent.
+
+A conventional application, deterministic processing component, scheduled automation or fixed workflow may satisfy the requirements.
+
+Examples:
+- Calculate price differences using an explicit formula.
+- Validate that a price record contains a commodity, unit, date and source.
+- Run a scheduled data import.
+- Send a report after a predefined approval event.
+
+This is an important architecture option, not a failure to use AI.
+
+#### B. Single-agent architecture
+
+One agent is responsible for a bounded objective and may use the capabilities assigned to it.
+
+This can be suitable when:
+- The work has one coherent objective.
+- Tasks are closely related and share much of the same context.
+- One role can own the outcome clearly.
+- The agent's authority and boundaries can be defined without becoming excessively broad.
+- A single agent can perform the work within acceptable cost, latency and reliability limits.
+
+A single agent does not mean a system with no other components. It may still rely on conventional software, data sources, interfaces and controlled capabilities. The distinction is that one agent performs the adaptive, goal-directed work.
+
+#### C. One agent supported by workflows and automation
+
+In this arrangement, a workflow or automation handles predictable stages, while an agent handles the portions that need interpretation or adaptive decisions.
+
+For example:
+- A scheduled process starts the work.
+- Conventional components collect and validate structured records.
+- An agent investigates unusual or ambiguous findings.
+- A deterministic process formats the result.
+- A person approves a sensitive publication.
+
+This arrangement often avoids asking an agent to perform routine steps that can be handled more predictably by ordinary software.
+
+#### D. Multi-agent architecture
+
+Several agents have distinct roles and collaborate to achieve a broader system objective.
+
+This may be appropriate when:
+- Responsibilities are genuinely separable.
+- Different tasks need distinct context, expertise or permissions.
+- Work can be performed independently or in parallel.
+- Independent review or separation of duties is important.
+- Agents need different autonomy levels or operating lifecycles.
+- The benefits of separation outweigh the extra coordination, communication and monitoring costs.
+
+A multi-agent architecture introduces additional design obligations: clear ownership, information handoffs, dependency management, conflict handling, traceability and failure recovery. More agents create more interactions that can fail or become difficult to understand.
+
+A multi-agent design should therefore solve a real separation or coordination problem. Do not create an agent for every small activity.
+
+#### E. Hybrid system
+
+A hybrid system combines agents with conventional software, automation, workflows, external services and human roles.
+
+This is not simply another competing pattern alongside the others. It is a broad arrangement that can include one agent or multiple agents together with non-agent components.
+
+Hybrid designs are useful when different parts of a problem have different characteristics. Predictable operations can remain deterministic, adaptive investigation can be assigned to an agent, and consequential decisions can remain under authorised human control.
+
+In practical systems, a hybrid arrangement may be more suitable than trying to make the entire process autonomous.
+
+### 3. A high-level view of multi-agent organisation
+
+When several agents are justified, their broad authority and coordination may be arranged in different ways.
+
+- **Coordinator-led arrangement:** a designated coordinator assigns or tracks work and gathers results from specialised agents.
+- **Distributed or peer arrangement:** agents with distinct responsibilities cooperate through agreed relationships, without one agent controlling every operational decision.
+- **Mixed arrangement:** some tasks are coordinated centrally while other interactions occur directly between specialised agents or through shared processes.
+
+These labels describe high-level organisational choices only. They do not prescribe how messages, delegation, consensus or conflict resolution must be implemented. Detailed orchestration and communication engineering belong to Discipline 6; distributed authority and self-governing rules are explored in Agentic Governance.
+
+A distributed arrangement does not mean that accountability disappears. Authority, ownership, constraints and escalation still need to be defined.
+
+### 4. How do we decide whether one agent is enough?
+
+A single agent may be sufficient when:
+- The objective is coherent and bounded.
+- The work shares a common context.
+- The tasks are closely connected.
+- One role can own the outputs.
+- Permissions do not need substantial separation.
+- The required workload can be handled within acceptable limits.
+
+Consider a Market Investigation Agent that examines a reported price spike. It may collect relevant approved observations, compare time periods, investigate possible explanations and prepare a finding. If the work is tightly connected and the same agent can perform it safely, splitting each step into a separate agent may add unnecessary overhead.
+
+### 5. When is splitting into multiple agents justified?
+
+Separate agents may be justified when there is a real architectural reason, such as:
+
+1. **Distinct responsibilities:** each function has a clear and independently meaningful outcome.
+2. **Different information contexts:** one role needs a different set of information or a different operating context.
+3. **Different authority or risk:** one function must not have the permissions needed by another.
+4. **Parallel work:** independent investigations can proceed at the same time.
+5. **Independent lifecycle or scaling:** one function must be updated, paused or scaled separately.
+6. **Independent checking:** a separate role is needed to review or challenge another component's output.
+7. **Operational isolation:** failure or excessive workload in one function should not necessarily stop another.
+
+These are decision factors, not a checklist requiring every condition. A single strong reason may justify separation when the benefit is significant.
+
+However, every additional agent adds communication, handoff, monitoring, testing, configuration and failure-management overhead. The separation must be worth that cost.
+
+### 6. Architecture shape and autonomy are separate decisions
+
+Do not confuse the number of agents with the autonomy of the system.
+
+- A single agent can operate with low or high autonomy within its permitted authority.
+- A multi-agent system can operate under strict human approval and supervision.
+- A hybrid system can automate routine work while requiring human approval for consequential actions.
+- Distributed agents do not automatically have equal authority or unrestricted freedom.
+
+Architecture shape answers: **How are the main components and responsibilities arranged?**
+
+Autonomy design answers: **How independently may each agent decide and act within its authority?**
+
+The two decisions influence each other, but neither determines the other automatically.
+
+### 7. Compare architecture shapes against the requirements
+
+Use a simple comparison before committing to an arrangement.
+
+| Consideration | Single agent | Agent plus workflow | Multi-agent | Hybrid |
+|---|---|---|---|---|
+| Number of agents | One | Usually one or a small number | Several | One or several |
+| Predictable tasks | Agent may not be the best provider | Workflow handles them | Can be assigned to non-agent components too | Often handled by conventional components |
+| Adaptive work | One agent handles it | Agent handles selected stages | Several specialised agents may handle separate parts | Allocated to the most suitable participants |
+| Coordination overhead | Lower | Low to moderate | Higher | Depends on the combination |
+| Separation of permissions | Can become broad if poorly designed | Can isolate fixed stages | Can separate agent permissions | Can combine agent and human controls |
+| Main risk to watch | One agent becomes overloaded or over-scoped | Poor handoff between fixed and adaptive stages | Coordination failures and unclear ownership | Inconsistent interfaces and fragmented operations |
+
+The table is qualitative. It is not a scoring formula and does not establish that one architecture is universally best.
+
+### 8. Apply the options to agricultural intelligence
+
+The agricultural intelligence example contains different kinds of work:
+
+- Scheduled collection from known sources.
+- Parsing and standardisation of structured observations.
+- AI-assisted interpretation of varied source material.
+- Deterministic price calculations and validation.
+- Investigation of unusual market movements.
+- Human review of consequential findings.
+- Controlled distribution of approved reports.
+
+A plausible high-level starting arrangement is a **hybrid system**:
+
+1. Scheduled automation initiates routine collection.
+2. Conventional components parse, standardise and validate structured observations.
+3. An AI agent is used where varied information needs interpretation or an investigation requires adaptive steps.
+4. Calculation and threshold checks use appropriate deterministic or statistical components.
+5. An authorised person reviews sensitive or consequential findings.
+6. Automation distributes outputs only after the required approval condition is satisfied.
+
+A separate verification agent or additional specialised agents may be justified later if independent responsibilities, authority separation, workload or scale warrant them. The current learning exercise does not require us to create them in advance.
+
+This is an illustrative architecture shape, not an approved build plan or a claim that the sources, data and operating requirements have already been verified.
+
+### 9. A practical architecture-selection procedure
+
+1. Start with the problem, requirements and capability map.
+2. Identify which work is deterministic, interpretive, adaptive, human-led or externally provided.
+3. Sketch the simplest arrangement that could satisfy the requirements.
+4. Decide whether one agent can safely and clearly own the adaptive work.
+5. Identify any genuine reasons to separate responsibilities into multiple agents.
+6. Add workflows, automation, conventional components and human approval where they provide a better fit.
+7. Compare the candidate arrangement against quality requirements, constraints, dependencies, risk, cost and operational complexity.
+8. Check that every important capability has an owner and that boundaries and handoffs are understandable.
+9. Record why the selected shape is preferable to the simpler alternatives, and preserve unresolved questions.
+
+The selected shape remains provisional until its interfaces, information flows and control boundaries are described in the next subsection.
+
+### 10. Common architecture-selection mistakes
+
+- Assuming that every capability needs its own agent.
+- Selecting a multi-agent design because it appears more advanced.
+- Putting predictable calculations inside an agent without a reason.
+- Giving one agent unrelated responsibilities and excessively broad permissions.
+- Splitting tightly connected tasks into agents that constantly depend on each other.
+- Ignoring communication, coordination, evaluation and maintenance overhead.
+- Assuming a coordinator automatically has authority to override every other agent.
+- Treating distributed operation as freedom from accountability.
+- Selecting an architecture before checking whether it can satisfy the actual requirements.
+
+### Principles established
+
+- Select the simplest architecture shape that satisfies the requirements.
+- Conventional software, automation and workflows remain valid architecture choices even in an agentic system.
+- Use a single agent when the adaptive work is coherent, bounded and manageable within one responsibility.
+- Introduce multiple agents only when separation, specialisation, parallelism, independent authority, review or lifecycle benefits justify the overhead.
+- Hybrid systems can combine deterministic components, agents, external services and people.
+- Architecture shape and autonomy level are separate design decisions.
+- Coordinator-led, distributed and mixed arrangements are high-level organisational choices; their detailed coordination belongs in later disciplines.
+- A distributed system still needs explicit authority, ownership, boundaries and accountability.
+- Record the reasons for the selected architecture and the alternatives rejected.
+
+
 ## Continuation point
 
-Continue with **8.4 Selecting the High-Level Architecture Shape**. Subsections 8.4–8.7 remain planned and have not yet been taught.
+Continue with **8.5 Component Boundaries, Interfaces and Flows**. Subsections 8.5–8.7 remain planned and have not yet been taught.
