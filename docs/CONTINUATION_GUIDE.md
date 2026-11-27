@@ -9,7 +9,7 @@ Before continuing a session:
 3. Continue from the next unfinished subsection.
 4. Do not repeat completed lessons unless the user asks to revisit or deepen them.
 
-Current continuation point: **Discipline 2 → Chapter 3 → 3.3 Abductive Reasoning and Explanation.** Chapters 1–2 are complete; Chapter 3.1–3.2 are covered.
+Current continuation point: **Discipline 2 → Chapter 3 → 3.4 Causal Reasoning, Correlation and Analogy.** Chapters 1–2 are complete; Chapter 3.1–3.3 are covered.
 
 ## 2. Document a lesson
 
@@ -35,7 +35,7 @@ Use the [Practical Build and Sector Transfer Method](PRACTICAL_BUILD_AND_SECTOR_
 - Discover and assess existing solutions before considering custom development.
 - Assemble suitable existing solutions and test their fit.
 - Build only where a genuine gap or clearly justified reason remains.
-- Record practical progress separately from lesson completion.
+- Record practical progress separately from lesson completion. The agricultural discovery register currently contains five candidate source/platform desk assessments; treat statuses and unresolved checks exactly as recorded there.
 - Assess whether demonstrated principles can transfer to other sectors, adapting and validating them independently.
 
 Do not let a passing mention of a technology turn into an unrelated survey. Investigate tools when a concrete capability requirement makes them relevant, not simply because they are advertised or recommended. Keep proposals, demonstrations and tested working capabilities clearly distinguished.
