@@ -25,7 +25,7 @@ The chapter is being taught progressively. Subsections marked Covered have been 
 3. **8.3 Capability and Responsibility Mapping:** Covered.
 4. **8.4 Selecting the High-Level Architecture Shape:** Covered.
 5. **8.5 Component Boundaries, Interfaces and Flows:** Covered.
-6. **8.6 Integrating Autonomy, Authority and Human Oversight:** ensure decisions, permissions, boundaries, approvals and escalation are coherent across the design.
+6. **8.6 Integrating Autonomy, Authority and Human Oversight:** Covered.
 7. **8.7 Producing and Reviewing an Architecture Blueprint:** document the design, assumptions, alternatives, trade-offs, unresolved questions and traceability to requirements.
 
 ## Scope boundaries
@@ -1144,6 +1144,239 @@ If these questions cannot be answered, the architecture boundaries or interfaces
 - Do not assume every component is a separate agent or must use a particular technology.
 
 
+## 8.6 Integrating Autonomy, Authority and Human Oversight
+
+### Core question
+
+How do we decide how independently each component or agent may operate, what it is allowed to do, and where people must supervise, approve or intervene?
+
+Architecture must bring three related but distinct decisions together:
+
+- **Autonomy:** how independently an agent may decide and act within its permitted scope.
+- **Authority:** which decisions, information and actions the system permits it to access or perform.
+- **Human oversight:** how people review, approve, supervise, constrain or intervene in the system's operation.
+
+A design is incomplete if it defines autonomy without authority, grants authority without considering consequences, or names a human approver without ensuring that meaningful oversight is possible.
+
+### 1. Autonomy, authority and oversight are not interchangeable
+
+| Concept | Main question | Example |
+|---|---|---|
+| Autonomy | How independently may the agent operate? | May it investigate a price movement without waiting for approval at every step? |
+| Authority | What is it actually permitted to decide or do? | May it read approved sources, create records or send notifications? |
+| Human oversight | Where and how can people supervise or control the work? | Must a reviewer approve a sensitive public alert? |
+
+An agent may have high autonomy within a narrow authority. It may independently perform routine data collection but have no access to payment functions or permission to publish sensitive claims.
+
+Likewise, a system with several agents may still require human approval for important actions. The number of agents does not determine the degree of autonomy.
+
+### 2. Reuse the project's five-level autonomy framework
+
+Chapter 5 introduced a five-level teaching framework. It is a project framework, not a universal industry standard.
+
+| Level | Name | Operating arrangement |
+|---:|---|---|
+| 1 | Advisory | The agent analyses information and recommends; a human decides. |
+| 2 | Assisted execution | The agent prepares an action but waits for human approval before executing it. |
+| 3 | Conditional autonomy | The agent executes approved categories of work within limits and escalates unusual or high-risk cases. |
+| 4 | High autonomy | The agent plans, executes, monitors and adjusts work independently within established policies. |
+| 5 | Full operational autonomy | The agent manages complex, ongoing objectives with minimal routine human intervention. |
+
+These levels should not be assigned merely because an agent is technically capable of operating at that level. The level must be justified by its responsibility, the permitted actions, demonstrated reliability, operating conditions and potential consequences.
+
+### 3. Assign autonomy according to responsibility and consequences
+
+Different agents in the same system should not automatically receive equal autonomy.
+
+Consider the agricultural intelligence example:
+
+| Agent or function | Responsibility | Illustrative autonomy starting point | Oversight consideration |
+|---|---|---:|---|
+| Market Data Collector | Collect approved market observations | Level 4 for routine collection within its scope | Monitor source coverage, data quality and exceptions |
+| Information Verification Agent | Assess evidence status | Level 3 | Escalate disputed or insufficient evidence |
+| Market Analyst | Analyse price movements and patterns | Level 4 for bounded analysis | Review important conclusions and preserve evidence |
+| Opportunity Discovery Agent | Identify and recommend opportunities | Level 2–3 | Human review before external commitments |
+| Reporting Agent | Prepare and distribute authorised reports | Level 3 | Approval required for sensitive or public reports |
+| Procurement or payment function | Commit funds or enter transactions | Human-authorised execution | Strong approval and transaction controls |
+
+These are illustrative starting points based on the responsibilities described in earlier lessons, not approved production settings. Actual levels must be determined from verified requirements, real-world risk, operating evidence and authorisation rules.
+
+A useful rule is to consider both the likelihood of an error and the severity of its consequences. Actions that affect money, legal commitments, personal data, public reputation, safety or important records generally warrant stronger controls than reversible, low-impact internal work.
+
+### 4. Distinguish the agent's autonomy from the authority of an action
+
+An agent may be autonomous in one activity and tightly constrained in another.
+
+For example, the Market Analyst may independently:
+- Compare approved market observations.
+- Identify unusual price movements.
+- Request additional approved evidence.
+- Prepare an internal analytical report.
+
+But it may be prohibited from:
+- Changing original source records.
+- Publishing a public warning without approval.
+- Contacting external buyers without authorisation.
+- Committing money or entering a contract.
+
+Therefore, autonomy should not be treated as one unrestricted setting for the entire agent. The architecture should consider the actions the agent can take and apply different permissions and approval conditions to different action categories.
+
+Where practical, high-impact permissions should be enforced by the surrounding system rather than relying only on the model's instructions.
+
+### 5. Three human-oversight arrangements
+
+Chapter 5 introduced three useful terms.
+
+#### A. Human-in-the-loop
+
+A person is required to participate in a decision or action before the process can proceed.
+
+Example: an Opportunity Discovery Agent identifies a proposed purchase. An authorised person reviews the evidence and approves or rejects the transaction before it can be committed.
+
+Use this where a decision requires human judgement, formal authorisation or a deliberate check before a consequential action.
+
+#### B. Human-on-the-loop
+
+The agent or system operates independently within approved limits while a person supervises its activity and can intervene.
+
+Example: a Market Data Collector gathers and processes routine observations automatically. An operator monitors its coverage, failures and unusual behaviour and can pause it when required.
+
+This is suitable for bounded activities where continuous approval of every routine step would add little value, but intervention must remain possible.
+
+#### C. Human-out-of-the-loop
+
+The system operates without routine human participation in each decision or action.
+
+This may be appropriate only for sufficiently bounded, tested and controlled activities where the consequences of failure are acceptable and recovery arrangements are adequate.
+
+It should not be interpreted as the absence of organisational accountability, governance or emergency intervention arrangements. A process can operate without routine human approval while still being subject to defined ownership, monitoring and review.
+
+### 6. Human oversight must be meaningful
+
+Merely adding an approval button or naming a human reviewer does not guarantee effective oversight.
+
+For oversight to be meaningful, the person should have:
+
+1. **Relevant information:** enough evidence, context and uncertainty to understand what is being proposed.
+2. **Competence:** sufficient knowledge to assess the action or a suitable escalation route when specialist expertise is needed.
+3. **Time:** a realistic opportunity to review before the action occurs.
+4. **Authority:** the actual ability to approve, reject, pause or escalate.
+5. **Visibility:** access to the status and relevant history of the agent's work.
+6. **Intervention capability:** a practical way to stop or constrain the system when necessary.
+7. **Clear responsibility:** a defined understanding of what the reviewer is being asked to decide and what remains the responsibility of the system operator or organisation.
+
+If reviewers receive too many requests, have too little information or cannot realistically reject a proposal, oversight may become a rubber-stamp exercise.
+
+The architecture should therefore avoid unnecessary approvals while preserving meaningful control at important decision points.
+
+### 7. Place approval gates at consequential boundaries
+
+An approval gate is a control point that prevents an action from proceeding until the required authorisation is received.
+
+Examples:
+- Approval before publishing a sensitive public report.
+- Approval before sending an external commercial offer.
+- Approval before committing funds.
+- Approval before modifying or deleting important records.
+- Approval before changing high-impact permissions or operating policies.
+
+Not every internal action requires an approval gate. Routine, low-risk activities may operate within pre-approved limits.
+
+For each gate, define:
+- Which action is being held.
+- What evidence the reviewer receives.
+- Who is authorised to approve.
+- What counts as approval, rejection or a request for revision.
+- What happens if nobody responds.
+- How the decision is recorded.
+- Whether the approval expires or must be renewed if the proposal changes.
+
+An agent must not interpret silence, a timeout or an unavailable reviewer as approval unless a formally approved policy explicitly defines a safe alternative for that situation.
+
+### 8. Design escalation and intervention paths
+
+An agent should know when it can proceed, when it must stop and when it must ask for help.
+
+Escalation conditions may include:
+- Conflicting or insufficient evidence.
+- A request outside the agent's scope.
+- A proposed action above an approved threshold.
+- An unexpected change in risk.
+- A required permission or approval being unavailable.
+- Repeated failures or abnormal behaviour.
+- A potential safety, privacy or security incident.
+
+A useful architecture-level escalation path identifies:
+1. The condition that triggers escalation.
+2. The action the agent must stop or hold.
+3. The person or authorised component that receives the escalation.
+4. The evidence and context provided.
+5. The decision or information required to resume.
+6. What happens if no response is received within the permitted period.
+
+The system should fail safely when a required decision is unavailable. It should not widen its own permissions or continue a restricted action simply to complete its objective.
+
+### 9. Autonomy should be bounded by operating conditions
+
+An autonomy level is not necessarily a permanent guarantee that the agent can always operate in the same way.
+
+The architecture may define conditions that reduce or suspend autonomy, such as:
+- A sharp increase in error rates.
+- Missing or unreliable input data.
+- An unexpected source or environment change.
+- Repeated failed actions.
+- Loss of a critical dependency.
+- A security or policy alert.
+- Expired credentials or approvals.
+
+For example, a collector may normally operate at Level 4 for routine collection. If its source data becomes inconsistent or its validation checks fail repeatedly, the system may pause it or restrict it to collecting raw records pending review.
+
+Any mechanism that reduces or restores autonomy must itself be governed. An agent should not independently promote itself to a higher autonomy level. Restoration should follow defined checks and approval rules appropriate to the risk.
+
+### 10. Map actions to autonomy, authority and oversight
+
+Instead of assigning a single autonomy label and assuming that it covers every activity, examine the important action categories.
+
+| Action | Permitted authority | Autonomy arrangement | Human control |
+|---|---|---|---|
+| Read approved market data | Read assigned sources | Independent within scope | Monitor access and exceptions |
+| Calculate price differences | Process approved records | Independent | Review through quality checks |
+| Investigate an unusual price movement | Conduct bounded investigation | Conditional or high autonomy, depending on evidence and reliability | Escalate uncertainty or unusual cases |
+| Prepare an internal report | Create draft report | Independent within format and scope | Review according to report risk |
+| Publish a sensitive public alert | No independent publication permission | Approval required | Authorised reviewer approves |
+| Commit funds | No autonomous spending authority in this example | Human-authorised execution | Explicit transaction approval |
+
+This action-level view helps expose gaps that a broad label such as "Level 4 agent" might hide.
+
+### 11. Review the integrated control design
+
+Before accepting an architecture, check:
+
+1. Does each agent's autonomy match its assigned responsibility and potential consequences?
+2. Are decision, data, action and resource permissions explicit?
+3. Are high-impact and irreversible actions separately controlled?
+4. Are human approval points placed where they add necessary protection?
+5. Do reviewers have the information, competence, time and authority to intervene?
+6. Are escalation conditions and recipients defined?
+7. Can the system pause, restrict or stop an agent safely?
+8. Can an agent change or increase its own permissions or autonomy? It should not be able to do so unilaterally.
+9. Are actions and approvals traceable for later review?
+10. Are degraded operation and loss of oversight handled safely?
+
+### Principles established
+
+- Autonomy, authority and human oversight are distinct but must be designed together.
+- Different agents and different action categories may require different autonomy levels.
+- Match autonomy to responsibility, demonstrated reliability, operating conditions and potential consequences.
+- High autonomy does not imply broad authority.
+- Human-in-the-loop, human-on-the-loop and human-out-of-the-loop describe different oversight arrangements.
+- Human oversight must be meaningful: reviewers need information, competence, time, authority and practical intervention capability.
+- Place approval gates at consequential boundaries, not indiscriminately on every action.
+- Define escalation, timeout and safe-stop behaviour.
+- Conditions may reduce or suspend autonomy, but an agent must not unilaterally increase its own authority or autonomy.
+- Record decisions, permissions, approvals and interventions so the control design remains accountable.
+
+
 ## Continuation point
 
-Continue with **8.5 Component Boundaries, Interfaces and Flows**. Subsections 8.5–8.7 remain planned and have not yet been taught.
+Continue with **8.7 Producing and Reviewing an Architecture Blueprint**. Subsection 8.7 remains planned and has not yet been taught.
