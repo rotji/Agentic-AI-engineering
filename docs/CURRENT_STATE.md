@@ -13,8 +13,8 @@ Agentic AI Engineering
 - **Completed chapter coverage:** Chapters 1–5
 - **Chapter 6 status:** Covered (subsections 6.1–6.7)
 - **Current chapter:** 7 — Agent Configuration and Lifecycle
-- **Covered subsections:** 7.1 Agent Configuration; 7.2 Configuration Elements; 7.3 Initialization and Startup; 7.4 Agent Lifecycle and States
-- **Next subsection:** 7.5 — Configuration and Version Changes
+- **Covered subsections:** 7.1 Agent Configuration; 7.2 Configuration Elements; 7.3 Initialization and Startup; 7.4 Agent Lifecycle and States; 7.5 Configuration and Version Changes
+- **Next subsection:** 7.6 — Lifecycle Management and Continuity
 
 ## Completed chapter coverage
 
@@ -152,6 +152,18 @@ A state machine defines permitted states and transitions, the events that trigge
 
 Paused, stopped, failed and retired have different meanings. Recovery should establish the cause of failure, preserve relevant evidence and state, check authority and consider whether retrying could duplicate an external action. Graceful shutdown should handle new and in-progress work, save necessary state, close connections and release resources. Retirement should stop new assignments, handle outstanding work, revoke access and preserve records required for accountability.
 
+
+
+### 7.5 Configuration and Version Changes
+
+Configuration changes should be justified, defined, impact-assessed, approved where required, validated, tested, deployed in a controlled way, monitored and recorded. Configuration versioning identifies the settings that governed an agent or task. Model, instruction, policy, schema and software versions may change independently and should be identified separately when relevant.
+
+A controlled change process includes identifying the need, defining the change, assessing impacts on responsibilities, permissions, boundaries, resources and downstream agents, obtaining approval, preparing a candidate version, validating and testing it, releasing it, monitoring results, and promoting or rolling back as appropriate.
+
+Testing should examine expected behaviour, failure cases, permissions, outputs and downstream compatibility. Rollback restores a previous approved configuration but does not automatically reverse external actions already performed. Configuration drift occurs when actual operating settings differ from the approved record. The system should define when new versions take effect so active consequential tasks do not unknowingly mix incompatible settings.
+
+An agent may propose a configuration change but must not automatically approve or apply changes beyond its authority.
+
 ## Important project boundaries
 
 - Do not divert the learning sequence into detailed platform or tool evaluations before a relevant need arises.
@@ -161,4 +173,4 @@ Paused, stopped, failed and retired have different meanings. Recovery should est
 
 ## Next action
 
-Continue with **Discipline 1 → Chapter 7 → 7.5 Configuration and Version Changes**. Chapter 7 is in progress; do not treat the remaining planned subsections as lessons already covered.
+Continue with **Discipline 1 → Chapter 7 → 7.6 Lifecycle Management and Continuity**. Chapter 7 is in progress; do not treat the remaining planned subsections as lessons already covered.
