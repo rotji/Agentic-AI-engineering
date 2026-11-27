@@ -667,8 +667,3 @@ Chapter 6 has covered all seven elements needed to define and organise agents wi
 7. Agent Accountability
 
 The next planned chapter is **Chapter 7 — Agent Configuration and Lifecycle**. Its detailed lessons have not yet been covered.
-
-
-- **6.7 Agent Accountability** — how its actions and performance are traced, assessed and governed.
-
-Continue with 6.7 Agent Accountability. Do not treat the remaining subsection headings as lessons already covered.
