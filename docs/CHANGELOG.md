@@ -2,6 +2,17 @@
 
 ## 2026-11-27 — Chapter 8 learning progress
 
+- Covered and documented subsection 8.4, Selecting the High-Level Architecture Shape.
+- Compared non-agentic software/automation, single-agent, agent-plus-workflow, multi-agent and hybrid arrangements.
+- Established criteria for using one agent or separating work across multiple agents.
+- Distinguished architecture shape from autonomy level.
+- Introduced coordinator-led, distributed and mixed arrangements at a high level while deferring detailed orchestration to Discipline 6.
+- Applied a provisional hybrid architecture example to agricultural intelligence without committing to implementation.
+- Set the next learning point to 8.5, Component Boundaries, Interfaces and Flows.
+
+
+## 2026-11-27 — Chapter 8 learning progress
+
 - Covered and documented subsection 8.3, Capability and Responsibility Mapping.
 - Distinguished requirements, capabilities, responsibilities, components and tools.
 - Documented capability derivation, decomposition and classification by work type.
