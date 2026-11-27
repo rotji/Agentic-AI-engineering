@@ -15,7 +15,7 @@ Reasoning and planning are related, but they are not identical:
 
 These activities influence one another. New information can change a conclusion, a plan can reveal missing information, and an observed result can require a decision to revise the plan.
 
-This discipline focuses on the reasoning and planning capabilities themselves, without prematurely choosing a model, framework, tool or platform.
+This discipline focuses on reasoning and planning capabilities without prematurely choosing a model, framework, tool or platform. Concepts will be connected to the agricultural pilot and practical design questions. When a concrete requirement arises, we may investigate existing solutions, assemble them or build a justified missing capability without waiting for all ten chapters or all 13 disciplines to be completed.
 
 ## 2. Learning outcomes
 
@@ -168,15 +168,18 @@ Reasoning and planning are central agent capabilities, but they do not replace t
 
 ## 5. Learning method
 
-Use a recurring problem such as agricultural market intelligence to make abstract concepts concrete. The example remains illustrative and is not an implementation commitment.
+Use agricultural market intelligence as the first practical pilot path to make concepts concrete and to inform real design and validation work. Mark proposed architectures, untested workflows and hypothetical examples clearly; do not present them as working capabilities until tested. Practical work may progress alongside the chapter sequence.
 
 For each chapter:
 - Explain the concept and distinguish it from related concepts.
-- Use worked examples before introducing more complex cases.
-- Show where the concept appears in an agent's reasoning or planning.
-- Identify assumptions, evidence, uncertainty and limits.
-- Record the lesson's key principles.
-- Update the chapter document and exact continuation point.
+- Connect it to a practical problem or design decision in the agricultural pilot where relevant.
+- Identify whether the capability can be supplied by existing solutions, assembled components, a human process or custom development.
+- Research tools and platforms only when a concrete requirement makes the investigation relevant.
+- Use worked examples and practical tests where possible.
+- Identify assumptions, evidence, uncertainty, costs, risks and limits.
+- Record the lesson's key principles and what the practical work demonstrates.
+- Update the chapter document and exact learning continuation point.
+- Record practical pilot progress separately so the learning sequence and build status are not confused.
 
 Where useful, exercises will ask the learner to formulate goals, decompose tasks, compare candidate plans or identify when an agent should ask for clarification rather than proceed.
 
