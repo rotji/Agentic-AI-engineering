@@ -14,6 +14,14 @@ Agentic AI Engineering is a practical learning and building journey, not a theor
 
 See [Practical Build and Sector Transfer Method](PRACTICAL_BUILD_AND_SECTOR_TRANSFER.md).
 
+## Practical pilot position
+
+- **Pilot domain:** Agriculture.
+- **Discovery charter:** [Agricultural Pilot Charter](practical-pilot/AGRICULTURAL_PILOT_CHARTER.md) — provisional; first problem, users, test scope and acceptance thresholds remain unvalidated.
+- **Discovery register:** [Agricultural Pilot Discovery Register](practical-pilot/DISCOVERY_REGISTER.md) — created as a template; no user problem or source has yet been assessed.
+- **Next practical step:** gather and assess evidence about candidate user problems and authorised information sources before selecting the first bounded test.
+
+
 ## Active learning position
 
 - **Completed discipline:** 1 — Agent Architecture and Design
