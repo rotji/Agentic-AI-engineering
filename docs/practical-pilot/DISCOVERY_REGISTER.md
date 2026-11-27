@@ -88,89 +88,113 @@ _No user problem has yet been validated. Add entries as evidence is gathered._
 | Status | Use the status vocabulary above |
 | Next action | What must be checked next |
 
-### Source entries — initial desk research
+### Source entries — desk research updated 2026-11-27
 
-**Assessment date:** 2026-11-27. These are preliminary desk assessments of published metadata and website descriptions. Raw files, individual observations, complete licences, operational methods and practical access have not all been tested. "Partially supported" or "Under review" must not be read as approval for production use.
+These entries reflect published descriptions and catalogue metadata inspected on 2026-11-27. They are not the same as validating individual observations, downloading and testing every raw dataset, conducting interviews or establishing data-use rights. Provider statements are identified as provider claims.
 
 #### SRC-001 — National Bureau of Statistics (NBS), Selected Food Price Watch
 
 - **Source:** [NBS Microdata Catalog — Selected Food Price Watch](https://microdata.nigerianstat.gov.ng/index.php/catalog/162/related-materials)
 - **Source type:** Official national statistical source.
-- **Information:** Monthly selected food-price reporting for Nigeria.
-- **Publisher-described collection method:** NBS states that over 700 staff collect prices across all 774 LGAs, from 10,000 respondents and locations, with internal/external supervisory monitoring and random audit verification.
-- **Published aggregation:** The catalogue description says average prices are reported for each state and the national average. This should not be confused with a public, transaction-level feed for each market or each LGA.
-- **Latest catalogue item located in this review:** Selected Food Price Watch May 2026, dated 2026-06-25, with a ZIP containing a report PDF and an XLSX table. The catalogue currently surfaces April, March, February and January 2026 as earlier releases.
-- **Coverage and limits:** Strong candidate for official national/state benchmark context and selected food categories. It is monthly, selected-food coverage and does not by itself demonstrate live prices for every commodity, product form, market or LGA. Exact columns and granularity in the May 2026 XLSX still need inspection.
-- **Rights/access:** Files are publicly linked in the NBS catalogue; exact licence and permitted redistribution conditions need confirmation before republishing.
-- **Status:** **Partially supported** — publisher, monthly collection description and report availability confirmed from catalogue metadata; underlying table schema and source-row granularity not yet tested.
-- **Next action:** Inspect the May 2026 XLSX and PDF methodology; record exactly which commodities, units, locations and price definitions are published; check whether any detailed LGA or market-level fields are available.
+- **Published collection description:** NBS states that over 700 NBS staff collect prices across all 774 LGAs from 10,000 respondents and locations, with supervisory monitoring and random audit verification.
+- **Published output description:** The catalogue says averages of the collected prices are reported for each state and the national average. Therefore, collection across all LGAs should not be confused with a public record of each individual market or each LGA observation.
+- **Latest catalogue resource located in this review:** Selected Food Price Watch May 2026, dated 2026-06-25. The catalogue preview identifies a report PDF and an XLSX file inside a ZIP. The same page surfaces April, March, February and January 2026 releases as earlier items.
+- **Coverage and limits:** Useful official benchmark for selected food items and state/national price comparisons. It is monthly and selected-food focused. Its published description does not establish that every commodity, product form, grade or market level is represented.
+- **Raw-file inspection:** The catalogue page was inspected, but an attempt to retrieve the May 2026 ZIP in this session failed. The XLSX column names, sheet structure, exact product coverage and detailed price definitions therefore remain uninspected.
+- **Rights/access:** Public download is linked in the catalogue. The licence and conditions for redistribution or commercial reuse still need to be checked.
+- **Status:** **Partially supported** — NBS publisher identity, collection description, state/national aggregation description and May 2026 file listing confirmed from catalogue metadata; underlying workbook not inspected.
+- **Next action:** Obtain the May 2026 ZIP through an accessible route; inspect the report methodology and XLSX sheets/columns; record product names, units, price definitions, state detail and any geographic granularity beyond state averages.
 
 #### SRC-002 — World Bank, Monthly Food Price Estimates by Product and Market (Nigeria)
 
 - **Source:** [World Bank Microdata Library — Nigeria, Study 4503](https://microdata.worldbank.org/catalog/4503)
-- **Source type:** Public analytical dataset; compiled and model-estimated market-price series.
-- **Information:** Market-level food-price estimates for Nigeria. The current search-indexed catalogue record describes 73 markets, a period from 2007-01-01 to 2026-11-01, and version date 2026-11-17. The same record describes a combination of direct price measurements and machine-learning estimation of missing observations, using source information from WFP, FAO and selected national statistical offices.
-- **Important validation issue:** Opening the catalogue page during this review returned a cached record showing an older version (2026-08-03, coverage through 2026-08-01). The search-indexed version and opened page therefore disagree. The version, latest observation period and current coverage must be rechecked through the dataset's API/download before being used.
-- **Analytical limitation:** This is not a pure direct-observation dataset. It mixes direct information and model-estimated missing prices; estimates and observations must be distinguishable before use. The catalogue's disclaimer says the series is provided as available and may be revised.
-- **Geographic/product coverage:** The current indexed page describes 73 markets and selected food items. The precise current market list, product definitions and Plateau State coverage have not yet been verified from the raw metadata/data. The older opened version did not list Plateau among its stated geographic areas, but that cannot be assumed to describe the newer indexed version.
-- **Rights/access:** Catalogue describes the estimates as public/open data and provides access and citation information; exact data licence and API terms should be checked from the selected version.
-- **Status:** **Under review** — promising historical and subnational benchmark, but version discrepancy, market coverage, source lineage and observed-versus-imputed flags need direct verification.
-- **Next action:** Retrieve the current data/API metadata; confirm the actual release version, market list, Plateau presence, observed/estimated fields, product coverage and relevant terms.
+- **Source type:** Public analytical dataset of modeled monthly market/commodity price estimates.
+- **Latest version surfaced by the current indexed catalogue:** Version dated 2026-11-17; listed coverage 2007-01-01 to 2026-11-01 and 73 Nigerian markets. The indexed data dictionary lists the current file as `NGA_RTFP_mkt_2007_2026-11-17.csv`, with 17,686 cases and 137 variables.
+- **Important version caveat:** Directly opening the detailed catalogue and API pages in this review returned older cached metadata (version 2026-08-03 or 2026-07-06). The newest indexed result and the readable cached page therefore differ. The 2026-11-17 metadata is the latest listing located, but the raw current file has not yet been retrieved and checked.
+- **Method:** The catalogue describes Real Time Food Prices as a weekly updated dataset combining direct price measurements with machine-learning estimates for missing data. It uses WFP, FAO and selected national statistical office information, may revise observations, adjusts some outliers and generates estimates for missing market/product entries. It is not a pure set of independently observed transactions.
+- **Geographic coverage:** The current indexed scope notes list selected sub-national areas including Abia, Borno, Yobe, Katsina, Kano, Kaduna, Gombe, Adamawa, Jigawa, Kebbi, Oyo, Sokoto, Zamfara and Lagos, along with aggregate categories. Plateau is not listed in those published geographic coverage notes. The exact 73-market list in the newest raw file still needs confirmation.
+- **Product coverage:** The indexed scope lists selected foods such as beans, eggs, fish, gari, groundnuts, maize, maize flour, beef, goat meat, milk, millet, onions, rice, sorghum and yam. It does not list tomatoes in that scope, so it is not a complete agricultural commodity source.
+- **Data structure/API:** The catalogue data dictionary describes market-level rows with fields for administrative areas, market name, coordinates, date, currency, data coverage and other series details. The Microdata Library describes an API with field selection, filters and pagination (up to 1,000 rows per page). Exact current-version fields and observed-versus-estimated flags require checking in the raw file.
+- **Rights/access:** The catalogue describes the estimates as open data and specifies attribution. It also warns that some underlying third-party materials may have separate restrictions; check the restricted-data list and the applicable dataset terms before redistribution.
+- **Status:** **Partially supported** — latest indexed release metadata, market count, methodology, product scope, selected geographic coverage and API description located; the raw November 17 file and actual market rows have not been validated.
+- **Next action:** Retrieve the 2026-11-17 CSV/API data and inspect its actual market names, admin areas, Plateau presence, product variables and observed/model-estimated indicators. Preserve the dataset version and attribution.
 
 #### SRC-003 — FAO GIEWS Food Price Monitoring and Analysis (FPMA) Tool
 
-- **Source:** [FAO FPMA Tool](https://fpma.fao.org/giews/fpmat4/#/dashboard/tool/domestic) and [FAO FPMA information](https://www.fao.org/giews/food-prices/en/)
+- **Source:** [FAO FPMA Tool](https://fpma.fao.org/giews/fpmat4/#/dashboard/tool/domestic), [FAO FPMA overview](https://www.fao.org/giews/food-prices/en/), and [About the FPMA Tool](https://www.fao.org/giews/food-prices/price-tool/en/)
 - **Source type:** Official international food-price monitoring and analysis resource.
-- **Information:** FAO describes the domestic-price dataset as average monthly retail and wholesale prices for basic food commodities. The tool allows users to browse series, compare markets/commodities/seasons and download data, charts and basic statistics. The source for an individual series is displayed in its information panel.
-- **Coverage:** FAO's GIEWS information describes a multi-country database. A September 2026 FAO Nigeria country brief references the FPMA tool among the data/tools used in preparing its analysis. This does not yet confirm which Nigerian market series and commodities are available in the current tool.
-- **Limits:** Monthly averages and selected basic-food series are not equivalent to daily farmgate observations or verified individual transactions. Country-specific source methods and market coverage must be checked per series.
-- **Rights/access:** Public tool and downloads are described by FAO; terms for reuse or redistribution of downloaded series still need confirmation.
-- **Status:** **Under review** — useful candidate for international comparison and monthly market context; Nigeria series and downloadable data fields not yet inspected.
-- **Next action:** Filter the tool for Nigeria; capture available commodity, market, retail/wholesale, unit, last observation, original data source and any methodological notes.
+- **Published dataset description:** FAO describes its domestic dataset as average monthly retail and wholesale prices for basic food commodities, updated monthly with latest available data. It says the series are drawn predominantly from primary country sources and sometimes secondary sources. The tool's information panel identifies the source for a selected series.
+- **Broader coverage:** FAO describes the tool as containing recent consumer food-price information for almost 100 countries and more than 80 international benchmark commodity price series.
+- **Potential platform capability:** FAO says the FPMA Tool is available to countries and regional organisations and can be linked to existing national price-data systems. An optional mobile data collection component can collect primary prices, which can then be validated and pushed into the analysis/dissemination platform. This does not establish that an individual developer can use the tool as a public API or upload data independently.
+- **Limits:** Monthly average retail/wholesale series are not daily farmgate records or individual verified transactions. Country, commodity and market coverage must be checked series by series. The interactive tool did not render its data grid in this review, so Nigeria series, exact markets, latest observation dates and downloads have not yet been checked.
+- **Rights/access:** The global tool is public, but the reuse rights for a particular downloaded series and its underlying source need to be checked.
+- **Status:** **Partially supported** — official description, monthly frequency, broad country coverage, source transparency at series level and national/regional tool capability confirmed from FAO's published description; Nigeria-specific series remain uninspected.
+- **Next action:** Access the interactive data grid through a working browser; filter for Nigeria; record actual commodities, markets, units, retail/wholesale definitions, last observation date and original source. Check reuse conditions for each series.
 
 #### SRC-004 — Plateau Commodity Marketing Company Limited (PLACOM)
 
-- **Source:** [PLACOM market prices page](https://www.placommarkets.com/market-prices), [PLACOM about page](https://www.placommarkets.com/about), and [Plateau State Government statement](https://www.plateaustate.gov.ng/news/one/?id=677bdaf0756ad8d3db233c07).
-- **Source type:** Plateau State commodity-marketing institution and potential local data/stakeholder source.
-- **Institutional context:** PLACOM's website describes it as a state-owned special-purpose vehicle established in 2024. A Plateau State Government statement also says the administration established the Plateau State Commodity Marketing Company to address commodity trading, warehousing and market information systems.
-- **Market-price page claim:** The PLACOM page advertises indicative reference prices for Plateau agricultural, livestock and mineral commodities across local markets, and cautions that prices may vary by location and trader and should be confirmed before transacting.
-- **Limits:** The pages reviewed do not yet establish the underlying price collection method, exact named-market coverage, commodities/grades/units, update cadence, source provenance, whether values are quotations or transactions, or whether machine-readable data/API access exists. A page describing indicative figures is not itself verification of those figures.
-- **Potential role:** Could be an important local source, institutional stakeholder or partner to investigate; no relationship, agreement or data access has been established.
-- **Status:** **Under review** — local relevance is clear from the public description; data methodology and actual operational access remain unverified.
-- **Next action:** Inspect the live price board and any available data download; establish which markets and products are covered, how observations are collected, how often they are updated, who verifies them, and what access/reuse arrangements apply. Do not initiate contact until a specific inquiry and authority to send it are agreed.
+- **Source:** [PLACOM market prices](https://www.placommarkets.com/market-prices), [PLACOM institutional website](https://www.placommarkets.com/about), [PLACOM what-we-do](https://placommarkets.com/what-we-do.html), [PLACOM insights](https://www.placommarkets.com/insights), and [Plateau State Government statement](https://www.plateaustate.gov.ng/news/one/?id=677bdaf0756ad8d3db233c07).
+- **Source type:** Plateau State commodity-marketing institution and potential local source/stakeholder.
+- **Institutional context:** PLACOM's public description presents it as a Plateau State commodity-marketing organisation. The Plateau State Government has also publicly referred to the Plateau State Commodity Marketing Company and its role in commodity trading, warehousing and market information.
+- **Market-price page claim:** PLACOM labels its price page “Live Commodity & Mineral Prices” and says it tracks indicative prices for leading Plateau agricultural, livestock and mineral commodities across major local markets. It explicitly warns that values are indicative and may vary by location and trader, and should be confirmed before transacting.
+- **Service claims:** PLACOM's “what we do” page describes market information services, real-time commodity market intelligence, price discovery tools and data analytics. These are provider claims about its services; they are not independent validation of its data collection, coverage or operational performance.
+- **Limits:** The material reviewed does not disclose enough to establish a repeatable price-collection method, the exact named markets and products, grades/units, sample coverage, observation timestamps, update frequency, source provenance, verification procedure, downloadable data/API, or rights for external reuse.
+- **Potential role:** Potentially the most directly relevant local institutional source and a possible stakeholder or partner to investigate. No contact has been made, no data access has been granted and no partnership exists.
+- **Status:** **Under review** — relevant local service and indicative price-board claims located; data methodology, current board contents, coverage and access terms remain unverified.
+- **Next action:** Inspect the live board and any detailed price pages or downloadable material; document visible commodity/market/unit/date fields; establish how observations are collected and verified, update frequency, data access and reuse rights. Prepare a focused inquiry only after these checks; do not send it without separate authorisation.
 
 #### SRC-005 — Agromate Intelligence
 
-- **Source:** [Agromate Intelligence data downloads](https://www.agromate.ng/intelligence/data), [Plateau state intelligence page](https://www.agromate.ng/intelligence/state/plateau), and [Agromate methodology/source overview](https://www.agromate.ng/intelligence).
-- **Source type:** Independent commercial/technology platform and data aggregator with its own pilot estimates and analytical models.
-- **Published data claims:** Its data page advertises CSV downloads, local market price data from nine states, FEWS NET data through August 2026 and WFP data through October 2026, plus separately identified food-security, forecast and world commodity-price datasets.
-- **Plateau-specific statement:** The Plateau page says FEWS NET and WFP do not survey a market in Plateau and that it therefore displays the nearest surveyed markets for those sources. It separately labels an Agromate Plateau price board as pilot estimates, including conversions from per-tonne estimates. This is an important distinction: a nearby external market is not a Plateau market observation, and an Agromate pilot estimate is not an official market quotation.
-- **Limits:** Data lineage, CSV contents, update operation, forecast method/backtest, rights to reuse or redistribute and API availability must be tested. Its own estimates should remain separate from upstream observations.
-- **Potential role:** Useful existing capability/platform to compare against the pilot requirements; it may help identify source coverage gaps and avoid rebuilding features already available.
-- **Status:** **Under review** — substantial public description and source attributions located, but downloadable files, model methods and reuse/integration terms not yet tested.
-- **Next action:** Download and inspect the CSV files; trace individual records to FEWS NET/WFP or model outputs; inspect the forecast method and backtest evidence; assess data licence, commercial access, API and provider dependence.
+- **Source:** [Agromate dataset downloads](https://www.agromate.ng/intelligence/data), [Agromate Plateau intelligence](https://www.agromate.ng/intelligence/state/plateau), and [Agromate intelligence overview](https://www.agromate.ng/intelligence).
+- **Source type:** Independent commercial/technology platform and data aggregator with its own pilot estimates and analytical outputs.
+- **Published dataset claims:** Agromate advertises downloadable CSVs. Its current data page describes local market prices in nine states, using FEWS NET data through August 2026 and WFP data through October 2026. It also lists food-security data, world commodity prices and six-month price forecasts for 265 market series. The forecast description says it provides 80% ranges, seasonal peak/low months and backtest errors.
+- **Method description:** Agromate describes its price-forecast method as moving the last price along its seasonal pattern and backtesting against a no-change forecast. This is a publisher description, not an independently verified forecast-performance result. The actual backtest values, forecast errors and calibration of the 80% ranges need inspection.
+- **Plateau-specific statement:** The Plateau page says FEWS NET and WFP do not survey a market in Plateau and therefore displays the nearest surveyed markets. It names markets in Jigawa and Kano as examples. It separately labels an Agromate Plateau price board as pilot estimates, converted from per-tonne pilot prices to per-100-kg figures, with percentage movements compared with the national average.
+- **Important distinction:** A nearby surveyed market is not a Plateau market observation. A converted pilot estimate is not a directly observed Plateau transaction or quotation. These categories must remain separate in any comparison.
+- **Limits:** CSV content and row-level lineage, update operation, source licence, commercial reuse, API availability and forecast method/backtest have not yet been independently inspected.
+- **Potential role:** Useful existing platform and dataset to assess before building any similar price board, comparison or forecast capability.
+- **Status:** **Partially supported** — published dataset coverage claims, upstream source descriptions, forecast method description and Plateau page caveat located; raw CSV and forecast performance not tested.
+- **Next action:** Obtain the downloadable CSVs; inspect their fields, source IDs, dates, units and market rows; verify whether records are direct upstream observations or derived outputs; inspect backtest values and forecast errors; assess data reuse terms and integration options.
 
-### Preliminary cross-source observation — hypothesis, not a confirmed market gap
+### Preliminary cross-source assessment — a hypothesis, not a validated market gap
 
-The initial desk review suggests a possible coverage and traceability gap for Plateau local market prices:
+The five candidates suggest different capabilities and different limitations:
 
-- NBS describes broad LGA-level price collection but its catalogue explains state and national average reporting.
-- The current World Bank catalogue search listing reports market-level estimates, but direct page retrieval returned an older cached version and the current Plateau market coverage remains unconfirmed.
-- Agromate explicitly says FEWS NET and WFP do not survey a market in Plateau in the source series it uses; for its Plateau page it shows nearest surveyed markets and separately labels its own Plateau price board as pilot estimates.
-- PLACOM advertises local indicative prices, but the reviewed page descriptions do not disclose enough methodology to assess the observations.
+| Candidate | What it appears to offer | What remains important for our pilot |
+|---|---|---|
+| NBS | Official monthly selected-food prices and state/national average reporting, with field collection across LGAs. | Obtain and inspect the May 2026 workbook; determine exact product, price and location detail. |
+| World Bank RTFP | Modeled monthly prices for selected products and 73 markets, combining source data and model estimates. | Verify the current version's actual market rows; Plateau is absent from indexed geographic notes; not a complete commodity list. |
+| FAO FPMA | Monthly average retail/wholesale series with source information shown for each series; potential national data-collection platform. | Determine which Nigeria series and markets are present and whether a national-tool collaboration is relevant. |
+| PLACOM | Plateau-focused indicative commodity and mineral prices across major local markets, according to its website. | Verify the underlying observations, named markets, dates, methodology, access and reuse conditions. |
+| Agromate | Downloadable source-attributed datasets and analytics; its Plateau page distinguishes nearest external surveyed markets from its own pilot estimates. | Test the CSV and forecast details; do not mistake nearest markets or pilot estimates for local observations. |
 
-**Abductive hypothesis to investigate:** a useful opportunity may exist to connect locally grounded Plateau market observations with clear source provenance, dates, product definitions, evidence status and comparable units.
+**Working abductive hypothesis:** there may be value in connecting local Plateau market observations to transparent source provenance, dates, product definitions, units, evidence status and comparable market-level records.
 
-This is not yet proof that no such source or service exists, nor proof that users experience a problem or would pay for a solution. Competing explanations remain possible: the information may exist through local channels that are not publicly indexed; PLACOM or another institution may already collect and verify it; or the apparent gap may not be important to users. The next checks must distinguish these explanations.
+The current research does **not** prove that Plateau has no market-price information. PLACOM explicitly advertises local indicative prices, and there may be institutional, trader, cooperative or offline channels that are not publicly indexed. The stronger question is whether the information is sufficiently detailed, timely, accessible, comparable and trusted for a specific user's decision—and whether any unmet need remains after existing services are assessed.
+
+No user problem has yet been independently validated. No data has been integrated. No source has been approved for commercial redistribution.
+
+### Next verification sequence
+
+1. Inspect the NBS May 2026 XLSX and methodology report when the ZIP can be retrieved.
+2. Retrieve the World Bank 2026-11-17 CSV/API version and check actual market rows, Plateau coverage and modeled/observed fields.
+3. Identify Nigeria series in the FAO FPMA data grid and record their markets, units, dates and source institutions.
+4. Verify the actual PLACOM price board details and collection method; decide whether a focused institutional inquiry is warranted.
+5. Inspect Agromate CSVs and forecast backtests; separate upstream observations from its own estimates.
+6. Validate user problems and current workarounds separately from source coverage.
+7. Only then define a bounded pilot sample and compare solution options.
 
 ### Research trail and references
 
-- NBS catalogue and May 2026 resource listing: https://microdata.nigerianstat.gov.ng/index.php/catalog/162/related-materials
-- World Bank Nigeria price estimates catalogue: https://microdata.worldbank.org/catalog/4503
+- NBS catalogue and May 2026 file listing: https://microdata.nigerianstat.gov.ng/index.php/catalog/162/related-materials
+- World Bank Nigeria RTFP catalogue: https://microdata.worldbank.org/catalog/4503
+- World Bank data API page: https://microdata.worldbank.org/index.php/catalog/4503/data-api
+- FAO FPMA overview: https://www.fao.org/giews/food-prices/en/
 - FAO FPMA tool: https://fpma.fao.org/giews/fpmat4/#/dashboard/tool/domestic
-- FAO Nigeria GIEWS country brief (reference date 2026-09-16): https://cb.apps.fao.org/country.jsp?code=NGA
-- PLACOM market prices: https://www.placommarkets.com/market-prices
-- PLACOM institutional description: https://www.placommarkets.com/about
+- FAO FPMA national tool capability: https://www.fao.org/giews/food-prices/price-tool/en/
+- PLACOM price board: https://www.placommarkets.com/market-prices
+- PLACOM services: https://placommarkets.com/what-we-do.html
+- PLACOM insights: https://www.placommarkets.com/insights
 - Plateau State Government statement: https://www.plateaustate.gov.ng/news/one/?id=677bdaf0756ad8d3db233c07
 - Agromate dataset downloads: https://www.agromate.ng/intelligence/data
 - Agromate Plateau page: https://www.agromate.ng/intelligence/state/plateau
@@ -242,4 +266,4 @@ Do not invent sample sizes, numeric thresholds or success rates. Define them aft
 6. Compare available sources and existing services against the pilot requirements.
 7. Recommend a bounded test scope only when the evidence supports it.
 
-**Current discovery state (2026-11-27):** five candidate sources/platforms have received initial desk assessment (NBS, World Bank RTFP, FAO FPMA, PLACOM and Agromate). NBS source metadata and reported collection method are partially supported; the other candidates remain under review. No raw data pipeline, complete licence review, source integration or user problem has been validated. The initial Plateau coverage-gap hypothesis remains provisional.
+**Current discovery state (2026-11-27):** five candidate sources/platforms have received further desk assessment. NBS collection and aggregation metadata are partially supported, but its workbook could not be retrieved for inspection in this session. The latest indexed World Bank version is 2026-11-17, while detailed pages still show older cached versions; its published selected geographic coverage does not list Plateau. FAO's monthly series and source-transparency capability are described, but Nigeria series remain uninspected. PLACOM advertises local indicative prices, but the collection methodology remains unknown. Agromate explicitly distinguishes nearby surveyed markets from its own Plateau pilot estimates; its CSVs and model backtests remain uninspected. The possible Plateau traceability/coverage opportunity remains a hypothesis. No raw data integration, full rights review or user problem validation has been completed.
