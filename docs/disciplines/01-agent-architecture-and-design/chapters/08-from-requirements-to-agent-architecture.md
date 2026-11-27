@@ -22,7 +22,7 @@ The following subsections are planned and have not yet been taught:
 
 1. **8.1 Problem Framing and Agent Suitability:** Covered.
 2. **8.2 Requirements, Constraints and Operating Context:** Covered.
-3. **8.3 Capability and Responsibility Mapping:** translate requirements into capabilities and assign them to agents or conventional system components.
+3. **8.3 Capability and Responsibility Mapping:** Covered.
 4. **8.4 Selecting the High-Level Architecture Shape:** consider a single agent, an agent with supporting workflow or automation, a hybrid system, or multiple specialised agents; defer detailed orchestration to Discipline 6.
 5. **8.5 Component Boundaries, Interfaces and Flows:** establish responsibilities, inputs, outputs, information flows, control boundaries and dependencies at architecture level.
 6. **8.6 Integrating Autonomy, Authority and Human Oversight:** ensure decisions, permissions, boundaries, approvals and escalation are coherent across the design.
@@ -473,6 +473,216 @@ If important requirements remain unknown, record them. Do not invent certainty m
 - Keep unresolved information visible; do not invent certainty.
 
 
+## 8.3 Capability and Responsibility Mapping
+
+### Core question
+
+Once we know what the system must achieve, how do we identify the capabilities it needs and decide which agents, conventional software components, automated processes or people should be responsible for providing them?
+
+Requirements describe what the system must do. Capabilities describe what the system must be able to do to satisfy those requirements. Responsibility mapping assigns ownership for providing those capabilities and achieving the expected outcomes.
+
+This step begins to turn requirements into an architecture, but it does not yet select particular tools, models or platforms.
+
+### 1. What is a system capability?
+
+A capability is an ability the system needs in order to achieve an outcome.
+
+Examples in an agricultural intelligence system include:
+- Collect market observations.
+- Extract information from different source formats.
+- Standardise prices, units and location references.
+- Preserve source provenance.
+- Assess evidence quality.
+- Detect unusual price movements.
+- Investigate possible causes.
+- Calculate comparisons and trends.
+- Prepare reports.
+- Notify authorised users.
+- Obtain approval for sensitive actions.
+
+Capabilities describe what must be possible. They do not automatically specify which software, agent or technology will provide that ability.
+
+### 2. Requirement, capability, responsibility, component and tool are different
+
+These concepts are connected but should not be confused.
+
+| Concept | Question it answers | Example |
+|---|---|---|
+| Requirement | What must the system achieve? | Every price observation must retain its source and unit. |
+| Capability | What must the system be able to do? | Capture and preserve price-observation provenance. |
+| Responsibility | Which part or actor is responsible for providing the capability or outcome? | The data-intake function must capture source and unit fields. |
+| Component | What part of the system performs the work? | A collection service or a Market Data Collector agent. |
+| Tool | What specific means can a component use? | A data connector, parser or approved information source. |
+
+A capability is not a tool. A capability may be provided by one component, several cooperating components or a human process. A component may provide several capabilities.
+
+For example, the capability to calculate price differences may be provided by a conventional computation component. It does not automatically require an AI agent.
+
+### 3. Derive capabilities from requirements
+
+Start with the requirements already identified in subsection 8.2.
+
+Look for the actions and outcomes the system needs to support. Convert them into clear capability statements.
+
+For example:
+
+| Requirement | Capability derived from it |
+|---|---|
+| Collect price observations from approved sources. | Market observation collection |
+| Record product, market, location, price, unit, date and source. | Structured extraction and metadata capture |
+| Distinguish verified observations from uncertain reports. | Evidence assessment and status classification |
+| Identify significant price changes. | Price comparison and change detection |
+| Investigate unusual market movements. | Adaptive investigation and evidence synthesis |
+| Produce reports with sources and uncertainty. | Evidence-based report preparation |
+| Notify authorised users when conditions are met. | Controlled notification |
+| Require approval before sensitive publication. | Human review and approval control |
+
+One requirement may require several capabilities. Several requirements may also depend on the same capability.
+
+Do not assume a one-to-one relationship between requirements and capabilities.
+
+### 4. Break broad capabilities into manageable sub-capabilities
+
+A broad statement such as "provide agricultural market intelligence" is too large to assign clearly.
+
+It can be decomposed into smaller capabilities:
+
+**Market intelligence**
+- Collect observations.
+- Extract and standardise information.
+- Check completeness and consistency.
+- Preserve provenance.
+- Assess verification status.
+- Compare observations across locations and time.
+- Detect unusual changes.
+- Investigate possible explanations.
+- Prepare evidence-based findings.
+- Distribute approved outputs.
+
+Decomposition helps reveal dependencies and prevents important work from being hidden inside a broad label.
+
+However, do not split every small action into a separate capability or agent. Decompose until ownership, inputs, outputs and expected results are clear enough for architecture decisions.
+
+### 5. Identify the nature of each capability
+
+Before allocating a capability, consider what kind of work it involves.
+
+- **Deterministic or rule-based:** predictable operations with explicit rules, such as arithmetic, field validation, unit conversion and scheduled triggers.
+- **Interpretive or probabilistic:** work involving varied inputs, classification, language interpretation or uncertain evidence.
+- **Adaptive and goal-directed:** work where the next step depends on findings, context or feedback, such as investigating an unusual market event.
+- **Human judgement or authority:** decisions that require a person's expertise, responsibility, approval or discretion.
+- **Hybrid:** work that combines more than one of these kinds.
+
+This classification helps identify where an agent may add value and where ordinary software or people are more appropriate.
+
+For example, an AI agent might interpret an unstructured market announcement, while conventional computation calculates the percentage change in prices. A person may approve a consequential public alert.
+
+### 6. Allocate capabilities to the appropriate system participants
+
+Possible capability providers include:
+
+1. **Conventional software components:** suitable for predictable, well-defined operations that can be expressed as explicit rules.
+2. **Automation or workflows:** suitable for scheduled actions, triggers and known sequences.
+3. **AI agents:** potentially suitable for interpretation, adaptive investigation, multi-step judgement and selecting among permitted actions.
+4. **People:** appropriate where human expertise, accountability, discretion or formal approval is required.
+5. **External systems or organisations:** may provide information or services on which the system depends.
+
+A hybrid allocation is often appropriate. The aim is not to maximise the number of agents. It is to use the simplest suitable provider for each capability.
+
+### 7. Example capability and responsibility map
+
+The following map is an illustrative architecture exercise based on the agricultural intelligence example. It is not a final design or an implementation commitment.
+
+| Requirement | Required capability | Candidate responsible part | Nature of work |
+|---|---|---|---|
+| Collect observations from approved sources | Market observation collection | Scheduled intake process; an agent only where source interpretation requires it | Automation / possibly interpretive |
+| Capture required fields and source details | Extraction and metadata capture | Parser or extraction component | Deterministic / AI-assisted for varied formats |
+| Standardise units and check required fields | Normalisation and validation | Conventional processing component | Deterministic |
+| Distinguish evidence quality and uncertainty | Evidence assessment | Verification agent with defined criteria and escalation | Interpretive / human review for disputed cases |
+| Detect significant price movements | Comparison and change detection | Calculation and monitoring component | Deterministic/statistical |
+| Investigate unusual changes | Adaptive investigation and synthesis | Market investigation agent | Adaptive and goal-directed |
+| Prepare a report with traceable evidence | Evidence-based report preparation | Reporting component or reporting agent | Hybrid |
+| Approve sensitive publication | Formal review and approval | Authorised human reviewer | Human judgement / authority |
+| Send approved notifications | Controlled notification | Notification automation after approval status is confirmed | Automation |
+
+The allocation is deliberately mixed. It does not convert every row into a separate agent.
+
+### 8. Map responsibilities, not just activity names
+
+After identifying candidate capability providers, define who owns each responsibility.
+
+A responsibility assignment should clarify:
+- **Owner:** which component, agent or human role is accountable for delivering the defined output.
+- **Contributors:** which other participants provide inputs or assistance.
+- **Inputs:** what information or decisions are needed.
+- **Output:** what result must be delivered.
+- **Acceptance condition:** how the receiving part knows the output is usable.
+- **Boundary:** what the owner is not permitted or expected to do.
+- **Escalation:** where the work goes when it cannot be completed.
+
+Try to give each defined outcome one clearly identified owner, even when several participants contribute. Shared contribution should not create ambiguity about who must ensure that the result is delivered or escalated.
+
+This does not mean a single person or agent must perform every step. Ownership is about clarity of responsibility, not monopolising the work.
+
+### 9. Check dependencies and handoffs
+
+Capabilities rarely operate in isolation.
+
+For example:
+- Extraction depends on source information being accessible.
+- Validation depends on agreed field definitions and units.
+- Evidence assessment depends on provenance and collection details.
+- Investigation depends on sufficiently reliable observations and relevant context.
+- Reporting depends on analysis outputs and their evidence status.
+- Publication depends on the required approval.
+
+For each handoff, identify what is passed, in what form, with what status and who receives it. A downstream component must be able to tell whether an input is verified, uncertain, incomplete or rejected.
+
+If a required capability has no owner, a dependency has no viable provider or an output has no receiving participant, the capability map is incomplete.
+
+### 10. Avoid common mapping mistakes
+
+- Treating every requirement as a separate agent.
+- Assuming every capability needs AI.
+- Selecting tools before understanding the capability.
+- Assigning a broad responsibility that cannot be assessed.
+- Giving multiple participants overlapping ownership with no clear decision rights.
+- Ignoring human responsibilities and approval points.
+- Forgetting that one capability may require several components.
+- Forgetting that one component may provide multiple capabilities.
+- Mapping an output without defining who consumes it.
+- Treating an unverified information source as a dependable capability.
+
+### 11. A practical mapping procedure
+
+Use this sequence:
+
+1. List the functional and quality requirements.
+2. Identify the capabilities needed to satisfy each requirement.
+3. Break broad capabilities into manageable sub-capabilities.
+4. Classify each capability as deterministic, interpretive, adaptive, human-led or hybrid.
+5. Identify a suitable candidate provider: conventional component, automation/workflow, agent, human or external dependency.
+6. Assign one clear owner for each defined responsibility and identify contributors.
+7. Define inputs, outputs, acceptance conditions, boundaries, dependencies and escalation.
+8. Check that every requirement is covered and that no capability has been left without a viable owner.
+9. Record unresolved questions and assumptions rather than filling gaps with invented decisions.
+
+This produces a capability and responsibility map that can inform the high-level architecture choice in subsection 8.4.
+
+### Principles established
+
+- Requirements describe what must be achieved; capabilities describe what the system must be able to do.
+- Responsibilities identify who or what owns delivery of a capability or outcome.
+- Capabilities, components and tools are different concepts.
+- Derive capabilities from requirements rather than starting with agents or tools.
+- Decompose broad capabilities enough to make ownership and outputs clear, but avoid unnecessary fragmentation.
+- Allocate work to the simplest suitable provider: conventional software, automation, agents, people or external services.
+- Use agents where adaptive interpretation and goal-directed activity justify them, not by default.
+- Give each defined outcome a clear owner while identifying contributors and dependencies.
+- Define inputs, outputs, acceptance conditions, boundaries and escalation for important responsibilities.
+- Verify that every requirement is covered and every capability has a viable provider.
+
+
 ## Continuation point
 
-Begin with **8.1 Problem Framing and Agent Suitability**. Do not treat the planned subsection headings as lessons already covered.
+Continue with **8.4 Selecting the High-Level Architecture Shape**. Subsections 8.4–8.7 remain planned and have not yet been taught.
