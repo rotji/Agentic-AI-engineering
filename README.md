@@ -14,8 +14,8 @@ Read [START_HERE.md](START_HERE.md) for the project entry point and documentatio
 - **Current chapter:** 6 — Agent Identity, Roles and Responsibilities.
 - **Chapter 6:** Complete (subsections 6.1–6.7).
 - **Current chapter:** 7 — Agent Configuration and Lifecycle.
-- **Covered:** 7.1 Agent Configuration.
-- **Next:** 7.2 Configuration Elements.
+- **Covered:** 7.1 Agent Configuration; 7.2 Configuration Elements.
+- **Next:** 7.3 Initialization and Startup.
 
 ## Key project principles
 
