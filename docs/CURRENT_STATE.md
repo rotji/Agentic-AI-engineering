@@ -11,8 +11,8 @@ Agentic AI Engineering
 - **Discipline:** 1 — Agent Architecture and Design
 - **Chapter:** 6 — Agent Identity, Roles and Responsibilities
 - **Completed chapter coverage:** Chapters 1–5
-- **Current subsection:** 6.1 — Agent Identity (introduced)
-- **Next subsection:** 6.2 — Agent Roles
+- **Covered subsections in Chapter 6:** 6.1 Agent Identity; 6.2 Agent Roles; 6.3 Agent Responsibilities
+- **Next subsection:** 6.4 Agent Authority
 
 ## Completed chapter coverage
 
@@ -24,11 +24,21 @@ Agentic AI Engineering
 
 ## Chapter 6 progress
 
-Chapter 6 introduces identity, roles, responsibilities, authority, boundaries, relationships and accountability.
+### 6.1 Agent Identity
 
-Subsection 6.1 established that an agent needs a distinguishable identity and that its identity is separate from the model powering it. Multiple agents can use the same model while retaining different identities, roles, configurations, permissions and memory. A model may also change without necessarily changing the agent's identity.
+An agent needs a distinguishable identity. Its identity is separate from the model powering it. Multiple agents can use the same model while retaining different identities, roles, configurations, permissions and memory. A model may also change without necessarily changing the agent's identity.
 
-The chapter is not complete. Continue with 6.2 Agent Roles.
+Principle: every agent should have a clearly identifiable identity independent of the model powering it.
+
+### 6.2 Agent Roles
+
+A role defines the function an agent performs in a system. Identity distinguishes the agent; role explains its function. Role, responsibility, task and authority are different concepts. One agent may perform multiple roles, and multiple agents may share a role, provided the design remains clear and justified.
+
+### 6.3 Agent Responsibilities
+
+Responsibilities define the duties and expected outcomes an agent is expected to handle within its role. They are broader than individual tasks and are distinct from authority to act.
+
+A well-defined responsibility identifies scope, expected outcomes, quality criteria, dependencies, exceptions and escalation, and supporting evidence. Agents should report limitations rather than fabricate results or act beyond their authority. Assigning operational responsibility to an agent does not automatically transfer ultimate organisational or legal accountability to the software.
 
 ## Important project boundaries
 
@@ -39,4 +49,4 @@ The chapter is not complete. Continue with 6.2 Agent Roles.
 
 ## Next action
 
-Continue the lesson with **Discipline 1 → Chapter 6 → 6.2 Agent Roles**. Document the subsection after it has been taught and update this file when the learning position advances.
+Continue with **Discipline 1 → Chapter 6 → 6.4 Agent Authority**. Document the subsection after it has been taught and update this file when the learning position advances.
