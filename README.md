@@ -12,8 +12,8 @@ Read [START_HERE.md](START_HERE.md) for the project entry point and documentatio
 - **Current discipline:** 1 — Agent Architecture and Design.
 - **Chapters covered:** 1–5.
 - **Current chapter:** 6 — Agent Identity, Roles and Responsibilities.
-- **Subsections covered:** 6.1 Identity, 6.2 Roles, 6.3 Responsibilities.
-- **Next:** 6.4 Agent Authority.
+- **Subsections covered:** 6.1 Identity, 6.2 Roles, 6.3 Responsibilities, 6.4 Authority.
+- **Next:** 6.5 Agent Boundaries.
 
 ## Key project principles
 
