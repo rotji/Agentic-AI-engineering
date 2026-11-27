@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-11-27 — Discipline 1 coverage review
+
+- Reviewed the documented coverage of Chapters 1–7.
+- Confirmed that core agent concepts, components, autonomy, identity, responsibilities, authority, boundaries, relationships, accountability, configuration and lifecycle have been introduced.
+- Identified one genuine gap: no end-to-end method yet exists in the documented curriculum for translating a real problem and its requirements into a coherent agent architecture.
+- Added a final synthesis chapter, Chapter 8 — From Requirements to Agent Architecture, without expanding the number of disciplines.
+- Recorded the review, scope boundaries and decision D-009.
+- Set the next learning point to 8.1, Problem Framing and Agent Suitability.
+
+
 ## 2026-11-27 — Chapter 7 completed
 
 - Covered and documented subsection 7.6, Lifecycle Management and Continuity.
