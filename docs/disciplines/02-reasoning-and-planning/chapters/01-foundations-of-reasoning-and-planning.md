@@ -1,6 +1,6 @@
 # Chapter 1 — Foundations of Reasoning and Planning
 
-**Status:** In progress.
+**Status:** Complete.
 
 ## Purpose
 
@@ -11,7 +11,7 @@ Establish what reasoning and planning mean in an agentic system, how they contri
 1. **1.1 What Reasoning and Planning Mean in Agentic Systems:** Covered.
 2. **1.2 Reasoning vs Planning vs Decision-Making vs Execution:** Covered.
 3. **1.3 How Reasoning and Planning Fit into an Agent's Operation:** Covered.
-4. **1.4 Deliberative and Reactive Behaviour:** Planned.
+4. **1.4 Deliberative and Reactive Behaviour:** Covered.
 
 ---
 
@@ -598,4 +598,247 @@ This lesson provides the conceptual relationship. It does not attempt to teach a
 - Detailed context, tools, execution, orchestration, governance and evaluation engineering remain in their assigned disciplines.
 
 
-Continue with **1.4 Deliberative and Reactive Behaviour**. Subsection 1.4 remains planned and has not yet been taught.
+## 1.4 Deliberative and Reactive Behaviour
+
+### Core question
+
+When should an agent pause to examine a situation and plan a course of action, and when should it respond quickly to an event using an established behaviour?
+
+Agentic systems may need both approaches.
+
+- **Deliberative behaviour** uses a more considered process to interpret a situation, assess alternatives and plan actions toward an objective.
+- **Reactive behaviour** responds to a current event or condition with an immediate or relatively direct action, often using an established rule, policy or response pattern.
+
+The difference is not simply that one uses AI and the other does not. It is about how the system selects its behaviour, how much deliberation is involved, and how quickly it needs to respond.
+
+### 1. Deliberative behaviour
+
+A deliberative approach considers the situation before selecting a course of action. It may use a representation of the current situation, relevant knowledge, goals, constraints and possible future outcomes.
+
+A deliberative agent may:
+- Interpret a broad or ambiguous objective.
+- Gather and compare relevant information.
+- Consider several possible explanations or actions.
+- Break a goal into smaller tasks.
+- Examine dependencies and consequences.
+- Form a plan for achieving the objective.
+- Revise the plan when new evidence changes its understanding.
+
+**Main question:** Given the objective and what is known, what is the most suitable course of action?
+
+For example, an agricultural market investigation agent receives a report of an unusual tomato-price movement. It examines the source, checks whether the price observations are comparable, identifies missing information, considers possible explanations and develops an investigation plan.
+
+This is deliberative behaviour because the system is not simply applying one immediate response to the report. It is considering the situation and organising a course of work.
+
+#### Strengths of deliberative behaviour
+
+- Supports complex, multi-step objectives.
+- Can consider dependencies and longer-term consequences.
+- Can compare alternatives before acting.
+- Can adapt a plan when new information changes the problem.
+- Can make assumptions and unresolved questions explicit.
+
+#### Limitations of deliberative behaviour
+
+- May take more time to reach a decision.
+- Can require more computation and information.
+- May be unnecessary for simple, predictable events.
+- Can produce a poor plan if its information or assumptions are poor.
+- May be too slow for conditions that require an immediate response.
+- A plan can become outdated when the environment changes quickly.
+
+Deliberation does not guarantee correctness. The quality of its conclusions depends on evidence, assumptions, constraints and the suitability of its reasoning process.
+
+### 2. Reactive behaviour
+
+A reactive approach responds to a current event, input or condition without first constructing a long, explicit plan.
+
+It may use:
+- A predefined condition-and-action rule.
+- A policy that maps an observed condition to an allowed response.
+- A quick classification or decision.
+- A learned response pattern.
+- An event-triggered behaviour.
+
+**Main question:** Given what is happening now, what response should occur immediately?
+
+Examples:
+- If a required field is missing, reject or quarantine the record.
+- If a system temperature passes an approved safety threshold, trigger a protective shutdown.
+- If a scheduled collection fails, record the failure and raise an alert.
+- If an agent receives a request outside its permitted scope, stop and escalate.
+
+Reactive behaviour is often useful when the response is already known, the event is recognisable and waiting for a longer planning process would add little value or create unacceptable risk.
+
+#### Strengths of reactive behaviour
+
+- Can respond quickly to immediate events.
+- Often needs less deliberation for predictable situations.
+- Can be useful for repeated, well-defined conditions.
+- Can provide prompt protective responses.
+- Can reduce the need to construct a new plan for every routine event.
+
+#### Limitations of reactive behaviour
+
+- May focus on the immediate condition and overlook wider consequences.
+- A fixed response may not fit an unusual or unfamiliar situation.
+- Separate rules can conflict if their priorities are unclear.
+- It may struggle with tasks requiring many dependent steps.
+- It may not recognise that a local response is undermining a broader objective.
+
+A reactive rule is only as suitable as its conditions, response and priority. A fast response is not automatically a correct or safe response.
+
+### 3. Compare deliberative and reactive behaviour
+
+| Consideration | Deliberative behaviour | Reactive behaviour |
+|---|---|---|
+| Primary focus | Consider the situation and formulate a course of action | Respond to a current event or condition |
+| Typical process | Interpret, assess, compare and plan | Detect a condition and apply a response |
+| Time horizon | Can consider multiple steps and future consequences | Often focuses on immediate needs |
+| Response time | May be slower, depending on complexity | Often faster for recognised conditions |
+| Information needs | May need broader context and several sources | May use a smaller, directly relevant set of signals |
+| Best suited to | Complex, ambiguous and multi-step tasks | Urgent, predictable or well-defined events |
+| Main risk | Slow or flawed deliberation and outdated plans | Inflexible or locally appropriate responses that miss wider context |
+
+These are general tendencies, not absolute rules. A simple deliberative decision can be quick, and a complex reactive system can still have substantial engineering behind its response rules.
+
+### 4. Deliberative does not mean slow in every case; reactive does not mean mindless
+
+The terms describe different ways of organising behaviour, not a judgement about intelligence.
+
+A reactive response may use an AI model to classify an event or select among a small number of approved responses. It is still reactive if the behaviour is organised around responding to the present condition rather than constructing a broader plan.
+
+A deliberative process may also use predefined algorithms or conventional software rather than an AI model.
+
+Therefore:
+- Reactive behaviour is not necessarily non-AI.
+- Deliberative behaviour is not necessarily performed by an LLM.
+- A system can combine the two approaches.
+- The same agent can behave reactively in one situation and deliberatively in another.
+
+### 5. Why practical agentic systems often combine both
+
+Real systems face two different needs:
+
+1. They must respond promptly to certain known events and safety conditions.
+2. They must also reason about complex objectives and plan work that cannot be handled by a single immediate response.
+
+Using only deliberation can make a system unnecessarily slow for routine or urgent events. Using only reactive rules can make it difficult to handle ambiguity, changing conditions and multi-step objectives.
+
+A combined or hybrid behavioural approach allows a system to use each mode where it is most suitable.
+
+### 6. Example: combining both approaches in agricultural intelligence
+
+Suppose the agricultural intelligence system receives a large number of price observations from different sources.
+
+Some events have known responses:
+
+- A record with no required unit is marked incomplete.
+- A duplicate record is flagged for review.
+- A failed scheduled collection is recorded and an alert is raised.
+- A source that is not approved is not used for a verified summary.
+
+These can be handled through defined reactive behaviours.
+
+Other situations require deliberation:
+
+- A sudden price increase appears across several markets.
+- Sources disagree about the current price.
+- Observations may refer to different product qualities or measurement units.
+- Several possible explanations need investigation.
+- The system must decide which evidence to seek next and prepare a qualified finding.
+
+A deliberative investigation agent can examine those complex situations and develop a plan.
+
+The combined arrangement might be:
+
+| Event or task | Behavioural approach | Reason |
+|---|---|---|
+| Missing required unit | Reactive | A defined validation response is sufficient |
+| Collection failure | Reactive | Record and alert according to an established rule |
+| Duplicate observation | Reactive or rule-based review | Known condition with a defined handling path |
+| Conflicting reports across markets | Deliberative | Requires comparison, context and assessment |
+| Unusual price movement with unclear cause | Deliberative | Requires multi-step investigation |
+| Sensitive finding ready for publication | Controlled approval process | Authority and human oversight determine whether it may proceed |
+
+The reactive responses do not replace deliberation. They handle conditions with known responses and help direct more complex cases to the appropriate process.
+
+### 7. A hybrid behavioural arrangement
+
+A useful high-level arrangement can have three cooperating layers:
+
+1. **Immediate response layer:** handles defined events, protective conditions and routine exceptions using approved responses.
+2. **Deliberative layer:** interprets complex situations, compares alternatives and creates or revises plans.
+3. **Control and oversight layer:** enforces authority, priority, approval and escalation rules so that neither quick responses nor elaborate plans exceed permitted boundaries.
+
+This is a conceptual arrangement, not a universal architecture pattern or a requirement to build exactly three software components.
+
+The surrounding system must define how conflicts are resolved. For example, an immediate protective restriction should not be overridden simply because a deliberative planner proposes an action that would otherwise advance its goal.
+
+Priority and control rules must be explicit.
+
+### 8. Choosing when to react and when to deliberate
+
+The choice depends on the event, the uncertainty, the time available and the consequences of error.
+
+Ask:
+
+1. **Is the condition recognised?** If a reliable response is already defined, a reactive approach may be suitable.
+2. **Is an immediate response necessary?** A delay may create unacceptable risk or operational disruption.
+3. **Is the next action predictable?** If a condition has a clear, authorised response, lengthy planning may be unnecessary.
+4. **Does the problem involve ambiguity or several dependent steps?** Deliberation may be required.
+5. **Could a quick response create serious consequences?** The response may need validation, a restrictive safety control or human approval.
+6. **Can the two approaches be combined?** A reactive rule may handle immediate containment while a deliberative process investigates the cause and plans recovery.
+
+For a high-impact event, speed must not be used as an excuse to skip necessary authority and safety checks.
+
+### 9. What happens when the two approaches disagree?
+
+Suppose a reactive rule says to pause collection because a source has become unreliable. At the same time, a deliberative agent wants to continue collecting from that source because it needs more evidence to complete an investigation.
+
+The architecture must define which instruction takes priority.
+
+The agent should not simply choose whichever option seems more useful to its current objective.
+
+Possible design principles include:
+- Protective restrictions take priority over ordinary task progress.
+- A deliberative planner may propose a change, but it cannot unilaterally remove an enforced restriction.
+- If the conflict cannot be resolved within approved rules, pause the affected action and escalate.
+- Record the condition, decision and reason for the chosen response.
+
+Detailed safety-policy and governance mechanisms belong to Disciplines 7 and 8. This lesson establishes that the architecture must provide a clear priority and conflict-resolution arrangement.
+
+### 10. Common mistakes
+
+Avoid:
+- Assuming deliberative behaviour is always better because it involves more analysis.
+- Assuming reactive behaviour is always less intelligent.
+- Using a lengthy planning process for every routine event.
+- Relying on fixed responses when the situation is ambiguous or materially different.
+- Creating conflicting reactive rules with no priority arrangement.
+- Allowing a planner to override protective restrictions.
+- Treating a fast response as proof of a correct result.
+- Confusing behavioural approach with the specific model or technology used.
+
+### Principles established
+
+- Deliberative behaviour considers the situation and formulates a course of action toward an objective.
+- Reactive behaviour responds to a current event or condition using an immediate or relatively direct response.
+- The distinction concerns the organisation of behaviour, not whether AI is used.
+- Deliberation is useful for complex, ambiguous and multi-step work.
+- Reactive behaviour is useful for recognised conditions that need a prompt, defined response.
+- Each approach has limitations; neither is universally superior.
+- Practical systems often combine reactive responses and deliberative planning.
+- Protective restrictions and authority controls must not be overridden by a planner pursuing its objective.
+- Define priority, conflict resolution, stop and escalation behaviour explicitly.
+- Select the simplest behavioural approach that fits the task, timing, uncertainty and consequences.
+
+
+
+## Chapter 1 completion
+
+Chapter 1, Foundations of Reasoning and Planning, is complete. Its four subsections established the meaning of reasoning and planning; distinguished them from decision-making and execution; connected them to the wider agent architecture; and compared deliberative, reactive and hybrid behaviour.
+
+## Next learning step
+
+Continue with **Chapter 2 → 2.1 Objectives, Goals and Desired Outcomes**. Chapter 2 has not yet been taught.
