@@ -21,7 +21,7 @@ This chapter is a synthesis chapter. It should reuse prior material rather than 
 The following subsections are planned and have not yet been taught:
 
 1. **8.1 Problem Framing and Agent Suitability:** Covered.
-2. **8.2 Requirements, Constraints and Operating Context:** identify desired outcomes, users, environment, dependencies, risks and quality constraints.
+2. **8.2 Requirements, Constraints and Operating Context:** Covered.
 3. **8.3 Capability and Responsibility Mapping:** translate requirements into capabilities and assign them to agents or conventional system components.
 4. **8.4 Selecting the High-Level Architecture Shape:** consider a single agent, an agent with supporting workflow or automation, a hybrid system, or multiple specialised agents; defer detailed orchestration to Discipline 6.
 5. **8.5 Component Boundaries, Interfaces and Flows:** establish responsibilities, inputs, outputs, information flows, control boundaries and dependencies at architecture level.
@@ -212,6 +212,265 @@ This is a thinking aid, not a requirement to complete a large document for every
 - Judge suitability against both expected benefit and consequences of failure.
 - Do not grant independent execution where authority, boundaries, evaluation or recovery cannot be made sufficiently safe.
 - Record assumptions and evidence; do not present an unverified problem statement as established fact.
+
+
+## 8.2 Requirements, Constraints and Operating Context
+
+### Core question
+
+Once the problem is understood, how do we describe what the system must achieve, the conditions it must operate under and the limits its architecture must respect?
+
+Problem framing explains why a system may be needed. Requirements and constraints translate that problem into design obligations. Operating context describes the environment, people, information, processes and external conditions in which the system must work.
+
+These three areas are related, but they answer different questions:
+
+- **Requirements:** What must the system do, or what qualities must it satisfy?
+- **Constraints:** What limits or obligations restrict the possible solutions?
+- **Operating context:** Where, for whom, and under what real-world conditions will the system operate?
+
+A good architecture should be traceable back to these requirements and should make its assumptions and unresolved questions visible.
+
+### 1. Functional requirements: what the system must do
+
+Functional requirements describe system behaviours, capabilities or services that must be provided.
+
+For the agricultural intelligence example, possible functional requirements might be:
+
+1. Collect agricultural price observations from approved sources.
+2. Record the product, market, location, price, unit, observation time and source.
+3. Distinguish verified observations from unverified reports and market signals.
+4. Identify significant price changes according to agreed rules.
+5. Prepare an investigation when a defined condition is detected.
+6. Produce reports that show the evidence and uncertainty behind their findings.
+7. Notify authorised users when specified conditions are met.
+
+These statements describe required functions. They do not yet prescribe whether each function should be implemented using an agent, conventional software, automation or a human process.
+
+### 2. Quality requirements: how well the system must operate
+
+Requirements are not limited to functions. A system also needs qualities that determine whether it is useful and acceptable.
+
+Common quality areas include:
+
+- **Accuracy:** How correct must its calculations, classifications and outputs be?
+- **Timeliness:** How quickly must information be collected, analysed or delivered?
+- **Availability:** When must the service be accessible?
+- **Reliability:** How consistently must it perform under expected conditions?
+- **Security and privacy:** What information and operations must be protected?
+- **Traceability:** Can findings be linked to sources, versions, decisions and approvals?
+- **Usability:** Can intended users understand and act on the outputs?
+- **Scalability:** What increase in markets, products, users or workload must it accommodate?
+- **Maintainability:** Can the system be corrected and changed without destabilising it?
+
+These qualities may conflict. For example, collecting from more sources may improve coverage but increase processing time and cost. Requirements therefore need priorities and trade-offs, not just an unranked wish list.
+
+Where possible, make quality requirements measurable.
+
+Instead of saying "reports should be fast", specify a target such as "routine daily reports should be ready by an agreed local time, provided required sources have responded". The target, measurement method and exceptions must be agreed rather than invented by the architect.
+
+### 3. Constraints: what limits the design?
+
+Constraints restrict the set of acceptable architectural choices. They are not necessarily features the system must deliver.
+
+Examples include:
+
+- A fixed or limited budget.
+- Limited availability of reliable data sources.
+- Restrictions on the collection or use of personal or confidential information.
+- Geographic or jurisdictional obligations.
+- Limited network connectivity in some locations.
+- A required response window.
+- Existing organisational procedures that must be respected.
+- Restrictions on who may approve external or financial actions.
+- Requirements to use or integrate with an existing system.
+
+A constraint can make an otherwise attractive design unsuitable. For example, an architecture that depends on continuous high-bandwidth connectivity may not be appropriate for an operating environment where connectivity is intermittent.
+
+Record the source and status of important constraints. Distinguish confirmed constraints from preferences, assumptions or temporary conditions.
+
+### 4. Operating context: the environment in which the system must work
+
+Operating context describes the real conditions surrounding the system.
+
+It may include:
+
+1. **People and users:** who requests information, consumes outputs, supervises activity or approves actions?
+2. **Organisations and processes:** which existing roles, procedures and decision-making arrangements does the system interact with?
+3. **Geography and time:** which locations, local calendars, time zones, languages and regional conventions matter?
+4. **Information environment:** which sources exist, how reliable and timely are they, and in what formats do they provide information?
+5. **Technical environment:** what connectivity, devices, existing systems and operating conditions are available?
+6. **External environment:** what market events, policy changes, seasonal conditions or third-party dependencies may affect operations?
+7. **Operational conditions:** when will the system be used, how often, by whom and under what workload?
+
+Operating context should describe reality as it is understood, including uncertainty. Do not write an unverified assumption as if it were a confirmed property of the environment.
+
+### 5. Actors and stakeholders
+
+An architecture must account for the people and external systems that interact with it or are affected by it.
+
+A stakeholder is a person, group or organisation with an interest in the system or its outcomes. An actor is a role or external system that directly interacts with the system in a particular use case.
+
+In the agricultural intelligence example, possible stakeholders include producers, traders, market operators, analysts, buyers and organisations using the information. Possible actors include an authorised analyst requesting an investigation, a source system supplying observations and an authorised reviewer approving a sensitive report.
+
+Not every stakeholder needs direct system access. Some may only be affected by its outputs or decisions.
+
+For each relevant actor, clarify:
+- What do they need from the system?
+- What information may they provide?
+- What information or service should they receive?
+- What authority do they have?
+- What decisions remain theirs?
+- What could go wrong for them if the system is incorrect or unavailable?
+
+This helps avoid designing around the assumptions of only one user or one organisation.
+
+### 6. Data and information requirements
+
+The system's required information should be described before deciding how to store or retrieve it.
+
+Questions include:
+- What information is needed to fulfil each requirement?
+- Where could it originate?
+- Who owns or controls access to it?
+- How current must it be?
+- What units, definitions and formats must be consistent?
+- How will provenance and verification status be preserved?
+- What information is sensitive or restricted?
+- What happens when information is missing, conflicting or stale?
+- How long does information need to be retained, and why?
+
+For example, a price observation without a unit, market, date or source may be unsuitable for comparison. The architecture must therefore account for these information requirements.
+
+Detailed data modelling, memory, knowledge representation and retrieval belong to Discipline 3. Here, the goal is to identify what information the architecture must provide for and what uncertainties remain.
+
+### 7. Dependencies and external conditions
+
+A dependency is something the system relies on but does not fully control.
+
+Examples:
+- A third-party information source.
+- A data provider or market reporting organisation.
+- An external service or system.
+- A human reviewer or approval process.
+- Network connectivity.
+- Another internal component or agent.
+- A legal or organisational decision that must be made before operation.
+
+For every important dependency, identify:
+- What the system needs from it.
+- Who controls it.
+- How reliable or available it is known to be.
+- What happens if it is delayed, inaccurate or unavailable.
+- Whether an approved alternative exists.
+- Whether the dependency creates cost, access, privacy or continuity risks.
+
+Do not assume a dependency will always be available simply because it works during an initial demonstration.
+
+### 8. Assumptions, facts and open questions
+
+Architecture work often begins before every detail is known. The important thing is to distinguish the status of information.
+
+- **Verified fact:** supported by evidence or direct confirmation.
+- **Assumption:** temporarily accepted for design purposes but not yet confirmed.
+- **Constraint:** a confirmed limit or obligation that the design must respect.
+- **Preference:** something stakeholders would like, but which may be negotiable.
+- **Open question:** information or a decision still needed.
+- **Risk:** an uncertain condition that could affect the system or its objectives.
+
+For example:
+
+| Statement | Classification |
+|---|---|
+| A particular source has supplied usable observations during a documented test | Verified fact, limited to that test |
+| The same source will remain available every day | Assumption until sustained availability is established |
+| Only approved staff may publish sensitive reports | Constraint, if confirmed by the organisation's rules |
+| Users would prefer reports before 9 AM | Preference until agreed as a requirement |
+| Who pays for external data access? | Open question |
+| A source may change its format without notice | Risk if this possibility is credible |
+
+A statement can change category as evidence is obtained or decisions are made. Keep its status visible rather than silently upgrading an assumption into a fact.
+
+### 9. Prioritise requirements
+
+Not every requested feature is equally important. Requirements should be prioritised so that essential obligations are not obscured by desirable additions.
+
+A simple prioritisation approach is:
+
+- **Must have:** without this, the system does not solve the core problem or cannot operate acceptably.
+- **Should have:** important, but a temporary or limited first version may work without it.
+- **Could have:** useful improvement if resources and circumstances allow.
+- **Not now:** explicitly deferred to avoid scope expansion.
+
+This is a practical prioritisation aid, not a universal legal or engineering standard. Safety, privacy and other binding obligations should not be demoted simply because they are inconvenient or expensive.
+
+### 10. Make requirements testable and traceable
+
+A requirement should be clear enough that someone can later determine whether it has been satisfied.
+
+Compare:
+
+- Vague: "The system should provide reliable market information."
+- More testable: "Each published price observation must include a product, market, location, unit, observation date and source reference; records missing required fields must be marked incomplete and excluded from verified-price summaries."
+
+The second statement gives designers and evaluators something concrete to check.
+
+Traceability means linking a requirement to the relevant design elements and later to tests or evidence.
+
+A simple chain is:
+
+**Problem → Desired outcome → Requirement → Architecture component or process → Validation evidence**
+
+This chain helps answer why a component exists and what evidence will establish whether it fulfils its purpose.
+
+Detailed test cases and evaluation metrics belong to Discipline 9. In this chapter, we establish the need for requirements to be testable and traceable.
+
+### 11. Example: a requirements and context summary
+
+The following is an illustrative summary for the agricultural intelligence case. It is not a verified statement about current market operations and does not commit the project to implementation.
+
+| Area | Illustrative requirement or condition |
+|---|---|
+| Problem | Market information is fragmented and varies in reliability. |
+| Desired outcome | Timely, traceable information about relevant market changes. |
+| Functional need | Collect, classify, compare, investigate and report observations. |
+| Quality need | Preserve source references, timestamps, units and uncertainty. |
+| Users and actors | Analysts, authorised reviewers and information sources. |
+| Data need | Product, market, location, price, unit, date, source and evidence status. |
+| Constraint | Sensitive or external actions require appropriate authorisation. |
+| Operating context | Multiple locations, different source formats and variable connectivity. |
+| Dependency | External sources and human review where required. |
+| Assumption | Some approved sources will provide sufficiently current information; this needs verification. |
+| Open question | Which sources can be accessed reliably and under what terms? |
+| Risk | Missing, delayed or misleading observations may distort analysis. |
+| Must have | Clear provenance and distinction between verified and unverified information. |
+| Should have | Coverage across additional markets after source reliability is established. |
+
+### 12. Requirements review before architecture selection
+
+Before moving to capability mapping, check:
+
+1. Is the problem and desired outcome still clear?
+2. Are functional requirements distinct from quality requirements?
+3. Are constraints confirmed and their sources recorded?
+4. Does the operating context reflect actual users, processes and conditions?
+5. Are data requirements and dependencies visible?
+6. Are assumptions, preferences, risks and open questions distinguished?
+7. Have requirements been prioritised?
+8. Can important requirements be tested or otherwise verified?
+9. Can each requirement be traced to the problem it addresses?
+
+If important requirements remain unknown, record them. Do not invent certainty merely to make the architecture look complete.
+
+### Principles established
+
+- Requirements describe what the system must do and the qualities it must satisfy.
+- Constraints limit acceptable design choices.
+- Operating context describes the real environment, people, information and conditions in which the system must work.
+- Identify stakeholders, actors, data needs and external dependencies.
+- Distinguish verified facts, assumptions, constraints, preferences, risks and open questions.
+- Prioritise requirements without weakening binding safety, privacy or legal obligations.
+- Make important requirements testable and traceable to architecture decisions and later validation.
+- Keep unresolved information visible; do not invent certainty.
 
 
 ## Continuation point
