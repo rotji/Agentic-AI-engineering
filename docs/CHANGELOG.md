@@ -2,6 +2,15 @@
 
 Significant changes to the project's structure, curriculum, decisions and learning progress are recorded here.
 
+## 2026-11-27 — Chapter 6 learning progress
+
+- Covered and documented Chapter 6.2, Agent Roles.
+- Covered and documented Chapter 6.3, Agent Responsibilities.
+- Clarified the distinction between identity, role, responsibility, task and authority.
+- Recorded that responsibility should be scoped, observable, achievable and supported by appropriate authority and dependencies.
+- Clarified that assigning operational responsibility to an agent does not automatically transfer ultimate organisational or legal accountability to software.
+- Updated the project continuation point to Chapter 6.4, Agent Authority.
+
 ## 2026-11-26 — Initial repository documentation
 
 - Initialised the repository documentation and navigation.
