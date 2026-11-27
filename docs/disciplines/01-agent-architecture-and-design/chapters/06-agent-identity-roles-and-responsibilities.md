@@ -360,9 +360,151 @@ The tests should verify the actual system behaviour and enforcement, not merely 
 - Agents should stop, explain and escalate when they reach a boundary they cannot safely resolve.
 - Boundaries should be tested and reviewed as the system changes.
 
+## 6.6 Agent Relationships
+
+### Core question
+
+How does an agent interact with, depend on and cooperate with other agents inside a larger system?
+
+An agent relationship defines how agents exchange information, request or assign work, coordinate activities, depend on one another and handle shared objectives.
+
+An agent does not need to operate in isolation. Many useful systems consist of specialised agents whose work must be connected.
+
+### Why relationships matter
+
+Consider our agricultural intelligence system. A Market Data Collector gathers observations, an Information Verification Agent checks their quality, a Market Analyst interprets the verified information, an Opportunity Discovery Agent identifies possible commercial opportunities, and a Reporting Agent prepares approved outputs.
+
+Each agent has its own identity, role, responsibilities, authority and boundaries. But the overall system only works when their activities are coordinated.
+
+The relationship design answers questions such as:
+- Which agent can send information to which other agent?
+- Which agent can request work from another?
+- Which agent depends on another agent's output?
+- Who coordinates a multi-step task?
+- What information may be shared?
+- What happens when an agent is unavailable or returns an incomplete result?
+
+### Common types of agent relationships
+
+1. **Peer relationship:** agents cooperate as counterparts. Neither necessarily controls the other. They may exchange findings or coordinate work.
+2. **Producer–consumer relationship:** one agent produces information or an output that another agent uses. The receiving agent should know the source and status of that output.
+3. **Delegation relationship:** one agent assigns a task to another within the delegating agent's permitted authority. Delegation does not automatically transfer unlimited authority or remove the delegating agent's obligation to check the result.
+4. **Coordinator–worker relationship:** a coordinator breaks a larger objective into tasks, distributes them and gathers results from specialised agents. Coordination does not mean the coordinator should have unrestricted authority over every worker.
+5. **Supervisory or approval relationship:** one agent or authorised human reviews a proposed action, checks compliance or approves a decision before it proceeds.
+6. **Dependency relationship:** one agent's work cannot safely or usefully continue until it receives a required input, decision or result from another agent.
+
+One agent may have several kinds of relationships with different agents. These categories describe interaction patterns, not fixed identities or ranks.
+
+### Example: relationships in the agricultural intelligence system
+
+| From | To | Relationship | Information or work exchanged |
+|---|---|---|---|
+| Market Data Collector | Information Verification Agent | Producer–consumer | Raw price observations and source details |
+| Information Verification Agent | Market Analyst | Producer–consumer | Verified, rejected or uncertain observations |
+| Market Analyst | Opportunity Discovery Agent | Peer / producer–consumer | Market analysis and identified trends |
+| Opportunity Discovery Agent | Reporting Agent | Producer–consumer | Opportunity assessments and supporting evidence |
+| Coordinator | Specialised agents | Coordinator–worker | Task assignments, status requests and collected results |
+| Authorised reviewer | Reporting Agent | Supervisory / approval | Approval or rejection of sensitive reports |
+
+This is an illustrative arrangement, not a final implementation architecture. Actual relationships should be determined by the system's objectives, risks, scale and workflow.
+
+### Communication is not the same as authority
+
+An agent being able to communicate with another agent does not mean it can control that agent.
+
+For example:
+- An analyst may request additional price data from a collector.
+- A collector may respond with available observations or explain a limitation.
+- The analyst cannot automatically change the collector's permissions or assign it unrelated work.
+- A coordinator may distribute approved tasks, but cannot grant workers permissions it does not possess.
+
+Keep communication rights, task-assignment rights, decision authority and permission-management authority distinct.
+
+### Common communication patterns
+
+Agents can interact through several broad patterns:
+
+- **Direct communication:** one agent sends a request or message to another identified agent.
+- **Shared workspace:** agents contribute to and retrieve information from a shared task record or knowledge space, subject to access rules.
+- **Publish and subscribe:** an agent publishes an event or update, and interested authorised agents receive it.
+- **Orchestrated communication:** a coordinator routes tasks and responses among specialised agents.
+- **Hierarchical communication:** requests and results move through defined levels of responsibility or supervision.
+
+A system can combine these patterns. The right arrangement depends on coordination needs, independence, reliability and complexity. No particular platform or communication technology is required by this conceptual lesson.
+
+### Relationship contracts and message clarity
+
+A dependable agent relationship needs an agreed understanding of what is exchanged.
+
+For a task request or result, the system may need to specify:
+- The sender and intended recipient.
+- The task or purpose.
+- The input information and its source.
+- The expected output and format.
+- The relevant deadline or priority.
+- The status of the work.
+- Any restrictions on use or disclosure.
+- Errors, uncertainty or missing information.
+- Whether a response, acknowledgement or approval is required.
+
+This is a communication contract: an agreed expectation for interaction. It helps prevent one agent from assuming that another has received, understood or completed a request when that has not been established.
+
+### Information sharing and trust
+
+Agents should share only information needed for the receiving agent's authorised task.
+
+A receiving agent should be able to distinguish:
+- Original observations from derived analysis.
+- Verified information from unverified reports.
+- Facts from assumptions or predictions.
+- Current information from stale information.
+- Complete results from partial results.
+
+Preserve useful source and provenance details when information moves between agents. Otherwise, later agents may treat an unverified statement as established fact simply because it came from another agent.
+
+An agent's message is not automatically trustworthy merely because another agent sent it. Important information may need independent verification.
+
+### Dependencies, failures and coordination
+
+Agent relationships create dependencies. If one agent is delayed, unavailable, produces an incomplete result or returns conflicting information, other agents may be affected.
+
+A relationship design should specify how the system handles:
+1. Missing or delayed responses.
+2. Failed or incomplete tasks.
+3. Duplicate or repeated messages.
+4. Conflicting results from different agents.
+5. Changed requirements or cancelled tasks.
+6. An agent becoming unavailable during a task.
+7. Escalation when the agents cannot resolve a problem.
+
+The system may wait, retry where safe, request clarification, use an approved alternative, pause dependent work or escalate to a human. It should not silently treat a missing response as a successful result.
+
+### Avoid unnecessary agent-to-agent communication
+
+More communication does not automatically produce better intelligence.
+
+Excessive connections can create:
+- Repeated or contradictory instructions.
+- Unnecessary message traffic and cost.
+- Confusion about which agent owns a task.
+- Circular delegation or repeated work.
+- Unclear information provenance.
+- Difficulties tracing decisions and errors.
+
+Create relationships because a task, dependency or control requires them. Define who initiates communication, what is exchanged and who is responsible for the next step.
+
+### Principles established
+
+- Agents should have explicit, purpose-driven relationships.
+- Communication, delegation, coordination, supervision and authority are different concepts.
+- Delegation does not automatically transfer unlimited authority.
+- Share only information needed for an authorised task, preserving relevant provenance and uncertainty.
+- A message from another agent is not automatically verified evidence.
+- Define how dependencies, delays, failures and conflicts are handled.
+- Avoid unnecessary connections and unclear ownership of work.
+
 ## Remaining subsections
 
-- **6.6 Agent Relationships** — which other agents it can communicate or collaborate with.
 - **6.7 Agent Accountability** — how its actions and performance are traced, assessed and governed.
 
-Continue with 6.6 Agent Relationships. Do not treat the remaining subsection headings as lessons already covered.
+Continue with 6.7 Agent Accountability. Do not treat the remaining subsection headings as lessons already covered.
