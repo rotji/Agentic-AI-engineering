@@ -21,7 +21,7 @@ This repository preserves the learning path, practical pilot work, solution rese
 
 This is not a theory-only curriculum. Agriculture is the first pilot path. We will connect lessons to real capability needs, discover and combine existing solutions, test working methods and build custom components only when a genuine gap is demonstrated. Validated principles will be assessed for transfer to other sectors—including real estate, mining and healthcare—with sector-specific adaptation and validation.
 
-Read the [Practical Build and Sector Transfer Method](docs/PRACTICAL_BUILD_AND_SECTOR_TRANSFER.md) the [provisional Agricultural Pilot Charter](docs/practical-pilot/AGRICULTURAL_PILOT_CHARTER.md), and the [Agricultural Pilot Discovery Register](docs/practical-pilot/DISCOVERY_REGISTER.md).
+Read the [Practical Build and Sector Transfer Method](docs/PRACTICAL_BUILD_AND_SECTOR_TRANSFER.md), the [provisional Agricultural Pilot Charter](docs/practical-pilot/AGRICULTURAL_PILOT_CHARTER.md), and the [Agricultural Pilot Discovery Register](docs/practical-pilot/DISCOVERY_REGISTER.md).
 
 ## Read in this order
 
