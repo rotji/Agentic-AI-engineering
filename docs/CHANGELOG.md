@@ -2,6 +2,16 @@
 
 ## 2026-11-27 — Discipline 2 learning progress
 
+- Completed and documented Chapter 1.4, Deliberative and Reactive Behaviour.
+- Distinguished deliberative behaviour from reactive responses and clarified that the distinction is not whether AI is used.
+- Compared their strengths, limitations and appropriate use.
+- Documented a hybrid behavioural arrangement and the need for explicit priorities and conflict handling.
+- Completed Chapter 1, Foundations of Reasoning and Planning (subsections 1.1–1.4).
+- Set the next learning point to Chapter 2.1, Objectives, Goals and Desired Outcomes.
+
+
+## 2026-11-27 — Discipline 2 learning progress
+
 - Covered and documented Chapter 1.3, How Reasoning and Planning Fit into an Agent's Operation.
 - Connected reasoning and planning to objectives, assigned tasks, context, memory, model capabilities, state, authority controls, execution and feedback.
 - Clarified that the model contributes capabilities but is not the entire agentic system.
