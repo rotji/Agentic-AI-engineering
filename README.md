@@ -11,8 +11,8 @@ Read [START_HERE.md](START_HERE.md) for the project entry point and documentatio
 - **Curriculum:** 13 disciplines.
 - **Completed discipline:** 1 — Agent Architecture and Design (Chapters 1–8).
 - **Current discipline:** 2 — Reasoning and Planning (in progress; sequence defined).
-- **Completed subsections:** Chapter 1.1 — What Reasoning and Planning Mean in Agentic Systems; Chapter 1.2 — Reasoning vs Planning vs Decision-Making vs Execution.
-- **Next step:** Chapter 1.3 — How Reasoning and Planning Fit into an Agent's Operation.
+- **Completed subsections:** Chapter 1.1 — What Reasoning and Planning Mean in Agentic Systems; Chapter 1.2 — Reasoning vs Planning vs Decision-Making vs Execution; Chapter 1.3 — How Reasoning and Planning Fit into an Agent's Operation.
+- **Next step:** Chapter 1.4 — Deliberative and Reactive Behaviour.
 
 ## Key project principles
 
