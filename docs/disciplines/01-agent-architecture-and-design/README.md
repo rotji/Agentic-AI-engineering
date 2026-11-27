@@ -30,7 +30,7 @@ Understand the structure and behaviour of an individual agent before studying th
 
 ## Continuation point
 
-Chapters 1–7 are covered. The Discipline 1 review identified one genuine gap: an end-to-end method for turning requirements into a coherent agent architecture. Chapter 8 has been added as a final synthesis chapter. Chapter 8 is in progress: 8.1 Problem Framing and Agent Suitability is covered. Continue with 8.2 Requirements, Constraints and Operating Context. See [Review](REVIEW.md).
+Chapters 1–7 are covered. The Discipline 1 review identified one genuine gap: an end-to-end method for turning requirements into a coherent agent architecture. Chapter 8 has been added as a final synthesis chapter. Chapter 8 is in progress: 8.1 Problem Framing and Agent Suitability and 8.2 Requirements, Constraints and Operating Context are covered. Continue with 8.3 Capability and Responsibility Mapping. See [Review](REVIEW.md).
 
 ## Learning note
 
