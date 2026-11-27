@@ -15,7 +15,14 @@ Agentic AI Engineering
 - **Chapter 8:** Complete (subsections 8.1–8.7)
 - **Final review:** Completed; no further foundational architecture chapter was identified.
 - **Next discipline:** 2 — Reasoning and Planning
-- **Next action:** Define Discipline 2's scope and learning sequence before beginning its first lesson.
+- **Discipline 2 status:** Scope and 10-chapter learning sequence defined; lessons not yet started.
+- **Next learning step:** Chapter 1.1 — What Reasoning and Planning Mean in Agentic Systems.
+
+## Discipline 2 — Reasoning and Planning
+
+The scope and initial 10-chapter sequence have been defined. No Discipline 2 lesson has been taught yet. The discipline studies goal interpretation, reasoning and inference, problem representation, task decomposition, planning strategies, action selection, uncertainty, plan validation and replanning. It distinguishes plan formation from execution and multi-agent orchestration, which remain in later disciplines.
+
+See [Discipline 2 learning sequence](disciplines/02-reasoning-and-planning/README.md).
 
 ## Completed chapter coverage
 
