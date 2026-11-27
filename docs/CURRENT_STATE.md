@@ -13,8 +13,9 @@ Agentic AI Engineering
 - **Chapter 6 status:** Covered (subsections 6.1–6.7)
 - **Chapter 7 status:** Complete (subsections 7.1–7.6)
 - **Review outcome:** One genuine design-synthesis gap identified
-- **Current chapter:** 8 — From Requirements to Agent Architecture (planned)
-- **Next subsection:** 8.1 — Problem Framing and Agent Suitability
+- **Current chapter:** 8 — From Requirements to Agent Architecture (in progress)
+- **Covered subsection:** 8.1 — Problem Framing and Agent Suitability
+- **Next subsection:** 8.2 — Requirements, Constraints and Operating Context
 
 ## Completed chapter coverage
 
@@ -187,6 +188,24 @@ The review found that Chapters 1–7 establish the agent concept, components, au
 A final synthesis chapter, Chapter 8 — From Requirements to Agent Architecture, has therefore been added. It will cover problem framing and agent suitability, requirements and constraints, capability mapping, high-level architecture selection, component boundaries and flows, autonomy and oversight integration, and architecture documentation and review.
 
 Detailed methods assigned to Disciplines 2–13 remain in those disciplines. See [Discipline 1 Review](disciplines/01-agent-architecture-and-design/REVIEW.md) and [Chapter 8 outline](disciplines/01-agent-architecture-and-design/chapters/08-from-requirements-to-agent-architecture.md).
+
+
+
+## Chapter 8 progress
+
+### 8.1 Problem Framing and Agent Suitability
+
+Architecture should begin with the problem and desired outcome, not a predetermined decision to build an agent. A useful problem statement identifies affected users, current process, difficulty, desired outcome, frequency, supporting evidence and constraints.
+
+Separate the problem, desired outcome and proposed solution. An agent may be useful when the work requires contextual judgement, adaptive multi-step activity, action selection and feedback. These are suitability signals, not automatic proof that an agent is needed.
+
+Compare an agent with conventional software, workflow, automation, AI assistance and hybrid approaches. Use simpler methods for predictable, rule-based work when they adequately meet the need. Consider hybrid systems when different parts of a process need different capabilities.
+
+Assess objective clarity, need for adaptive judgement, action selection, feedback, available information and capabilities, enforceable boundaries, evaluability, manageable failures and whether benefits justify cost and complexity. Consider both likelihood and severity of failure. Higher-impact actions may require stronger validation, restricted authority, human approval and recovery controls.
+
+The agricultural intelligence example illustrated a hybrid approach: scheduled collection and structured parsing may be conventional automation; variable document extraction may use AI assistance; field and unit checks can be deterministic; unusual market investigations may justify an agent; and purchases or financial commitments require separately authorised control.
+
+Principles: frame the problem first; distinguish problem, outcome and solution; use agents only where adaptive goal-directed behaviour provides justified value; prefer simpler methods for predictable tasks; consider hybrid designs; assess failure consequences and preserve evidence and assumptions.
 
 ## Important project boundaries
 
