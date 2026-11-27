@@ -7,7 +7,7 @@
 1. **2.1 Objectives, Goals and Desired Outcomes:** Covered.
 2. **2.2 Interpreting Instructions and Identifying Intent:** Covered.
 3. **2.3 Goal States and Conditions for Success:** Covered.
-4. **2.4 Constraints, Priorities and Conflicting Objectives:** Planned.
+4. **2.4 Constraints, Priorities and Conflicting Objectives:** Covered.
 5. **2.5 Ambiguity, Missing Requirements and Clarification:** Planned.
 
 ---
@@ -863,5 +863,339 @@ Avoid:
 
 ## Continuation point
 
-Continue with **2.4 Constraints, Priorities and Conflicting Objectives**. Subsections 2.4–2.5 remain planned.
+## 2.4 Constraints, Priorities and Conflicting Objectives
+
+### Core question
+
+What should an agent do when it has several objectives to pursue but faces limits on time, information, resources, permissions or acceptable risk—and when some objectives compete with one another?
+
+Real tasks rarely have unlimited resources or perfectly aligned goals. A system may be asked to maximise information coverage, provide fresh results, minimise cost, maintain high evidence quality and finish quickly. It may not be possible to maximise all of these at the same time.
+
+An agent therefore needs to understand constraints, distinguish mandatory limits from preferences, recognise conflicts and select a course of action that respects the most important requirements.
+
+For this lesson, use these working definitions:
+
+- **Constraint:** a condition or limit that restricts which goals, plans or actions are acceptable.
+- **Priority:** the relative importance assigned to a goal, requirement or action when choices must be made.
+- **Conflict:** a situation in which two or more goals, requirements, instructions or constraints cannot all be satisfied together under the current conditions.
+- **Trade-off:** a choice to accept less of one desirable attribute in order to gain more of another, while remaining within mandatory limits.
+- **Feasible option:** an option that can be carried out with the available resources and within the applicable constraints and authority.
+
+### 1. What is a constraint?
+
+A constraint limits the acceptable ways of pursuing a goal.
+
+Examples include:
+- A deadline or observation period.
+- A fixed or limited budget.
+- Limited staff, compute, storage or available data.
+- A requirement to use only approved information sources.
+- Privacy, confidentiality or data-use restrictions.
+- Legal, regulatory or contractual obligations.
+- An agent's assigned permissions and authority.
+- A required evidence standard.
+- A limit on acceptable risk or on actions that may affect people, money or important records.
+
+A constraint does not necessarily describe the result we want. It describes a condition that the plan must respect.
+
+For example:
+- Goal: create traceable producer records for an agreed agricultural pilot scope.
+- Constraint: do not present a producer, location or buyer relationship as verified unless the supporting evidence meets the agreed standard.
+
+The goal describes the desired result. The constraint limits what counts as an acceptable way to achieve it.
+
+### 2. Distinguish goals, constraints, preferences and assumptions
+
+These terms should not be mixed together.
+
+| Type | What it means | Agricultural pilot example |
+|---|---|---|
+| Goal | A result we want to achieve | Build a traceable register of producers and products in an agreed scope. |
+| Constraint | A condition that must limit the work | Do not invent unsupported producer or destination relationships. |
+| Preference | A desirable characteristic that may be traded off | Prefer low-cost or no-cost sources where they meet the required quality. |
+| Assumption | Something temporarily treated as true but not yet established | An identified source may contain current producer information. |
+
+A preference is not automatically a mandatory constraint. If we prefer a free source but it cannot meet an important evidence requirement, we should not silently weaken the evidence standard just to avoid cost. We should compare lawful alternatives, narrow the test scope, seek permission or funding, or report that the goal is currently blocked.
+
+Likewise, an assumption should not be treated as a verified fact. If an assumption proves false, the plan may need to change.
+
+### 3. Hard constraints and soft constraints
+
+A useful project distinction is between hard and soft constraints.
+
+**Hard constraints** are non-negotiable for the task as authorised. A plan that violates one is not an acceptable plan, even if it performs well on other dimensions.
+
+Examples:
+- Do not exceed the authorised spending limit.
+- Do not disclose protected information without permission.
+- Do not take an action outside the agent's authority.
+- Do not present unsupported claims as verified.
+- Do not bypass a required approval for a consequential action.
+
+**Soft constraints** express limits or preferences that may be relaxed when the trade-off is explicitly accepted.
+
+Examples:
+- Prefer a shorter completion time.
+- Prefer a smaller operating cost.
+- Prefer broader coverage.
+- Prefer a particular report format.
+- Prefer a specific source when several sources meet the required standard.
+
+A soft constraint is not permission to ignore a rule or safety requirement. The responsible person or policy must establish which conditions are genuinely negotiable.
+
+For design purposes, it is often clearer to treat preferences as optimisation criteria and reserve the word hard constraint for a mandatory boundary.
+
+### 4. Constraints can come from different places
+
+An agent should identify where a constraint comes from and whether it applies to the current task.
+
+| Source | Example |
+|---|---|
+| User or task instruction | Cover only the agreed pilot scope. |
+| Project requirement | Preserve provenance for every factual claim. |
+| Organisational policy | Use only approved sources for a specified report. |
+| Legal or regulatory obligation | Follow applicable restrictions on collecting, processing or disclosing data. |
+| System architecture | A component can read records but cannot modify the source-of-truth database. |
+| Resource environment | The available time, budget or compute is limited. |
+| Human approval | A public alert must be reviewed before publication. |
+
+The source matters. An agent should not treat a suggestion, preference or statement from an untrusted webpage as though it were an authoritative policy.
+
+Where constraints conflict, the system must use an established authority and escalation arrangement rather than inventing its own hierarchy.
+
+### 5. Understand different types of conflict
+
+Conflicts can take several forms.
+
+**A. Goal-versus-goal conflict**
+
+Two desirable results compete.
+
+Example: maximise geographic coverage while ensuring every included record is thoroughly verified. With limited time, broader coverage may mean less depth per record.
+
+**B. Goal-versus-constraint conflict**
+
+A desired result cannot be reached without violating a mandatory limit.
+
+Example: the goal is to identify buyers, but the agent has permission only to research public information and not to contact businesses. It must not contact them simply to complete the goal.
+
+**C. Constraint-versus-constraint conflict**
+
+Two applicable requirements appear incompatible.
+
+Example: a report is required immediately, but a mandatory review has not been completed. The system must identify the conflict and follow the established approval or escalation process; it must not silently discard one requirement.
+
+**D. Instruction conflict**
+
+Two instructions appear to direct different actions.
+
+Example: an earlier authorised task limits the investigation to approved public sources, while a later message from an untrusted source asks the agent to use confidential records. The source and authority of each instruction must be checked.
+
+**E. Resource conflict**
+
+Several tasks need the same limited resource.
+
+Example: two investigations are due at the same time but there is only enough available processing capacity to complete one within the deadline.
+
+Recognising the type of conflict helps determine whether the answer is to reprioritise, find an alternative, seek clarification, request a resource or stop and escalate.
+
+### 6. Establish a priority order before a conflict occurs
+
+An agent should not improvise a new priority system every time it encounters competing goals.
+
+For an actual system, the responsible organisation should establish a priority arrangement appropriate to its domain and risk.
+
+A general design pattern is:
+
+1. **Mandatory legal, safety, privacy and policy boundaries:** do not violate them to improve a score or complete a goal.
+2. **Explicit authority and approval requirements:** do not take actions that the agent is not permitted to take.
+3. **Essential goal conditions:** preserve the conditions that define an acceptable result.
+4. **Important operational priorities:** such as required scope, deadlines or critical dependencies, according to the task's approved order.
+5. **Preferences and optimisation goals:** improve cost, speed, convenience, breadth or presentation within the remaining feasible choices.
+
+This is a teaching pattern, not a universal legal or organisational hierarchy. Actual precedence must be defined for the system and jurisdiction.
+
+The key principle is that an agent must not trade away a mandatory boundary merely because doing so would improve a lower-priority objective.
+
+### 7. Feasibility comes before optimisation
+
+Before comparing plans, first remove options that cannot be carried out acceptably.
+
+Consider four candidate approaches to a producer-information task:
+
+- Option A: collect a large volume of information quickly, but use sources whose reuse conditions are unclear.
+- Option B: use approved sources, preserve evidence and cover a smaller scope.
+- Option C: contact producers directly, although the agent has not been authorised to contact them.
+- Option D: wait until access conditions and permissions are resolved.
+
+The agent should not rank all four simply by speed or coverage. It should first exclude or hold options that violate mandatory conditions.
+
+For example, Option C is not available to the agent without the required authority. Option A may also be unsuitable until data-use conditions are established. Options B and D can then be assessed according to the goal, deadline and evidence needs.
+
+A high-performing but unauthorised plan is not a feasible plan.
+
+### 8. Make trade-offs explicit
+
+When several feasible options remain, compare their trade-offs.
+
+For example, our agricultural pilot may need to balance:
+
+- Coverage across products and locations.
+- Evidence quality and verification depth.
+- Freshness of observations.
+- Completion time.
+- Operating cost.
+- Ease of maintaining the information.
+- Usefulness to the intended user.
+
+A wider dataset may increase coverage but also create more unresolved records and greater review effort. A narrower scope may allow stronger verification and a more useful first test.
+
+The correct choice depends on the goal and acceptance conditions. It should not be made by assuming that more records, more sources or more automation are always better.
+
+A trade-off should record:
+- What is gained.
+- What is reduced or delayed.
+- Which mandatory conditions remain satisfied.
+- Who has authority to accept the trade-off.
+- What evidence or condition would cause the choice to be revisited.
+
+### 9. Two ways to compare feasible options
+
+There are different ways to compare options. Two useful conceptual approaches are:
+
+**A. Priority-ordered or lexicographic selection**
+
+Compare options against priorities in order. A lower-priority improvement cannot compensate for a worse result on a higher-priority requirement.
+
+Example:
+1. Exclude options that violate data-use or authority requirements.
+2. Among the remaining options, preserve the evidence standard.
+3. Then compare coverage and freshness.
+4. Then prefer lower cost or shorter completion time.
+
+This is useful when some requirements are clearly more important than others.
+
+**B. Weighted scoring**
+
+Assign weights to selected criteria, score each feasible option and compare the combined result.
+
+For example, among options that already satisfy all mandatory conditions, a project might compare coverage, freshness, cost and ease of maintenance.
+
+Weighted scoring can help structure a comparison, but it has limitations:
+- Scores may be subjective.
+- Weights may hide disagreement about priorities.
+- A high score on one attribute can mask a poor score on another.
+- Different units and measures need careful normalisation.
+- A total score must never be used to justify violating a hard constraint.
+
+Therefore, use weighted scoring only after mandatory constraints have been applied, and record the assumptions behind the scores. Do not invent precision where the evidence is weak.
+
+### 10. Work through a practical agricultural conflict
+
+Suppose we want our first producer-information pilot to:
+
+- Cover as many relevant locations as possible.
+- Preserve traceable evidence for each claim.
+- Deliver useful findings quickly.
+- Operate with very limited resources.
+- Avoid contacting producers without authorisation.
+
+These aims may compete.
+
+A responsible approach would be:
+
+1. Treat evidence integrity and the no-unauthorised-contact rule as mandatory boundaries.
+2. Establish what information can be obtained through permitted sources.
+3. Define a manageable test scope based on available time and resources.
+4. Prefer sources that satisfy the evidence and data-use requirements.
+5. Record coverage gaps and unresolved relationships rather than inventing them.
+6. Produce a partial but defensible result if the full scope cannot be completed.
+7. Request additional authority, resources or clarification where these are necessary for a broader result.
+
+This approach does not abandon the wider ambition to understand the agricultural ecosystem. It separates what can be responsibly achieved now from what requires further capability, evidence or permission.
+
+### 11. What should an agent do when no feasible option exists?
+
+Sometimes every available option violates a mandatory constraint, depends on unavailable information or cannot satisfy the goal within the authorised conditions.
+
+The agent should not manufacture a solution or silently weaken the requirement.
+
+Possible responses include:
+- Ask for clarification.
+- Request an authorised exception or approval.
+- Seek a different permitted source or method.
+- Propose a narrower scope.
+- Wait for a dependency or resource.
+- Report the goal as blocked or currently infeasible.
+- Stop and escalate if proceeding would breach a mandatory boundary.
+
+The agent may explain the consequences of each option, but the authority to change a mandatory policy or grant new permissions must remain with the appropriate person or governing process.
+
+### 12. Preserve priorities and trade-off decisions
+
+For important tasks, record the constraint and priority arrangement so it can be reviewed and applied consistently.
+
+A concise record may contain:
+
+| Field | What to record |
+|---|---|
+| Goal | The result being pursued. |
+| Constraint | The applicable limit or condition. |
+| Source and authority | Where the constraint comes from and who can change it. |
+| Classification | Mandatory constraint, negotiable limit, preference or assumption. |
+| Priority | How it ranks against other requirements. |
+| Conflict | Which goals or constraints cannot all be satisfied. |
+| Selected trade-off | What was chosen and what was deferred or reduced. |
+| Rationale | Why the option was selected. |
+| Approval | Who accepted the trade-off, where approval is required. |
+| Revisit condition | What new evidence or change would cause reconsideration. |
+
+This prevents priorities from changing silently between tasks, agents or operating sessions.
+
+### 13. Transfer the principle across sectors
+
+The general method applies across sectors, but the actual constraints and priority rules differ.
+
+- **Agriculture:** balance coverage, seasonal freshness, evidence quality, operating resources and source-use permissions.
+- **Real estate:** balance listing coverage and update speed against verification of property identity, ownership claims, title evidence and lawful data use.
+- **Mining:** balance operational information needs against licence conditions, environmental and safety obligations, data sensitivity and regulatory requirements.
+- **Healthcare:** balance service efficiency and information availability against patient safety, privacy, clinical evidence, professional responsibility and required clinical oversight.
+
+The reusable principle is to identify constraints, classify their authority, resolve mandatory boundaries first and compare only feasible options. The domain-specific rules must be established by appropriate experts and applicable authorities.
+
+### 14. Practical conflict-resolution procedure
+
+When an agent encounters competing requirements, it can use this sequence:
+
+1. Restate the goal and the desired result.
+2. List the applicable constraints, preferences and assumptions.
+3. Identify the source and authority of each constraint.
+4. Classify mandatory boundaries separately from negotiable preferences.
+5. Identify which goals or constraints conflict.
+6. Remove options that violate mandatory conditions or exceed authority.
+7. Compare the remaining feasible options against the approved priorities.
+8. Make trade-offs explicit and obtain approval where required.
+9. If no feasible option remains, ask, defer, narrow scope, report blocked status or escalate.
+10. Record the decision and the conditions that would cause it to be revisited.
+
+### Principles established
+
+- A constraint limits which goals, plans or actions are acceptable.
+- Distinguish goals, constraints, preferences and assumptions.
+- Classify mandatory boundaries separately from negotiable preferences.
+- Identify the source and authority of each constraint.
+- Recognise conflicts between goals, goals and constraints, constraints, instructions and resources.
+- Establish priority rules before conflicts occur.
+- Check feasibility and authority before optimising for cost, speed or coverage.
+- Make trade-offs, consequences and approvals explicit.
+- Weighted scoring may compare feasible options but must never override hard constraints.
+- If no acceptable option exists, ask, defer, narrow scope, report the blockage or escalate rather than inventing a solution.
+- Reuse the conflict-resolution method across sectors, but adapt domain-specific rules and controls.
+
+## Continuation point
+
+Continue with **2.5 Ambiguity, Missing Requirements and Clarification**. Subsection 2.5 remains planned.
+
+
+
 
