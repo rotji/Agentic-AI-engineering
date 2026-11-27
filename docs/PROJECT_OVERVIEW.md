@@ -6,7 +6,7 @@ Agentic AI Engineering is a structured learning and research project focused on 
 
 The project progresses from the architecture of an individual agent to reasoning, memory, tools, execution, multi-agent coordination, governance, evaluation, reliability, infrastructure and continuous improvement.
 
-The immediate objective is to build a durable, practical understanding. Studying a concept does not automatically commit the project to implementing it.
+The objective is to build durable understanding through a practical engineering journey. Theory and practical work are integrated: we study concepts when they help us understand, evaluate, assemble, test, govern or improve real capabilities. We do not wait to finish all theoretical disciplines before beginning practical work.
 
 ## 2. Scope
 
@@ -38,11 +38,15 @@ Agentic Governance is both a dedicated discipline and a cross-cutting concern. T
 - **Continuity and portability:** project knowledge must remain understandable outside any particular chat or software tool.
 - **Document as we learn:** capture concepts, distinctions, examples and decisions progressively.
 
-## 4. Learning method
+## 4. Practical learning and building method
 
-The project proceeds discipline by discipline and chapter by chapter. Each chapter introduces concepts, explains distinctions, uses practical examples where helpful and records the point at which learning stops.
+The 13 disciplines provide the knowledge structure, but they are not a theory-only sequence that must be completed before implementation begins. Learning, solution discovery, pilot assembly, testing and improvement proceed together. We study theory in context and deepen it when practical problems require it.
 
-The agricultural intelligence ecosystem is a recurring illustrative example for discussing agents, roles, responsibilities, autonomy, coordination and governance. It is an example for learning, not a committed system design.
+Agriculture is the first practical pilot path. It will be used to identify real needs, discover existing solutions, assemble capabilities, test working methods and identify genuine gaps. The pilot is a practical direction, not a claim that a final product architecture or successful operation already exists.
+
+When a capability or principle is supported by evidence in agriculture, we will examine its applicability to other sectors such as real estate, mining and healthcare. We will transfer validated principles, not blindly copy sector-specific data models, decision rules, autonomy levels or controls. Each sector requires its own evidence, workflow and risk assessment.
+
+See [Practical Build and Sector Transfer Method](PRACTICAL_BUILD_AND_SECTOR_TRANSFER.md) for the operating method.
 
 ## 5. Technology policy
 
@@ -54,6 +58,6 @@ Blockchain is not a mandatory component of agentic AI. It will be considered onl
 
 ## 6. Project status
 
-Discipline 1 is in progress. Chapters 1–5 have been covered in the learning sequence. Chapter 6 has begun, and subsection 6.1 has been introduced and documented.
+Discipline 1 is complete. Discipline 2 is in progress; Chapter 1 is complete and the next learning point is Chapter 2.1, Objectives, Goals and Desired Outcomes. Agriculture is the first practical pilot path. The pilot's requirements, existing-solution discovery and practical validation should develop alongside the learning journey as concrete capabilities are identified.
 
 See [Current State](CURRENT_STATE.md) for the exact continuation point.
