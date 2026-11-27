@@ -11,8 +11,8 @@ Agentic AI Engineering
 - **Discipline:** 1 — Agent Architecture and Design
 - **Chapter:** 6 — Agent Identity, Roles and Responsibilities
 - **Completed chapter coverage:** Chapters 1–5
-- **Covered subsections in Chapter 6:** 6.1 Agent Identity; 6.2 Agent Roles; 6.3 Agent Responsibilities
-- **Next subsection:** 6.4 Agent Authority
+- **Covered subsections in Chapter 6:** 6.1 Agent Identity; 6.2 Agent Roles; 6.3 Agent Responsibilities; 6.4 Agent Authority
+- **Next subsection:** 6.5 Agent Boundaries
 
 ## Completed chapter coverage
 
@@ -40,6 +40,18 @@ Responsibilities define the duties and expected outcomes an agent is expected to
 
 A well-defined responsibility identifies scope, expected outcomes, quality criteria, dependencies, exceptions and escalation, and supporting evidence. Agents should report limitations rather than fabricate results or act beyond their authority. Assigning operational responsibility to an agent does not automatically transfer ultimate organisational or legal accountability to the software.
 
+### 6.4 Agent Authority
+
+Authority defines which decisions, data access and actions an agent is permitted to exercise, and under what conditions. It is distinct from responsibility (what the agent is expected to accomplish) and capability (what it is technically able to do).
+
+Authority can cover decision-making, data access and modification, external actions, resource use, operational scope, conditional permissions, delegation, and approval or escalation requirements.
+
+The agricultural intelligence example illustrated that different agents should receive different permissions. A market data collector may submit observations but not delete verified history; an analyst may prepare reports but not publish high-impact public alerts without approval.
+
+Authority and autonomy are separate: authority defines the permitted scope, while autonomy describes how independently the agent acts inside that scope. An agent can have high autonomy within narrow authority.
+
+Principles: apply least privilege; make authority explicit, scoped, proportionate and revocable; enforce permissions through the surrounding system rather than relying only on model instructions; do not allow an agent to expand its own authority; require additional approval for actions whose impact or irreversibility warrants it.
+
 ## Important project boundaries
 
 - Do not divert the learning sequence into detailed platform or tool evaluations before a relevant need arises.
@@ -49,4 +61,4 @@ A well-defined responsibility identifies scope, expected outcomes, quality crite
 
 ## Next action
 
-Continue with **Discipline 1 → Chapter 6 → 6.4 Agent Authority**. Document the subsection after it has been taught and update this file when the learning position advances.
+Continue with **Discipline 1 → Chapter 6 → 6.5 Agent Boundaries**. Document the subsection after it has been taught and update this file when the learning position advances.
