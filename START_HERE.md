@@ -9,8 +9,8 @@ This repository preserves the learning path, concepts, decisions, and progress o
 - **Curriculum:** 13 disciplines.
 - **Current discipline:** 1 — Agent Architecture and Design.
 - **Current chapter:** 6 — Agent Identity, Roles and Responsibilities.
-- **Last completed subsection:** 6.1 — Agent Identity.
-- **Next learning step:** 6.2 — Agent Roles.
+- **Last covered subsection:** 6.3 — Agent Responsibilities.
+- **Next learning step:** 6.4 — Agent Authority.
 
 ## Read in this order
 
