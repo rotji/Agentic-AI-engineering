@@ -1,5 +1,21 @@
 # Changelog
 
+## 2026-11-27 — Chapter 3.4 and agricultural source verification
+
+- Covered and documented Chapter 3.4, Causal Reasoning, Correlation and Analogy.
+- Distinguished correlation from causation and examined confounding, reverse causality, shared trends, temporal order, mechanisms and counterfactual comparisons.
+- Compared observational evidence with controlled experiments and explained why before-and-after changes alone do not prove cause.
+- Applied causal reasoning to agricultural price and transport examples.
+- Explained analogical reasoning and the need to validate cross-sector transfers in mining, healthcare and other domains.
+- Refined the discovery register with five candidate source assessments using current published catalogue and platform descriptions.
+- NBS May 2026 ZIP listing confirmed, but the download timed out; the workbook remains uninspected.
+- World Bank November 17 indexed release identified; detailed pages accessible in this review remained on older cached versions, so the newest market rows remain unverified.
+- FAO FPMA platform capabilities and national/regional integration model documented; Nigeria series remain to be checked.
+- PLACOM advertises local indicative prices; underlying observations and methodology remain under review.
+- Agromate explicitly distinguishes nearby surveyed FEWS NET/WFP markets from its separate Plateau pilot estimates; CSVs and backtests remain uninspected.
+- Retained the Plateau traceability/coverage opportunity as a hypothesis, not a confirmed market gap.
+- Set the next learning point to Chapter 3.5, Hypotheses, Evidence, Confidence and Limitations.
+
 ## 2026-11-27 — Chapter 3.3 and initial agricultural source discovery
 
 - Covered and documented Chapter 3.3, Abductive Reasoning and Explanation.
