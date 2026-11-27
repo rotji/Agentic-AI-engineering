@@ -2,7 +2,7 @@
 
 Welcome to **Agentic AI Engineering**.
 
-This repository preserves the learning path, concepts, decisions, and progress of the project so work can continue consistently across sessions and tools.
+This repository preserves the learning path, practical pilot work, solution research, engineering decisions and progress so work can continue consistently across sessions and tools.
 
 ## Current position
 
@@ -13,6 +13,13 @@ This repository preserves the learning path, concepts, decisions, and progress o
 - **Discipline 2 status:** In progress; scope and 10-chapter learning sequence defined.
 - **Last completed chapter:** Chapter 1 — Foundations of Reasoning and Planning (subsections 1.1–1.4).
 - **Next learning step:** Chapter 2.1 — Objectives, Goals and Desired Outcomes.
+- **Practical direction:** Agriculture is the first pilot path. Learning, existing-solution discovery, assembly, testing and justified custom development proceed together.
+
+## Practical project direction
+
+This is not a theory-only curriculum. Agriculture is the first pilot path. We will connect lessons to real capability needs, discover and combine existing solutions, test working methods and build custom components only when a genuine gap is demonstrated. Validated principles will be assessed for transfer to other sectors—including real estate, mining and healthcare—with sector-specific adaptation and validation.
+
+Read the [Practical Build and Sector Transfer Method](docs/PRACTICAL_BUILD_AND_SECTOR_TRANSFER.md).
 
 ## Read in this order
 
