@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-11-27 — Discipline 2 scope and learning sequence defined
+
+- Established the scope, learning outcomes and boundaries for Discipline 2, Reasoning and Planning.
+- Defined an initial 10-chapter sequence from foundational reasoning concepts through goal formulation, inference, problem representation, task decomposition, planning strategies, action selection, uncertainty, plan validation and replanning.
+- Clarified boundaries with Context, Memory and Knowledge; Tools and Environment Engineering; Execution and Loop Engineering; and Orchestration and Multi-Agent Systems.
+- Recorded that the sequence is defined but no Discipline 2 lesson has yet been taught.
+- Set the next learning point to Chapter 1.1, What Reasoning and Planning Mean in Agentic Systems.
+
+
 ## 2026-11-27 — Chapter 8 and Discipline 1 completed
 
 - Covered and documented subsection 8.7, Producing and Reviewing an Architecture Blueprint.
