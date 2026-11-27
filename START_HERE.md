@@ -10,18 +10,20 @@ This repository preserves the learning path, concepts, decisions, and progress o
 - **Completed discipline:** 1 — Agent Architecture and Design (Chapters 1–8).
 - **Final review:** Completed; ready to progress to Discipline 2.
 - **Next discipline:** 2 — Reasoning and Planning.
-- **Next learning step:** Establish Discipline 2's scope and learning sequence.
+- **Discipline 2 status:** Scope and 10-chapter learning sequence defined; lessons not yet started.
+- **Next learning step:** Chapter 1.1 — What Reasoning and Planning Mean in Agentic Systems.
 
 ## Read in this order
 
 1. [Project overview](docs/PROJECT_OVERVIEW.md) — purpose, scope and working principles.
 2. [Curriculum](docs/CURRICULUM.md) — all 13 disciplines and their current status.
 3. [Current state](docs/CURRENT_STATE.md) — precise continuation point.
-4. [Discipline 1 guide](docs/disciplines/01-agent-architecture-and-design/README.md) — chapter index.
-5. [Architecture blueprint template](docs/templates/AGENT_ARCHITECTURE_BLUEPRINT_TEMPLATE.md) — reusable design document.
-5. [Decision log](docs/DECISIONS.md) — decisions and boundaries already established.
-6. [Continuation guide](docs/CONTINUATION_GUIDE.md) — how to maintain and continue the project.
-7. [Changelog](docs/CHANGELOG.md) — significant documentation updates.
+4. [Discipline 1 guide](docs/disciplines/01-agent-architecture-and-design/README.md) — completed chapter index.
+5. [Discipline 2 guide](docs/disciplines/02-reasoning-and-planning/README.md) — current learning scope and chapter sequence.
+6. [Architecture blueprint template](docs/templates/AGENT_ARCHITECTURE_BLUEPRINT_TEMPLATE.md) — reusable design document.
+7. [Decision log](docs/DECISIONS.md) — decisions and boundaries already established.
+8. [Continuation guide](docs/CONTINUATION_GUIDE.md) — how to maintain and continue the project.
+9. [Changelog](docs/CHANGELOG.md) — significant documentation updates.
 
 ## Documentation rules
 
