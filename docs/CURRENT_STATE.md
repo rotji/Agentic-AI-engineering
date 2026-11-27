@@ -14,8 +14,8 @@ Agentic AI Engineering
 - **Chapter 7 status:** Complete (subsections 7.1–7.6)
 - **Review outcome:** One genuine design-synthesis gap identified
 - **Current chapter:** 8 — From Requirements to Agent Architecture (in progress)
-- **Covered subsections:** 8.1 Problem Framing and Agent Suitability; 8.2 Requirements, Constraints and Operating Context; 8.3 Capability and Responsibility Mapping; 8.4 Selecting the High-Level Architecture Shape
-- **Next subsection:** 8.5 — Component Boundaries, Interfaces and Flows
+- **Covered subsections:** 8.1 Problem Framing and Agent Suitability; 8.2 Requirements, Constraints and Operating Context; 8.3 Capability and Responsibility Mapping; 8.4 Selecting the High-Level Architecture Shape; 8.5 Component Boundaries, Interfaces and Flows
+- **Next subsection:** 8.6 — Integrating Autonomy, Authority and Human Oversight
 
 ## Completed chapter coverage
 
@@ -247,6 +247,20 @@ The lesson also distinguished architecture shape from autonomy: a single agent c
 
 Principles: select the simplest sufficient architecture; do not make an agent for every capability; use multiple agents only when real separation benefits justify coordination overhead; preserve human control and accountability where required; document alternatives and the reasons for the chosen shape.
 
+
+
+### 8.5 Component Boundaries, Interfaces and Flows
+
+A component boundary defines the responsibility and scope of a system part. A component may be an agent, conventional software, workflow, data store, external system or human-operated function; a boundary does not necessarily mean a separate deployment or agent.
+
+The lesson established the design aim of high cohesion within components and manageable coupling between them. An interface defines the agreed interaction between components and is not necessarily a software API. Important interactions should have a contract covering producer and consumer, purpose, inputs, outputs, structure and meaning, provenance, conditions, authority, failure behaviour, acknowledgement and relevant version compatibility.
+
+Information flow describes how observations, requests, evidence and results move. Control flow describes how work is triggered, directed, approved, paused or allowed to proceed. Both matter. The agricultural intelligence example mapped intake, normalisation, evidence assessment, monitoring/calculation, adaptive investigation, human approval and reporting/notification as candidate responsibilities—not necessarily separate deployed components.
+
+Boundaries should clarify what each component owns and does not own, its inputs and outputs, dependencies, permissions and escalation. Preserve source references, timestamps, units, verification status and uncertainty across handoffs. Avoid hidden or circular dependencies and define what happens when an interface fails.
+
+Principles: use coherent responsibility boundaries; aim for high cohesion and manageable coupling; define important interface contracts; distinguish information flow from control flow; preserve provenance and authority across handoffs; make dependencies and failure behaviour explicit; do not assume each component must be a separate agent or technology.
+
 ## Important project boundaries
 
 - Do not divert the learning sequence into detailed platform or tool evaluations before a relevant need arises.
@@ -256,4 +270,4 @@ Principles: select the simplest sufficient architecture; do not make an agent fo
 
 ## Next action
 
-Continue with **Discipline 1 → Chapter 8 → 8.5 Component Boundaries, Interfaces and Flows**. Chapter 8 is in progress; do not treat the remaining planned subsections as lessons already covered.
+Continue with **Discipline 1 → Chapter 8 → 8.6 Integrating Autonomy, Authority and Human Oversight**. Chapter 8 is in progress; do not treat the remaining planned subsections as lessons already covered.
