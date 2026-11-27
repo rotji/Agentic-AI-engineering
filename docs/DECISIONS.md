@@ -78,3 +78,14 @@ This file records decisions that shape the learning project. It is not a list of
 **Scope boundary:** The chapter will synthesise existing material and address problem framing, requirements, capability mapping, high-level architecture selection, component boundaries and flows, autonomy and oversight integration, and architecture documentation/review. Detailed reasoning, context/memory, tools, execution loops, orchestration, security, governance, evaluation, infrastructure and continuous improvement remain in their assigned disciplines.
 
 **Status:** Implemented. Chapter 8 is complete, and the final Discipline 1 review confirmed that it addresses the identified design-synthesis gap.
+
+
+## D-010 — Establish a dedicated learning sequence for Reasoning and Planning
+
+**Decision:** Define Discipline 2 as a ten-chapter learning sequence covering foundations, goal and problem formulation, reasoning and inference, problem representation, task decomposition, planning strategies and search, decision-making and action selection, uncertainty, plan validation and replanning.
+
+**Reason:** Reasoning and planning are core agent capabilities that need structured treatment, distinct from the architecture decisions in Discipline 1 and the detailed execution, context, tools and orchestration concerns assigned to later disciplines.
+
+**Scope boundary:** This discipline covers forming and revising plans, not executing tools, engineering persistent memory/retrieval, implementing runtime loops or coordinating work across multiple agents. Those responsibilities remain in their assigned disciplines.
+
+**Status:** Active. Scope and sequence defined; lessons not yet started.
