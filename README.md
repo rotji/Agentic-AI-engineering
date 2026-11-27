@@ -10,9 +10,7 @@ Read [START_HERE.md](START_HERE.md) for the project entry point and documentatio
 
 - **Curriculum:** 13 disciplines.
 - **Current discipline:** 1 — Agent Architecture and Design.
-- **Chapters covered:** 1–5.
-- **Current chapter:** 6 — Agent Identity, Roles and Responsibilities.
-- **Chapter 6:** Complete (subsections 6.1–6.7).
+- **Chapters covered:** 1–7.
 - **Current chapter:** 7 — Agent Configuration and Lifecycle.
 - **Covered:** 7.1 Agent Configuration; 7.2 Configuration Elements; 7.3 Initialization and Startup; 7.4 Agent Lifecycle and States; 7.5 Configuration and Version Changes.
 - **Next:** 7.6 Lifecycle Management and Continuity.
