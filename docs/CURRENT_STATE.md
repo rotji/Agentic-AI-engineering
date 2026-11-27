@@ -13,8 +13,8 @@ Agentic AI Engineering
 - **Completed chapter coverage:** Chapters 1–5
 - **Chapter 6 status:** Covered (subsections 6.1–6.7)
 - **Current chapter:** 7 — Agent Configuration and Lifecycle
-- **Covered subsection:** 7.1 — Agent Configuration
-- **Next subsection:** 7.2 — Configuration Elements
+- **Covered subsections:** 7.1 Agent Configuration; 7.2 Configuration Elements
+- **Next subsection:** 7.3 — Initialization and Startup
 
 ## Completed chapter coverage
 
@@ -118,6 +118,18 @@ Two agents with the same role may have different configurations. A configuration
 
 The agricultural Market Data Collector example illustrated configuration settings such as market coverage, product scope, approved sources, collection schedule, required output fields and operating limits, contrasted with changing runtime information such as current task, progress and pending requests.
 
+
+
+### 7.2 Configuration Elements
+
+An agent configuration is a set of related elements, not one prompt. Depending on purpose and risk, it may cover objective and scope; instructions and policies; model settings; context and knowledge sources; assigned capabilities; permission and policy references; input and output specifications; operating and resource limits; schedules and triggers; environment settings; exception, recovery and escalation behaviour; and observability records.
+
+These elements are connected. For example, the output specification affects what data must be collected, while the agent's permissions determine which configured capabilities it can actually use. Configuration must be internally consistent with the agent's role, responsibilities, authority and boundaries.
+
+Sensitive credentials should not be exposed in ordinary configuration files or prompts. Use appropriately protected credential mechanisms. Not every agent needs every configuration element, and no single configuration format is mandatory for all agents.
+
+A practical review checks purpose, scope, access, capabilities, input/output clarity, resource limits, triggers, secret handling, failure handling, record requirements and the active configuration version.
+
 ## Important project boundaries
 
 - Do not divert the learning sequence into detailed platform or tool evaluations before a relevant need arises.
@@ -127,4 +139,4 @@ The agricultural Market Data Collector example illustrated configuration setting
 
 ## Next action
 
-Continue with **Discipline 1 → Chapter 7 → 7.2 Configuration Elements**. Chapter 7 is in progress; do not treat the remaining planned subsections as lessons already covered.
+Continue with **Discipline 1 → Chapter 7 → 7.3 Initialization and Startup**. Chapter 7 is in progress; do not treat the remaining planned subsections as lessons already covered.
