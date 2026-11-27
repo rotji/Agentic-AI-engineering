@@ -2,6 +2,17 @@
 
 ## 2026-11-27 — Discipline 2 learning progress
 
+- Covered and documented subsection 2.5, Ambiguity, Missing Requirements and Clarification.
+- Distinguished ambiguity, missing requirements, underspecification, inconsistency and evidence uncertainty.
+- Established response options: proceed, disclose a low-risk assumption, clarify, provide an honest partial result, or stop/defer/escalate.
+- Applied the method to the agricultural producer-mapping task, including scope, destination relationships, evidence standards, information freshness and contact authority.
+- Established progressive clarification and preserving interpretation decisions for recurring tasks.
+- Completed Chapter 2, Goals, Instructions and Problem Formulation (subsections 2.1–2.5).
+- Set the next learning point to Chapter 3.1, Deductive Reasoning.
+
+
+## 2026-11-27 — Discipline 2 learning progress
+
 - Covered and documented subsection 2.4, Constraints, Priorities and Conflicting Objectives.
 - Distinguished goals, constraints, preferences and assumptions, and explained hard versus soft constraints.
 - Identified goal conflicts, goal-versus-constraint conflicts, constraint conflicts, instruction conflicts and resource conflicts.
