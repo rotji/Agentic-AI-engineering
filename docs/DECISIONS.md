@@ -77,4 +77,4 @@ This file records decisions that shape the learning project. It is not a list of
 
 **Scope boundary:** The chapter will synthesise existing material and address problem framing, requirements, capability mapping, high-level architecture selection, component boundaries and flows, autonomy and oversight integration, and architecture documentation/review. Detailed reasoning, context/memory, tools, execution loops, orchestration, security, governance, evaluation, infrastructure and continuous improvement remain in their assigned disciplines.
 
-**Status:** Active. Chapter 8 is planned and has not yet been taught.
+**Status:** Implemented. Chapter 8 is complete, and the final Discipline 1 review confirmed that it addresses the identified design-synthesis gap.
