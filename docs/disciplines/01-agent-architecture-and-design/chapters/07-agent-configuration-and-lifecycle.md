@@ -16,7 +16,7 @@ The chapter is being taught progressively. Subsections marked as planned have no
 2. **7.2 Configuration Elements:** Covered.
 3. **7.3 Initialization and Startup:** Covered.
 4. **7.4 Agent Lifecycle and States:** Covered.
-5. **7.5 Configuration and Version Changes:** how approved changes are introduced, tracked, tested and rolled back.
+5. **7.5 Configuration and Version Changes:** Covered.
 6. **7.6 Lifecycle Management and Continuity:** how agents are suspended, resumed, replaced or retired without losing necessary task history and accountability.
 
 ## 7.1 Agent Configuration
@@ -669,6 +669,196 @@ Retiring an agent should not mean deleting all historical evidence needed for ac
 - Recovery should consider the cause of failure and the risk of repeating an action.
 - Shutdown should handle active work, state, connections and resources deliberately.
 - Retirement should revoke access and handle outstanding tasks and records without destroying required accountability evidence.
+
+
+## 7.5 Configuration and Version Changes
+
+### Core question
+
+When an agent's configuration needs to change, how can we introduce that change safely, preserve the previous setup and establish which version governed each task?
+
+An agent's configuration is not necessarily permanent. Its instructions, operating limits, model assignment, data sources, output specification or other settings may need to change as requirements and circumstances evolve.
+
+Configuration and version management provides a controlled way to make those changes without losing clarity about how the agent was expected to operate at a particular time.
+
+### Why configuration changes need control
+
+Imagine AGENT-001, our Market Data Collector, has been collecting tomato prices from selected markets in Jos North.
+
+We decide to expand its assignment to additional markets and add new data fields to its output.
+
+That change may affect:
+- Which sources it accesses.
+- How much data it processes.
+- Which fields it must extract.
+- What downstream agents receive.
+- How long collection takes.
+- Whether its existing permissions remain appropriate.
+
+A seemingly small change can affect several parts of the system. Changing configuration without review can introduce errors, access problems, unexpected costs or incompatible outputs.
+
+### What may change?
+
+Configuration changes can involve different elements:
+
+1. **Objective or scope:** expanding or narrowing the agent's assigned work.
+2. **Instructions or policies:** changing procedures, evidence requirements or escalation rules.
+3. **Model settings:** changing the assigned model or supported behaviour parameters.
+4. **Context and knowledge sources:** adding, removing or changing approved information sources.
+5. **Capabilities and permissions references:** changing which capabilities are assigned or which policy applies, subject to authorised permission enforcement.
+6. **Input and output specifications:** changing required fields, formats, units or validation rules.
+7. **Operating parameters:** changing time, resource, request or retry limits.
+8. **Schedules and triggers:** changing when or under what conditions the agent runs.
+9. **Environment settings:** changing approved destinations, service references or regional settings.
+10. **Exception and observability rules:** changing retry, escalation, monitoring or record requirements.
+
+Not every change has the same risk. Changing a report title is different from granting access to confidential data or allowing external transactions.
+
+### Configuration versioning
+
+A configuration version is an identifiable snapshot or release of the settings that define how an agent is intended to operate.
+
+For example:
+
+| Version | Configuration change |
+|---|---|
+| 1.0 | Collect approved commodity prices in Jos North and submit structured observations. |
+| 1.1 | Add two required output fields while retaining the existing scope and permissions. |
+| 2.0 | Expand the approved collection scope to additional markets after reviewing sources, resource limits and downstream compatibility. |
+
+These labels are illustrative. A project may use a simple sequence, dates, revision identifiers or another consistent versioning convention. The essential requirement is that a version can be identified and linked to the tasks that used it.
+
+### Do not confuse different kinds of versions
+
+An agentic system may contain several independently changing components:
+
+- **Agent configuration version:** the bundle of settings defining how the agent is set up.
+- **Model version:** the particular AI model or model release used.
+- **Instruction or prompt version:** the version of role-specific instructions.
+- **Policy version:** the applicable permission, safety or organisational rules.
+- **Output schema version:** the structure expected from the agent or by receiving components.
+- **Software or runtime version:** the code or execution component operating the agent.
+
+These versions may change independently. A configuration version should not be used as a substitute for recording the model, policy or schema version when those details matter.
+
+A useful task record should identify the relevant versions that actually governed that task.
+
+### A controlled configuration-change process
+
+A typical change process may include the following stages:
+
+1. **Identify the need.** Describe the problem, new requirement or improvement that justifies the change.
+2. **Define the proposed change.** Specify exactly which configuration elements will change and what should remain unchanged.
+3. **Assess impact and risk.** Examine effects on responsibilities, authority, boundaries, data, resources, dependencies, downstream agents and users.
+4. **Obtain required approval.** Secure approval from the person or governance process authorised to approve that category of change. Changes to permissions or high-impact actions may require stronger approval.
+5. **Prepare a new version.** Create an identifiable candidate configuration without silently overwriting the currently approved version.
+6. **Validate the candidate.** Check that settings are complete, valid, internally consistent and compatible with the agent's role, authority and boundaries.
+7. **Test before release.** Use suitable tests and representative scenarios to check normal behaviour, edge cases, restrictions and expected outputs.
+8. **Deploy in a controlled way.** Introduce the new version using a rollout approach appropriate to the potential impact.
+9. **Monitor after release.** Check performance, errors, costs, permissions, outputs and downstream effects.
+10. **Promote or roll back.** Accept the change if it works as intended; otherwise restore the prior approved configuration or apply another authorised correction.
+11. **Record the outcome.** Preserve the change reason, approval, version identifiers, tests, release time, monitoring results and any rollback or follow-up.
+
+Not every low-risk change requires a lengthy approval process. The level of control should be proportionate to the change's potential impact, reversibility and risk.
+
+### Testing a change
+
+A configuration change should not be accepted just because the agent starts successfully.
+
+Testing should examine whether the changed agent still performs its responsibilities correctly and respects its authority and boundaries.
+
+For example, if the Market Data Collector is expanded from Jos North to additional markets, testing might check:
+- Whether the new market list is valid.
+- Whether the agent is authorised to access the relevant sources.
+- Whether new output fields are populated correctly.
+- Whether units and timestamps remain consistent.
+- Whether resource limits are still adequate.
+- Whether downstream verification and analysis agents can process the new output.
+- Whether the agent still rejects or reports incomplete information appropriately.
+
+Test the expected behaviour and the important failure cases, not merely whether the configuration can be loaded.
+
+### Deployment approaches
+
+There are several conceptual ways to introduce a new configuration.
+
+- **Direct replacement:** replace the old configuration with the new approved version. This may be appropriate for low-risk changes with a simple recovery path.
+- **Staged rollout:** introduce the change gradually, beginning with a limited scope or set of tasks, then expand after successful checks.
+- **Parallel or shadow evaluation:** evaluate the candidate configuration alongside the current one without allowing the candidate to perform consequential external actions. Compare outputs before deciding whether to promote it.
+- **Canary rollout:** expose a small portion of work to the new version first, monitor the results, then increase usage if it behaves as expected.
+
+These are general rollout patterns. A particular system may use one, combine them or use a simpler process when appropriate.
+
+### Rollback and recovery
+
+Rollback means returning to a previously approved configuration or release when a new change causes unacceptable results.
+
+A sound rollback plan should establish:
+- Which previous version is known to be acceptable.
+- How to restore it.
+- Whether the agent must be paused or restarted.
+- Whether task state remains compatible.
+- Whether downstream components also need a compatible version.
+- How to record the rollback and its reason.
+
+Restoring a configuration does not automatically reverse actions already performed. If the new version sent an incorrect message, changed a record or initiated an external transaction, separate corrective or compensating actions may be required and may need human approval.
+
+Some changes, such as data migrations or external transactions, may not be fully reversible. Their risk should be assessed before release.
+
+### Compatibility between versions
+
+A configuration change may affect agents that depend on the changed agent's output.
+
+Suppose the Market Data Collector changes its output from a price value expressed per basket to a price value expressed per kilogram.
+
+The Verification Agent and Market Analyst may interpret the output incorrectly if they continue using assumptions from the previous format.
+
+Before releasing a change, identify affected dependencies and confirm that the versions used by connected components remain compatible.
+
+Where needed, introduce a transition period, support both formats temporarily or coordinate the update across the connected agents.
+
+### Configuration drift
+
+Configuration drift occurs when the actual operating settings of an agent or environment no longer match the approved configuration record.
+
+For example:
+- Someone manually changes a setting in a running instance.
+- One deployed agent receives an update while another remains on an older version.
+- A permission changes in one environment but not in another.
+- A task uses a stale configuration that was never meant to remain active.
+
+Drift makes behaviour difficult to reproduce and audit. The system should compare actual settings with the approved version, detect unauthorised or unexpected differences and restore or formally approve the required state.
+
+### Configuration changes during active tasks
+
+A configuration change should not silently alter the rules halfway through a consequential task.
+
+The system should define when a new version takes effect. Depending on the task and risk, it may:
+- Allow the current task to finish under the version with which it started.
+- Pause the task and apply the new version after a controlled restart.
+- Cancel and reissue the task under the new version.
+- Apply an urgent authorised restriction immediately if continuing under the old version would create unacceptable risk.
+
+The task record should preserve which versions governed the work. A running task should not unknowingly mix settings from incompatible versions.
+
+### Configuration change authority
+
+An agent may identify a need for a configuration improvement and propose a change. That does not automatically authorise it to approve or apply the change.
+
+The person or governance process responsible for the relevant configuration should approve it according to the risk and scope involved. Changes that affect permissions, safety boundaries, sensitive data or financial authority should receive the appropriate higher-level review.
+
+### Principles established
+
+- Configuration changes should be justified, defined and impact-assessed.
+- Identify configuration versions so tasks can be linked to the settings that governed them.
+- Record model, policy, instruction, schema and software versions separately when relevant.
+- Validate and test a candidate configuration before release.
+- Use staged or parallel evaluation when the change's risk warrants it.
+- Monitor after deployment and maintain an appropriate rollback or correction plan.
+- Assess compatibility with downstream agents and active tasks.
+- Detect and address configuration drift.
+- Do not silently mix configuration versions within consequential work.
+- An agent may propose a change but must not grant itself authority to approve or apply it.
 
 
 No particular implementation technology or framework is assumed.
