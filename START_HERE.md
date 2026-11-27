@@ -10,8 +10,9 @@ This repository preserves the learning path, concepts, decisions, and progress o
 - **Completed discipline:** 1 — Agent Architecture and Design (Chapters 1–8).
 - **Final review:** Completed; ready to progress to Discipline 2.
 - **Next discipline:** 2 — Reasoning and Planning.
-- **Discipline 2 status:** Scope and 10-chapter learning sequence defined; lessons not yet started.
-- **Next learning step:** Chapter 1.1 — What Reasoning and Planning Mean in Agentic Systems.
+- **Discipline 2 status:** In progress; scope and 10-chapter learning sequence defined.
+- **Last covered subsection:** Chapter 1.1 — What Reasoning and Planning Mean in Agentic Systems.
+- **Next learning step:** Chapter 1.2 — Reasoning vs Planning vs Decision-Making vs Execution.
 
 ## Read in this order
 
