@@ -53,7 +53,7 @@ Understand how an agent interprets an objective and turns it into a problem it c
 Planned subsections:
 - **2.1 Objectives, Goals and Desired Outcomes:** Covered.
 - **2.2 Interpreting Instructions and Identifying Intent:** Covered.
-- **2.3 Goal States and Conditions for Success**
+- **2.3 Goal States and Conditions for Success:** Covered.
 - **2.4 Constraints, Priorities and Conflicting Objectives**
 - **2.5 Ambiguity, Missing Requirements and Clarification**
 
@@ -203,6 +203,6 @@ Where useful, exercises will ask the learner to formulate goals, decompose tasks
 
 ## 7. Current continuation point
 
-**Discipline 2 → Chapter 2 → 2.3 Goal States and Conditions for Success.**
+**Discipline 2 → Chapter 2 → 2.4 Constraints, Priorities and Conflicting Objectives.**
 
-Subsections 2.1–2.2 are covered. Subsections 2.3–2.5 remain planned.
+Subsections 2.1–2.3 are covered. Subsections 2.4–2.5 remain planned.
