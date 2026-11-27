@@ -48,6 +48,19 @@ When a capability or principle is supported by evidence in agriculture, we will 
 
 See [Practical Build and Sector Transfer Method](PRACTICAL_BUILD_AND_SECTOR_TRANSFER.md) for the operating method.
 
+## 5. Working end goals and practical milestones
+
+The project has two connected end goals:
+
+1. **Engineering competence:** develop the ability to understand, design, assemble, build where justified, govern, evaluate, operate and improve agentic AI systems across the 13 disciplines.
+2. **Demonstrated practical capability:** use the agricultural pilot to identify a real problem and deliver at least one bounded, tested end-to-end capability or workflow that produces useful, evidence-supported results.
+
+The longer-term direction is to identify which validated principles and components can responsibly be adapted to other sectors. A successful result does not have to be a large autonomous multi-agent platform. It may be a well-designed workflow combining existing services, automation, human review and a small amount of custom software. The solution form must follow the demonstrated need.
+
+**What is not yet finalised:** the first pilot use case, its initial geographic and product scope, intended users or beneficiaries, acceptance criteria, source set and final deliverable. These must be defined through practical problem discovery and evidence, not assumed in advance. The wider agricultural programme must not be confused with the deliberately smaller first pilot.
+
+Practical work can begin before Discipline 2 reaches Chapter 10.6 and before the other disciplines are completed. Learning, solution discovery, pilot assembly and validation are parallel workstreams. When practical work needs a concept from a later discipline, study that concept when needed, document the detour and return to the planned lesson sequence.
+
 ## 5. Technology policy
 
 The curriculum is technology-neutral. Models, platforms, protocols, databases, infrastructure and other tools are investigated in detail when a specific capability or practical requirement makes them relevant.
@@ -56,8 +69,8 @@ A technology recommendation, advertisement or mention is not an endorsement and 
 
 Blockchain is not a mandatory component of agentic AI. It will be considered only if a concrete requirement establishes that its capabilities are needed and a simpler alternative is insufficient.
 
-## 6. Project status
+## 7. Project status
 
-Discipline 1 is complete. Discipline 2 is in progress; Chapter 1 is complete and the next learning point is Chapter 2.1, Objectives, Goals and Desired Outcomes. Agriculture is the first practical pilot path. The pilot's requirements, existing-solution discovery and practical validation should develop alongside the learning journey as concrete capabilities are identified.
+Discipline 1 is complete. Discipline 2 is in progress; Chapters 1–2 are complete, and Chapter 3.1, Deductive Reasoning, is covered. The next learning point is Chapter 3.2, Inductive Reasoning. Agriculture is the first practical pilot path. The first bounded pilot use case and its acceptance criteria remain to be defined. Practical discovery and validation should develop alongside the learning journey, not wait for completion of the curriculum.
 
 See [Current State](CURRENT_STATE.md) for the exact continuation point.
