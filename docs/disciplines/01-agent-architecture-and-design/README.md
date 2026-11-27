@@ -14,7 +14,7 @@ Understand the structure and behaviour of an individual agent before studying th
 | 4 | Agent vs Chatbot vs Workflow vs Automation vs Autonomous System | Covered |
 | 5 | Autonomy Levels and the Autonomy Spectrum | Covered |
 | 6 | Agent Identity, Roles and Responsibilities | Covered |
-| 7 | Agent Configuration and Lifecycle | Covered |
+| 7 | Agent Configuration and Lifecycle | Covered |\n| 8 | From Requirements to Agent Architecture | Planned |
 
 ## Chapter documents
 
@@ -24,11 +24,11 @@ Understand the structure and behaviour of an individual agent before studying th
 4. [Chapter 4 — Agent vs Chatbot vs Workflow vs Automation vs Autonomous System](chapters/04-agent-chatbot-workflow-automation-autonomous-system.md)
 5. [Chapter 5 — Autonomy Levels and the Autonomy Spectrum](chapters/05-autonomy-levels-and-the-autonomy-spectrum.md)
 6. [Chapter 6 — Agent Identity, Roles and Responsibilities](chapters/06-agent-identity-roles-and-responsibilities.md)
-7. [Chapter 7 — Agent Configuration and Lifecycle](chapters/07-agent-configuration-and-lifecycle.md)
+7. [Chapter 7 — Agent Configuration and Lifecycle](chapters/07-agent-configuration-and-lifecycle.md)\n8. [Chapter 8 — From Requirements to Agent Architecture](chapters/08-from-requirements-to-agent-architecture.md)
 
 ## Continuation point
 
-Chapters 1–7 are covered. Chapter 7 includes subsections 7.1–7.6. Next, review the scope of Discipline 1 and identify any remaining essential architecture topics before transitioning to Discipline 2. Do not add chapters without a demonstrated learning gap.
+Chapters 1–7 are covered. The Discipline 1 review identified one genuine gap: an end-to-end method for turning requirements into a coherent agent architecture. Chapter 8 has been added as a final synthesis chapter. Continue with 8.1 Problem Framing and Agent Suitability. See [Review](REVIEW.md).
 
 ## Learning note
 
