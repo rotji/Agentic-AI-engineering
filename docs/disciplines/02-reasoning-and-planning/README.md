@@ -1,6 +1,6 @@
 # Discipline 2 — Reasoning and Planning
 
-**Status:** Sequence defined; lessons not yet started.
+**Status:** In progress; Chapter 1 is underway.
 
 ## 1. Purpose
 
@@ -41,7 +41,7 @@ The discipline is organised into ten chapters. This is the initial learning sequ
 Establish the core concepts and how they fit into an agentic system.
 
 Planned subsections:
-- **1.1 What Reasoning and Planning Mean in Agentic Systems**
+- **1.1 What Reasoning and Planning Mean in Agentic Systems:** Covered.
 - **1.2 Reasoning vs Planning vs Decision-Making vs Execution**
 - **1.3 How Reasoning and Planning Fit into an Agent's Operation**
 - **1.4 Deliberative and Reactive Behaviour**
@@ -193,8 +193,12 @@ Where useful, exercises will ask the learner to formulate goals, decompose tasks
 - Treat frameworks and examples as learning aids unless explicitly established as universal standards.
 - Investigate tools only when a specific capability requirement makes them necessary.
 
+## Chapter documents
+
+1. [Chapter 1 — Foundations of Reasoning and Planning](chapters/01-foundations-of-reasoning-and-planning.md)
+
 ## 7. Current continuation point
 
-**Discipline 2 → Chapter 1 → 1.1 What Reasoning and Planning Mean in Agentic Systems.**
+**Discipline 2 → Chapter 1 → 1.2 Reasoning vs Planning vs Decision-Making vs Execution.**
 
-**Status:** The scope and sequence are defined. No Discipline 2 lesson has been taught yet.
+Subsection 1.1 is covered. Subsections 1.2–1.4 remain planned.
