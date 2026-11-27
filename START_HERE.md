@@ -11,7 +11,9 @@ This repository preserves the learning path, concepts, decisions, and progress o
 - **Completed chapters:** 1–7.
 - **Last completed chapter:** 7 — Agent Configuration and Lifecycle (subsections 7.1–7.6).
 - **Review outcome:** Chapter 8 is justified as a final design-synthesis chapter.
-- **Next learning step:** 8.1 — Problem Framing and Agent Suitability.
+- **Current chapter:** 8 — From Requirements to Agent Architecture.
+- **Last covered subsection:** 8.1 — Problem Framing and Agent Suitability.
+- **Next learning step:** 8.2 — Requirements, Constraints and Operating Context.
 
 ## Read in this order
 
