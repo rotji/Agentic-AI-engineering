@@ -15,7 +15,7 @@ Understand the structure and behaviour of an individual agent before studying th
 | 5 | Autonomy Levels and the Autonomy Spectrum | Covered |
 | 6 | Agent Identity, Roles and Responsibilities | Covered |
 | 7 | Agent Configuration and Lifecycle | Covered |
-| 8 | From Requirements to Agent Architecture | In progress |
+| 8 | From Requirements to Agent Architecture | Complete |
 
 ## Chapter documents
 
@@ -30,7 +30,7 @@ Understand the structure and behaviour of an individual agent before studying th
 
 ## Continuation point
 
-Chapters 1–7 are covered. The Discipline 1 review identified one genuine gap: an end-to-end method for turning requirements into a coherent agent architecture. Chapter 8 has been added as a final synthesis chapter. Chapter 8 is in progress: 8.1 Problem Framing and Agent Suitability, 8.2 Requirements, Constraints and Operating Context, 8.3 Capability and Responsibility Mapping, 8.4 Selecting the High-Level Architecture Shape, 8.5 Component Boundaries, Interfaces and Flows and 8.6 Integrating Autonomy, Authority and Human Oversight are covered. Continue with 8.7 Producing and Reviewing an Architecture Blueprint. See [Review](REVIEW.md).
+Discipline 1 is complete for progression to Discipline 2. Chapters 1–7 establish the foundations; Chapter 8 completes the end-to-end design-synthesis method. The final review found no additional foundational chapter necessary at this stage. See [Review](REVIEW.md). The reusable [Agent Architecture Blueprint Template](../../templates/AGENT_ARCHITECTURE_BLUEPRINT_TEMPLATE.md) is available for future design exercises.
 
 ## Learning note
 
