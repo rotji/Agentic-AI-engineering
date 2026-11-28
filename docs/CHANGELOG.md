@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-11-28 — Clarify automation, workflows, agents and Skills
+
+- Expanded the reusable procedural knowledge document to distinguish workflow, automation and orchestration.
+- Clarified that automation may be deterministic, AI-assisted or agent-enabled, while Skills provide reusable procedural guidance and do not trigger or schedule work by themselves.
+- Added a hybrid agricultural intelligence example combining scheduled collection, deterministic validation, agent-assisted interpretation, human review and governed reporting as a conceptual illustration only.
+- Kept the example provisional; no automation platform, runtime or production workflow has been selected or implemented.
+
 ## 2026-11-28 — Reusable Skills and procedural knowledge principle
 
 - Added a cross-cutting architecture note on packaging reusable procedural expertise as Skills.
