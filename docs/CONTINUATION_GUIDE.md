@@ -9,7 +9,7 @@ Before continuing a session:
 3. Continue from the next unfinished subsection.
 4. Do not repeat completed lessons unless the user asks to revisit or deepen them.
 
-Current continuation point: **Discipline 2 → Chapter 4 → 4.1 Problem and Environment Representation.** Chapters 1–3 are complete.
+Current continuation point: **Discipline 2 → Chapter 4 → 4.2 Current State, Goal State and State Changes.** Chapters 1–3 are complete; Chapter 4.1 is covered.
 
 ## 2. Document a lesson
 
