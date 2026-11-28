@@ -37,8 +37,11 @@ Agentic Governance is both a dedicated discipline and a cross-cutting concern. T
 - **Evidence and verification:** separate established knowledge, source-backed claims, examples, assumptions, proposals and open questions.
 - **Continuity and portability:** project knowledge must remain understandable outside any particular chat or software tool.
 - **Document as we learn:** capture concepts, distinctions, examples and decisions progressively.
+- **Reusable procedural knowledge:** before creating a specialist agent for recurring work, assess whether an existing agent/runtime can apply a tested, reusable procedure with the required tools and permissions.
 
 ## 4. Practical learning and building method
+
+Reusable Skills are treated as a cross-cutting design capability, not a fourteenth discipline or a commitment to one vendor's implementation. They package repeatable procedural expertise; tools provide operational access; governance defines authority; and evaluation establishes whether the procedure works. Separate agents remain appropriate where distinct identities, permissions, isolation, state, lifecycles or accountability are justified. See [Reusable Skills and Procedural Knowledge](REUSABLE_SKILLS_AND_PROCEDURAL_KNOWLEDGE.md).
 
 The 13 disciplines provide the knowledge structure, but they are not a theory-only sequence that must be completed before implementation begins. Learning, solution discovery, pilot assembly, testing and improvement proceed together. We study theory in context and deepen it when practical problems require it.
 
