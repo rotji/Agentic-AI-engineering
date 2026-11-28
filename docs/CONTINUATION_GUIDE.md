@@ -35,6 +35,7 @@ Use the [Practical Build and Sector Transfer Method](PRACTICAL_BUILD_AND_SECTOR_
 - Discover and assess existing solutions before considering custom development.
 - Assemble suitable existing solutions and test their fit.
 - Build only where a genuine gap or clearly justified reason remains.
+- Before creating a specialist agent, assess whether an existing agent/runtime plus a reusable Skill or procedure and authorised tools is sufficient. See [Reusable Skills and Procedural Knowledge](REUSABLE_SKILLS_AND_PROCEDURAL_KNOWLEDGE.md).
 - Record practical progress separately from lesson completion. The agricultural discovery register currently contains five candidate source/platform desk assessments; treat statuses and unresolved checks exactly as recorded there.
 - Assess whether demonstrated principles can transfer to other sectors, adapting and validating them independently.
 
@@ -49,6 +50,8 @@ When a new concept appears:
 3. Explain the relationship to concepts already documented.
 4. Record a curriculum or scope change only when there is a substantive reason.
 5. Preserve the previous learning record and explain any change rather than silently rewriting history.
+
+A reusable Skill is a cross-cutting procedural capability, not automatically a new agent, tool or curriculum discipline. Keep its instructions, reference knowledge, executable dependencies, permissions and evaluation requirements distinct. Do not claim that a candidate procedure is a validated Skill until it has been tested and reviewed.
 
 ## 5. Maintain repository continuity
 
