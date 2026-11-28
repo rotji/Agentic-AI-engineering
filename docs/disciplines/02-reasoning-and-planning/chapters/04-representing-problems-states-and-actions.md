@@ -1,6 +1,6 @@
 # Chapter 4 — Representing Problems, States and Actions
 
-**Status:** In progress; subsections 4.1–4.2 covered.
+**Status:** In progress; subsections 4.1–4.3 covered.
 
 ## Purpose
 
@@ -10,7 +10,7 @@ Learn how to describe the situation an agent is reasoning about and the possible
 
 1. **4.1 Problem and Environment Representation:** Covered.
 2. **4.2 Current State, Goal State and State Changes:** Covered.
-3. **4.3 Actions, Preconditions and Effects:** Planned.
+3. **4.3 Actions, Preconditions and Effects:** Covered.
 4. **4.4 Constraints, Resources, Time and Dependencies:** Planned.
 5. **4.5 State Spaces, Trees and Graphs as Planning Representations:** Planned.
 
@@ -704,6 +704,335 @@ The task goal may still be incomplete until the agent checks the dataset's prove
 
 This is the central discipline of subsection 4.2: represent where things stand, define what must be true at completion, and track actual changes without confusing actions, observations, information and real-world events.
 
+## 4.3 Actions, Preconditions and Effects
+
+### Core question
+
+What can an agent or another actor do to change a relevant state, what must be true before an action can be performed, and what changes should be expected if it succeeds?
+
+A plan describes possible actions toward a goal. To plan responsibly, an agent needs a representation of each relevant action: what the action means, which conditions must hold before it is attempted, what it is expected to change and how the result can be observed.
+
+An **action** is an operation that an actor or system can perform. It may change the external world, another system, a stored record or the agent's information state. Some actions gather information without changing the external situation being investigated.
+
+A **precondition** is a condition that must be satisfied before an action is valid or can be carried out as intended.
+
+An **effect** is a change that is expected to result from an action when it is successfully performed under the relevant conditions.
+
+Actions, preconditions and effects connect the state representation from Lesson 4.2 to the planning process.
+
+### 1. What counts as an action?
+
+In agentic systems, actions can be digital, informational, organisational or physical.
+
+Examples include:
+- Searching an authorised website.
+- Retrieving a public dataset through an API.
+- Saving an observation in an internal register.
+- Comparing two compatible price records.
+- Asking an authorised human reviewer to assess a claim.
+- Sending an approved notification.
+- Updating a record after a correction is reviewed.
+- Operating a physical device through an authorised interface.
+
+An agent may also propose an action without being permitted or technically able to execute it. The fact that an action can be represented or reasoned about does not mean it is authorised, available or safe to perform.
+
+An action is not the same as an event. An action is something an actor or system does; an event is something that occurs. An action may cause an event, but events can also occur independently of the agent. For example, an agent may request a dataset, while the provider's later publication of a new version is an external event.
+
+### 2. Representing an action
+
+A practical action representation can include:
+
+| Element | Meaning | Agricultural example |
+|---|---|---|
+| Action name | A clear identifier for the operation. | Retrieve a public market-price file. |
+| Actor | Who or what performs it. | The authorised data-retrieval service. |
+| Target | What the operation acts on. | A specified public dataset URL or API resource. |
+| Parameters | Values needed to perform it. | Dataset identifier, date range or API filters. |
+| Preconditions | What must be true before the action is valid. | Source is accessible; request parameters are valid; access conditions permit retrieval. |
+| Authority check | Whether this actor is permitted to perform it. | The project permits retrieval under the source's terms and assigned access rights. |
+| Expected effects | What should change if it succeeds. | A local copy of the file and a retrieval record are created. |
+| Observable result | How success or failure can be checked. | A response is received, file integrity is checked and retrieval metadata is recorded. |
+| Failure conditions | What may prevent the intended result. | Timeout, access denied, invalid request, unavailable resource or malformed file. |
+
+Not every simple action needs a lengthy specification. The level of detail should reflect the action's complexity, consequences, uncertainty and need for auditability.
+
+### 3. Preconditions: what must be true before the action?
+
+Preconditions describe requirements that must hold before the action can be validly attempted or expected to work.
+
+They may concern:
+- **State:** the system is in the correct condition for the operation.
+- **Input:** required parameters and data are present and valid.
+- **Identity:** the target is correctly identified.
+- **Access:** the required connection, credentials or interface are available.
+- **Dependency:** a required earlier step has been completed.
+- **Authority:** the actor has permission to perform the operation.
+- **Safety:** required checks have passed and the action does not violate protective restrictions.
+
+Consider retrieving an agricultural dataset.
+
+Possible preconditions include:
+1. The correct dataset or endpoint has been identified.
+2. The requested date range and filters are valid.
+3. The source is reachable.
+4. Any required authentication is available through an authorised method.
+5. The proposed retrieval complies with applicable access conditions and data-use restrictions.
+6. The actor has been assigned authority to perform the retrieval.
+
+If a precondition is not met, the agent should not pretend that the action is ready. It may obtain missing information, request authorised access, choose a permitted alternative, ask for clarification or mark the step as blocked.
+
+### 4. Capability, access and authority are different
+
+These conditions are related but must not be collapsed into one.
+
+- **Capability:** the system has the technical ability to perform the operation.
+- **Access:** the system can reach the required resource or interface.
+- **Authority:** the actor is permitted to perform the operation for the stated purpose.
+- **Safety and policy compliance:** the operation is consistent with required rules and safeguards.
+
+For example, a system might technically be able to send an email because it has a connected email tool. That does not automatically authorise it to contact a producer, trader or public institution. A separate permission or approved process may be required.
+
+Likewise, a public API endpoint may allow a user to retrieve information, while write or upload operations are restricted to authenticated users with specific permissions.
+
+A planner must not infer authority from technical capability. Preconditions for execution include both operational requirements and the required permission checks.
+
+### 5. Effects: what is expected to change?
+
+Effects describe the conditions expected to hold after an action succeeds.
+
+For example:
+
+**Action:** Save an inspected source page to the project's source register.
+
+**Possible preconditions:**
+- The source has been opened and inspected.
+- Its original URL is recorded.
+- The relevant register is available.
+- The actor has permission to update the register.
+
+**Expected effects:**
+- A source entry is created or updated.
+- The source's inspection date is recorded.
+- Its observed claims and limitations are documented.
+- The register's information state is updated.
+
+The effect is not that the source's claims become true. Saving a source record does not independently verify its content.
+
+An effect should describe a state change, not simply repeat the action in different words. "The file was downloaded" is an action outcome; "the system now holds a retrievable copy with a recorded source and retrieval time" describes the resulting condition more precisely.
+
+### 6. Positive, negative and conditional effects
+
+An action may establish a new condition, remove an existing condition or have effects that depend on what is encountered.
+
+- **Positive effect:** a condition becomes true. For example, a source record is added to the register.
+- **Negative effect:** a condition that was previously true becomes false. For example, a record is no longer marked as awaiting review after an authorised review decision.
+- **Conditional effect:** a particular change occurs only when an additional condition is met. For example, a retrieval process records a file as successfully imported only if the response is valid and the file passes the required integrity checks.
+
+An operation may also have several effects. Updating a record could change its status, add a review timestamp and create a history entry. The representation should capture the effects relevant to planning and verification.
+
+Some actions have uncertain or non-deterministic outcomes. A search may return no results, one result or many results. An API request may time out or return a partial response. The action representation should not promise one exact outcome when the result depends on the external environment.
+
+### 7. Intended effect versus actual result
+
+An action's expected effect is not proof that the effect occurred.
+
+Consider an agent that requests a dataset from an API.
+
+- It sends the request.
+- The request may succeed, fail, time out or return incomplete data.
+- Even if a response arrives, the file may be corrupt, incomplete or different from what was requested.
+
+The system must observe the result and check it.
+
+Distinguish:
+- **Action issued:** the system attempted the operation.
+- **Action accepted:** the receiving interface acknowledged or accepted the request.
+- **Action completed:** the operation reached its reported completion point.
+- **Effect verified:** the expected state change was independently checked to the required extent.
+
+These conditions are not always identical. An API may accept a request for later processing; a job may complete but produce an invalid file; a database operation may report success while a downstream process still fails.
+
+A dependable agent updates its state from observed results rather than assuming that intended effects happened.
+
+### 8. One action can change more than one state
+
+Recall the difference between real-world state and information state from Lesson 4.2.
+
+Suppose an agent retrieves a public report about tomato market prices.
+
+The action may:
+- Change the agent's information state because it now has the report.
+- Change an internal system state because a source record and retrieval timestamp are stored.
+- Leave the external market state unchanged.
+- Leave the truth of the report's claims unresolved until they are assessed.
+
+An action can therefore have effects in one part of the environment but not another. A clear action model should identify which state or system boundary each effect concerns.
+
+Similarly, sending an authorised notification may change the recipient's information state if it is received, but it does not guarantee that the recipient reads it or acts on it. The agent must not claim downstream effects it cannot observe.
+
+### 9. Actions may fail, partially succeed or produce unexpected effects
+
+A realistic plan must allow for results other than complete success.
+
+Possible outcomes include:
+- **Success:** the expected effect is observed.
+- **Failure:** the action could not be completed or did not produce the required effect.
+- **Partial success:** some expected effects occurred, but others did not.
+- **Unexpected result:** the operation completed but produced a result different from what was expected.
+- **Unknown outcome:** the system cannot determine whether the action succeeded, perhaps because a connection was lost after a request was sent.
+
+The unknown-outcome case is particularly important. If a payment, message or external update times out, blindly repeating the action might duplicate it. The system may need to check the operation's status or use a safe idempotent method before retrying. These operational details will be examined further in later engineering disciplines.
+
+For the agricultural pilot, a failed data retrieval should not be recorded as "no data exists." It may mean only that the source was temporarily unavailable or the retrieval method failed.
+
+### 10. A worked agricultural example
+
+Suppose the pilot needs to inspect a candidate market-price dataset.
+
+**Action:** Retrieve the selected dataset file from an authorised public source.
+
+**Preconditions:**
+- The source and dataset version are identified.
+- The requested resource and parameters are valid.
+- The source can be accessed.
+- Retrieval is permitted for the intended purpose.
+- The retrieval process has been authorised.
+
+**Expected effects:**
+- A local copy or response is available.
+- The retrieval date and source reference are recorded.
+- The file can be inspected for structure and content.
+
+**Checks after the action:**
+- Did the retrieval actually complete?
+- Is the file readable?
+- Does it match the requested dataset and version?
+- Are the expected fields present?
+- Is the file complete enough for the intended inspection?
+
+**What the action does not establish:**
+- That the underlying prices are correct.
+- That every record is a direct observation.
+- That Plateau markets are represented.
+- That the source's data can be redistributed.
+- That the dataset is suitable for our pilot.
+
+Those are separate claims requiring further evidence and review.
+
+### 11. Action sequences and dependencies
+
+Some actions can be performed only after earlier actions have produced the required conditions.
+
+For example:
+
+1. Identify the source.
+2. Inspect its access conditions.
+3. Confirm the retrieval is authorised.
+4. Retrieve the dataset.
+5. Check file integrity.
+6. Inspect the data dictionary and columns.
+7. Assess coverage and limitations.
+8. Record the suitability decision.
+
+The retrieval action depends on source identification, valid parameters, access and authority. Data inspection depends on having a usable file. A suitability decision depends on sufficient inspection and evidence.
+
+This sequence is not simply a list of activities. Each step establishes conditions required by later steps.
+
+Some actions may be independent and possible in parallel. Others have dependencies. Chapter 4.4 will examine dependencies alongside resources, time and constraints in greater detail.
+
+### 12. A simple action representation
+
+A compact way to describe an action is:
+
+```text
+Action:
+  Name: RetrieveDataset
+
+  Preconditions:
+    - Dataset identified
+    - Request parameters valid
+    - Source accessible
+    - Retrieval authorised
+
+  Expected effects:
+    - Dataset response or file received
+    - Retrieval metadata recorded
+
+  Post-action checks:
+    - Response status acceptable
+    - File readable
+    - Dataset identity and version checked
+
+  Possible outcomes:
+    - Success
+    - Failure
+    - Partial result
+    - Unknown outcome
+```
+
+In classical planning, an action is often represented formally by a set of preconditions and effects. A planner considers which actions are applicable in a given state and how their effects could produce a later state. Real agentic systems may require richer representations because actions can involve external services, uncertain outcomes, permissions, human approval and partial observability.
+
+The example above is a teaching representation, not a final software schema for our pilot.
+
+### 13. How an agent can reason about an action
+
+Before proposing or executing an action, an agent can follow this method:
+
+1. **Name the action precisely.** Avoid vague descriptions such as "process the data."
+2. **Identify the actor and target.** Determine which component or authorised person performs the operation and what it affects.
+3. **Check the current state.** Confirm that the task is at a point where the action makes sense.
+4. **List the preconditions.** Identify required inputs, prior results, access, capability and permissions.
+5. **Check authority and safeguards.** Technical ability is not permission.
+6. **Specify expected effects.** Describe which relevant conditions should change if the action succeeds.
+7. **Identify observable success checks.** Determine how the actual result will be confirmed.
+8. **Consider failure and partial outcomes.** Do not assume every operation succeeds.
+9. **Update the state from the observed result.** Record what happened, not just what was intended.
+10. **Reconsider the next action.** Continue only when its preconditions are satisfied.
+
+This is a reasoning and planning method. The actual mechanics of reliable retries, transactions, tool execution and recovery are studied in later disciplines.
+
+### 14. Common action-model failures and safeguards
+
+| Failure | What goes wrong | Safeguard |
+|---|---|---|
+| Vague action | The agent cannot determine what operation is intended. | Name the action, actor, target and parameters. |
+| Preconditions omitted | The plan assumes an action is ready when required conditions are absent. | Make prerequisites explicit and check them before execution. |
+| Capability confused with authority | The agent performs an action simply because a tool allows it. | Apply explicit permission and policy checks. |
+| Intended effect assumed | The system records success without observing the result. | Verify the actual post-action state. |
+| World and information effects confused | Retrieving a report is described as changing the market. | Identify which state boundary each effect changes. |
+| Partial outcome ignored | Some effects occur but the task is recorded as wholly successful. | Track partial success and unresolved effects. |
+| Failure interpreted too broadly | A failed retrieval is treated as proof that no data exists. | Record the failure reason and distinguish access failure from absence. |
+| Unexpected outcome ignored | The agent continues from an assumed state that no longer holds. | Observe, update and replan from the actual result. |
+| Unsafe repeated action | An uncertain operation is repeated and creates duplicates. | Check operation status and use safe retry controls where appropriate. |
+| Action-effect relationship overstated | A notification sent is treated as proof the recipient acted. | Claim only effects that can be observed and verified. |
+
+### 15. Key principles
+
+- An action is an operation an actor or system can perform; an event is something that occurs.
+- Preconditions describe what must be true before an action is valid or can be performed as intended.
+- Effects describe the relevant state changes expected when an action succeeds.
+- Technical capability, access, authority and safety permission are different requirements.
+- A plan may represent an action without granting permission to execute it.
+- Expected effects are not proof of actual effects.
+- Distinguish an action being issued, accepted, completed and its effects being verified.
+- Actions may succeed, fail, partially succeed, produce unexpected results or have unknown outcomes.
+- Information retrieval can change the agent's information state without changing the external world.
+- Record which state boundary each effect concerns.
+- Later actions may depend on conditions established by earlier actions.
+- Update the state from observed results, then reconsider the next action.
+
+## Lesson checkpoint
+
+An agent identifies a public agricultural dataset and sends a retrieval request. The API times out before the agent can determine whether the file was returned.
+
+Which conclusion is justified?
+
+The agent can say that it attempted the retrieval and that the outcome is unknown. It cannot claim that the dataset was successfully retrieved, that no dataset exists or that the source has no relevant data.
+
+Before retrying, it may need to check whether the request completed and whether a result is available, so it does not create unnecessary duplicate operations.
+
+This is the central discipline of subsection 4.3: represent what an action requires, what it is expected to change and how the actual result will be checked—without confusing an intention or attempt with a verified effect.
+
 ## Chapter 4 progress
 
-Subsections 4.1, Problem and Environment Representation, and 4.2, Current State, Goal State and State Changes, are covered. Next: **4.3 Actions, Preconditions and Effects**.
+Subsections 4.1, Problem and Environment Representation; 4.2, Current State, Goal State and State Changes; and 4.3, Actions, Preconditions and Effects, are covered. Next: **4.4 Constraints, Resources, Time and Dependencies**.
