@@ -153,3 +153,20 @@ This file records decisions that shape the learning project. It is not a list of
 **Reason:** Social platforms can expose signals that formal datasets do not capture, but their content is uneven, self-selected and often unverified. The project needs a governed way to assess useful signals without confusing popularity, visibility or volume with reliable intelligence.
 
 **Status:** Active design principle; no social listening provider, platform integration or automated collection pipeline has been selected or deployed.
+
+
+## D-015 — Establish explicit project boundaries and learning transfer with Agricultural Ecosystem Intelligence
+
+**Decision:** Treat Agricultural Ecosystem Intelligence as the first practical application and validation path for Agentic AI Engineering, while maintaining separate repositories, responsibilities and sources of truth.
+
+**Engineering repository responsibility:** Preserve the 13-discipline curriculum, reusable engineering concepts and methods, architecture and governance principles, capability/tool assessments, experiments, evaluation results and transferable lessons.
+
+**Agricultural repository responsibility:** Preserve agricultural programme scope, operational workstreams, sources and evidence, market observations, counterparties, opportunities, actions, outreach and agricultural decisions.
+
+**Daily brief boundary:** The scheduled agricultural daily brief is the current human-supervised operating workflow and a source of practical requirements. Its existence does not establish that persistent memory, complete source/connector coverage, reliable record updates, independent verification or autonomous end-to-end execution have been engineered. These capabilities must be assessed and tested individually.
+
+**Learning method:** Connect major concepts through theory, engineering application and agricultural practical validation. Extract reusable principles into this repository only when supported; keep sector-specific evidence and operational records in the agricultural repository. Track curriculum progress separately from agricultural operational progress.
+
+**Reason:** This relationship makes the curriculum practical without confusing an operating brief with a completed system, duplicating operational records, or allowing one sector's assumptions to become universal engineering rules.
+
+**Status:** Active.
