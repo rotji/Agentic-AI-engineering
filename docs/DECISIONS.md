@@ -170,3 +170,22 @@ This file records decisions that shape the learning project. It is not a list of
 **Reason:** This relationship makes the curriculum practical without confusing an operating brief with a completed system, duplicating operational records, or allowing one sector's assumptions to become universal engineering rules.
 
 **Status:** Active.
+
+## D-016 — Enable real-time capabilities only when justified
+
+**Decision:** Design future systems so that selected information sources, events and operational workflows can support real-time or near-real-time updates when a demonstrated business or operational requirement justifies the added complexity, cost, infrastructure and operating responsibility.
+
+**Freshness rule:** Select on-demand, scheduled/batch, near-real-time or continuous/streaming updates according to the freshness required by the specific decision. Do not treat real-time operation as a universal default or promise latency that has not been defined and measured.
+
+**Justification requirements:** Before adopting a continuous or event-driven design, establish the affected decision, acceptable information age, change frequency, authorised source capability, access and reuse rights, reliability and reconciliation requirements, economics, fallback behaviour, human approval requirements and measurable success criteria.
+
+**Engineering boundary:** Webhooks, event feeds, streaming APIs, polling, change detection, queues, retries, idempotency and monitoring are candidate mechanisms, not mandated technologies. Prefer the least complex existing capability that meets the requirement.
+
+**Governance boundary:** Faster updates do not establish truth, remove the need for provenance and corroboration, or expand an agent's authority. Handle duplicates, delays, missing and reordered events, corrections, privacy, licensing, security and safe fallback explicitly.
+
+**Current status:** Future architecture direction only. The agricultural daily brief remains a scheduled, human-supervised workflow. No real-time pipeline, webhook, streaming platform or always-on service has been selected or deployed.
+
+**Reason:** Some future operational decisions may be harmed by stale information, while many others do not benefit enough from continuous updates to justify their cost and complexity. The system should be capable of becoming more time-responsive where evidence supports the need, without overengineering the whole project.
+
+**Status:** Active conditional design principle; implementation deferred pending a validated use case.
+
