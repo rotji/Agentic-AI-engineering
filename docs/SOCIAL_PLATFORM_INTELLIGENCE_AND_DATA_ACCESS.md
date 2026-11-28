@@ -63,9 +63,9 @@ Possible intelligence value:
 - Page insights and engagement data for a Page that an authorised user manages.
 
 Access considerations:
-- Meta's Graph API provides Page-related endpoints, but the required Page tokens, permissions and feature access depend on the data and use case. Public Page content access may require a specific feature permission.
-- Meta states that automated collection from its products requires express written permission unless the collection is otherwise explicitly authorised. Merely viewing public content in a browser does not itself grant permission to scrape it.
-- Meta Content Library is a separate controlled-access research product. As documented on 16 November 2026, it covers qualifying public content across Facebook and Instagram, including public Pages, groups, events, posts and comments. Access is controlled, and its API operates in a Secure Research Environment or an approved cleanroom. API data downloading is not permitted. This is a research access route, not a general-purpose public scraping API.
+- Meta's Graph API provides Page-related endpoints. Reading Page-owned data and reading qualifying public Page data are different permission cases; the Page Public Content Access (PPCA) feature may be required for the latter. Feature approval, tokens, rate limits and endpoint-specific restrictions apply.
+- Meta states that automated collection from its products requires prior permission or explicit authorisation. Merely viewing public content in a browser does not itself grant permission to scrape it.
+- Meta Content Library is a separate controlled-access research product. Its 16 November 2026 documentation covers qualifying public Facebook and Instagram content, including eligible Pages, groups, events and profiles. Access requires affiliation with a qualified academic or non-academic research institution and approval; individuals may participate through an eligible research programme but should not assume that an unaffiliated personal project qualifies. Its API operates in Meta's Secure Research Environment or an approved cleanroom, and downloading data from the API is not permitted. This is a research route, not a general-purpose public or commercial social-listening API.
 
 Official references:
 - [Graph API — Page Published Posts](https://developers.facebook.com/docs/graph-api/reference/page/published_posts/)
@@ -83,7 +83,8 @@ Possible intelligence value:
 
 Access considerations:
 - The Instagram APIs support defined use cases for professional accounts and require the relevant login method, tokens and permissions. They should not be treated as unrestricted access to every public Instagram account or all platform content.
-- Meta Content Library includes qualifying public Instagram content for approved research access, subject to its inclusion and controlled-environment rules. It is not a general download service.
+- The Instagram APIs primarily support professional Business and Creator accounts and defined account-management, content and insights use cases. They do not provide unrestricted access to every public consumer account.
+- Meta Content Library includes qualifying public Instagram content for approved research access, subject to institutional eligibility, inclusion rules and controlled-environment restrictions. It is not a general download service.
 - Meta's automated collection rules apply to scraping of Meta products; do not assume public visibility authorises automated extraction.
 
 Official references:
@@ -101,8 +102,9 @@ Possible intelligence value:
 
 Access considerations:
 - WhatsApp is primarily a private messaging service, not an open public post-search network. The project must not treat private chats, personal contacts or ordinary group conversations as public data to be extracted.
-- The WhatsApp Business Platform Cloud API supports messaging for a registered business phone number. Webhooks can deliver relevant inbound message notifications and status updates to an authorised business integration. This is a channel for communications with that business account, not permission to read arbitrary users' chats or unrelated groups.
-- Meta Content Library's November 2026 documentation includes qualifying WhatsApp Channels and recent channel updates in a controlled research environment. Its coverage is limited to eligible public channels and specified update windows; it is not general access to private WhatsApp groups or personal messages.
+- The WhatsApp Business Platform Cloud API supports sending and receiving messages for a registered business phone number. Webhooks can deliver relevant inbound message notifications and status updates to an authorised business integration. This applies to communications with that business account, not permission to read arbitrary users' private chats.
+- Meta also documents a Groups API for businesses to create and manage their own WhatsApp groups. This does not provide general access to read unrelated consumer groups or extract the history of groups that the business does not control. Eligibility, group capabilities and limits must be checked before considering it.
+- Meta Content Library's November 2026 documentation includes qualifying public WhatsApp Channels and their recent updates in a controlled research environment. Coverage is limited to eligible public channels (verified or meeting a follower threshold) and updates from the last 30 days. It is not general access to private WhatsApp groups or personal messages.
 
 A safer agricultural collection model may invite producers, traders and cooperatives to submit a price or supply observation to a dedicated project/business contact, explain its intended use, and capture only the information necessary for that purpose.
 
@@ -120,7 +122,7 @@ Possible intelligence value:
 Access considerations:
 - X's official API provides programmatic access to public posts and replies, including keyword searches or posts from selected accounts. Direct Message access requires separate permission from the account holder.
 - X's Terms of Service effective 9 October 2026 state that scraping the service without express written permission is prohibited and require access through its published interfaces. Non-API scripting of the website should not be treated as an alternative access route.
-- API access and charges are governed by the current developer platform and can change. Confirm live pricing, endpoint availability, rate limits and data-use restrictions before relying on X as a source.
+- At the time checked, X's developer console describes consumption-based, pay-per-use API billing with no fixed monthly cost. Its displayed Posts: Read rate is US$0.005 per resource fetched. This is a live price indication, not a long-term quote; confirm which objects are billable, current rates, endpoint availability, rate limits and data-use restrictions before relying on X. A broad monitoring query could become costly, so begin with a narrow test and estimate cost per useful observation.
 
 Official references:
 - [About X's APIs](https://help.x.com/en/rules-and-policies/x-api)
@@ -157,6 +159,22 @@ Official references:
 | LinkedIn | Company and industry announcements; own Page analytics | Vetted official APIs; scraping and unauthorised automation prohibited |
 
 This comparison is about access methods, not a ranking of data value. We should not assume that the platform with the most visible activity has the most representative or useful market information.
+
+### Practical access position for an individual or small project
+
+The access conditions matter to our resource constraints:
+
+- **Meta Content Library:** potentially valuable for broad research on eligible public Facebook and Instagram content, and qualifying WhatsApp Channels, but it is not a simple self-service scraping API. Applicants need affiliation with a qualified academic or non-academic research institution and approval. The API runs in a controlled research environment and does not permit data downloads. This should be treated as a possible research collaboration route, not an assumed available tool.
+- **Facebook Page / Instagram professional APIs:** more realistic when an organisation or client authorises access to its own Page or professional account, subject to app review and specific permissions. They should not be mistaken for general public-content search APIs.
+- **WhatsApp Business Platform:** potentially useful for collecting voluntary submissions through a dedicated business contact and webhook. It is not an archive or search engine for other people's chats.
+- **X API:** the developer console currently advertises pay-per-use billing. Even though there is no fixed monthly charge, per-resource reading can accumulate. Avoid broad collection until a small query proves useful and the cost is measured.
+- **LinkedIn Community Management API:** access is currently vetted for registered legal organisations and supported commercial use cases; the requirements include a verified business email, organisation details, privacy policy and a linked Page administrator's verification. This is a significant barrier for an unaffiliated individual project.
+
+For our initial work, manually reviewing a small number of relevant public links and inviting voluntary supplier/market submissions may be more feasible than building a continuous social crawler.
+
+### Other platforms not yet assessed
+
+TikTok, YouTube, Telegram, Reddit, Threads and sector-specific online communities are candidates for later source discovery. Their access methods, restrictions, representativeness and costs have not been assessed in this document. Do not assume they offer equivalent public search APIs or scraping rights.
 
 ## 6. How social observations should be classified
 
@@ -220,7 +238,7 @@ Distinguish the time a post was published from the time the market event occurre
 
 A public post is not a blanket licence to collect, profile, retain, combine, redistribute or sell personal information.
 
-Apply purpose limitation, data minimisation, accuracy, retention limitation, security and accountability. The Nigeria Data Protection Act 2023 section 24 sets out personal-data processing principles including fairness, lawfulness and transparency, specified purposes, minimum necessary data, appropriate retention and security. The appropriate lawful basis and any additional obligations must be assessed for the actual use case.
+Apply purpose limitation, data minimisation, accuracy, retention limitation, security and accountability. The Nigeria Data Protection Act 2023 applies to personal-data processing in the circumstances described in section 2. Section 24 sets out processing principles, and section 25 requires an appropriate lawful basis. Public availability does not by itself establish that every intended collection or reuse is lawful. The appropriate lawful basis and any additional obligations must be assessed for the actual use case.
 
 For this project:
 - Prefer organisation, market, product and event information over personal-profile data.
@@ -235,8 +253,12 @@ For this project:
 
 This document is engineering guidance, not legal advice. Uncertain or higher-risk processing should receive qualified data-protection and legal review.
 
-Official reference:
+Official references:
 - [Nigeria Data Protection Act 2023](https://ndpc.gov.ng/wp-content/uploads/2024/03/Nigeria_Data_Protection_Act_2023.pdf)
+- [Meta Content Library access requirements](https://developers.facebook.com/documentation/meta-content-library/get-access)
+- [X Developer Platform pricing](https://developer.x.com/)
+- [LinkedIn Community Management API access review](https://learn.microsoft.com/en-us/linkedin/marketing/community-management-app-review?view=li-lms-2026-06)
+- [Instagram API documentation from Meta](https://www.postman.com/meta/instagram/documentation/6yqw8pt/instagram-api)
 
 ## 10. Important limitations and failure modes
 
