@@ -20,6 +20,12 @@ The project has documented and adopted reusable procedural knowledge (often pack
 
 See [Reusable Skills and Procedural Knowledge](REUSABLE_SKILLS_AND_PROCEDURAL_KNOWLEDGE.md). This is a documented design principle, not a production implementation or a new fourteenth discipline. No Skill packages or Skill runtime have been selected or validated.
 
+## Cross-cutting capability — web data acquisition
+
+The project has documented web data acquisition and scraping as one possible method within the wider information-acquisition capability. The source-first approach is to prefer suitable documented APIs, official downloadable datasets, feeds, exports or approved integrations, and consider permitted scraping or browser-based acquisition only where those routes are unavailable or insufficient. Provenance, extraction quality, data-use conditions and evidence status must be retained.
+
+See [Web Data Acquisition and Scraping](WEB_DATA_ACQUISITION_AND_SCRAPING.md). This is engineering guidance, not a decision to scrape any particular source. No scraper, crawler or scraping platform has been selected or deployed.
+
 ## Practical pilot position
 
 - **Pilot domain:** Agriculture.
