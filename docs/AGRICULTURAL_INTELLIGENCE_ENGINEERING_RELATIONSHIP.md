@@ -70,7 +70,15 @@ Use these as capability states, not promised delivery dates:
 
 Progression is evidence-led. Do not automate a step merely because it appears in the brief. First establish that the step is useful, repeatable, permitted, testable and worth the added complexity.
 
-## 7. Practical constraints and guardrails
+## 7. Real-time capability when justified
+
+A future integrated system may need selected information sources, events or workflows to update in real time or near-real-time. This is a conditional design capability, not a default requirement. Choose on-demand, scheduled, near-real-time or continuous processing according to the freshness needed by a specific decision, the source's authorised capabilities, reliability requirements and the value of reducing delay.
+
+Before adding continuous updates, establish the decision affected, acceptable data age, change frequency, source permissions, failure and reconciliation behaviour, operating cost, fallback and approval requirements. Faster delivery does not make a signal verified and does not expand an agent's authority.
+
+See [Real-Time and Event-Driven Capabilities](REAL_TIME_AND_EVENT_DRIVEN_CAPABILITIES.md). This records a future direction only; no real-time pipeline, webhook, streaming platform or always-on service has been selected or deployed.
+
+## 8. Practical constraints and guardrails
 
 - Keep the agricultural objective grounded in real needs and economic participation; do not equate collecting information with creating value.
 - Respect the agricultural brief's preference for no- or low-capital participation routes and do not imply guaranteed income.
@@ -81,7 +89,7 @@ Progression is evidence-led. Do not automate a step merely because it appears in
 - Keep consequential external actions subject to appropriate human authority and approval.
 - Prefer existing services, integrations and manual processes when they meet the need; build custom components only for demonstrated gaps.
 
-## 8. How to maintain this relationship
+## 9. How to maintain this relationship
 
 When agricultural work reveals a reusable engineering lesson:
 
@@ -93,7 +101,7 @@ When agricultural work reveals a reusable engineering lesson:
 
 When engineering study produces a method relevant to agriculture, explain the method in this repository and record its practical adoption, test and outcome in the agricultural repository.
 
-## 9. Immediate continuation
+## 10. Immediate continuation
 
 The relationship does not change the curriculum order or current learning position. Continue **Discipline 2 — Reasoning and Planning, Chapter 4.4: Constraints, Resources, Time and Dependencies**. Use the agricultural daily brief as a live example when it helps explain constraints, limited resources, action priority, dependencies and feasible plans.
 
