@@ -14,6 +14,12 @@ Agentic AI Engineering is a practical learning and building journey, not a theor
 
 See [Practical Build and Sector Transfer Method](PRACTICAL_BUILD_AND_SECTOR_TRANSFER.md).
 
+## Cross-cutting architecture principle — reusable Skills
+
+The project has documented and adopted reusable procedural knowledge (often packaged as **Skills**) as a cross-cutting design principle. Before creating a specialist agent for a recurring task, assess whether an existing agent/runtime equipped with an appropriate reusable procedure and authorised tools is sufficient. Skills do not replace tools, data access, permissions, governance or evaluation, and separate agents remain appropriate where requirements justify them.
+
+See [Reusable Skills and Procedural Knowledge](REUSABLE_SKILLS_AND_PROCEDURAL_KNOWLEDGE.md). This is a documented design principle, not a production implementation or a new fourteenth discipline. No Skill packages or Skill runtime have been selected or validated.
+
 ## Practical pilot position
 
 - **Pilot domain:** Agriculture.
