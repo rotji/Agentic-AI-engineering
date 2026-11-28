@@ -53,6 +53,10 @@ Information acquisition is a capability that may be needed across sector pilots.
 
 Do not equate a successful retrieval with a verified fact. The origin, method, time, meaning, limitations and evidence status of each acquired record must remain traceable.
 
+### Social platforms as source and submission channels
+
+Social platforms may contribute public announcements, market signals and voluntarily submitted observations. Treat them as source channels within information acquisition—not as unrestricted databases. Access must be checked platform by platform, evidence must be corroborated, and personal-data collection must be justified and minimised. See [Social Platform Intelligence and Data Access](SOCIAL_PLATFORM_INTELLIGENCE_AND_DATA_ACCESS.md).
+
 ## 4. Keep four workstreams connected
 
 The project should maintain four connected workstreams rather than treating them as isolated stages:
