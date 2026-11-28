@@ -77,3 +77,12 @@ Blockchain is not a mandatory component of agentic AI. It will be considered onl
 Discipline 1 is complete. Discipline 2 is in progress; Chapters 1–2 are complete, and Chapter 3.1, Deductive Reasoning; 3.2, Inductive Reasoning; and 3.3, Abductive Reasoning and Explanation, and 3.4, Causal Reasoning, Correlation and Analogy, and 3.5, Hypotheses, Evidence, Confidence and Limitations, are covered. Chapter 3 is complete. Chapter 4.1, Problem and Environment Representation, and 4.2, Current State, Goal State and State Changes, and 4.3, Actions, Preconditions and Effects, are covered. The next learning point is Chapter 4.4, Constraints, Resources, Time and Dependencies. Agriculture is the first practical pilot path. The first bounded pilot use case and its acceptance criteria remain to be defined. Practical discovery and validation should develop alongside the learning journey, not wait for completion of the curriculum.
 
 See [Current State](CURRENT_STATE.md) for the exact continuation point.
+
+
+## 6. Relationship to the Agricultural Ecosystem Intelligence programme
+
+The Agricultural Ecosystem Intelligence programme is the first practical application and validation path for Agentic AI Engineering. It is a separate operational project with its own repository and source of truth. The engineering repository owns reusable concepts, methods, architecture principles, capability assessments, experiments and cross-sector lessons. The agricultural repository owns agricultural scope, source and evidence records, market observations, counterparties, opportunities, actions, outreach and operational decisions.
+
+The scheduled agricultural daily brief is the current human-supervised workflow through which some of the engineering ideas are being applied. It supplies real operational requirements and examples, but a scheduled brief must not be mistaken for a fully engineered autonomous agentic system. Persistence, connector coverage, verification, reliable record updates, execution and recovery each require separate evidence and testing.
+
+Use the dedicated [relationship document](AGRICULTURAL_INTELLIGENCE_ENGINEERING_RELATIONSHIP.md) for the full boundary, learning-to-application method, maturity progression and maintenance rules. The [agricultural repository](https://github.com/rotji/agricultural-intelligence-ecosystem) remains authoritative for operational agricultural records.
