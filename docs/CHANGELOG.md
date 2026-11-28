@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-11-28 — Document social platform intelligence and access boundaries
+
+- Added a source reference covering Facebook, Instagram, WhatsApp, X and LinkedIn as candidate intelligence sources and voluntary submission channels.
+- Distinguished public content, managed professional/Page accounts, public research libraries, business messaging inboxes and private conversations.
+- Recorded current access barriers: Meta Content Library institutional eligibility and controlled environment, LinkedIn organisation/app vetting, and X's pay-per-use API pricing.
+- Clarified WhatsApp Business Platform messaging and business-created Groups API are not general access to unrelated private chats or consumer groups.
+- Established that social posts are claims or signals, not proof of quotations, transactions or market conditions.
+- Added privacy, provenance, coverage, duplication, corroboration and cost controls; listed additional social platforms as unassessed candidates.
+- Added decision D-014 and preserved the next learning step, Chapter 4.4.
+
 ## 2026-11-28 — Document web data acquisition and scraping
 
 - Added a reference document locating crawling, scraping, browser automation, APIs and data ingestion within the wider information-acquisition capability.
