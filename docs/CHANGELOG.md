@@ -1,5 +1,16 @@
 # Changelog
 
+## 2026-11-28 — Discipline 2 Chapter 4.3
+
+- Covered and documented subsection 4.3, Actions, Preconditions and Effects.
+- Defined actions, preconditions and effects; distinguished actions from external events.
+- Explained action representations using actor, target, parameters, prerequisites, expected effects, observable results and failure conditions.
+- Separated technical capability, access, authority and safety permission.
+- Covered positive, negative and conditional effects and the distinction between intended effects and verified outcomes.
+- Explained success, failure, partial success, unexpected results and unknown outcomes, including caution with timeouts and repeated operations.
+- Applied the action model to retrieving an agricultural dataset and checking its integrity, identity and version.
+- Set the next learning point to Chapter 4.4, Constraints, Resources, Time and Dependencies.
+
 ## 2026-11-28 — Discipline 2 Chapter 4.2
 
 - Covered and documented subsection 4.2, Current State, Goal State and State Changes.
