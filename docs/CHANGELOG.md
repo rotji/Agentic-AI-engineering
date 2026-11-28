@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-11-28 — Real-time capability when justified
+
+- Established a conditional architecture principle: selected sources and workflows may support real-time or near-real-time updates when a demonstrated decision need justifies the cost and complexity.
+- Distinguished on-demand, scheduled/batch, near-real-time and continuous/streaming update modes.
+- Added a requirements test covering decision impact, acceptable freshness, source capabilities and permissions, reliability, economics, fallback, human authority and measurement.
+- Documented candidate mechanisms such as webhooks, event feeds, polling, change detection, queues, retries and reconciliation without selecting a technology stack.
+- Added provenance, evidence, privacy, reliability and authority safeguards.
+- Clarified that the current agricultural daily brief remains scheduled and human-supervised; no real-time pipeline or always-on service is implemented or approved.
+- Recorded decision D-016 and linked the principle from the agricultural relationship document and current state.
+
 ## 2026-11-28 — Make agricultural intelligence relationship explicit
 
 - Added a dedicated relationship document defining Agricultural Ecosystem Intelligence as the first practical application and validation path for Agentic AI Engineering.
