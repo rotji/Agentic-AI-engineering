@@ -121,3 +121,18 @@ This file records decisions that shape the learning project. It is not a list of
 **Reason:** Reusable procedural expertise can reduce duplicated instructions and unnecessary agent scaffolding while allowing specialist knowledge to be shared and maintained. The project should prefer the simplest architecture that satisfies demonstrated requirements.
 
 **Status:** Active design principle; implementation remains unselected and unvalidated.
+
+
+## D-013 — Treat web scraping as one option within source-first data acquisition
+
+**Decision:** Treat web scraping as one method within the project's wider information-acquisition capability, not as the default method or a goal in itself. Select the source and required information first; then prefer a suitable documented API, official downloadable dataset, feed, export or approved integration. Consider permitted HTML scraping or browser-based acquisition only when structured routes are unavailable or materially insufficient.
+
+**Quality boundary:** Preserve source identity, original location, retrieval time, publication/observation times where available, extraction method, original values, transformations, quality checks and evidence status. Successful extraction is not proof that the extracted claim is true.
+
+**Governance boundary:** Review applicable access conditions, terms, licences, privacy and data-protection obligations, request limits and publisher instructions. Do not bypass access controls or treat `robots.txt` as a grant of permission. Escalate uncertain or higher-risk collection for review.
+
+**Architecture boundary:** Scraping is primarily a data-acquisition capability implemented through tools/connectors. It may be scheduled by automation, used within a workflow, or invoked by an agent where appropriate; it is not itself an agent, Skill, workflow, automation platform or new discipline.
+
+**Reason:** The project's mission depends on useful, traceable and reliable information, not on collecting the largest possible volume of web pages. The most suitable permitted interface should be used for each source, with extraction and evidence quality tested.
+
+**Status:** Active design principle; no scraper, crawler or scraping platform has been selected or deployed.
