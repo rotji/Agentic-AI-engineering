@@ -14,6 +14,8 @@ The working principle is:
 
 **Find the best permitted source interface first; scrape web pages only when a suitable structured or authorised route is unavailable and the need justifies it.**
 
+Social platforms require additional source-specific access, privacy and evidence controls. See [Social Platform Intelligence and Data Access](SOCIAL_PLATFORM_INTELLIGENCE_AND_DATA_ACCESS.md) for Facebook, Instagram, WhatsApp, X and LinkedIn, plus other platforms awaiting assessment.
+
 ## 2. Important terms
 
 These activities are related, but are not identical.
