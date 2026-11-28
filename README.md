@@ -14,8 +14,8 @@ Read [START_HERE.md](START_HERE.md) for the project entry point and documentatio
 - **Completed chapter:** Chapter 1 — Foundations of Reasoning and Planning (subsections 1.1–1.4).
 - **Completed chapter:** Chapter 2 — Goals, Instructions and Problem Formulation (subsections 2.1–2.5).
 - **Completed chapter:** Chapter 3 — Reasoning Patterns and Inference (subsections 3.1–3.5).
-- **Current chapter:** Chapter 4 — Representing Problems, States and Actions (4.1–4.2 covered).
-- **Next learning step:** Chapter 4.3 — Actions, Preconditions and Effects.
+- **Current chapter:** Chapter 4 — Representing Problems, States and Actions (4.1–4.3 covered).
+- **Next learning step:** Chapter 4.4 — Constraints, Resources, Time and Dependencies.
 - **Practical direction:** Agriculture is the first pilot path; five candidate information sources have received desk assessment; underlying data and user needs remain to be validated.
 
 ## Practical operating method
