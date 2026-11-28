@@ -25,6 +25,7 @@ Learn the relevant concepts, discover existing solutions, assemble suitable capa
 - [Practical Build and Sector Transfer Method](docs/PRACTICAL_BUILD_AND_SECTOR_TRANSFER.md)
 - [Reusable Skills and Procedural Knowledge](docs/REUSABLE_SKILLS_AND_PROCEDURAL_KNOWLEDGE.md)
 - [Web Data Acquisition and Scraping](docs/WEB_DATA_ACQUISITION_AND_SCRAPING.md)
+- [Social Platform Intelligence and Data Access](docs/SOCIAL_PLATFORM_INTELLIGENCE_AND_DATA_ACCESS.md)
 - [Agricultural Pilot Charter (provisional)](docs/practical-pilot/AGRICULTURAL_PILOT_CHARTER.md)
 - [Agricultural Pilot Discovery Register](docs/practical-pilot/DISCOVERY_REGISTER.md)
 
@@ -49,6 +50,7 @@ Learn the relevant concepts, discover existing solutions, assemble suitable capa
 - [Agent architecture blueprint template](docs/templates/AGENT_ARCHITECTURE_BLUEPRINT_TEMPLATE.md)
 - [Reusable Skills and Procedural Knowledge](docs/REUSABLE_SKILLS_AND_PROCEDURAL_KNOWLEDGE.md)
 - [Web Data Acquisition and Scraping](docs/WEB_DATA_ACQUISITION_AND_SCRAPING.md)
+- [Social Platform Intelligence and Data Access](docs/SOCIAL_PLATFORM_INTELLIGENCE_AND_DATA_ACCESS.md)
 - [Discipline 1 coverage review](docs/disciplines/01-agent-architecture-and-design/REVIEW.md)
 - [Decision log](docs/DECISIONS.md)
 - [Continuation guide](docs/CONTINUATION_GUIDE.md)
