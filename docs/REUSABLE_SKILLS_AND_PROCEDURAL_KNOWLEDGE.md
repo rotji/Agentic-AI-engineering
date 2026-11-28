@@ -26,7 +26,9 @@ A Skill is not a smaller agent. It is a reusable package of procedural expertise
 | **Prompt / instruction** | Directs the agent for a particular interaction or task. |
 | **Context / reference knowledge** | Supplies facts, background, schemas, records or other information needed for the current work. |
 | **Tool / connector** | Provides an interface through which an authorised system can read, calculate, retrieve or change something. |
-| **Workflow / orchestration** | Organises task order, dependencies, hand-offs, parallel work and coordination across components or agents. |
+| **Workflow** | Defines how tasks or stages are arranged, including their sequence, conditions, branches and hand-offs. A workflow can be manual, automated, agentic or hybrid. |
+| **Automation** | Causes one or more actions or processes to run from defined triggers, schedules or conditions with reduced need for manual initiation. It can be deterministic and rule-based, AI-assisted or agent-enabled. |
+| **Orchestration** | Coordinates multiple tasks, services, workflows or agents, managing dependencies, hand-offs, timing and overall execution. |
 | **Governance / policy** | Defines authority, permissions, restrictions, approvals, accountability and oversight. |
 | **Evaluation** | Tests whether the agent and procedure produce acceptable results under representative conditions. |
 
@@ -34,7 +36,49 @@ These elements complement one another. A Skill can explain how to use a tool, bu
 
 Likewise, describing a procedure in a Skill does not make the procedure correct. Its content must be grounded in evidence, tested and maintained.
 
-## 3. What a reusable Skill may contain
+## 3. Where automation fits
+
+**Automation is the automatic execution of an action or process when a defined trigger, schedule or condition occurs.** It is an execution approach, not another name for an AI agent, Skill, tool or workflow.
+
+The distinctions are important:
+
+- A **workflow** describes how work is arranged: what happens first, what follows, what branches and where approval is required.
+- **Automation** makes some or all of that work run without a person manually initiating every step. It may be a single scheduled action or a complete workflow.
+- An **agent** contributes model-driven interpretation, reasoning or action selection where the task requires judgement or adaptation.
+- A **Skill** gives an agent reusable procedural guidance for a recurring class of work. It does not schedule or trigger the work by itself.
+- **Tools and services** provide the actual interfaces and operations used by people, agents or automated processes.
+- **Orchestration** coordinates the execution of multiple tasks, services, workflows or agents.
+
+These concepts can be combined, but they are not interchangeable. A workflow may be performed manually. An automation may run without AI. An agent can be invoked by an automation, work inside a workflow, or initiate authorised actions itself. Not every agent needs to be continuously automated, and not every automation needs an agent.
+
+### Choosing the appropriate approach
+
+| Situation | Usually appropriate starting point |
+|---|---|
+| The steps and rules are stable, explicit and repeatable. | Conventional rule-based automation. |
+| Work requires interpretation, handling ambiguous information or adapting to changing evidence. | An agent, with suitable tools, context, limits and evaluation. |
+| The task has stable steps but one or more stages require judgement. | A hybrid workflow: automate deterministic stages and use an agent for bounded judgement. |
+| Several tasks or services must be coordinated, perhaps across agents and people. | Workflow orchestration, with automation and agent steps where justified. |
+
+Automation does not automatically mean full autonomy. A scheduled process can collect data and prepare a report while a person still reviews the findings and approves consequential actions. The system's authority and autonomy must be separately defined.
+
+### Agricultural intelligence example
+
+A possible recurring workflow—not yet an approved or implemented design—could operate as follows:
+
+1. A scheduler triggers a daily collection process.
+2. Automated connectors retrieve permitted source data and record retrieval metadata.
+3. Deterministic checks validate file format, required fields, dates and units.
+4. An agent applies a reviewed market-observation assessment Skill to interpret product descriptions, flag comparability problems and explain anomalies.
+5. The workflow routes uncertain or consequential findings to a human reviewer.
+6. An approved report is generated and distributed through an authorised channel.
+7. Monitoring records failures, missing sources, completion status and the version of the procedure used.
+
+In this example, the schedule and repeatable checks are automation; the ordered stages are the workflow; connectors and scripts perform operations; the Skill guides the agent's assessment; the agent handles bounded interpretation; orchestration manages the hand-offs; and governance defines permissions and review. Some steps may remain manual.
+
+The example is a way to understand the architecture, not a decision that we should build this entire pipeline now.
+
+## 4. What a reusable Skill may contain
 
 A Skill should contain only the material needed to perform its defined work. Depending on the task and runtime, it may include:
 
