@@ -1,6 +1,6 @@
 # Discipline 2 — Reasoning and Planning
 
-**Status:** In progress; Chapters 1–3 complete; Chapter 4 is next.
+**Status:** In progress; Chapters 1–3 complete; Chapter 4 in progress (4.1 covered).
 
 ## 1. Purpose
 
@@ -73,7 +73,7 @@ Planned subsections:
 Learn how to describe the situation an agent is reasoning about and the possible changes its actions may produce.
 
 Planned subsections:
-- **4.1 Problem and Environment Representation**
+- **4.1 Problem and Environment Representation:** Covered.
 - **4.2 Current State, Goal State and State Changes**
 - **4.3 Actions, Preconditions and Effects**
 - **4.4 Constraints, Resources, Time and Dependencies**
@@ -204,6 +204,6 @@ Where useful, exercises will ask the learner to formulate goals, decompose tasks
 
 ## 7. Current continuation point
 
-**Discipline 2 → Chapter 4 → 4.1 Problem and Environment Representation.**
+**Discipline 2 → Chapter 4 → 4.2 Current State, Goal State and State Changes.**
 
-Chapters 1–3 are complete. Chapter 3 subsections 3.1–3.5 are covered.
+Chapters 1–3 are complete. Chapter 4 is in progress; subsection 4.1 is covered.
