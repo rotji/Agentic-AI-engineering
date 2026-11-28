@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-11-28 — Make agricultural intelligence relationship explicit
+
+- Added a dedicated relationship document defining Agricultural Ecosystem Intelligence as the first practical application and validation path for Agentic AI Engineering.
+- Established separate repository responsibilities and sources of truth: reusable engineering learning here; agricultural operational evidence and activity in the agricultural repository.
+- Positioned the scheduled daily brief as a human-supervised workflow and requirements source, not proof of a fully engineered autonomous system.
+- Defined the theory → engineering application → agricultural validation learning loop and maturity progression from scheduled workflow toward possible integrated and agentic systems.
+- Recorded decision D-015 and linked the relationship from project navigation, overview, current state and continuation guidance.
+- Preserved the curriculum continuation point at Discipline 2, Chapter 4.4.
+
 ## 2026-11-28 — Document social platform intelligence and access boundaries
 
 - Added a source reference covering Facebook, Instagram, WhatsApp, X and LinkedIn as candidate intelligence sources and voluntary submission channels.
