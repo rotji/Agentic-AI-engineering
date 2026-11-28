@@ -23,6 +23,7 @@ Read [START_HERE.md](START_HERE.md) for the project entry point and documentatio
 Learn the relevant concepts, discover existing solutions, assemble suitable capabilities, test them, build only genuine gaps and assess the transfer of validated principles to other sectors.
 
 - [Practical Build and Sector Transfer Method](docs/PRACTICAL_BUILD_AND_SECTOR_TRANSFER.md)
+- [Reusable Skills and Procedural Knowledge](docs/REUSABLE_SKILLS_AND_PROCEDURAL_KNOWLEDGE.md)
 - [Agricultural Pilot Charter (provisional)](docs/practical-pilot/AGRICULTURAL_PILOT_CHARTER.md)
 - [Agricultural Pilot Discovery Register](docs/practical-pilot/DISCOVERY_REGISTER.md)
 
@@ -35,6 +36,7 @@ Learn the relevant concepts, discover existing solutions, assemble suitable capa
 - Evidence and verification.
 - Continuity and portability.
 - Document as we learn.
+- Reuse procedural expertise before creating specialist agents.
 
 ## Documentation
 
@@ -44,6 +46,7 @@ Learn the relevant concepts, discover existing solutions, assemble suitable capa
 - [Discipline 1 chapter index](docs/disciplines/01-agent-architecture-and-design/README.md)
 - [Discipline 2 learning sequence](docs/disciplines/02-reasoning-and-planning/README.md)
 - [Agent architecture blueprint template](docs/templates/AGENT_ARCHITECTURE_BLUEPRINT_TEMPLATE.md)
+- [Reusable Skills and Procedural Knowledge](docs/REUSABLE_SKILLS_AND_PROCEDURAL_KNOWLEDGE.md)
 - [Discipline 1 coverage review](docs/disciplines/01-agent-architecture-and-design/REVIEW.md)
 - [Decision log](docs/DECISIONS.md)
 - [Continuation guide](docs/CONTINUATION_GUIDE.md)
