@@ -46,3 +46,10 @@ Read the [Practical Build and Sector Transfer Method](docs/PRACTICAL_BUILD_AND_S
 - Update the relevant chapter document when a chapter or subsection is covered.
 - Update the current-state record and changelog when the continuation point changes.
 - Keep the curriculum technology-neutral. Investigate a technology in depth when a real design requirement makes it necessary.
+
+
+## Relationship between the two projects
+
+The [Agricultural Ecosystem Intelligence](https://github.com/rotji/agricultural-intelligence-ecosystem) programme is the first practical application of the engineering curriculum. Keep the two repositories separate: this repository records reusable engineering knowledge and decisions; the agricultural repository records operational agricultural intelligence and activity. The daily brief is a current, human-supervised workflow and a source of practical requirements—not evidence that an autonomous production system has already been built.
+
+Read [Agricultural Intelligence and Agentic AI Engineering Relationship](docs/AGRICULTURAL_INTELLIGENCE_ENGINEERING_RELATIONSHIP.md) before treating agricultural work as an engineering implementation commitment.
