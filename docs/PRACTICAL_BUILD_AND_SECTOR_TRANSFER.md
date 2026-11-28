@@ -128,6 +128,12 @@ Classify transferability as **proven in the original pilot**, **plausibly reusab
 - Build a custom component only for a demonstrated gap or a clearly justified strategic reason.
 - Do not introduce a technology merely because it is fashionable, advertised or mentioned in a lesson.
 
+### Prefer reusable procedures before creating more agents
+
+When a recurring task appears to need specialist expertise, first assess whether an existing agent/runtime can perform it using a focused reusable procedure (often called a Skill), the appropriate reference knowledge and the required authorised tools. Test that combination on representative tasks before creating another agent.
+
+A reusable procedure does not provide its own tools, credentials, permissions, data or governance. Nor should every problem be turned into a Skill: create or retain separate agents when distinct identity, security boundaries, isolated state, independent lifecycle, parallel execution or accountable responsibility make them necessary. See [Reusable Skills and Procedural Knowledge](REUSABLE_SKILLS_AND_PROCEDURAL_KNOWLEDGE.md) for the detailed design and quality controls.
+
 ## 8. Relationship with the 13-discipline curriculum
 
 The 13 disciplines remain the knowledge structure. They are not a requirement to finish theory in sequence before practical work begins.
