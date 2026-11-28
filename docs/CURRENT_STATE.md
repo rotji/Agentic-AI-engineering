@@ -26,6 +26,12 @@ The project has documented web data acquisition and scraping as one possible met
 
 See [Web Data Acquisition and Scraping](WEB_DATA_ACQUISITION_AND_SCRAPING.md). This is engineering guidance, not a decision to scrape any particular source. No scraper, crawler or scraping platform has been selected or deployed.
 
+## Cross-cutting capability — social platform intelligence
+
+Social platforms are now documented as candidate sources for public market signals, announcements, supply/demand indications and voluntary submissions. Access is platform-specific: official APIs, approved research access, licensed providers, authorised business inboxes and manual review are possible routes. Public posts are not automatically verified facts, and private chats/groups must not be treated as unrestricted source material.
+
+See [Social Platform Intelligence and Data Access](SOCIAL_PLATFORM_INTELLIGENCE_AND_DATA_ACCESS.md). Current access and cost barriers are documented; no social listening provider, API connector or collection pipeline has been selected or deployed.
+
 ## Practical pilot position
 
 - **Pilot domain:** Agriculture.
