@@ -32,6 +32,12 @@ Social platforms are now documented as candidate sources for public market signa
 
 See [Social Platform Intelligence and Data Access](SOCIAL_PLATFORM_INTELLIGENCE_AND_DATA_ACCESS.md). Current access and cost barriers are documented; no social listening provider, API connector or collection pipeline has been selected or deployed.
 
+## Cross-cutting architecture principle — real-time capability when justified
+
+Future systems may support real-time or near-real-time updates for selected sources and workflows when a demonstrated decision need justifies the added cost and complexity. Choose on-demand, scheduled, near-real-time or continuous processing according to required freshness, source permissions, reliability, fallback and measurable value. Faster updates do not make information verified or expand agent authority.
+
+See [Real-Time and Event-Driven Capabilities](REAL_TIME_AND_EVENT_DRIVEN_CAPABILITIES.md) and decision [D-016](DECISIONS.md#d-016-enable-real-time-capabilities-only-when-justified). This is a future design principle only: no real-time pipeline or streaming technology has been selected or deployed.
+
 ## Practical pilot position
 
 - **Pilot domain:** Agriculture.
