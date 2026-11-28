@@ -104,3 +104,20 @@ This file records decisions that shape the learning project. It is not a list of
 **Reason:** The purpose is not merely to understand agentic AI concepts, but to use that understanding to assemble working capabilities and build only what is genuinely missing, while creating reusable methods across industries.
 
 **Status:** Active.
+
+
+## D-012 — Treat reusable procedural knowledge as a cross-cutting design capability
+
+**Decision:** Before designing a new specialist agent for recurring work, assess whether an existing agent/runtime can perform it with a focused, reusable procedure (often packaged as a Skill), the necessary reference knowledge and authorised tools.
+
+**Scope:** Reusable procedures are cross-cutting across the 13 disciplines, not a new fourteenth discipline. They package procedural expertise; they do not independently provide tool access, credentials, data, execution infrastructure, authority or governance.
+
+**Agent-boundary rule:** Separate agents remain appropriate where distinct identity, permissions, security isolation, state, lifecycle, parallel execution or accountable responsibility are justified by requirements.
+
+**Quality boundary:** Candidate procedures must be grounded in evidence, tested on representative tasks, reviewed for safety and security, versioned and maintained. A procedure is not a validated capability merely because it has been written or used once.
+
+**Technology boundary:** This decision does not mandate Anthropic, the `SKILL.md` format, a particular runtime or a Skills platform. Compatibility and portability must be tested in each target environment.
+
+**Reason:** Reusable procedural expertise can reduce duplicated instructions and unnecessary agent scaffolding while allowing specialist knowledge to be shared and maintained. The project should prefer the simplest architecture that satisfies demonstrated requirements.
+
+**Status:** Active design principle; implementation remains unselected and unvalidated.
