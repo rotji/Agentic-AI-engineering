@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-11-28 — Reusable Skills and procedural knowledge principle
+
+- Added a cross-cutting architecture note on packaging reusable procedural expertise as Skills.
+- Distinguished Skills from agents, prompts, context, tools, workflows/orchestration, governance and evaluation.
+- Documented progressive disclosure, candidate Skill contents, evaluation-first development, lifecycle, security and portability boundaries.
+- Established the principle to assess a reusable procedure with an existing agent/runtime before creating a specialist agent, while retaining separate agents where requirements justify them.
+- Added provisional agricultural Skill candidates for source assessment, market-observation assessment, producer/location evidence, evidence comparison and intelligence reporting; none is treated as implemented or validated.
+- Explicitly kept Skills cross-cutting rather than adding a fourteenth discipline, and did not select a vendor, format or runtime.
+- Preserved the next learning step: Chapter 4.4, Constraints, Resources, Time and Dependencies.
+
 ## 2026-11-28 — Discipline 2 Chapter 4.3
 
 - Covered and documented subsection 4.3, Actions, Preconditions and Effects.
