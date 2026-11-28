@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-11-28 — Discipline 2 Chapter 4.1
+
+- Covered and documented Chapter 4.1, Problem and Environment Representation.
+- Explained the purpose of structured problem and environment representations, including task scope and system/environment boundaries.
+- Distinguished actors, entities, attributes, relationships, processes, events, sources, resources, conditions and interfaces.
+- Distinguished real-world entities from digital records, source documents and claims; covered identity matching and the risks of false entity merges or invented relationships.
+- Explained abstraction, observability and partial knowledge, including known, observed-but-unverified, inferred, unknown, unavailable and disputed information.
+- Applied a provisional representation to an agricultural market-quotation comparison; explicitly kept it as a teaching aid rather than an approved schema or final pilot scope.
+- Set the next learning point to Chapter 4.2, Current State, Goal State and State Changes.
+
 ## 2026-11-27 — Chapter 3.5 and evidence assessment
 
 - Covered and documented subsection 3.5, Hypotheses, Evidence, Confidence and Limitations.
