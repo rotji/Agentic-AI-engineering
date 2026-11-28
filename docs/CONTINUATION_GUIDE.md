@@ -63,3 +63,14 @@ The repository should allow a reader to understand:
 - Exactly where to continue.
 
 The repository is the durable project record. A conversation is a place to work through the material, not the only place where its knowledge should exist.
+
+
+## 6. Use the agricultural project as the practical application
+
+The [Agricultural Ecosystem Intelligence](https://github.com/rotji/agricultural-intelligence-ecosystem) programme is the first practical application of this engineering curriculum, not a replacement for it. Before changing either project's structure or duplicating records, consult [Agricultural Intelligence and Agentic AI Engineering Relationship](AGRICULTURAL_INTELLIGENCE_ENGINEERING_RELATIONSHIP.md).
+
+Keep the records separate:
+- This repository: curriculum, reusable engineering knowledge, architecture principles, experiments and transferable lessons.
+- Agricultural repository: agricultural evidence, market observations, operational opportunities, actions, outreach and decisions.
+
+Use the daily brief as a live human-supervised workflow and requirements source. Do not describe it as a fully engineered autonomous system unless its persistence, access, verification, execution, approval and failure-handling capabilities have actually been tested. Connect lessons to agriculture when useful, but do not force every concept into an implementation. Preserve the next curriculum step independently of operational progress.
