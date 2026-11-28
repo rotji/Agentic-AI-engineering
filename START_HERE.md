@@ -14,8 +14,8 @@ This repository preserves the learning path, practical pilot work, solution rese
 - **Last completed chapter:** Chapter 1 — Foundations of Reasoning and Planning (subsections 1.1–1.4).
 - **Last completed chapter:** Chapter 2 — Goals, Instructions and Problem Formulation (subsections 2.1–2.5).
 - **Last completed chapter:** Chapter 3 — Reasoning Patterns and Inference (subsections 3.1–3.5).
-- **Current chapter:** Chapter 4 — Representing Problems, States and Actions (4.1–4.2 covered).
-- **Next learning step:** Chapter 4.3 — Actions, Preconditions and Effects.
+- **Current chapter:** Chapter 4 — Representing Problems, States and Actions (4.1–4.3 covered).
+- **Next learning step:** Chapter 4.4 — Constraints, Resources, Time and Dependencies.
 - **Practical direction:** Agriculture is the first pilot path. Learning, existing-solution discovery, assembly, testing and justified custom development proceed together.
 
 ## Practical project direction
