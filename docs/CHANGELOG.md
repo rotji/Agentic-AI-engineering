@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-11-28 — Document web data acquisition and scraping
+
+- Added a reference document locating crawling, scraping, browser automation, APIs and data ingestion within the wider information-acquisition capability.
+- Established a source-first method: prefer suitable APIs, official datasets, feeds, exports or approved integrations before considering permitted scraping.
+- Documented an acquisition pipeline covering source assessment, retrieval, preservation, extraction, normalisation, quality checks, provenance, evidence classification and monitoring.
+- Recorded responsible collection boundaries, including terms and licences, privacy, request limits, access controls and the limited role of robots.txt.
+- Connected data acquisition to the 13 disciplines and the agricultural pilot without selecting or deploying a scraper.
+- Added decision D-013 and preserved the next learning step, Chapter 4.4.
+
 ## 2026-11-28 — Clarify automation, workflows, agents and Skills
 
 - Expanded the reusable procedural knowledge document to distinguish workflow, automation and orchestration.
