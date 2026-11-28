@@ -343,3 +343,10 @@ Discipline 1 is complete for progression to the specialist disciplines. Chapters
 - **Learning:** Continue with Discipline 2, Chapter 4.4 — Constraints, Resources, Time and Dependencies.
 - **Practical pilot:** inspect the data and methods behind the five candidate sources in the discovery register, confirm Plateau coverage and permissions, and validate user problems separately.
 - Do not select technologies, integrate data or declare a market gap until the source and problem evidence justifies those decisions.
+
+
+## Relationship to the agricultural intelligence programme
+
+Agricultural Ecosystem Intelligence is the first practical application and validation path for this engineering programme. The repositories have distinct responsibilities and sources of truth. This repository records reusable engineering learning; the agricultural repository records operational agricultural intelligence. The scheduled daily brief is a human-supervised workflow and a source of practical requirements, not proof of a fully engineered autonomous system. See [Agricultural Intelligence and Agentic AI Engineering Relationship](AGRICULTURAL_INTELLIGENCE_ENGINEERING_RELATIONSHIP.md).
+
+The relationship does not change the curriculum continuation point: **Discipline 2 → Chapter 4.4 — Constraints, Resources, Time and Dependencies.** Track agricultural operational progress separately.
