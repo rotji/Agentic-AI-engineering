@@ -22,7 +22,7 @@ This repository preserves the learning path, practical pilot work, solution rese
 
 This is not a theory-only curriculum. Agriculture is the first pilot path. We will connect lessons to real capability needs, discover and combine existing solutions, test working methods and build custom components only when a genuine gap is demonstrated. Validated principles will be assessed for transfer to other sectors—including real estate, mining and healthcare—with sector-specific adaptation and validation.
 
-Read the [Practical Build and Sector Transfer Method](docs/PRACTICAL_BUILD_AND_SECTOR_TRANSFER.md) and the [Reusable Skills and Procedural Knowledge principle](docs/REUSABLE_SKILLS_AND_PROCEDURAL_KNOWLEDGE.md), alongside the [provisional Agricultural Pilot Charter](docs/practical-pilot/AGRICULTURAL_PILOT_CHARTER.md), and the [Agricultural Pilot Discovery Register](docs/practical-pilot/DISCOVERY_REGISTER.md).
+Read the [Practical Build and Sector Transfer Method](docs/PRACTICAL_BUILD_AND_SECTOR_TRANSFER.md), the [Reusable Skills and Procedural Knowledge principle](docs/REUSABLE_SKILLS_AND_PROCEDURAL_KNOWLEDGE.md), and the [Web Data Acquisition and Scraping guidance](docs/WEB_DATA_ACQUISITION_AND_SCRAPING.md), alongside the [provisional Agricultural Pilot Charter](docs/practical-pilot/AGRICULTURAL_PILOT_CHARTER.md), and the [Agricultural Pilot Discovery Register](docs/practical-pilot/DISCOVERY_REGISTER.md).
 
 ## Read in this order
 
@@ -33,9 +33,10 @@ Read the [Practical Build and Sector Transfer Method](docs/PRACTICAL_BUILD_AND_S
 5. [Discipline 2 guide](docs/disciplines/02-reasoning-and-planning/README.md) — current learning scope and chapter sequence.
 6. [Architecture blueprint template](docs/templates/AGENT_ARCHITECTURE_BLUEPRINT_TEMPLATE.md) — reusable design document.
 7. [Reusable Skills and Procedural Knowledge](docs/REUSABLE_SKILLS_AND_PROCEDURAL_KNOWLEDGE.md) — cross-cutting design principle; not an additional discipline or an implementation commitment.
-8. [Decision log](docs/DECISIONS.md) — decisions and boundaries already established.
-9. [Continuation guide](docs/CONTINUATION_GUIDE.md) — how to maintain and continue the project.
-10. [Changelog](docs/CHANGELOG.md) — significant documentation updates.
+8. [Web Data Acquisition and Scraping](docs/WEB_DATA_ACQUISITION_AND_SCRAPING.md) — source-first acquisition methods, provenance, quality and responsible collection.
+9. [Decision log](docs/DECISIONS.md) — decisions and boundaries already established.
+10. [Continuation guide](docs/CONTINUATION_GUIDE.md) — how to maintain and continue the project.
+11. [Changelog](docs/CHANGELOG.md) — significant documentation updates.
 
 ## Documentation rules
 
