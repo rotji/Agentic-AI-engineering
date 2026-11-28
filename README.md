@@ -61,3 +61,10 @@ Learn the relevant concepts, discover existing solutions, assemble suitable capa
 The curriculum is technology-neutral. Tools and technologies are investigated when a specific learning or design requirement makes them relevant, not simply because they are mentioned or advertised. Blockchain is not assumed to be a compulsory component of agentic AI.
 
 Agriculture is the first practical pilot path. It is where we will investigate needs, assemble and test capabilities, and identify reusable principles. Real estate, mining, healthcare and other sectors are expansion domains for validated principles, subject to their own requirements and controls.
+
+
+## Relationship to the agricultural intelligence project
+
+The [Agricultural Ecosystem Intelligence](https://github.com/rotji/agricultural-intelligence-ecosystem) programme is the first practical application and validation path for this engineering journey. The projects have separate repositories and sources of truth: this repository owns reusable engineering learning; the agricultural repository owns operational agricultural evidence, opportunities, actions and outreach records. The scheduled daily brief is the current human-supervised operating workflow, not proof of a fully engineered autonomous system.
+
+Read the [Agricultural Intelligence and Agentic AI Engineering Relationship](docs/AGRICULTURAL_INTELLIGENCE_ENGINEERING_RELATIONSHIP.md) for responsibilities, the learning-to-application loop, maturity boundaries and maintenance rules.
