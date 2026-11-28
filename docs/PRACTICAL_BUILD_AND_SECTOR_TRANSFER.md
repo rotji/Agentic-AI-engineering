@@ -47,6 +47,12 @@ Use the following cycle repeatedly. It is a project method, not a universal engi
 
 Repeat the cycle as the pilot reveals new needs.
 
+### Data acquisition: choose the source interface before the tool
+
+Information acquisition is a capability that may be needed across sector pilots. For each requirement, identify the source and the data needed before selecting an acquisition method. Prefer suitable documented APIs, official downloadable datasets, feeds, exports or approved partner integrations. Consider permitted web scraping or browser-based acquisition only where structured routes are unavailable or materially insufficient. Preserve provenance, assess data quality and use rights, and test collection reliability. See [Web Data Acquisition and Scraping](WEB_DATA_ACQUISITION_AND_SCRAPING.md).
+
+Do not equate a successful retrieval with a verified fact. The origin, method, time, meaning, limitations and evidence status of each acquired record must remain traceable.
+
 ## 4. Keep four workstreams connected
 
 The project should maintain four connected workstreams rather than treating them as isolated stages:
