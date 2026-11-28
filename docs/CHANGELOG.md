@@ -1,5 +1,16 @@
 # Changelog
 
+## 2026-11-28 — Discipline 2 Chapter 4.2
+
+- Covered and documented subsection 4.2, Current State, Goal State and State Changes.
+- Defined state as a task-relevant representation and distinguished current state, goal state and state changes.
+- Distinguished goals as completion conditions from activity lists and workflow progress.
+- Explained how state may change through agent actions, external events, other actors, corrections, new observations and time.
+- Separated real-world state, information state, task state and workflow status.
+- Applied the distinctions to an agricultural source-assessment workflow; preserved event, observation, publication, collection, review and update times.
+- Emphasised that attempted actions and completed workflow steps do not prove goal achievement; preserved the distinctions among zero, missing, unknown, unavailable, estimated and stale values.
+- Set the next learning point to Chapter 4.3, Actions, Preconditions and Effects.
+
 ## 2026-11-28 — Discipline 2 Chapter 4.1
 
 - Covered and documented Chapter 4.1, Problem and Environment Representation.
