@@ -136,3 +136,20 @@ This file records decisions that shape the learning project. It is not a list of
 **Reason:** The project's mission depends on useful, traceable and reliable information, not on collecting the largest possible volume of web pages. The most suitable permitted interface should be used for each source, with extraction and evidence quality tested.
 
 **Status:** Active design principle; no scraper, crawler or scraping platform has been selected or deployed.
+
+
+## D-014 — Treat social platforms as governed intelligence sources and submission channels
+
+**Decision:** Include social platforms within the project's wider information-acquisition strategy as potential sources of public announcements, market signals, business and sector activity, and voluntary information submissions. Use platform-approved APIs, authorised account integrations, approved research access, licensed providers or manual review as appropriate. Do not presume that public visibility grants a right to automate collection or reuse.
+
+**Platform boundary:** Access rights and permitted purposes are platform-specific. Private messages, private groups, personal contact lists and account data must not be treated as open datasets. A business messaging integration receives information addressed to its authorised business account; it does not grant access to unrelated conversations. Platform research libraries may have institutional eligibility, controlled-environment, retention and download restrictions.
+
+**Evidence boundary:** A post or message is a claim or observation, not proof of a quotation, transaction, supply relationship or market condition. Preserve provenance, time, content context, duplicate relationships and the project's four evidence categories. Corroborate before upgrading evidence status.
+
+**Privacy boundary:** Apply purpose limitation, data minimisation, lawful basis, security, retention and accountability. Prefer market, organisation, product and event information over unnecessary personal-profile data. Provide suitable human review for consequential use.
+
+**Resource boundary:** Evaluate approval requirements, API quotas, current pricing, data-use restrictions, coverage and representativeness before adopting a provider. For cost-sensitive discovery, start with a small manual or narrowly scoped test rather than broad continuous monitoring.
+
+**Reason:** Social platforms can expose signals that formal datasets do not capture, but their content is uneven, self-selected and often unverified. The project needs a governed way to assess useful signals without confusing popularity, visibility or volume with reliable intelligence.
+
+**Status:** Active design principle; no social listening provider, platform integration or automated collection pipeline has been selected or deployed.
